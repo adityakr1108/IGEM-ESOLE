@@ -1,8 +1,18 @@
 {% extends "layout.html" %}
-{% block title %}<img src="https://i.ibb.co/8XkTXCb/E-solei.png" alt="E-solei" border="0" style = "height:auto;width:auto;margin-left:45px">Project Description{% endblock %}
-{% block lead %}
-   <img src="https://iconape.com/wp-content/files/it/192347/png/iiser-kolkata-logo.png" alt="IISER Kolkata Logo" style="height: 20px; margin-right: 10px">IISER KOLKATA
-{% endblock %}
+<div class="hero">
+  <div class="hero-text">
+    <h2><img src="https://i.ibb.co/8XkTXCb/E-solei.png" alt="E-solei" border="0" style="height:auto;width:auto;margin-left:45px">Project Description</h2>
+    <p>Your project description content goes here...</p>
+  </div>
+  <img src="https://iconape.com/wp-content/files/it/192347/png/iiser-kolkata-logo.png" alt="IISER Kolkata Logo" style="height: 20px; margin-right: 10px">IISER KOLKATA <!-- Assuming this is part of the lead block -->
+</div>
+
+<div class="row mt-4">
+  <div class="col-lg-8">
+    <!-- Rest of your content -->
+  </div>
+</div>
+   {% endblock %}
 
 {% block page_content %}
 
