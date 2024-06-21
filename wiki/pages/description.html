@@ -1,11 +1,49 @@
 {% extends "layout.html" %}
-  
 {% block title %}Project Description{% endblock %}
+
 {% block lead %}
-<img src="https://drive.google.com/file/d/1eYOXHPuwZ-AAKJigtkC2uIZXif3OXuXT/view?usp=drive_link" alt="IISER Kolkata Logo" style="height: 20px; margin-right: 10px; color: black;background-color: transparent;">IISER KOLKATA
+<style>
+    .lead {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .lead img {
+        height: 20px;
+        margin-right: 10px;
+    }
+</style>
+
+<div class="lead">
+    <img src="https://drive.google.com/uc?id=1eYOXHPuwZ-AAKJigtkC2uIZXif3OXuXT" alt="IISER Kolkata Logo">
+    <span style="color: black;">IISER KOLKATA</span>
+</div>
 {% endblock %}
 
 {% block page_content %}
+<style>
+    .page-content {
+        margin-top: 20px;
+    }
+
+    .page-content h2 {
+        color: #007bff; /* blue headings */
+    }
+
+    .page-content p {
+        text-align: justify;
+    }
+
+    .references ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .references li {
+        margin-bottom: 5px;
+    }
+</style>
 <div class="row mt-4">
   <div class="col-lg-8">
     <h2> Inspiration</h2>
