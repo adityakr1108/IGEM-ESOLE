@@ -1,48 +1,75 @@
-from flask import Flask, render_template
-import time
-from os import path
-from pathlib import Path
-from flask_frozen import Freezer  # Update this line
-
-# Set up paths
-static_folder_path = path.abspath('./static')
-template_folder_path = path.abspath('./wiki')
-app = Flask(__name__, static_folder=static_folder_path, template_folder=template_folder_path)
-
-# Flask-Frozen Configuration
-app.config['FREEZER_DESTINATION'] = 'public'
-app.config['FREEZER_RELATIVE_URLS'] = True
-app.config['FREEZER_IGNORE_MIMETYPE_WARNINGS'] = True
-freezer = Freezer(app)
-
-@app.cli.command()
-def freeze():
-    """Command to freeze the app"""
-    freezer.freeze()
-
-@app.cli.command()
-def serve():
-    """Command to serve the frozen pages"""
-    freezer.run()
-
-@app.after_request
-def add_header(response):
-    # Disable caching for development
-    response.cache_control.no_cache = True
-    response.cache_control.no_store = True
-    response.cache_control.max_age = 0
-    response.cache_control.public = False
-    return response
-
-@app.route('/')
-def home():
-    current_time = int(time.time())
-    return render_template('pages/home.html', current_time=current_time)
-
-@app.route('/<page>')
-def pages(page):
-    current_time = int(time.time())
-    return render_template(f'pages/{page.lower()}.html', current_time=current_time)
-
-if __name__ == "__main__":
-    app.run(port=8000, debug=True)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/menu.css') }}?v={{ current_time }}">
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <nav class="nav">
+                <ul>
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li class="dropdown">
+                        <a href="{{ url_for('pages', page='team') }}">Team</a>
+                        <div class="dropdown-content">
+                            <a href="{{ url_for('pages', page='team') }}">Team Members</a>
+                            <a href="{{ url_for('pages', page='attributions') }}">Attribution</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" id="project-link">Project</a>
+                        <div class="dropdown-content">
+                            <a href="{{ url_for('pages', page='description') }}">Description</a>
+                            <a href="{{ url_for('pages', page='Contribution') }}">Contribution</a>
+                            <a href="{{ url_for('pages', page='engineering') }}">Engineering</a>
+                            <a href="{{ url_for('pages', page='results') }}">Results</a>
+                            <a href="{{ url_for('pages', page='NoteBook') }}">NoteBook</a>
+                            <a href="{{ url_for('pages', page='proofOfConcept') }}">Proof Of Concept</a>
+                            <a href="{{ url_for('pages', page='implementation') }}">Implementation</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" id="project-link">WetLab</a>
+                        <div class="dropdown-content">
+                            <a href="{{ url_for('pages', page='design') }}">Design</a>
+                            <a href="{{ url_for('pages', page='Contribution') }}">Engineering</a>
+                            <a href="{{ url_for('pages', page='engineering') }}">Experiment</a>
+                            <a href="{{ url_for('pages', page='results') }}">Results</a>
+                            
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" id="project-link">DryLab</a>
+                        <div class="dropdown-content">
+                            <a href="{{ url_for('pages', page='description') }}">Description</a>
+                            <a href="{{ url_for('pages', page='Contribution') }}">Contribution</a>
+                            <a href="{{ url_for('pages', page='engineering') }}">Engineering</a>
+                            <a href="{{ url_for('pages', page='results') }}">Results</a>
+                            <a href="{{ url_for('pages', page='NoteBook') }}">NoteBook</a>
+                        </div>
+                    </li>
+                    <li><a href="{{ url_for('pages', page='entrepreneurship') }}">Entrepreneurship</a></li>
+                    <li><a href="{{ url_for('pages', page='human-practices') }}">Human Safety</a></li>
+                    <li class="dropdown">
+                        <a href="#" id="awards-link">Awards</a>
+                        <div class="dropdown-content">
+                            <a href="{{ url_for('pages', page='education') }}">Education</a>
+                            <a href="{{ url_for('pages', page='entrepreneurship') }}">Entrepreneurship</a>
+                            <a href="{{ url_for('pages', page='Hardware') }}">Hardware</a>
+                            <a href="{{ url_for('pages', page='Inclusivity') }}">Inclusivity</a>
+                            <a href="{{ url_for('pages', page='Measurement') }}">Measurement</a>
+                            <a href="{{ url_for('pages', page='Model') }}">Model</a>
+                            <a href="{{ url_for('pages', page='Plant') }}">Plant</a>
+                            <a href="{{ url_for('pages', page='Software') }}">Software</a>
+                            <a href="{{ url_for('pages', page='Sustainable') }}">Sustainable</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+</body>
+</html>
