@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
   <head>
@@ -6,23 +5,22 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="https://static.igem.wiki/common/icons/favicons/igem-2022.svg"/>
-    
     <link rel="license" href="https://creativecommons.org/licenses/by/4.0/"/>
+
     <!-- Bootstrap CSS -->
     <link href="{{ url_for('static', filename = 'bootstrap.min.css') }}" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link href="{{ url_for('static', filename = 'style.css') }}" rel="stylesheet">
-    <link rel="icon" type="image/png" href="\iiser-kolkata\wiki\Images\iiser.png"/>
 
-    <title>{% block title %} | IISER-KOLKATA - iGEM 2024{% endblock %}</title>
+    <title>{% block title %}{% endblock %} | IISER-Kolkata - iGEM 2024</title>
 
 </head>
 <body>
   <!-- Navigation -->
   {% include 'menu.html' %}
 
-  <!-- Header -->
+  <!-- <Header>
   <header class="bg-hero py-5 mb-5">
     <div class="container h-100">
       <div class="row h-100 align-items-center">
@@ -32,7 +30,7 @@
         </div>
       </div>
     </div>
-  </header>
+  </header> -->
 
   <!-- Page Content -->
   <div class="container">

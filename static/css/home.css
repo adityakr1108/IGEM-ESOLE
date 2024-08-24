@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+body {
+  font-family: "Poppins", sans-serif;
+  background-image: url("../images/giphy.webp");
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* set bg white and fit div should fit the screen */
+.background-section {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.88);
+  z-index: -1;   
+}
+.dummy-text {
+  width: 50%;
+  height: 100vh;
+  padding-top: 200px;
+  padding-left: 50px;
+}
+.dummy-text h2 {
+  font-size: 92px;
+  font-weight: bold;
+  line-height: 80px;
+  margin: 35px 0px 0px 50px;
+  width: 100%;
+}

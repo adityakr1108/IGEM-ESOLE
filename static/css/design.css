@@ -1,0 +1,224 @@
+:root {
+    --primary-bg-color: #ce4ac3;
+    --primary-text-color: #ffffff;
+    --secondary-bg-color: #f0f0f0;
+    --border-radius: 20px;
+    --transition-duration: 0.5s;
+  }
+
+  
+  /* Hero section */
+  .hero {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.75);
+    padding: 160px 0 0px;
+    width: 100vw;
+    margin-top: -100px;
+    z-index: -1;
+    /* margin-left: calc(-50vw + 50%); */
+    margin-left: -180px;
+  }
+  
+  .hero h1 {
+    /* color: var(--primary-text-color); */
+    font-size: 110px;
+    font-weight: bold;
+    width: 100%;
+    max-width: 1200px;
+    padding: 10px 0 50px;
+    box-sizing: border-box;
+    margin-left: -100px;
+    color: #ce4ac3;
+  }
+  
+  /* Overview section */
+  .overview {
+    position: relative;
+    padding: 20px 0 30px;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    background-color: var(--primary-bg-color);
+  }
+  
+  .overview h2 {
+    color: var(--primary-text-color);
+    font-size: 90px;
+    font-weight: bold;
+    margin-left: 50px;
+    width: 100%;
+    max-width: 1200px;
+    padding: 10px 0 50px;
+    box-sizing: border-box;
+  }
+  
+  .overview-content {
+    color: var(--primary-text-color);
+    margin: -30px 50px 0;
+    padding-bottom: 20px;
+  }
+  
+  .overview-content-text {
+    font-weight: bold;
+  }
+  
+  .overview-content-btns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-left: 50px;
+  }
+  
+  .overview-content-btns button {
+    border-radius: var(--border-radius);
+    padding: 5px 50px;
+    font-weight: bold;
+    transition: all var(--transition-duration) ease;
+    font-size: 20px;
+    background-color: var(--primary-text-color);
+    color: var(--primary-bg-color);
+    border: 2px solid var(--primary-text-color);
+  }
+  
+  .overview-content-btns button:hover {
+    font-size: 28px;
+    background-color: var(--primary-bg-color);
+    color: black;
+    border-color: black;
+  }
+  
+  /* Main content */
+  .page-container {
+    display: flex;
+    /* min-height: 100vh; */
+    margin-top: 25px;
+  }
+  
+  /* .left-nav {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    margin-left: -50px;
+    padding: 20px 50px 0px 0px;
+  } */
+  .left-nav {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    margin-left: -50px;
+    padding: 20px 50px 0px 0px;
+    position: -webkit-sticky; /* For Safari */
+    position: sticky;
+    top: 0;
+    align-self: flex-start; /* Ensures it starts at the top */
+  }
+  
+  .left-nav button {
+      border-radius: var(--border-radius);
+      margin-bottom: 10px;
+      padding: 5px 50px;
+    /* padding: 5px 40px 0px 40px; */
+    font-weight: bold;
+    transition: all var(--transition-duration) ease;
+    /* transition: all var(--transition-duration) ease; */
+    background-color: var(--primary-text-color);
+    color: var(--primary-bg-color);
+    /* font-size: 20px; */
+    width: 100%;
+    text-align: left;
+    border: none;
+    /* background-color: #e0e0e0; */
+    cursor: pointer;
+    border: 2px solid var(--primary-text-color);
+    border-color: rgb(0, 0, 0);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 10px 15px; /* Adjusted padding */
+    font-size: 18px; /* Slightly reduced font size if needed */
+  }
+  
+    /* font-weight: bold; */
+    /* font-size: 20px; */
+  
+  .left-nav button:hover {
+    background-color: #ce4ac3;
+    color: black;
+  }
+  
+  .right-content {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure it takes full height */
+    justify-content: space-between; /* Pushes footer down */
+    margin-top: 20px;
+  }
+  
+  .content-section {
+    margin-bottom: 40px;
+    border: 2px solid #000000;
+    border-radius: var(--border-radius);
+    padding: 20px;
+    transition: 0.3s ease-in-out;
+    flex: 1; 
+  }
+  .content-section:last-child {
+    margin-bottom: 0;
+  }
+  .content-section:hover{
+    border-color: black;
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.6), 0 3px 6px rgba(0, 0, 0, 0);
+    background-color: #ce4ac3;
+  }
+  
+  .content-section h2 {
+    margin-top: 0;
+    color: #ce4ac3;
+  }
+  /* on hover the h2 should be black incolor soomthly*/
+  .content-section:hover h2 {
+    color: black;
+    /* tranform smooth animation */
+    transition: all 0.3s ease-in-out;
+  }
+
+
+  
+  /* Animations */
+  @keyframes shine {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(100%); }
+  }
+  
+  .shine, .shine2 {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+   text-align: left;
+    padding-left: 20px;
+  }
+  
+  .shine::before, .shine2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.4),
+      transparent
+    );
+    animation: shine 2s ease-in-out;
+    pointer-events: none;
+  }
+  
+  .shine2::before {
+    background: linear-gradient(
+      90deg,
+      transparent,
+      #ce4ac3,
+      transparent
+    );
+  }
