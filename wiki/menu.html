@@ -11,16 +11,16 @@
         <div class="nav-container">
             <nav class="nav">
                 <ul>
-                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a style="color: rgb(255, 236, 204); text-decoration: none;" href="{{ url_for('home') }} " id="project-link">Home</a></li>
                     <li class="dropdown">
-                        <a href="{{ url_for('pages', page='team') }}">Team</a>
+                        <a id="project-link">Team</a>
                         <div class="dropdown-content">
                             <a href="{{ url_for('pages', page='team') }}">Team Members</a>
                             <a href="{{ url_for('pages', page='attributions') }}">Attribution</a>
                         </div>
                     </li>
                     <li class="dropdown">
-                        <a href="#" id="project-link">Project</a>
+                        <a  id="project-link">Project</a>
                         <div class="dropdown-content">
                             <a href="{{ url_for('pages', page='description') }}">Description</a>
                             <a href="{{ url_for('pages', page='Contribution') }}">Contribution</a>
@@ -32,7 +32,7 @@
                         </div>
                     </li>
                     <li class="dropdown">
-                        <a href="#" id="project-link">WetLab</a>
+                        <a  id="project-link">WetLab</a>
                         <div class="dropdown-content">
                             <a href="{{ url_for('pages', page='design') }}">Design</a>
                             <a href="{{ url_for('pages', page='Contribution') }}">Engineering</a>
@@ -42,7 +42,7 @@
                         </div>
                     </li>
                     <li class="dropdown">
-                        <a href="#" id="project-link">DryLab</a>
+                        <a id="project-link">DryLab</a>
                         <div class="dropdown-content">
                             <a href="{{ url_for('pages', page='description') }}">Description</a>
                             <a href="{{ url_for('pages', page='Contribution') }}">Contribution</a>
@@ -51,10 +51,10 @@
                             <a href="{{ url_for('pages', page='NoteBook') }}">NoteBook</a>
                         </div>
                     </li>
-                    <li><a href="{{ url_for('pages', page='entrepreneurship') }}">Entrepreneurship</a></li>
-                    <li><a href="{{ url_for('pages', page='human-practices') }}">Human Safety</a></li>
+                    <li><a id="project-link">Entrepreneurship</a></li>
+                    <li><a id="project-link">Human Safety</a></li>
                     <li class="dropdown">
-                        <a href="#" id="awards-link">Awards</a>
+                        <a id="project-link">Awards</a>
                         <div class="dropdown-content">
                             <a href="{{ url_for('pages', page='education') }}">Education</a>
                             <a href="{{ url_for('pages', page='entrepreneurship') }}">Entrepreneurship</a>
