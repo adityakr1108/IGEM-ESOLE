@@ -2,9 +2,9 @@
 
 footer{
     position: absolute;
-    background:rgb(31, 31, 31);
+    background:#ce4ac3;
     width: 100%;
-    margin-top: 500px;
+    /* margin-top: 500px; */
   }
   
   
@@ -15,7 +15,7 @@ footer{
     top: 100px;
     height: 1px;
     width: 100%;
-    background: #AFAFB6;
+    background: #040404;
   }
   footer .content{
     max-width: calc(100% - 200px);
@@ -29,7 +29,7 @@ footer{
     margin-bottom: 50px;
   }
   .content .top .logo-details{
-    color: #fff;
+    color: rgb(255, 236, 204);
     font-size: 30px;
   }
   .content .top .media-icons{
@@ -42,7 +42,7 @@ footer{
     border-radius: 50%;
     text-align: center;
     line-height: 40px;
-    color: #fff;
+    color: rgb(255, 236, 204);
     font-size: 17px;
     text-decoration: none;
     transition: all 0.4s ease;
@@ -52,7 +52,7 @@ footer{
   }
   .top .media-icons a:nth-child(1):hover{
     color: #4267B2;
-    background: #fff;
+    background: rgb(255, 236, 204);
   }
   .top .media-icons a:nth-child(2){
     background: #1DA1F2;
@@ -66,21 +66,21 @@ footer{
   }
   .top .media-icons a:nth-child(3):hover{
     color: #E1306C;
-    background: #fff;
+    background: rgb(255, 236, 204);
   }
   .top .media-icons a:nth-child(4){
     background: #0077B5;
   }
   .top .media-icons a:nth-child(4):hover{
     color: #0077B5;
-    background: #fff;
+    background: rgb(255, 236, 204);
   }
   .top .media-icons a:nth-child(5){
     background: #FF0000;
   }
   .top .media-icons a:nth-child(5):hover{
     color: #FF0000;
-    background: #fff;
+    background: rgb(255, 236, 204);
   }
   footer .content .link-boxes{
     width: 100%;
@@ -91,7 +91,7 @@ footer{
     width: calc(100% / 5 - 10px);
   }
   .content .link-boxes .box .link_name{
-    color: #fff;
+    color: rgb(255, 236, 204);
     font-size: 18px;
     font-weight: 400;
     margin-bottom: 10px;
@@ -111,7 +111,7 @@ footer{
     list-style: none;
   }
   .content .link-boxes .box li a{
-    color: #fff;
+    color: rgb(255, 236, 204);
     font-size: 14px;
     font-weight: 400;
     text-decoration: none;
@@ -142,7 +142,7 @@ footer{
     font-size: 16px;
   }
   .link-boxes .input-box input[type="button"]{
-    background: #fff;
+    background: rgb(255, 236, 204);
     color: #140B5C;
     border: none;
     font-size: 18px;
@@ -157,7 +157,7 @@ footer{
   }
   footer .bottom-details{
     width: 100%;
-    background: black;
+    background:#7b2c74
     
   }
   footer .bottom-details .bottom_text{
@@ -170,9 +170,9 @@ footer{
   .bottom-details .bottom_text span,
   .bottom-details .bottom_text a{
     font-size: 14px;
-    font-weight: 300;
-    color: #fff;
-    opacity: 0.8;
+    font-weight: 500;
+    color: rgb(255, 236, 204);
+    opacity: 0.9;
     text-decoration: none;
   }
   .bottom-details .bottom_text a:hover{

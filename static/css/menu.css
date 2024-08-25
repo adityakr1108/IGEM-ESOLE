@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 
-body {
+/* body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-}
+} */
 
 header {
     display: flex;
@@ -16,12 +16,16 @@ header {
 
 .nav {
     width: 100%;
-    background-color: #0b0b0b;
-    border-radius: 10px 10px 30px 30px; 
+    background-color: #ce4ac3;
+    border-radius: 10px 10px 30px 30px;
     padding: 5px 0;
     box-sizing: border-box;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    border-color: #000;
+    border-style: solid; /* Ensure this is set */
+    border-width: 2px; /* Reduced from 10px */
+    /* overflow: hidden; */
 }
+
 
 .nav ul {
     list-style: none;
@@ -37,131 +41,63 @@ header {
     margin: 5px 10px;
 }
 
-.nav ul li a {
-    color: white;
+.nav ul li  {
+    color: rgb(255, 236, 204) !important; /* Overrides other color styles */
     text-decoration: none;
     padding: 10px 15px;
     display: block;
     transition: background-color 0.4s;
     border-radius: 5px;
     text-align: center;
+    font-weight: 700;
+    font-size: 1em;
+    background-color: #ce4ac3; /* Set the background color explicitly */
 }
+
+
 
 .nav ul li a:hover {
-    background-color: #f0f0f0;
-    color: #000;    
+    /* background-color: rgb(255, 236, 204) !important; Light background on hover */
+    color: #000000 !important; /* Text color change on hover */
+    border-radius: 10px;
+    cursor: pointer;
+    
 }
 
-.dropdown-content,
-.nested-dropdown-content {
+.dropdown-content {
     display: none;
     position: absolute;
-    background-color: #282828;
-    border-radius: 5px;
+    background-color: rgb(255, 236, 204); /* Set background color as specified */
+    border-radius: 10px;
+    left: 50%;
+    transform: translateX(-50%);
     min-width: 200px;
-    z-index: 0;    body {
-        font-family: 'Poppins', sans-serif;
-        margin: 0;
-        padding: 0;
-    }
-    
-    header {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 10px 0;
-        width: 100%;
-    }
-    
-    .nav {
-        width: 100%;
-        background-color: #0b0b0b;
-        border-radius: 10px 10px 30px 30px; 
-        padding: 5px 0;
-        box-sizing: border-box;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    }
-    
-    .nav ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-    
-    .nav ul li {
-        position: relative; /* Ensure the dropdown content is positioned relative to the parent */
-    }
-    
-    .nav ul li a {
-        color: white;
-        text-decoration: none;
-        padding: 10px 20px;
-        display: block;
-    }
-    
-    .nav ul li:hover > a {
-        background-color: #333;
-    }
-    
-    .nav ul li .dropdown-content {
-        display: none; /* Hide dropdown content by default */
-        position: absolute;
-        background-color: #0b0b0b;
-        min-width: 160px;
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-        z-index: 1;
-        border-radius: 0 0 10px 10px;
-    }
-    
-    .nav ul li .dropdown-content a {
-        color: white;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-    }
-    
-    .nav ul li .dropdown-content a:hover {
-        background-color: #575757;
-    }
-    
-    .nav ul li:hover .dropdown-content {
-        display: block; /* Show dropdown content on hover */
-    }
+    z-index: 1;
+    border-color: #000; /* Black border color */
+    border-style: solid; /* Ensure border style is set */
+    border-width: 2px; /* Define border width */
 }
-
-.dropdown:hover .dropdown-content,
-.dropdown-content:hover,
-.dropdown-content:hover .nested-dropdown-content {
+/* 
+.dropdown:hover .dropdown-content {
     display: block;
-}
-
-.nested-dropdown-content {
-    left: 100%;
-    top: 0;
-}
-
-.description-link:hover + .nested-dropdown-content,
-.design-link:hover + .nested-dropdown-content,
-.model-link:hover + .nested-dropdown-content,
-.nested-dropdown-content:hover {
-    display: block;
-}
-
-.dropdown-content a,
-.nested-dropdown-content a {
-    color: white;
+} */
+.dropdown-content a {
+    color: rgb(0, 0, 0) !important; /* Ensures text color is black, with override */
     padding: 10px;
     text-decoration: none;
     display: block;
     text-align: center;
+    background-color: transparent !important; /* Ensures no background interference */
 }
 
-.dropdown-content a:hover,
-.nested-dropdown-content a:hover {
-    background-color: #3a3a3a;
+.dropdown-content a:hover {
+    background-color: rgb(255, 236, 204) !important; /* Light background on hover */
+    color: #ce4ac3 !important; /* Text color change on hover */
+    border-radius: 10px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
 }
 
 @media (max-width: 768px) {
@@ -174,8 +110,7 @@ header {
         width: 100%;
     }
 
-    .dropdown-content,
-    .nested-dropdown-content {
+    .dropdown-content {
         position: static;
         transform: none;
         min-width: 100%;
