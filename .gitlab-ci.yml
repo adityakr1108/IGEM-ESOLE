@@ -1,38 +1,21 @@
 image: python:3.6
 
-stages:
-  - build
-  - deploy
-
-install_dependencies:
+build:
   stage: build
   script:
-    - pip install --upgrade pip
     - pip install --no-cache-dir -r dependencies.txt
-  cache:
-    paths:
-      - .cache/pip
-  only:
-    - branches
+    - FLASK_APP=app.py flask freeze
+  rules:
+    - if: $CI_COMMIT_BRANCH != $CI_DEFAULT_BRANCH
 
-build_site:
+
+pages:
   stage: build
   script:
+    - pip install --no-cache-dir -r dependencies.txt
     - FLASK_APP=app.py flask freeze
   artifacts:
     paths:
       - public
   rules:
-    - if: '$CI_COMMIT_BRANCH != $CI_DEFAULT_BRANCH'
-    - when: never
-    allow_failure: true
-
-deploy_pages:
-  stage: deploy
-  script:
-    - FLASK_APP=app.py flask freeze
-  artifacts:
-    paths:
-      - public
-  rules:
-    - if: '$CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH'
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
