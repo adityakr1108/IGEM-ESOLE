@@ -11,6 +11,7 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
+    /* background-image: url('https://static.igem.wiki/teams/5425/dall-e-2024-08-27-00-08-38-a-visually-striking-rectangular-image-suitable-for-a-hero-section-depicting-a-modern-experimental-laboratory-environment-the-lab-features-sleek-sta.webp'); */
 }
 
 #scrollToTopBtn:hover {
@@ -59,7 +60,7 @@ body {
     background-attachment: fixed; /* This makes the background image fixed */
     min-height: 100vh;
     position: relative;
-    padding: 130px 0; /* Adjust the padding to reduce space */
+    padding: 60px 0; /* Adjust the padding to reduce space */
     text-align: center;
     min-height: 50vh;
 }
@@ -107,7 +108,7 @@ body {
     font-size: 8em; /* Keep the font size large */
     font-family: 'Bubblegum Sans'; /* Keep the font family */
     font-weight: bold;
-    padding-top: 80px;
+    padding-top: 60px;
     color: #c9bfbf; /* Use white color for contrast */
     text-shadow: 3px 3px 5px #de5757; /* Add a shadow for a vintage effect */
     letter-spacing: 2px; /* Increase spacing for a vintage feel */
@@ -121,6 +122,7 @@ body {
     text-shadow: 5px 5px 0px rgba(0, 0, 0, 0.5); /* Strong shadow for depth */
     transform: skew(-10deg); /* Add a slight skew for a retro feel */
     position: relative;
+    padding-top: 90px;
 }
 
 /* Adding a retro gradient background */
@@ -178,7 +180,7 @@ body {
     transition: all 0.3s ease-in-out;
 }
 
-/* Animations */
+/* Animations  */
 @keyframes fadeIn {
     from {
       opacity: 0;
