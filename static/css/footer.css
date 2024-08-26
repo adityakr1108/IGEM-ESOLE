@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 
 footer{
-  background-color: #ce4ac3; /* Example background color */
+  background-color: #b733c3; /* Example background color */
   padding: 10px 0;
   text-align: center;
   position: relative;
-  bottom: -360px;
+  bottom: 0%;
   width: 100%;
   }
   
