@@ -25,44 +25,8 @@
   </section>
 </div>
 
-<button id="scrollToTopBtn" onclick="scrollToTop()">&#8679;</button>
 
-<script>
-    const heroButtons = document.getElementById('hero-buttons');
-    const collapsedIcon = document.getElementById('collapsed-icon');
-    const dropdownMenu = document.getElementById('dropdown-menu');
-    const scrollToTopBtn = document.getElementById('scrollToTopBtn');
 
-    window.onscroll = function() {
-        // Toggle hero-buttons and dropdown menu
-        if (window.scrollY > 200) {
-            heroButtons.style.display = 'none';
-            collapsedIcon.style.display = 'block';
-        } else {
-            heroButtons.style.display = 'flex';
-            collapsedIcon.style.display = 'none';
-            dropdownMenu.style.display = 'none'; // Hide dropdown when scrolling back up
-        }
-
-        // Show/Hide scroll to top button
-        if (window.scrollY > 600) {
-            scrollToTopBtn.style.display = 'block';
-        } else {
-            scrollToTopBtn.style.display = 'none';
-        }
-    };
-
-    function scrollToSection(sectionId) {
-        const section = document.getElementById(sectionId);
-        section.scrollIntoView({ behavior: 'smooth' });
-        dropdownMenu.style.display = 'none'; // Hide dropdown after selecting
-    }
-
-    function scrollToTop() {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-
-</script>
 
 <link rel="stylesheet" href="{{ url_for('static', filename='css/notebook.css') }}?v={{ current_time }}">
 <link href='https://fonts.googleapis.com/css?family=Bubblegum Sans' rel='stylesheet'>
