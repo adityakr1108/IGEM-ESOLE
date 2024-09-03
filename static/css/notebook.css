@@ -1,6 +1,6 @@
 :root {
     --primary-bg-color: #ce4ac3;
-    --primary-text-color: rgb(255, 236, 204);
+    --primary-text-color: #c9bfbf;
     --secondary-bg-color: rgb(255, 236, 204);
     --border-radius: 20px;
     --transition-duration: 0.5s;
@@ -11,7 +11,6 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    /* background-image: url('https://static.igem.wiki/teams/5425/dall-e-2024-08-27-00-08-38-a-visually-striking-rectangular-image-suitable-for-a-hero-section-depicting-a-modern-experimental-laboratory-environment-the-lab-features-sleek-sta.webp'); */
 }
 
 #scrollToTopBtn:hover {
@@ -33,23 +32,19 @@ body {
     transition: all 0.3s ease-in-out;
 }
 
-#scrollToTopBtn:hover {
-    transform: scale(1.1);
-}
-
 .styled-iframe {
     width: 95%;
     height: 700px;
     margin: 30px 40px 5px;
-    border: 2px solid #ccc; /* Add a border */
-    border-radius: 10px; /* Add rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for hover effect */
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .styled-iframe:hover {
-    transform: scale(1.02); /* Slightly enlarge on hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .hero {
@@ -57,101 +52,99 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed; /* This makes the background image fixed */
+    background-attachment: fixed;
     min-height: 100vh;
     position: relative;
-    padding: 60px 0; /* Adjust the padding to reduce space */
+    padding: 60px 0;
     text-align: center;
     min-height: 50vh;
 }
 
-.button {
-    align-items: center;
-    border-radius: var(--border-radius);
-    padding: 10px 20px;
-    font-weight: bold;
-    font-size: 2em;
-    cursor: pointer;
-    background-color: var(--primary-text-color);
-    color: var(--primary-bg-color);
-    border: 2px solid var(--primary-bg-color);
-    /* transition: all var(--transition-duration) ease; */
-}
-
-.button:hover {
-    background-color: var(--primary-bg-color);
-    color: var(--primary-text-color);
-    border-color: var(--primary-text-color);
-    transform: scale(1.05);
-}
-
-.page-container {
-    display: flex;
-    gap: 40px;
-    max-width: 1200px;
-    margin: 0 auto;
-    /* padding: 20px; */
-    background-color: #fff;
-    border-radius: var(--border-radius);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.right-content {
-    flex: 1;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: var(--border-radius);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-#design {
-    font-size: 8em; /* Keep the font size large */
-    font-family: 'Bubblegum Sans'; /* Keep the font family */
-    font-weight: bold;
-    padding-top: 60px;
-    color: #c9bfbf; /* Use white color for contrast */
-    text-shadow: 3px 3px 5px #de5757; /* Add a shadow for a vintage effect */
-    letter-spacing: 2px; /* Increase spacing for a vintage feel */
-}
-
-/* Add a vintage style */
-.vintage {
-    font-family: 'Pacifico', cursive; /* Use a cursive font for a vintage look */
-    font-size: 8em; /* Adjust size as needed */
-    color: #472626; /* White color for the text */
-    text-shadow: 5px 5px 0px rgba(0, 0, 0, 0.5); /* Strong shadow for depth */
-    transform: skew(-10deg); /* Add a slight skew for a retro feel */
-    position: relative;
-    padding-top: 90px;
-}
-
-/* Adding a retro gradient background */
-.vintage::before {
-    content: '';
-    position: absolute;
-    top: -10px;
-    left: -10px;
-    right: -10px;
-    bottom: -10px;
-    /* background: linear-gradient(45deg, #ff7e5f, #feb47b); Gradient background */
-    z-index: -1;
-    transform: skew(10deg); /* Counteract the text skew */
-    border-radius: var(--border-radius);
-}
-
-/* Apply hover effect */
-.vintage:hover {
-    text-shadow: 7px 7px 0px rgba(0, 0, 0, 0.8); /* Enhance shadow on hover */
-    transform: skew(-8deg) scale(1.02); /* Slightly enlarge and reduce skew on hover */
-}
-
 .hero-buttons {
     position: absolute;
-    bottom: 20px; /* Adjust as needed */
+    bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    gap: 10px; /* Space between buttons */
+    gap: 10px;
+}
+
+/* Updated Button Design */
+.button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #c9bfbf;
+    background-color: #908e8e;
+    border: 2px solid #de5757;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hover Effect */
+.button:hover {
+    color: #472626;
+    background-color: #c9bfbf;
+    border-color: #472626;
+    transform: scale(1.05);
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+    box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.5);
+}
+
+/* Button Active State */
+.button:active {
+    transform: scale(0.95);
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4);
+    background-color: #de5757;
+    color: #ffffff;
+    border-color: #c9bfbf;
+}
+
+#design {
+    font-size: 8em;
+    font-family: 'Bubblegum Sans', cursive;
+    font-weight: bold;
+    color: #c9bfbf;
+    letter-spacing: 2px;
+    padding-top: 60px;
+    text-shadow: 3px 3px 10px #e30b0b;
+    text-transform: uppercase;
+    text-decoration: underline wavy;
+    animation: fadeIn 2s ease-in-out 1, retroHover 3s infinite alternate ease-in-out;
+}
+
+/* New Retro Animation */
+@keyframes retroHover {
+    0% {
+        transform: skew(-10deg) scale(1);
+        text-shadow: 5px 5px 0px rgba(0, 0, 0, 0.5);
+    }
+    50% {
+        transform: skew(-8deg) scale(1.02);
+        text-shadow: 7px 7px 0px rgba(0, 0, 0, 0.7);
+    }
+    100% {
+        transform: skew(-10deg) scale(1);
+        text-shadow: 5px 5px 0px rgba(0, 0, 0, 0.5);
+    }
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .content-section {
@@ -178,14 +171,4 @@ body {
 .content-section:hover h2 {
     color: var(--primary-text-color);
     transition: all 0.3s ease-in-out;
-}
-
-/* Animations  */
-@keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
 }
