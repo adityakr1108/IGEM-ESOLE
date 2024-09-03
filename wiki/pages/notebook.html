@@ -2,7 +2,7 @@
 {% block title %}Design{% endblock %}
 {% block page_content %}
 <section class="hero">
-    <h1 id="design" class="vintage">NoteBook</h1>
+    <h1 id="design" class="vintage"></h1>
     <div class="hero-buttons" id="hero-buttons">
         <button class="button" id="button1" onclick="scrollToSection('section1')">Records</button>
         <button class="button" id="button2" onclick="scrollToSection('section2')" aria-label="Go to Section 2">Parameters</button>
@@ -32,6 +32,57 @@
         const section = document.getElementById(sectionId);
         section.scrollIntoView({ behavior: 'smooth' });
     } 
+
+    const designElement = document.getElementById('design');
+designElement.style.setProperty('--random1', Math.random());
+designElement.style.setProperty('--random2', Math.random());
+designElement.style.setProperty('--random3', Math.random());
+designElement.style.setProperty('--random4', Math.random());
+
+
+    const text = "Notebook";
+const animatedText = document.getElementById('design');
+
+let jumbledText = Array(text.length).fill('_');
+let typedIndexes = [];
+
+function randomTypingEffect() {
+    if (typedIndexes.length < text.length) {
+        // Find a random position that hasn't been typed yet
+        let index;
+        do {
+            index = Math.floor(Math.random() * text.length);
+        } while (typedIndexes.includes(index));
+
+        // Insert the character at the random position
+        jumbledText[index] = text.charAt(index);
+        typedIndexes.push(index);
+
+        // Display the jumbled text
+        animatedText.innerHTML = jumbledText.join('');
+
+        // Randomize typing speed (between 50ms and 300ms)
+        let randomDelay = Math.floor(Math.random() * 250) + 50;
+        setTimeout(randomTypingEffect, randomDelay);
+    }
+}
+
+window.onload = randomTypingEffect;
+
+
+function eraseText() {
+    if (index > 0) {
+        animatedText.innerHTML = text.substring(0, index - 1);
+        index--;
+        setTimeout(eraseText, 100);
+    } else {
+        setTimeout(randomTypingEffect, 1000);
+    }
+
+}
+
+window.onload = randomTypingEffect;
+
 
 </script>
 
