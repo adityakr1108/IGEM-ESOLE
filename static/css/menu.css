@@ -51,7 +51,7 @@ header {
     text-align: center;
     font-weight: 700;
     font-size: 1em;
-    background-color: #ce4ac3; /* Set the background color explicitly */
+    background-color: #d7c8ed; /* Set the background color explicitly */
 }
 
 
@@ -92,7 +92,7 @@ header {
 
 .dropdown-content a:hover {
     background-color: rgb(255, 236, 204) !important; /* Light background on hover */
-    color: #ce4ac3 !important; /* Text color change on hover */
+    color: #d7c8ed !important; /* Text color change on hover */
     border-radius: 10px;
 }
 
