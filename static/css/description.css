@@ -1,7 +1,7 @@
 :root {
-  --primary-bg-color: #ce4ac3;
-  --primary-text-color: rgb(255, 236, 204);
-  --secondary-bg-color: rgb(255, 236, 204);
+  --primary-bg-color: #b29ce4;
+  --primary-text-color: #6e5b9a;
+  --secondary-bg-color: #D7C8eD;
   --border-radius: 20px;
   --transition-duration: 0.5s;
 }
