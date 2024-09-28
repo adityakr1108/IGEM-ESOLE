@@ -1,41 +1,130 @@
 {% extends "layout.html" %}
-  
-{% block title %}Model{% endblock %}
-{% block lead %}Explain your model's assumptions, data, parameters, and results in a way that anyone could understand.{% endblock %}
-
+{% block title %} Inclusivity {% endblock %}
 {% block page_content %}
-
-<div class="row mt-4">
-  <div class="col">
-    <div class="bd-callout bd-callout-info">
-      <h4>Best Model</h4>
-      <p>Models and computers simulations can help us understand the function and operation of BioBrick Parts and Devices. Simulation and modeling are critical engineering skills that can contribute to project design or provide a better understanding of the modeled process. These processes are even more useful and/or informative when real world data are included in the model. This award is for teams who build a model of their system and use it to inform system design or simulate expected behavior before, or in conjunction with, experiments in the wetlab.</p>
-      <p>To compete for the Best Model prize, select the prize on the <a href="https://competition.igem.org/deliverables/judging-form">judging form</a> and describe your work on this page.</p>
-      <hr>
-      <p>Please see the <a href="https://competition.igem.org/judging/awards">2024 Awards Page</a> for more information.</p>
-    </div>
-  </div>
+<div class="head py-10 px-4 bg-gray-50">
+    <h3 class="text-5xl font-bold text-center mt-20" style="font-family: 'Times New Roman', Times, serif;">
+      Inclusivity
+    </h3>
+    <p class="text-lg mt-4 p-6 bg-white rounded-lg shadow-md" style="font-family: Arial, Helvetica, sans-serif; background-color: rgba(146, 146, 146, 0.1);">
+      In a country as vast and varied as India, no one solution fits all. We quickly realized that to make our E. Solei project truly impactful, we needed to embrace the rich cultural, linguistic, and geographical diversity of the nation. As one team member aptly put it, “Understanding the unique challenges faced by different regions is not just important—it’s essential for designing solutions that work for everyone.” With this belief guiding us, we took deliberate steps to ensure our project was as inclusive and accessible as possible, reaching people across different states, languages, and socio-economic backgrounds.
+    </p>
 </div>
 
-<div class="row mt-4">
-  <div class="col-lg-8">
-    <h2>Overview</h2>
-    <hr>
-    <p>Mathematical models and computer simulations provide a great way to describe the function and operation of Parts and Devices. Synthetic Biology is an engineering discipline, and part of engineering is simulation and modeling to determine the behavior of your design before you build it. Designing and simulating can be iterated many times in a computer before moving to the lab.</p>
-  </div>
-  <div class="col-lg-4">
-    <h2>Inspirations</h2>
-    <hr>
-    <ul>
-      <li><a href="http://2018.igem.org/Team:GreatBay_China/Model">2018 GreatBay China</a></li>
-      <li><a href="http://2018.igem.org/Team:Leiden/Model">2018 Leiden</a></li>
-      <li><a href="https://2019.igem.org/Team:IISER_Kolkata/Model">2019 IISER Kolkata</a></li>
-      <li><a href="https://2019.igem.org/Team:Exeter/Model">2019 Exeter</a></li>
-      <li><a href="https://2019.igem.org/Team:Mingdao/Model">2019 Mingdao</a></li>
-      <li><a href="https://2020.igem.org/Team:Harvard/Model">2020 Harvard</a></li>
-      <li><a href="https://2020.igem.org/Team:Leiden/Model">2020 Leiden</a></li>
+<!-- Index Section -->
+<div class="index-section fixed left-0 top-1/3 bg-white shadow-md p-4 ml-5 border rounded-md">
+    <ul class="list-disc space-y-4">
+        <li><a href="#terrain-section" class="hover:text-blue-600">Exploring the Terrain</a></li>
+        <li><a href="#athletes-section" class="hover:text-blue-600">Understanding Athletes' Footwear Needs</a></li>
+        <li><a href="#ek-pehel-section" class="hover:text-blue-600">Ek Pehel Outreach</a></li>
+        <li><a href="#linguistic-diversity-section" class="hover:text-blue-600">Embracing Linguistic Diversity</a></li>
+        <li><a href="#lgbtq-contributions-section" class="hover:text-blue-600">Celebrating LGBTQ+ Contributions</a></li>
     </ul>
-  </div>
 </div>
+
+<section id="terrain-section" class="terrian_section ml-64">
+    <div class="terrian">
+        <h3 class="text-2xl font-bold ml-10" style="font-family: 'Times New Roman', Times, serif;">1. Exploring the Terrain: Understanding Regional Challenges</h3>
+        <p class="text-lg mb-2 ml-5">Understanding that foot health varies across environments, we expanded our interviews to different states in India to capture regional challenges.</p>
+        <ol class="list-decimal ml-10">
+            <li>Kerala, known for its humid climate and high incidence of fungal infections.</li>
+            <li>Kashmir, where cold climates necessitate wearing shoes indoors for warmth, causing foot moisture issues.</li>
+            <li>Gujarat's coastal regions, where humidity and salt exposure impact foot health.</li>
+            <li>West Bengal, where corporate professionals wear formal shoes as part of their daily routine.</li>
+            <li>Punjab, focusing on athletes who push their feet to the limits.</li>
+        </ol>
+        <p class="text-lg mt-4 ml-10">These insights allowed us to tailor our solutions to the specific needs of each region.</p>
+
+        <!-- Image with Border and Aligned Right -->
+        <div class="border-2 border-gray-300 rounded-lg p-2 w-1/2 float-right mr-10">
+            <img src="https://static.igem.wiki/teams/5425/human-practices/india-removebg.png" usemap="#image-map" class="w-full rounded-lg">
+        </div>
+
+        <map name="image-map">
+            <area target="" alt="Jammu And Kashmir" title="Jammu And Kashmir" href="#jammu-slide" coords="349,94,331,96,302,107,314,124,329,131,326,144,313,162,330,186,366,196,384,176,421,184,450,191,450,154,471,135,462,116,410,132,375,122,362,108" shape="poly">
+            <area target="" alt="West Bengal" title="West Bengal" href="#west-bengal-slide" coords="703,402,697,393,675,404,665,421,659,428,669,447,677,453,687,465,706,462,721,462,721,450,719,435,714,419,713,412" shape="poly">
+            <area target="" alt="Kerela" title="Kerela" href="#kerela-slide" coords="334,759,343,751,359,769,369,788,378,805,385,833,370,835,358,814,346,776,350,784,353,792,357,798" shape="poly">
+            <area target="" alt="Gujrat" title="Gujrat" href="#gujarat-slide" coords="167,413,186,415,196,415,205,415,220,412,226,408,241,404,251,404,262,407,271,412,281,419,289,428,308,439,291,451,290,461,295,470,291,477,287,484,279,510,264,509,264,492,264,476,264,466,255,457,248,460,248,466,248,476,236,490,223,497,205,499,195,491,187,488,175,479,165,472,175,468,185,466,193,462,197,453,205,441,190,441,180,444,165,442,157,431,146,424,154,418,163,415" shape="poly">
+        </map>
+
+        <!-- Slides for each region -->
+        <div id="jammu-slide" class="region-slide hidden transition-opacity duration-500">Jammu and Kashmir insights...</div>
+        <div id="west-bengal-slide" class="region-slide hidden transition-opacity duration-500">West Bengal insights...</div>
+        <div id="kerela-slide" class="region-slide hidden transition-opacity duration-500">Kerela insights...</div>
+        <div id="gujarat-slide" class="region-slide hidden transition-opacity duration-500">Gujarat insights...</div>
+    </div>
+</section>
+
+<!-- New Section: Athletes' Footwear -->
+<section id="athletes-section" class="ml-64 mt-10">
+    <h3 class="text-2xl font-bold ml-10" style="font-family: 'Times New Roman', Times, serif;">2. Understanding Athletes' Footwear Needs: Insights from Coaches and Athletes</h3>
+    <p class="text-lg mb-2 ml-5">
+        In our quest to make our project truly inclusive, we turned our attention to athletes—individuals whose feet bear the brunt of immense strain and pressure on a daily basis.
+        To dive deeper into the crucial role that footwear plays in their lives, we held insightful interviews with three seasoned athletic coaches from football, badminton, and kabaddi, along with various athletes from Maharaja Bhupinder Singh University in Patiala.
+    </p>
+    <p class="text-lg mb-2 ml-5">
+        These discussions revealed just how vital proper footwear is—not just for performance, but for injury prevention and long-term foot health. For athletes pushing their physical limits day in and day out, the right footwear can make all the difference.
+    </p>
+</section>
+
+<!-- New Section: Ek Pehel Outreach -->
+<section id="ek-pehel-section" class="ml-64 mt-10">
+    <h3 class="text-2xl font-bold ml-10" style="font-family: 'Times New Roman', Times, serif;">3. Ek Pehel Outreach: Bringing Science to Underprivileged Children</h3>
+    <p class="text-lg mb-2 ml-5">
+        As part of our inclusivity efforts, we believe that education should be accessible to everyone, especially those with limited resources. 
+        To achieve this, we partnered with the Ek Pehel initiative at IISER Kolkata, which focuses on educating children from underprivileged backgrounds.
+    </p>
+</section>
+
+<!-- New Section: Linguistic Diversity -->
+<section id="linguistic-diversity-section" class="ml-64 mt-10">
+    <h3 class="text-2xl font-bold ml-10" style="font-family: 'Times New Roman', Times, serif;">4. Embracing Linguistic Diversity: Translating Surveys for Inclusivity</h3>
+    <p class="text-lg mb-2 ml-5">
+        Recognizing India's vast linguistic diversity, we made sure our project was accessible to a broader audience by translating our survey questions into four regional languages—Kashmiri, Malayalam, Bengali, Punjabi, and Gujarati.
+    </p>
+</section>
+
+<!-- New Section: LGBTQ+ Contributions -->
+<section id="lgbtq-contributions-section" class="ml-64 mt-10">
+    <h3 class="text-2xl font-bold ml-10" style="font-family: 'Times New Roman', Times, serif;">5. Celebrating Diversity: Honoring LGBTQ+ Contributions to Science</h3>
+    <p class="text-lg mb-2 ml-5">
+        As part of our inclusivity efforts, during Pride Month, we took to Instagram to highlight the remarkable contributions and inspiring stories of individuals from the LGBTQ+ community in the world of science.
+    </p>
+</section>
+
+<script>
+    // JavaScript to handle scroll-based navigation and region slides
+    const indexLinks = document.querySelectorAll('.index-section a');
+    const regionSlides = document.querySelectorAll('.region-slide');
+
+    // Smooth scroll for index links
+    indexLinks.forEach(link => {
+        link.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(link.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+        });
+    });
+
+    // Highlight the index link as per scroll position
+    window.addEventListener('scroll', function () {
+        indexLinks.forEach(link => {
+            const section = document.querySelector(link.getAttribute('href'));
+            if (section.getBoundingClientRect().top < window.innerHeight && section.getBoundingClientRect().bottom >= 0) {
+                link.classList.add('active');
+            } else {
+                link.classList.remove('active');
+            }
+        });
+    });
+
+    // Show the corresponding slide when map region is clicked
+    document.querySelectorAll('area').forEach(area => {
+        area.addEventListener('click', function (e) {
+            e.preventDefault();
+            const slideId = area.getAttribute('href');
+            regionSlides.forEach(slide => slide.classList.add('hidden'));
+            document.querySelector(slideId).classList.remove('hidden');
+        });
+    });
+</script>
 
 {% endblock %}
