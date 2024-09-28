@@ -50,6 +50,32 @@
             color: transparent;
         }  
     </style>
+    <style>
+      #scroll-indicator-container {
+        z-index: 1000;
+        right: 40px;
+        width: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        /* overflow: hidden; Hide overflow to keep the icon within the container */
+      }
+      #scroll-indicator {
+        transition: height 0.1s ease-out, background-color 0.3s ease;
+        position: relative; /* Add this to contain the absolute positioning of scroll-stick */
+      }
+      #scroll-stick {
+        transition: top 0.1s ease-out;
+        width: 100px;
+        height: 100px;
+        left: 50%; /* Center horizontally */
+        transform: translateX(-50%); /* Adjust for exact centering */
+        top: -00px;
+        background-image: url("https://static.igem.wiki/teams/5425/foot-on-sole.png");
+        background-size: contain; /* Changed from cover to contain */
+        background-repeat: no-repeat;
+        background-position: center;
+        /* position: absolute; Ensure absolute positioning */
+      }
+    </style>
   </head>
   <body class="flex flex-col min-h-screen bg-gray-100 text-gray-800">
     {% include 'menu.html' %}

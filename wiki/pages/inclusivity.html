@@ -1,38 +1,117 @@
 {% extends "layout.html" %}
-  
-{% block title %}Diversity and Inclusion{% endblock %}
-{% block lead %}Every individual, regardless of background or experience, should have an equal opportunity to engage with scientific knowledge and technological development.{% endblock %}
+
+{% block title %}Inclusivity{% endblock %}
 
 {% block page_content %}
-
-<div class="row mt-4">
-  <div class="col">
-    <div class="bd-callout bd-callout-info">
-      <h4>Inclusivity Award</h4>
-      <p>The Inclusivity Award recognizes exceptional efforts to include people with diverse identities in scientific research. Who is allowed to have a voice in iGEM, synthetic biology, and science more broadly? How have you developed new opportunities to eliminate barriers and allow more people to contribute to, participate in, and/or be represented by these communities? To compete for this prize, activities do not have to be directly related to your team’s project. Document your approach, how you improved inclusivity, and what was learned.</p>
-      <p>To compete for the Inclusivity award, select the prize on the <a href="https://competition.igem.org/deliverables/judging-form">judging form</a> and describe your work on this page.</p>
-      <hr>
-      <p>Please see the <a href="https://competition.igem.org/judging/awards">2024 Awards Page</a> for more information.</p>
+<div class="container mx-auto px-4 py-10">
+    <div class="head bg-gray-50">
+        <h3 class="text-5xl font-bold text-center mt-20" style="font-family: 'Times New Roman', Times, serif;">
+            Inclusivity
+        </h3>
+        <p class="text-lg mt-4 p-6 bg-white rounded-lg shadow-md" style="font-family: Arial, Helvetica, sans-serif; background-color: rgba(146, 146, 146, 0.1);">
+            In a country as vast and varied as India, no one solution fits all. We quickly realized that to make our E. Solei project truly impactful, we needed to embrace the rich cultural, linguistic, and geographical diversity of the nation. As one team member aptly put it, “Understanding the unique challenges faced by different regions is not just important—it’s essential for designing solutions that work for everyone.” With this belief guiding us, we took deliberate steps to ensure our project was as inclusive and accessible as possible, reaching people across different states, languages, and socio-economic backgrounds.
+        </p>
     </div>
-  </div>
+
+    <!-- Terrain Section -->
+    <section id="terrain-section" class="ml-72 mt-10">
+        <div class="terrain">
+            <h3 class="text-2xl font-bold mb-4" style="font-family: 'Times New Roman', Times, serif;">1. Exploring the Terrain: Understanding Regional Challenges</h3>
+            <p class="text-lg mb-4">
+                Understanding that foot health varies across environments, we expanded our interviews to different states in India to capture regional challenges.
+            </p>
+
+            <!-- Image with Border and Aligned Right -->
+            <div class="border-2 border-gray-300 rounded-lg p-2 w-full md:w-1/2 float-right ml-4">
+                <img src="https://static.igem.wiki/teams/5425/human-practices/india-removebg.png" usemap="#image-map" class="w-full rounded-lg">
+            </div>
+
+            <!-- Image Map -->
+            <map name="image-map">
+                <area target="" alt="Jammu And Kashmir" title="Jammu And Kashmir" href="#jammu-card" coords="349,94,331,96,302,107,314,124,329,131,326,144,313,162,330,186,366,196,384,176,421,184,450,191,450,154,471,135,462,116,410,132,375,122,362,108" shape="poly">
+                <area target="" alt="West Bengal" title="West Bengal" href="#west-bengal-card" coords="703,402,697,393,675,404,665,421,659,428,669,447,677,453,687,465,706,462,721,462,721,450,719,435,714,419,713,412" shape="poly">
+                <area target="" alt="Kerela" title="Kerela" href="#kerela-card" coords="334,759,343,751,359,769,369,788,378,805,385,833,370,835,358,814,346,776,350,784,353,792,357,798" shape="poly">
+                <area target="" alt="Gujrat" title="Gujrat" href="#gujarat-card" coords="167,413,186,415,196,415,205,415,220,412,226,408,241,404,251,404,262,407,271,412,281,419,289,428,308,439,291,451,290,461,295,470,291,477,287,484,279,510,264,509,264,492,264,476,264,466,255,457,248,460,248,466,248,476,236,490,223,497,205,499,195,491,187,488,175,479,165,472,175,468,185,466,193,462,197,453,205,441,190,441,180,444,165,442,157,431,146,424,154,418,163,415" shape="poly">
+            </map>
+
+            <!-- Cards Section -->
+            <div id="cards-container" class="space-y-8 mt-10">
+
+                <!-- Card for Jammu and Kashmir -->
+                <div id="jammu-card" class="card hidden border border-gray-300 rounded-lg p-6 shadow-md bg-white">
+                    <h4 class="text-2xl font-bold mb-2">Jammu and Kashmir Insights</h4>
+                    <p class="text-lg">In Jammu and Kashmir, cold climates necessitate wearing shoes indoors for warmth, causing foot moisture issues. These insights have helped tailor region-specific solutions for footwear needs in colder environments.</p>
+                </div>
+
+                <!-- Card for West Bengal -->
+                <div id="west-bengal-card" class="card hidden border border-gray-300 rounded-lg p-6 shadow-md bg-white">
+                    <h4 class="text-2xl font-bold mb-2">West Bengal Insights</h4>
+                    <p class="text-lg">In West Bengal, where corporate professionals wear formal shoes as part of their daily routine, the importance of comfort and foot health in office environments was highlighted.</p>
+                </div>
+
+                <!-- Card for Kerala -->
+                <div id="kerela-card" class="card hidden border border-gray-300 rounded-lg p-6 shadow-md bg-white">
+                    <h4 class="text-2xl font-bold mb-2">Kerala Insights</h4>
+                    <p class="text-lg">Kerala's humid climate contributes to a high incidence of fungal infections. We developed moisture-wicking footwear solutions specific to this region.</p>
+                </div>
+
+                <!-- Card for Gujarat -->
+                <div id="gujarat-card" class="card hidden border border-gray-300 rounded-lg p-6 shadow-md bg-white">
+                    <h4 class="text-2xl font-bold mb-2">Gujarat Insights</h4>
+                    <p class="text-lg">In Gujarat's coastal regions, humidity and salt exposure affect foot health. We explored materials that are resistant to these conditions.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Athletes' Footwear Section -->
+    <section id="athletes-section" class="ml-72 mt-10 border border-gray-300 rounded-lg p-6 shadow-md bg-white">
+        <h3 class="text-2xl font-bold mb-4" style="font-family: 'Times New Roman', Times, serif;">2. Understanding Athletes' Footwear Needs: Insights from Coaches and Athletes</h3>
+        <p class="text-lg mb-2">
+            We turned our attention to athletes—individuals whose feet bear the brunt of immense strain on a daily basis. Interviews with athletic coaches and athletes revealed the importance of proper footwear for performance and injury prevention.
+        </p>
+    </section>
+
+    <!-- Ek Pehel Outreach Section -->
+    <section id="ek-pehel-section" class="ml-72 mt-10 border border-gray-300 rounded-lg p-6 shadow-md bg-white">
+        <h3 class="text-2xl font-bold mb-4" style="font-family: 'Times New Roman', Times, serif;">3. Ek Pehel Outreach: Bringing Science to Underprivileged Children</h3>
+        <p class="text-lg mb-2">
+            We partnered with the Ek Pehel initiative at IISER Kolkata to provide education to underprivileged children, ensuring that science education reaches those with limited resources.
+        </p>
+    </section>
+
+    <!-- Linguistic Diversity Section -->
+    <section id="linguistic-diversity-section" class="ml-72 mt-10 border border-gray-300 rounded-lg p-6 shadow-md bg-white">
+        <h3 class="text-2xl font-bold mb-4" style="font-family: 'Times New Roman', Times, serif;">4. Embracing Linguistic Diversity: Translating Surveys for Inclusivity</h3>
+        <p class="text-lg mb-2">
+            We translated our surveys into Kashmiri, Malayalam, Bengali, Punjabi, and Gujarati to ensure broader accessibility across linguistic barriers.
+        </p>
+    </section>
+
+    <!-- LGBTQ+ Contributions Section -->
+    <section id="lgbtq-contributions-section" class="ml-72 mt-10 border border-gray-300 rounded-lg p-6 shadow-md bg-white">
+        <h3 class="text-2xl font-bold mb-4" style="font-family: 'Times New Roman', Times, serif;">5. Celebrating LGBTQ+ Contributions to Science</h3>
+        <p class="text-lg mb-2">
+            During Pride Month, we celebrated the remarkable contributions of LGBTQ+ individuals in science through our social media platforms.
+        </p>
+    </section>
 </div>
 
-<div class="row mt-4">
-  <div class="col-lg-8">
-    <h2>Overview</h2>
-    <hr>
-    <p>We should all recognize the importance of building an open and welcoming scientific community. A more diverse community involved in creating knowledge and technology is more likely to produce a more equitable and representative system. Every individual, regardless of background or experience, should have an equal opportunity to engage with scientific knowledge and technological development. Everyone should be able to share their opinions on the societal implications of research.</p>
-  </div>
-  <div class="col-lg-4">
-    <h2>Inspirations</h2>
-    <hr>
-    <ul>
-      <li><a href="https://2020.igem.org/Team:Fudan/Inclusion">2020 Fudan</a></li>
-      <li><a href="https://2020.igem.org/Team:CCU_Taiwan/Inclusion">2020 CCU Taiwan</a></li>
-      <li><a href="https://2020.igem.org/Team:Concordia-Montreal/Inclusion">2020 Concordia Montreal</a></li>
-      <li><a href="https://2020.igem.org/Team:CLS_CLSG_UK/Inclusione">2020 CLS CLSG UK</a></li>
-    </ul>
-  </div>
-</div>
+<!-- JavaScript for Card Display -->
+<script>
+    const regionCards = document.querySelectorAll('.card');
+
+    // Show the corresponding card when map region is clicked
+    document.querySelectorAll('area').forEach(area => {
+        area.addEventListener('click', function (e) {
+            e.preventDefault();
+            const cardId = area.getAttribute('href');
+            regionCards.forEach(card => card.classList.add('hidden')); // Hide all cards
+            document.querySelector(cardId).classList.remove('hidden'); // Show the corresponding card
+            document.querySelector(cardId).scrollIntoView({ behavior: 'smooth' }); // Scroll to the card
+        });
+    });
+</script>
 
 {% endblock %}
