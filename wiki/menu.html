@@ -5,8 +5,8 @@
     </a>
     <div id="nav-menu" class="hidden lg:flex gap-10 text-lg">
         <!-- Home -->
-        <a href="/home" class="font-medium text-primary">Home</a>
-        
+        <a href="{{ url_for('home') }}" class="font-medium text-primary">Home</a>
+
         <!-- Team -->
         <div class="relative group">
             <a href="#" class="font-medium hover:text-primary">Team</a>
@@ -15,19 +15,19 @@
                 <a href="#" class="block px-4 py-2 hover:bg-gray-100">Attribution</a>
             </div>
         </div>
-        
+
         <!-- Project -->
         <div class="relative group">
             <a href="#" class="font-medium hover:text-primary">Project</a>
             <div class="dropdown-content hidden absolute bg-white shadow-md rounded-lg w-48 group-hover:block">
-                <a href="/description" class="block px-4 py-2 hover:bg-gray-100">Description</a>
+                <a href="{{ url_for('pages', page='description') }}" class="block px-4 py-2 hover:bg-gray-100">Description</a>
                 <a href="#" class="block px-4 py-2 hover:bg-gray-100">Design</a>
                 <a href="#" class="block px-4 py-2 hover:bg-gray-100">Engineering</a>
                 <a href="#" class="block px-4 py-2 hover:bg-gray-100">Contribution</a>
                 <a href="#" class="block px-4 py-2 hover:bg-gray-100">Implementation</a>
             </div>
         </div>
-        
+
         <!-- Wetlabs -->
         <div class="relative group">
             <a href="#" class="font-medium hover:text-primary">Wetlabs</a>
@@ -39,26 +39,26 @@
                 <a href="#" class="block px-4 py-2 hover:bg-gray-100">Safety</a>
             </div>
         </div>
-        
+
         <!-- Drylab -->
         <div class="relative group">
             <a href="#" class="font-medium hover:text-primary">Drylab</a>
             <div class="dropdown-content hidden absolute bg-white shadow-md rounded-lg w-48 group-hover:block">
-                <a href="/model" class="block px-4 py-2 hover:bg-gray-100">Model</a>
-                <a href="/software" class="block px-4 py-2 hover:bg-gray-100">Software</a>
+                <a href="{{ url_for('pages', page='model') }}" class="block px-4 py-2 hover:bg-gray-100">Model</a>
+                <a href="{{ url_for('pages', page='software') }}" class="block px-4 py-2 hover:bg-gray-100">Software</a>
             </div>
         </div>
-        
+
         <!-- Human Practices -->
         <div class="relative group">
             <a href="#" class="font-medium hover:text-primary">Human Practices</a>
             <div class="dropdown-content hidden absolute bg-white shadow-md rounded-lg w-48 group-hover:block">
-                <a href="/ihp" class="block px-4 py-2 hover:bg-gray-100">IHP</a>
-                <a href="/education" class="block px-4 py-2 hover:bg-gray-100">Education & Outreach</a>
-                <a href="/inclusivity" class="block px-4 py-2 hover:bg-gray-100">Inclusivity</a>
+                <a href="{{ url_for('pages', page='ihp') }}" class="block px-4 py-2 hover:bg-gray-100">IHP</a>
+                <a href="{{ url_for('pages', page='education') }}" class="block px-4 py-2 hover:bg-gray-100">Education & Outreach</a>
+                <a href="{{ url_for('pages', page='inclusivity') }}" class="block px-4 py-2 hover:bg-gray-100">Inclusivity</a>
             </div>
-        </div> 
-        
+        </div>
+
         <!-- Entrepreneurship -->
         <div class="relative group">
             <a href="#" class="font-medium hover:text-primary">Entrepreneurship</a>
@@ -67,12 +67,12 @@
             </div>
         </div>
     </div>
-  
+
     <!-- Mobile Menu Button -->
     <button class="p-2 lg:hidden" onclick="handleMenu()">
         <i class="fa-solid fa-bars text-gray-600"></i>
     </button>
-  
+
     <!-- Mobile Menu -->
     <div id="nav-dialog" class="hidden fixed z-10 md:hidden bg-white inset-0 p-3">
         <div id="nav-bar" class="flex justify-between">
