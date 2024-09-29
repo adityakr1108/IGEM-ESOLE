@@ -1,150 +1,168 @@
 {% extends "layout.html" %}
 <!-- IISER KOLKATA -->
+{% block page_content %}
+<header class="bg-blue-600 text-white py-8">
+    <div class="container mx-auto">
+        <h1 class="text-4xl font-bold text-center shine">Description</h1>
+    </div>
+</header>
 
-{% block title %}
-Project Description
-{% endblock %}
+<section class="bg-gray-100 py-16">
+    <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center text-gray-800 shine2">Project Inspiration</h2>
+        <div class="mt-6 text-lg text-gray-700 leading-relaxed">
+            <p>
+                As you are reading this, you stand on your feet, and around you millions of others wade through their daily lives in this mile-a-minute world. Let us pause for a second and wonder how many of those million footfalls are ‘comfortable’ in the true sense.
+                A moisture-retaining, dark, warm setting, ideal for the micro-world is more than accounted for by your shoes. If worn for long periods regularly, these shoes cause bacteria and fungi to thrive, giving rise to deadly bacterial and fungal foot infections which are anything but skin-deep.
+            </p>
+            <p class="mt-4">
+                It is said that 20% of the entire population of India, which accounts for about 200 million of us, are likely to have Athlete’s foot, a serious foot fungal infection, at some point in life. And Athlete’s Foot is just the tip of the iceberg! There are many more such diseases wreaking havoc, causing pain, inflammation, and days gone by on medications.
+            </p>
+        </div>
+        <div class="flex justify-center mt-8">
+            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg mr-2 hover:bg-blue-700" aria-label="Strategic Design">PART I</button>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg mr-2 hover:bg-blue-700" aria-label="System Design">PART II</button>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700" aria-label="Proof of Concept">PART III</button>
+        </div>
+    </div>
+</section>
 
-<!-- {% block lead %}
-   <img src="https://iconape.com/wp-content/files/it/192347/png/iiser-kolkata-logo.png" alt="IISER Kolkata Logo" style="height: 20px; margin-right: 10px">IISER KOLKATA
+<main class="container mx-auto px-6 py-16">
+    <div class="relative">
+        <div class="absolute h-full w-1 bg-blue-600 left-1/2 transform -translate-x-1/2"></div>
+        <div class="relative z-10 w-8 h-8 bg-blue-600 rounded-full left-1/2 transform -translate-x-1/2"></div>
+    </div>
+    
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 mt-12">
+        <!-- Section 1 -->
+        <section id="section1" class="content-section bg-white p-6 shadow-lg rounded-lg">
+            <h2 class="text-2xl font-bold text-blue-600">EXISTING SOLUTIONS AND WHAT THEY LACK TO TREAT YOU</h2>
+            <p class="mt-4 text-gray-700">Imagine bad odour and a stubborn itch on the foot, being your top priority. Of course, we do have existing solutions such as foot creams, artificial fragrances, and other topical remedies for a foot sore. However, let us pause and think, what does that bottle of medicine actually do to you?</p>
+        </section>
 
-   {% endblock %} -->
+        <!-- Section 2 -->
+        <section id="section2" class="content-section bg-white p-6 shadow-lg rounded-lg">
+            <h2 class="text-2xl font-bold text-blue-600">What is in your bottle of perfume?</h2>
+            <p class="mt-4 text-gray-700">Bringing it down to the common-man’s problems, foot creams and other topical remedies greatly increase consumer effort, besides having lower regions of applicability. A foot cream might not reach the crevices of your foot-skin, is quite washable and thus it reduces efficiency by a huge factor, not to mention the cost of it all and repeated expenditure on such drugs!</p>
+        </section>
 
-{% block page_content %} 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/description.css') }}?v={{ current_time }}">
-</head>
-<body>
-  <header class="hero">
-      <h1 class="shine">Description</h1>
-  </header>
+        <!-- Section 3 -->
+        <section id="section3" class="content-section bg-white p-6 shadow-lg rounded-lg">
+            <h2 class="text-2xl font-bold text-blue-600">YOU CAN NEITHER SAVE YOUR FEET NOR THE EARTH! WHAT COMES OF IT ALL?</h2>
+            <p class="mt-4 text-gray-700">An ingenious foot-care solution is the need of the hour!</p>
+            <h2 class="mt-6 text-2xl font-bold text-blue-600">WHAT ARE WE BRINGING TO THE TABLE?</h2>
+            <p class="mt-4 text-gray-700">Team E.solei takes a step ahead of your everyday foot cream by designing a foot insole, to be placed inside the shoe, which would house an ecosystem of bacteria.</p>
+        </section>
 
-  <section class="overview">
-      <h2 class="shine2">Inspiration</h2>
-      <div class="overview-content">
-          <p class="overview-content-text">
-              Our feet, often the most neglected part of the body, are susceptible to fungal and bacterial infections due to the cosy, humid conditions in shoes. These infections cause itchy, flaky skin and foul odours, often ignored until they lead to serious secondary infections. Despite available antifungal and antibacterial treatments, they require frequent application and can be easily washed away. This is impractical for those with long working hours, such as office-goers, athletes, construction workers, and students, who cannot tend to their feet regularly. Existing fragrant products also pose environmental hazards. Inspired by these challenges, our project, E. solei, aims to provide a lasting, eco-friendly solution that keeps feet fresh, odour-free, and protected from infections without the need for constant reapplication.
-          </p>
-      </div>
-      <div class="overview-content-btns">
-          <button aria-label="Strategic Design">PART I</button>
-          <button aria-label="System Design">PART II</button>
-          <button aria-label="Proof of Concept">PART III</button>
-      </div>
-  </section>
+        <!-- Section 4 -->
+        <section id="section4" class="content-section bg-white p-6 shadow-lg rounded-lg">
+            <h2 class="text-2xl font-bold text-blue-600">WHAT WILL OUR PRODUCT LOOK LIKE?</h2>
+            <p class="mt-4 text-gray-700">E.solei comes in the form of a foot insole, split into several layers. Within the insole, a layer of biocompatible, nutrient-extractable polymer houses the GM bacteria. This layer is guarded by a non-porous layer at the bottom.</p>
+        </section>
 
-  <main class="page-container">
-      <div class="timeline">
-          <div class="timeline-bar"></div>
-          <div class="timeline-indicator">
-              <!-- <img src="shoe.png" alt="Shoe indicator" class="shoe-indicator"> -->
-          </div>
-      </div>
-      <div class="sections-container">
-          <section id="section1" class="content-section left">
-              <h2>Why we choose this?</h2>
-              <p>Feet, the least cared-for part of our body, suffer significantly from fungal and bacterial skin diseases, causing substantial disability. In India, the non-fatal burden of these diseases surpasses that of cardiovascular diseases, with years lived with disability rising from 4.07 million in 1990 to 6.26 million in 2017. Students, professionals, athletes, firefighters, policemen, and soldiers face persistent foot care challenges due to prolonged shoe wear, leading to infections and foot odour. Soldiers in hot, humid conditions show high rates of bacterial (21.2%) and fungal (23.3%) infections. Despite existing solutions, a more effective, convenient, and long-lasting foot care solution is needed to prevent and treat these infections, especially for those unable to tend to their feet regularly. The rise in fungal infections, coupled with issues like prosthetic malfunctions and diabetes, highlights the urgent need for innovative solutions like E. solei.</p>
-          </section>
+        <!-- Section 5 -->
+        <section id="section5" class="content-section bg-white p-6 shadow-lg rounded-lg">
+            <h2 class="text-2xl font-bold text-blue-600">BUILDING UP</h2>
+            <h3 class="mt-4 text-xl font-semibold text-blue-500">Linalool: Looking Beyond Medications</h3>
+            <p class="mt-4 text-gray-700">We chose Linalool as our target compound, which would be produced by the GM Bacteria. Linalool is a plant metabolite that has a pleasant fragrance and is a volatile oil compound. It is also involved in various industries, including soap, fragrance, and food additive manufacturing.</p>
+        </section>
 
-          <section id="section2" class="content-section right">
-              <h2>SYSTEM DESIGN</h2>
-              <p>Feet, the least cared-for part of our body, suffer significantly from fungal and bacterial skin diseases, causing substantial disability. In India, the non-fatal burden of these diseases surpasses that of cardiovascular diseases, with years lived with disability rising from 4.07 million in 1990 to 6.26 million in 2017. Students, professionals, athletes, firefighters, policemen, and soldiers face persistent foot care challenges due to prolonged shoe wear, leading to infections and foot odour. Soldiers in hot, humid conditions show high rates of bacterial (21.2%) and fungal (23.3%) infections. Despite existing solutions, a more effective, convenient, and long-lasting foot care solution is needed to prevent and treat these infections, especially for those unable to tend to their feet regularly. The rise in fungal infections, coupled with issues like prosthetic malfunctions and diabetes, highlights the urgent need for innovative solutions like E. solei.</p>
-          </section>
+        <!-- Section 6 -->
+        <section id="section6" class="content-section bg-white p-6 shadow-lg rounded-lg">
+            <h2 class="text-2xl font-bold text-blue-600">Our Chassis: The Protagonist</h2>
+            <p class="mt-4 text-gray-700">Lactobacillus rhamnosus is a well-established pro-biotic commonly found in the gut. It is known for producing antimicrobial compounds like 3-phenyllactic acid, which exhibits strong antifungal properties. This would complement the production of linalool, enhancing the foot-bed's efficacy in managing skin health.</p>
+        </section>
 
-          <section id="section3" class="content-section left">
-              <h2>PROOF OF CONCEPT</h2>
-              <p>A proof of concept (POC) in design is a small exercise to test the design idea or assumption. It's about quickly creating a working prototype to demonstrate the feasibility of a design solution. POCs help in validating ideas, identifying potential issues early, and gaining stakeholder buy-in before investing significant resources into full-scale development.</p>
-          </section>
+        <!-- Section 7 -->
+        <section id="section7" class="content-section bg-white p-6 shadow-lg rounded-lg">
+            <h2 class="text-2xl font-bold text-blue-600">MAPPING THE PATH</h2>
+            <p class="mt-4 text-gray-700">Our project can be traced by four milestones:<br>PRODUCTION OF LINALOOL and SUSTAINED PRODUCTION OF LINALOOL BY REGULATING THE POPULATION LEVELS</p>
+        </section>
 
-          <section id="section4" class="content-section right">
-              <h2>USER EXPERIENCE (UX) DESIGN</h2>
-              <p>UX design is about creating products that provide meaningful and relevant experiences to users. This field encompasses aspects of branding, design, usability, and function. UX designers focus on the entire process of acquiring and integrating a product, including aspects of branding, design, usability, and function.</p>
-          </section>
+        <!-- Section 8 -->
+        <section id="section8" class="content-section bg-white p-6 shadow-lg rounded-lg">
+            <h2 class="text-2xl font-bold text-blue-600">MODULE 1: PRODUCTION OF THE TARGET COMPOUND LINALOOL</h2>
+            <p class="mt-4 text-gray-700">Linalool is produced as a metabolite in plants through the Mevalonate Pathway (MEV Pathway). We aim to incorporate this pathway in our chassis and turn on the production of Linalool.</p>
+        </section>
 
-          <section id="section5" class="content-section left">
-              <h2>USER INTERFACE (UI) DESIGN</h2>
-              <p>UI design focuses on the look and feel, the presentation and interactivity of a product. It's all about making sure the user interface of a product is as intuitive as possible, and that means carefully considering each visual, interactive element the user might encounter. A good UI design ensures that the user interface is both efficient and enjoyable.</p>
-          </section>
+        <!-- Section 9 -->
+        <section id="section9" class="content-section bg-white p-6 shadow-lg rounded-lg">
+            <h2 class="text-2xl font-bold text-blue-600">MODULE 2: SUSTENANCE OF LINALOOL PRODUCTION</h2>
+            <p class="mt-4 text-gray-700">We regulate the population level of the GM bacteria, maintaining oscillations around a stable population level. By optimizing Linalool production and media usage, we increase the depletion time of the media and sustain product usage.</p>
+        </section>
 
-          <section id="section6" class="content-section right">
-              <h2>RESPONSIVE DESIGN</h2>
-              <p>Responsive design is an approach to web design that makes web pages render well on a variety of devices and window or screen sizes. It uses CSS and HTML to resize, hide, shrink, enlarge, or move the content to make it look good on any screen. Responsive design has become increasingly important with the rise of mobile device usage.</p>
-          </section>
+        <!-- Section 10 -->
+        <section id="section10" class="content-section bg-white p-6 shadow-lg rounded-lg">
+            <h2 class="text-2xl font-bold text-blue-600">Future Plan</h2>
+            <h3 class="mt-4 text-xl font-semibold text-blue-500">Creating a GMO with a mind of its own!</h3>
+            <p class="mt-4 text-gray-700">We plan to incorporate the two modules mentioned above in our chassis by co-transforming the plasmids housing the genes for both. This will allow for automated regulation of population levels and efficient usage of nutrient media.</p>
+        </section>
 
-          <section id="section7" class="content-section left">
-              <h2>ACCESSIBILITY DESIGN</h2>
-              <p>Accessibility design ensures that products, services, and environments are usable by people with disabilities. This includes considerations for visual, auditory, physical, speech, cognitive, and neurological disabilities. Good accessibility design benefits everyone by creating more inclusive and user-friendly experiences.</p>
-          </section>
+        <!-- Section 11 -->
+        <section id="section11" class="content-section bg-white p-6 shadow-lg rounded-lg">
+            <h2 class="text-2xl font-bold text-blue-600">Building up the store for the Chassis!</h2>
+            <p class="mt-4 text-gray-700">The GMO is housed in a biopolymer that acts as a nutrient-extractable source. The bacteria are made dormant prior to embedding through Lyophilisation techniques, and a kill-switch ensures no leakage of bacteria into the environment.</p>
+        </section>
 
-          <section id="section8" class="content-section right">
-              <h2>INTERACTION DESIGN</h2>
-              <p>Interaction design is about creating engaging interfaces with well thought out behaviors. Understanding how users and technology communicate with each other is fundamental to this field. The goal of interaction design is to create products that enable the user to achieve their objective(s) in the best way possible.</p>
-          </section>
+        <!-- Section 12 -->
+        <section id="section12" class="content-section bg-white p-6 shadow-lg rounded-lg">
+            <h2 class="text-2xl font-bold text-blue-600">Description References</h2>
+            <ol class="list-decimal mt-4 ml-6 text-gray-700">
+                <li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2907807/#:~:text=Fungal%20infection%20of%20the%20feet,body%20and%20to%20other%20people." target="_blank" class="text-blue-600 hover:underline">Fungal infection of the feet and its relation to overall health.</a></li>
+                <li><a href="https://diabetesjournals.org/care/article/46/1/209/148198/Etiology-Epidemiology-and-Disparities-in-the" target="_blank" class="text-blue-600 hover:underline">Etiology, Epidemiology, and Disparities in the Prevalence of Foot Ulcers in Diabetic Patients.</a></li>
+                <li><a href="https://www.researchgate.net/figure/Diabetes-related-foot-ulcer-prevalence-and-incidence-and-major-amputation-incidence-in_fig1_320334185" target="_blank" class="text-blue-600 hover:underline">Diabetes-related foot ulcer prevalence and incidence data from ResearchGate.</a></li>
+                <li><a href="https://jfootankleres.biomedcentral.com/articles/10.1186/s13047-020-00383-2" target="_blank" class="text-blue-600 hover:underline">Journal of Foot and Ankle Research - Key findings in diabetic foot ulcers.</a></li>
+                <!-- Add more references as needed -->
+            </ol>
+        </section>
+    </div>
+</main>
 
-          <section id="section9" class="content-section left">
-              <h2>INFORMATION ARCHITECTURE</h2>
-              <p>Information architecture involves organizing, structuring, and labeling content in an effective and sustainable way. The goal is to help users find information and complete tasks. It's about creating a structure and nomenclature for a website, app, or other digital product that allows users to navigate it easily and intuitively.</p>
-          </section>
-
-          <section id="section10" class="content-section right">
-              <h2>DESIGN THINKING</h2>
-              <p>Design thinking is a non-linear, iterative process that teams use to understand users, ...</p>
-          </section>
-      </div>
-  </main>
-
-  <script>
+<script>
     document.addEventListener('DOMContentLoaded', function() {
-    const sections = document.querySelectorAll('.content-section');
-    const timelineBar = document.querySelector('.timeline-bar');
-    const timelineIndicator = document.querySelector('.timeline-indicator');
-    let lastScrollTop = 0;
+        const sections = document.querySelectorAll('.content-section');
+        const timelineBar = document.querySelector('.timeline-bar');
+        const timelineIndicator = document.querySelector('.timeline-indicator');
+        let lastScrollTop = 0;
 
-    function updateTimeline() {
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-        const scrollPercent = scrollTop / docHeight;
-    
-        // Slow down the timeline progress
-        const slowScrollPercent = Math.pow(scrollPercent, 1.5);  // Adjust the power (1.5) to change the speed
-    
-        timelineBar.style.transform = `scaleY(${slowScrollPercent})`;
-        timelineIndicator.style.top = `${slowScrollPercent * 100}%`;
-    }
+        function updateTimeline() {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollPercent = scrollTop / docHeight;
 
-    function checkVisibility() {
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        const windowHeight = window.innerHeight;
+            const slowScrollPercent = Math.pow(scrollPercent, 1.5);
 
-        sections.forEach((section, index) => {
-            const sectionTop = section.getBoundingClientRect().top + scrollTop;
-            const sectionBottom = sectionTop + section.offsetHeight;
-            
-            if (scrollTop > lastScrollTop) {
-                if (scrollTop > sectionTop - windowHeight * 0.75 && scrollTop < sectionBottom) {
-                    section.classList.add('visible');
-                }
-            } else {
-                if (scrollTop < sectionBottom - windowHeight * 0.25 && scrollTop + windowHeight > sectionTop) {
-                    section.classList.add('visible');
+            timelineBar.style.transform = `scaleY(${slowScrollPercent})`;
+            timelineIndicator.style.top = `${slowScrollPercent * 100}%`;
+        }
+
+        function checkVisibility() {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            const windowHeight = window.innerHeight;
+
+            sections.forEach((section, index) => {
+                const sectionTop = section.getBoundingClientRect().top + scrollTop;
+                const sectionBottom = sectionTop + section.offsetHeight;
+
+                if (scrollTop > lastScrollTop) {
+                    if (scrollTop > sectionTop - windowHeight * 0.75 && scrollTop < sectionBottom) {
+                        section.classList.add('visible');
+                    }
                 } else {
-                    section.classList.remove('visible');
+                    if (scrollTop < sectionBottom - windowHeight * 0.25 && scrollTop + windowHeight > sectionTop) {
+                        section.classList.add('visible');
+                    } else {
+                        section.classList.remove('visible');
+                    }
                 }
-            }
-        });
+            });
 
-        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-        updateTimeline();
-    }
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+            updateTimeline();
+        }
 
-    window.addEventListener('scroll', checkVisibility);
-    checkVisibility(); // Check on initial load
-});
-  </script>
-</body>
-</html>
+        window.addEventListener('scroll', checkVisibility);
+        checkVisibility();
+    });
+</script>
 {% endblock %}
