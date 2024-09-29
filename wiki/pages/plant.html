@@ -1,34 +1,102 @@
 {% extends "layout.html" %}
   
-{% block title %}Plant{% endblock %}
-{% block lead %}This award is designed to celebrate exemplary work done in plant synthetic biology.{% endblock %}
+{% block title %}Media Dependent Kill Switch{% endblock %}
+{% block lead %}A model to prevent GMO contamination by ensuring bacterial death outside a specific medium.{% endblock %}
 
 {% block page_content %}
 
-<div class="row mt-4">
-  <div class="col">
-    <div class="bd-callout bd-callout-info">
-      <h4>Best Plant Synthetic Biology</h4>
-      <p>This award is designed to celebrate exemplary work done in plant synthetic biology. Did you build a project in a plant chassis? Did you submit plant parts to the Registry? This award could also be given to a team working with algae or another photosynthetic eukaryotic chassis. Show us what you made and remember to adhere to iGEM safety guidelines!</p>
-      <p>To compete for the Best Plant Synthetic Biology prize, select the prize on the <a href="https://competition.igem.org/deliverables/judging-form">judging form</a> and describe your work on this page.</p>
-      <hr>
-      <p>Please see the <a href="https://competition.igem.org/judging/awards">2024 Awards Page</a> for more information.</p>
-    </div>
-  </div>
-</div>
+    <!-- Main Container -->
+    <div class="container mx-auto px-4 py-8">
+        <h2 class="text-2xl font-semibold mb-4">Media Dependent Kill Switch: Overview</h2>
 
-<div class="row mt-4">
-  <div class="col">
-    <h2>Inspirations</h2>
-    <hr>
-    <ul>
-      <li><a href="http://2018.igem.org/Team:Cardiff_Wales/Plant">2018 Cardiff Wales</a></li>
-      <li><a href="https://2019.igem.org/Team:Sorbonne_U_Paris/Plant">2019 Sorbonne U Paris</a></li>
-      <li><a href="https://2019.igem.org/Team:TU_Kaiserslautern/Plant">2019 TU Kaiserslautern</a></li>
-      <li><a href="https://2019.igem.org/Team:Humboldt_Berlin/Plant">2019 Humboldt Berlin</a></li>
-      <li><a href="https://2020.igem.org/Team:Sorbonne_U_Paris/Plant">2020 Sorbonne U Paris</a></li>
-    </ul>
-  </div>
-</div>
+        <p class="mb-4">
+            The media-dependent bacterial kill switch is designed to prevent the escape of genetically modified organisms (GMOs) into the environment. It works by remaining dormant while the bacteria are in the medium. However, when bacteria escape from the medium, the absence of IPTG activates the kill switch, leading to bacterial death.
+        </p>
+
+        <h3 class="text-xl font-semibold mb-4">Circuit Diagram</h3>
+        <div class="mb-6">
+            <img src="https://static.igem.wiki/teams/5425/drylab/kill-circuit.webp" alt="Kill Switch Circuit" class="w-full rounded-lg border border-gray-400 shadow-md">
+        </div>
+
+        <h3 class="text-xl font-semibold mb-4">Working of the Circuit</h3>
+        <p class="mb-4">
+            The kill switch uses IPTG as a repressing molecule. As long as IPTG is present in the medium, the kill switch remains inactive. However, once the bacteria leave the medium, IPTG is no longer available to repress the kill switch, leading to bacterial death. 
+        </p>
+
+        <h3 class="text-xl font-semibold mb-4">Objective</h3>
+        <p class="mb-4">
+            Our goal is to determine the robustness of the kill switch by calculating the time required to kill the bacteria after it escapes the medium. We also want to calculate the probability of bacterial death once the kill switch is activated.
+        </p>
+
+        <h3 class="text-xl font-semibold mb-4">Model</h3>
+        <p class="mb-4">
+            The following set of ordinary differential equations (ODEs) models the behavior of the kill switch:
+        </p>
+
+        <pre class="bg-gray-100 p-4 rounded-lg mb-6 overflow-x-auto">
+<code>
+d[LacI]/dt = kcb*(b1^n1 + CIλ^n1) / (b1^n1 + CIλ^n1 / 3) - dLac[LacI]
+d[CIλ]/dt = klac*(b2^n2 / (b2^n2 + LacI^n2) + IPTG^n3) - dCI[CIλ] - dmfcl[CIλ][Mf-lon]
+d[ccdA]/dt = klac*(b2^n2 / (b2^n2 + LacI^n2) + IPTG^n3) - dccdA[ccdA]
+d[Mf-lon]/dt = kcl*(b4^n4 / (b4^n4 + CIλ^n4)) - dMf[Mf-lon]
+d[ccdB]/dt = kcl*(b4^n4 / (b4^n4 + CIλ^n4)) - dccdB[ccdB] - kD[ccdA][ccdB]
+dPkill/dt = (1 - Pkill)*(ccdB * Mf-lon^n5) / (a1^n5 + ccdB * Mf-lon^n5)
+</code>
+        </pre>
+
+        <h3 class="text-xl font-semibold mb-4">Parameter Values</h3>
+        <div class="bg-gray-50 border border-gray-200 p-6 rounded-lg mb-6">
+            <table class="w-full table-auto">
+                <thead>
+                    <tr class="bg-gray-200">
+                        <th class="px-4 py-2 text-left">Parameter</th>
+                        <th class="px-4 py-2 text-left">Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="border px-4 py-2">kcb</td>
+                        <td class="border px-4 py-2">10 nMmin<sup>-1</sup></td>
+                    </tr>
+                    <tr class="bg-gray-100">
+                        <td class="border px-4 py-2">kcl</td>
+                        <td class="border px-4 py-2">5 nMmin<sup>-1</sup></td>
+                    </tr>
+                    <tr>
+                        <td class="border px-4 py-2">klac</td>
+                        <td class="border px-4 py-2">10.3 nMmin<sup>-1</sup></td>
+                    </tr>
+                    <tr class="bg-gray-100">
+                        <td class="border px-4 py-2">dlac</td>
+                        <td class="border px-4 py-2">3 min<sup>-1</sup></td>
+                    </tr>
+                    <tr>
+                        <td class="border px-4 py-2">dcl</td>
+                        <td class="border px-4 py-2">0.5 min<sup>-1</sup></td>
+                    </tr>
+                    <tr class="bg-gray-100">
+                        <td class="border px-4 py-2">dmfcl</td>
+                        <td class="border px-4 py-2">2 min<sup>-1</sup></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3 class="text-xl font-semibold mb-4">Plots</h3>
+        <p class="mb-4">
+            We varied the concentration of IPTG to simulate the bacteria escaping from the medium at different times. The following plots show the probability of bacterial death (Pkill) at various times (τ = 15 mins, τ = 30 mins, τ = 50 mins):
+        </p>
+
+        <div class="mb-6">
+            <img src="https://static.igem.wiki/teams/5425/drylab/t15-iptg-t15-kill.webp" alt="τ = 15 mins" class="w-full rounded-lg border border-gray-400 shadow-md mb-4">
+            <img src="https://static.igem.wiki/teams/5425/drylab/t30-iptg-t30-kill.webp" alt="τ = 30 mins" class="w-full rounded-lg border border-gray-400 shadow-md mb-4">
+            <img src="https://static.igem.wiki/teams/5425/drylab/t50-iptg-t50-kill.webp" alt="τ = 50 mins" class="w-full rounded-lg border border-gray-400 shadow-md">
+        </div>
+
+        <h3 class="text-xl font-semibold mb-4">Conclusion</h3>
+        <p class="mb-4">
+            Our media-dependent kill switch ensures that once bacteria escape the medium, they die within 10 minutes, preventing GMO contamination. The robustness of the kill switch was verified by observing that the probability of bacterial death rises to 1 within this time frame.
+        </p>
+    </div>
 
 {% endblock %}

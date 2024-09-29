@@ -1,35 +1,312 @@
 {% extends "layout.html" %}
   
 {% block title %}Education{% endblock %}
-{% block lead %}Innovative educational tools and outreach activities have the ability to establish a two-way dialogue with new communities by discussing public values and the science behind synthetic biology.{% endblock %}
 
 {% block page_content %}
 
-<div class="row mt-4">
-  <div class="col">
-    <div class="bd-callout bd-callout-info">
-      <h4>Best Education</h4>
-      <p>How have you developed new opportunities to include more people in shaping synthetic biology? Innovative educational tools and outreach activities have the ability to establish a two-way dialogue with new communities by discussing public values and the science behind synthetic biology. Document your approach and what was learned by everyone involved to compete for this award.</p>
-      <p>To compete for the Best Education prize, select the prize on the <a href="https://competition.igem.org/deliverables/judging-form">judging form</a> and describe your work on this page.</p>
-      <hr>
-      <p>Please see the <a href="https://competition.igem.org/judging/awards">2024 Awards Page</a> for more information.</p>
+<!-- Education & Outreach Section -->
+<img src="https://static.igem.wiki/teams/5425/bacteria-8107336.png" style="height:200px; width:200px; border-radius: 20px; margin-left: 42%;" class="items-center w-full h-96 mt-20" alt="Education">
+
+<div class="heading">
+    <h1 class="text-6xl font-bold text-center">Education & Outreach</h1>
+</div>
+
+<!-- iGEM Stall Section -->
+<section class="mt-10 px-4 lg:px-20">
+    <h2 class="text-4xl font-bold text-center">iGEM Stall on Institute Open Day</h2>
+    <p class="text-lg mt-6 text-center" style="font-family: 'Times New Roman', Times, serif;">
+        A major highlight of our outreach was the Institute Open Day, where 400 students from various schools and colleges across West Bengal were introduced to the world of synthetic biology. We showcased interactive units and stalls, focusing on different aspects of science, including our project E. solei.
+    </p>
+
+    <p class="text-lg mt-4 text-center" style="font-family: 'Times New Roman', Times, serif;">
+        We set up three interactive stalls to actively engage and inspire students. Each stall had a different focus, and through hands-on learning, we sparked interest and curiosity about the exciting world of synthetic biology.
+    </p>
+
+    <!-- Clickable Images in a Row -->
+    <div class="flex justify-center space-x-10 mt-10">
+        <div class="stall-image">
+            <img src="https://static.igem.wiki/teams/5425/bacteria-8107336.png" alt="Bacterial World Stall" class="w-48 h-48 rounded-lg cursor-pointer" onclick="showCard('bacterialWorld')">
+            <p class="font-bold text-center mt-2">Bacterial World Stall</p>
+        </div>
+        <div class="stall-image">
+            <img src="https://static.igem.wiki/teams/5425/cosmetics-11030831.png" alt="Cosmetics and Safety Stall" class="w-48 h-48 rounded-lg cursor-pointer" onclick="showCard('cosmeticsSafety')">
+            <p class="font-bold text-center mt-2">Cosmetics and Safety Stall</p>
+        </div>
+        <div class="stall-image">
+            <img src="https://static.igem.wiki/teams/5425/screenshot-2024-09-22-231626.png" alt="iGEM and Innovative Projects Stall" class="w-48 h-48 rounded-lg cursor-pointer" onclick="showCard('igemProjects')">
+            <p class="font-bold text-center mt-2">iGEM and Innovative Projects Stall</p>
+        </div>
     </div>
-  </div>
-</div>
 
-<div class="row mt-4">
-  <div class="col">
-    <h2>Inspirations</h2>
-    <hr>
-    <ul>
-      <li><a href="https://2020.igem.org/Team:CCA_San_Diego/Education">2020 CCA San Diego</a></li>
-      <li><a href="https://2020.igem.org/Team:Lambert_GA/Education">2020 Lambert GA</a></li>
-      <li><a href="https://2020.igem.org/Team:Stanford/Education">2020 Stanford</a></li>
-      <li><a href="https://2020.igem.org/Team:Waseda/Education">2020 Waseda</a></li>
-      <li><a href="https://2020.igem.org/Team:Fudan/Education">2020 Fudan</a></li>
-      <li><a href="https://2020.igem.org/Team:Toulouse_INSA-UPS/Education">2020 Toulouse INSA UPS</a></li>
-    </ul>
-  </div>
-</div>
+    <!-- Responsive Images Section -->
+    
 
+    <!-- Cards Section -->
+    <div id="contentCard" class="content-card hidden">
+        <div id="bacterialWorld" class="card-content">
+            <h3 class="text-2xl font-bold text-center">Bacterial World Stall</h3>
+            <p class="text-lg mt-4 w-full" style="font-family: 'Times New Roman', Times, serif;">
+                At the first unit, students were introduced to the basic concepts of bacteria. The stall featured an engaging session on the different shapes and types of bacteria. Students were shown slides of bacteria such as <em>Lactococcus</em> and <em>E. coli</em>. Additionally, a unique display of bacterial art, created using blue chromogenic protein in DH5alpha, captivated the students.
+            </p>
+        </div>
+
+        <div id="cosmeticsSafety" class="card-content hidden">
+            <h3 class="text-2xl font-bold text-center">Cosmetics and Safety Stall</h3>
+            <p class="text-lg mt-4 w-full" style="font-family: 'Times New Roman', Times, serif;">
+                The second stall was dedicated to educating students about the potential hazards present in everyday cosmetics. The focus was on formaldehyde, a harmful chemical commonly found in many beauty and skincare products. Students were made aware of the health risks associated with formaldehyde exposure and the importance of being cautious when choosing cosmetic products.
+            </p>
+        </div>
+
+        <div id="igemProjects" class="card-content hidden">
+            <h3 class="text-2xl font-bold text-center">iGEM and Innovative Projects Stall</h3>
+            <p class="text-lg mt-4 w-full" style="font-family: 'Times New Roman', Times, serif;">
+                The third stall provided an opportunity for students to learn about innovative research in synthetic biology. Three fascinating iGEM projects—LAMPS, Flavour, and Bee Yeast—were explained in detail to the visitors. In addition to these projects, the concept and significance of the iGEM competition were introduced, highlighting how it serves as a platform for young scientists to tackle global issues through synthetic biology.
+            </p>
+        </div>
+    </div>
+</section>
+<section class="mt-10">
+  <h2 class="text-4xl font-bold text-center">Human Practices Gallery</h2>
+  <div class="gallery grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-8">
+      <img src="https://static.igem.wiki/teams/5425/human-practices/img-20240925-143450-047-1.webp" alt="Gallery Image 1" class="rounded-lg gallery-image">
+      <img src="https://static.igem.wiki/teams/5425/human-practices/img-20240925-143453-616.webp" alt="Gallery Image 2" class="rounded-lg gallery-image">
+      <img src="https://static.igem.wiki/teams/5425/human-practices/img-20240925-143451-658-1.webp" alt="Gallery Image 3" class="rounded-lg gallery-image">
+      <img src="https://static.igem.wiki/teams/5425/human-practices/photo-1-2024-09-27-11-50-36-66f64f0880f4e.webp" alt="Gallery Image 4" class="rounded-lg gallery-image">
+      <img src="https://static.igem.wiki/teams/5425/human-practices/photo-2-2024-09-27-11-50-36-66f64f072ce25.webp" alt="Gallery Image 5" class="rounded-lg gallery-image">
+      <img src="https://static.igem.wiki/teams/5425/human-practices/photo-3-2024-09-27-11-50-36-66f64f0fed72f.webp" alt="Gallery Image 6" class="rounded-lg gallery-image">
+  </div>
+</section>
+
+
+<section class="mt-10 px-4 lg:px-20">
+  <h2 class="text-4xl font-bold text-center">Through Science: Ghoragachha Municipality Outreach</h2>
+  <p class="text-lg mt-6" style="font-family: 'Times New Roman', Times, serif;">
+      “Education is the manifestation of perfection already in man.” —Swami Vivekananda.
+      In line with this vision, our iGEM team took the initiative to extend science education into the community, engaging the children of Ghoragachha Municipality in Kalyani, West Bengal. We aimed to make science both accessible and exciting, reaching 50 children aged 6 to 15 through hands-on, interactive sessions designed to broaden their understanding of health, hygiene, and microbiology.
+  </p>
+
+  <!-- Image Gallery for Ghoragachha Municipality -->
+  <div class="gallery grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-8">
+      <img src="https://static.igem.wiki/teams/5425/human-practices/20240901-104249.webp" alt="Image 1" class="rounded-lg gallery-image">
+      <img src="https://static.igem.wiki/teams/5425/human-practices/20240901-111040.webp" alt="Image 2" class="rounded-lg gallery-image">
+      <img src="https://static.igem.wiki/teams/5425/human-practices/img-20240925-143533-632-1.webp" alt="Image 3" class="rounded-lg gallery-image">
+      <img src="https://static.igem.wiki/teams/5425/human-practices/pxl-20240901-052546504.webp" alt="Image 4" class="rounded-lg gallery-image">
+      <img src="https://static.igem.wiki/teams/5425/human-practices/img-20240925-143527-603-66f6505d6918a-1.webp" alt="Image 5" class="rounded-lg gallery-image">
+      <img src="https://static.igem.wiki/teams/5425/human-practices/img-20240925-143531-760-66f6505d56029-1.webp" alt="Image 6" class="rounded-lg gallery-image">
+  </div>
+
+  <h3 class="text-2xl font-bold mt-8">Activities Carried Out at Ghoragachha Municipality</h3>
+  <ul class="list-disc list-inside text-lg mt-4" style="font-family: 'Times New Roman', Times, serif;">
+      <li><strong>Visual Demonstrations of Bacteria:</strong> We displayed printed images of cartoonish bacteria in various shapes, introducing the children to the fascinating world of microbiology.</li>
+      <li><strong>Health and Hygiene Education:</strong> We discussed essential hygiene practices, linking them to the prevention of illness and maintaining good health.</li>
+      <li><strong>Good vs. Bad Bacteria:</strong> We explained how beneficial bacteria support health, while harmful bacteria can cause disease.</li>
+      <li><strong>Introduction to Synthetic Biology:</strong> We introduced the children to our iGEM projects, explaining how bacteria can contribute to medicine, food production, and sustainability.</li>
+      <li><strong>Fun Treat for Students:</strong> At the conclusion of the session, we gave biscuits to the children as a token of appreciation.</li>
+  </ul>
+</section>
+
+<!-- Ek Pehel Outreach Section -->
+<section class="mt-10 px-4 lg:px-20">
+  <h2 class="text-4xl font-bold text-center">Ek Pehel Outreach: Bringing Biology to Underprivileged Children</h2>
+  <p class="text-lg mt-6" style="font-family: 'Times New Roman', Times, serif;">
+      At iGEM, we believe that knowledge is meant to be shared and spread far and wide, especially to those who may not have easy access to quality education. With this in mind, we teamed up with the Ek Pehel initiative at IISER Kolkata, an organization dedicated to educating children from underprivileged backgrounds. Through this collaboration, we aimed to make science fun and engaging for these young minds.
+  </p>
+
+  <!-- Image Gallery for Ek Pehel Outreach -->
+  <div class="gallery grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-8">
+      <!-- <img src="https://static.igem.wiki/teams/5425/human-practices/img-20240925-143414-762-1.webp" alt="Image 1" class="rounded-lg gallery-image"> -->
+      <img src="https://static.igem.wiki/teams/5425/human-practices/img-20240901-wa0132-66f6511baaf2b.webp" alt="Image 2" class="rounded-lg gallery-image">
+      <img src="https://static.igem.wiki/teams/5425/human-practices/img-20240925-143417-765.webp" alt="Image 3" class="rounded-lg gallery-image">
+      <img src="https://static.igem.wiki/teams/5425/human-practices/img-20240925-143420-799-2.webp" alt="Image 4" class="rounded-lg gallery-image">
+  </div>
+
+  <h3 class="text-2xl font-bold mt-8">Activities Carried Out at Ek Pehel Outreach</h3>
+  <ul class="list-disc list-inside text-lg mt-4" style="font-family: 'Times New Roman', Times, serif;">
+      <li><strong>Interactive Quizzes and Drawing Competitions:</strong> Engaging the children through creative activities and quizzes.</li>
+      <li><strong>Role-Playing Exercises:</strong> Enabling the children to learn science concepts through interactive role-playing.</li>
+      <li><strong>Bacterial Art on Agar Plates:</strong> Introducing children to the wonders of bacterial art on agar plates.</li>
+      <li><strong>Health and Hygiene Education:</strong> Teaching children about hygiene and how bacteria can affect health.</li>
+      <li><strong>Fingerprint Bacteria Experiment:</strong> The children cultured their fingerprints and observed bacterial colonies grow the next day.</li>
+  </ul>
+</section>
+
+<!-- Logo Design Competition Section -->
+<section class="mt-10 px-4 lg:px-20">
+  <h2 class="text-4xl font-bold text-center">Where Science Meets Art: Logo Design Competition for iGEM Project E. solei</h2>
+  <p class="text-lg mt-6" style="font-family: 'Times New Roman', Times, serif;">
+      As part of our iGEM 2024 project, the IISER Kolkata team collaborated with the Arts Club to host a logo design competition, merging creativity with science. The winning design will become the official emblem of our project, focused on innovation, sustainability, synthetic biology, and foot health.
+  </p>
+
+  <!-- Image Gallery for Logo Design Competition -->
+  <div class="gallery grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-8 ml-20">
+      <img src="https://static.igem.wiki/teams/5425/human-practices/img-20240925-143413-575-1.webp" alt="Logo Design Image 1" class="rounded-lg gallery-image ml-20">
+      <img src="https://static.igem.wiki/teams/5425/human-practices/img-20240925-143434-292.webp" alt="Logo Design Image 2" class="rounded-lg  gallery-image ml-20">
+  </div>
+</section>
+
+<!-- All India iGEM Meet Section -->
+<section class="mt-10 px-4 lg:px-20">
+  <h2 class="text-4xl font-bold text-center">All India iGEM Meet 2024: A Valuable Experience for IISER Kolkata</h2>
+  <p class="text-lg mt-6" style="font-family: 'Times New Roman', Times, serif;">
+      The All India iGEM Meet 2024, organized by IISc Bangalore in hybrid mode, brought together 11 iGEM teams from across India. IISER Kolkata participated online, attending insightful lectures and workshops covering topics ranging from bioengineering to computational biology.
+  </p>
+
+  <!-- Image Gallery for All India iGEM Meet -->
+  <div class="gallery grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-8">
+      <img src="https://static.igem.wiki/teams/5425/human-practices/img-20240925-143404-183.webp" alt="Image 1" class="rounded-lg gallery-image">
+      <img src="https://static.igem.wiki/teams/5425/human-practices/img-20240925-143515-591-1.webp" alt="Image 2" class="rounded-lg gallery-image">
+      <img src="https://static.igem.wiki/teams/5425/human-practices/img-20240925-143410-814.webp" alt="Image 3" class="rounded-lg gallery-image">
+  </div>
+</section>
+
+<!-- Collaborating with InScight Section -->
+<section class="mt-10 px-4 lg:px-20">
+  <h2 class="text-4xl font-bold text-center">Collaborating with InScight to Expand Our Reach</h2>
+  <p class="text-lg mt-6" style="font-family: 'Times New Roman', Times, serif;">
+      Our team had a conversation with InScight, the official Science Communication group of IISER Kolkata, to present our project and share our vision. InScight enthusiastically supported our project and offered to publicize it through their student-crafted magazine, helping us reach a wider audience of science enthusiasts.
+  </p>
+</section>
+
+<!-- Social Media Section -->
+<section class="mt-10 px-4 lg:px-20">
+  <h2 class="text-4xl font-bold text-center">Educating Through Social Media: Science for All</h2>
+  <p class="text-lg mt-6" style="font-family: 'Times New Roman', Times, serif;">
+      As part of our Education and Outreach initiatives, we used social media platforms like Instagram and Facebook to share engaging content on key scientific topics. We celebrated World Microbiome Day, Father's Day, and Pride Month, sharing stories that highlighted diversity and inclusivity in science.
+  </p>
+</section>
+
+
+<!-- Styles -->
+<style>
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+  }
+
+  .gallery-image {
+    width: 450px;
+    height: 300px;
+    object-fit: cover; /* Ensures images fill the container without stretching */
+  }
+
+  /* Adjust the layout for medium and larger screens */
+  @media (min-width: 640px) {
+    .gallery {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .gallery {
+      grid-template-columns: repeat(3, 1fr);
+    } */
+  }
+
+    .flex {
+        display: flex;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .space-x-10 > * + * {
+        margin-left: 2.5rem;
+    }
+
+    .stall-image img {
+        transition: transform 0.3s ease;
+    }
+
+    .stall-image img:hover {
+        transform: scale(1.1);
+    }
+
+    .content-card {
+        margin-top: 2rem;
+        width: 100%;
+        background-color: #f9f9f9;
+        border-radius: 10px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 2rem;
+        display: none;
+        animation: slideIn 0.5s ease forwards;
+    }
+
+    .card-content {
+        display: none;
+    }
+
+    .card-content.active {
+        display: block;
+    }
+
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1.5rem;
+    }
+
+    /* Adjust the layout for medium and larger screens */
+    @media (min-width: 640px) {
+        .gallery {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .gallery {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    @keyframes slideIn {
+        from {
+            transform: translateY(20px);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .flex {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .space-x-10 > * + * {
+            margin-left: 0;
+            margin-top: 1.5rem;
+        }
+
+        .content-card {
+            width: 100%;
+        }
+    }
+</style>
+
+<!-- JavaScript -->
+<script>
+    function showCard(cardId) {
+        var card = document.getElementById("contentCard");
+        var allContent = document.querySelectorAll(".card-content");
+
+        // Hide all content
+        allContent.forEach(function(content) {
+            content.classList.remove("active");
+        });
+
+        // Show selected content
+        document.getElementById(cardId).classList.add("active");
+
+        // Show card with animation
+        card.style.display = "block";
+        card.style.animation = "slideIn 0.5s ease forwards";
+    }
+</script>
 {% endblock %}

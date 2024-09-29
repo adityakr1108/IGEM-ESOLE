@@ -1,10 +1,106 @@
 {% extends "layout.html" %}
   
 {% block title %}Software{% endblock %}
-{% block lead %}Software in iGEM should make synthetic biology based on standard parts easier, faster, better or more accessible to our community.{% endblock %}
+{% block lead %}Software in iGEM should make synthetic biology based on standard parts easier, faster, better, or more accessible to our community.{% endblock %}
 
 {% block page_content %}
 
+
+
+    <!-- Main Content Section -->
+    <img src = "https://static.igem.wiki/teams/5425/drylab/screenshot-2024-09-21-215724.webp" class = "items-center w-full h-96 mt-20" alt = "Software" style = "height:200px; width : 200px; border-radius: 20px; margin-left: 42%;">
+<div class = "heading mt-8 bg-gray-300">
+    <h1 class="text-4xl font-bold text-center">Software</h1>
+    
+</div>
+    <main class="container mx-auto px-4 py-8">
+        <section class="mb-8 bg-white border-2 border-gray-300 p-6 rounded-lg shadow-md">
+            <h2 class="text-2xl font-semibold mb-4">Overview</h2>
+            <p class="mb-4">
+                We saw that there were no algorithms available that could predict the best length of the antisense mRNA for sense-antisense binding to achieve the best population control output from our designed Quorum Sensing Circuit.
+            </p>
+            <p class="mb-4">
+                We, therefore, developed ‘AntiRNA,’ an algorithm that incorporates deep learning, structure prediction, and molecular docking software such as DegScore, Seqfold, and IntaRNA. Our modified Quorum Sensing mathematical model determines the best antisense mRNA length for sense-antisense binding to achieve the desired population regulation.
+            </p>
+            <p class="mb-4">
+                Teams performing cell cycle arrest mediated Quorum Sensing of bacterial populations can use ‘AntiRNA’ to determine the best antisense mRNA length by inputting the sense mRNA sequence. The software will automatically return the optimal antisense length to achieve the desired target based on the user-set circuit parameters.
+            </p>
+
+            <img src="https://static.igem.wiki/teams/5425/drylab/screenshot-2024-09-21-215724.webp" class="w-full mb-4 rounded border border-gray-400 shadow-md" alt="Backbone Code Snippet">
+        </section>
+
+        <!-- Development Section -->
+        <section class="mb-8 bg-white border-2 border-gray-300 p-6 rounded-lg shadow-md">
+            <h2 class="text-2xl font-semibold mb-4">Development of AntiRNA</h2>
+            <p class="mb-4">
+                AntiRNA is designed to take the input sense mRNA sequence, synthesize antisense mRNAs of various lengths, predict their secondary structures, determine degradation rates, and compute the optimal antisense length for population control.
+            </p>
+
+            <div class="bg-white border-2 border-gray-200 p-6 mt-4">
+                <h3 class="text-xl font-semibold mb-4">Functions/Softwares Used</h3>
+                <ul class="list-disc ml-8">
+                    <li><strong>Seqfold:</strong> Python module for predicting secondary structure.</li>
+                    <li><strong>DegScore:</strong> Python module for predicting RNA degradation.</li>
+                    <li><strong>IntaRNA:</strong> Software for RNA-RNA interaction prediction.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Functionality Section -->
+        <section class="mb-8 bg-white border-2 border-gray-300 p-6 rounded-lg shadow-md">
+            <h2 class="text-2xl font-semibold mb-4">AntiRNA Functionality</h2>
+            <p class="mb-4">
+                AntiRNA follows a structured process, which includes listing model ODEs, parameter customization, mRNA input, antisense synthesis, structure prediction, and degradation rate calculation.
+            </p>
+
+            <p class="mb-4">Some important steps include:</p>
+            <ul class="list-decimal ml-8 mb-4">
+                <li>Listing ODEs and parameters for customization.</li>
+                <li>Inputting the sense mRNA sequence.</li>
+                <li>Synthesizing antisense mRNAs from 50 to 600 bps.</li>
+                <li>Predicting secondary structures using Seqfold.</li>
+                <li>Computing half-lives and degradation rates using DegScore.</li>
+                <li>Determining ΔG of binding using IntaRNA and calculating the optimal antisense length.</li>
+            </ul>
+
+            <div class="mb-6">
+                <img src="https://static.igem.wiki/teams/5425/drylab/screenshot-2024-09-25-220741.webp" class="w-full mb-4 rounded border border-gray-400 shadow-md" alt="AntiRNA Output Example">
+            </div>
+        </section>
+
+        <!-- Future Developments Section -->
+        <section class="mb-8 bg-white border-2 border-gray-300 p-6 rounded-lg shadow-md">
+            <h2 class="text-2xl font-semibold mb-4">Future Developments</h2>
+            <p class="mb-4">
+                Due to time constraints, further development is required to refine AntiRNA. Our future goals include defining a Python module to call IntaRNA directly from the algorithm and making AntiRNA more generalized for predicting the best antisense mRNA length for any sense mRNA sequence.
+            </p>
+
+            <div class="mb-6">
+                <img src="https://static.igem.wiki/teams/5425/drylab/green-and-white-project-phases-flowchart.webp" class="w-full mb-4 rounded border border-gray-400 shadow-md" alt="Project Phases Flowchart">
+            </div>
+        </section>
+
+        <!-- Conclusion Section -->
+        <section class="mb-8 bg-white border-2 border-gray-300 p-6 rounded-lg shadow-md">
+            <h2 class="text-2xl font-semibold mb-4">Conclusion</h2>
+            <p class="mb-4">
+                AntiRNA is a promising tool for predicting optimal antisense mRNA length to regulate bacterial populations. This software will assist researchers in controlling bacterial populations while minimizing toxic by-products.
+            </p>
+        </section>
+
+        <!-- Acknowledgements Section -->
+        <section class="mb-8 bg-white border-2 border-gray-300 p-6 rounded-lg shadow-md">
+            <h2 class="text-2xl font-semibold mb-4">Acknowledgements</h2>
+            <ul class="list-disc ml-8">
+                <li><a href="https://biopython.org/" class="text-blue-500 underline">Biopython</a></li>
+                <li><a href="https://github.com/BackofenLab/IntaRNA" class="text-blue-500 underline">IntaRNA</a></li>
+                <li><a href="https://github.com/eternagame/DegScore" class="text-blue-500 underline">DegScore</a></li>
+                <li><a href="https://github.com/Lattice-Automation/seqfold/tree/main" class="text-blue-500 underline">Seqfold</a></li>
+                <li><a href="https://docs.anaconda.com/miniconda/" class="text-blue-500 underline">Anaconda</a></li>
+                <li><a href="https://www.boost.org/" class="text-blue-500 underline">Boost Libraries</a></li>
+            </ul>
+        </section>
+    </main>
 
 
 {% endblock %}

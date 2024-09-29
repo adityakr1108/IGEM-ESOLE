@@ -1,51 +1,896 @@
 {% extends "layout.html" %}
   
-{% block title %}Human Practices{% endblock %}
-{% block lead %}We ask every team to think deeply and creatively about whether their project is responsible and good for the world. Consider how the world affects your work and how your work affects the world.{% endblock %}
+{% block title %}Integraded Human Practices{% endblock %}
 
 {% block page_content %}
-
-<div class="row mt-4">
-  <div class="col">
-    <div class="bd-callout bd-callout-info">
-      <h4>Silver Medal Criterion #2</h4>
-      <p>Explain how you have determined your work is responsible and good for the world.</p>
-      <hr>
-      <p>Please see the <a href="https://competition.igem.org/judging/medals">2024 Medals Page</a> for more information.</p>
-    </div>
+  <head>
+    <style>
+       body {
+            background-image: url('/path/to/your/image.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        } 
+         .content-container {
+            background-color: rgba(255, 255, 255, 0.8); /* White background with 80% opacity */
+         } 
+        .section-hidden {
+            display: none;
+        }
+        .section-container {
+            display: none;
+        }
+        .section-container.active {
+            display: block;
+        } */
   
-    <div class="bd-callout bd-callout-info">
-      <h4>Best Integrated Human Practices</h4>
-      <p>How does your project affect society and how does society influence the direction of your project? How might ethical considerations and stakeholder input guide your project purpose and design and the experiments you conduct in the lab? How does this feedback enter into the process of your work all through the iGEM competition? Document a thoughtful and creative approach to exploring these questions and how your project evolved in the process to compete for this award!</p>
-      <p>To compete for the Best Integrated Human Practices prize, select the prize on the <a href="https://competition.igem.org/deliverables/judging-form">judging form</a> and describe your work on this page.</p>
-      <hr>
-      <p>Please see the <a href="https://competition.igem.org/judging/awards">2024 Awards Page</a> for more information.</p>
+        .custom-height {
+            height: 350px; /* Adjust this value as needed */
+
+        }
+      .pop-out {
+            animation: popOut 0.3s ease-in-out;
+            transform: scale(1.2);
+        }
+        
+        @keyframes popOut {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+            100% {
+                transform: scale(1.2);
+            }
+        }
+    </style>
+  </head>
+    <body class="bg-gray-100 p-10 mt-20">
+    
+      <!-- Main Wrapper with Sidebar and Content -->
+      <div class="flex">
+        <!-- Sidebar Navigation -->
+        <nav id="sidebar" class="w-1/5 h-screen bg-peach p-6 mt-20 shadow-md rounded-lg sticky top-0 transition-all duration-500 ease-in-out transform">
+          <h2 class="text-lg font-bold mb-6 text-center">Index</h2>
+          <ul class="space-y-4 border border-gray-300 bg-peach p-4 rounded-lg">
+            <li class="relative group">
+              <a href="#ihp-section" class="text-gray-800 block p-2 rounded-lg transition-all duration-300 hover:bg-blue-500 hover:text-white hover:shadow-lg">Overview</a>
+            </li>
+            <li class="relative group">
+              <a href="#knowing" class="text-gray-800 block p-2 rounded-lg transition-all duration-300 hover:bg-blue-500 hover:text-white hover:shadow-lg">Knowing the Problem</a>
+            </li>
+            <li class="relative group">
+              <a href="#stake" class="text-gray-800 block p-2 rounded-lg transition-all duration-300 hover:bg-blue-500 hover:text-white hover:shadow-lg">Stake Holders</a>
+            </li>
+            <li class="relative group">
+              <a href="#expert" class="text-gray-800 block p-2 rounded-lg transition-all duration-300 hover:bg-blue-500 hover:text-white hover:shadow-lg">Expert Integration</a>
+            </li>
+          </ul>
+        </nav>
+        
+      
+        
+    
+        <!-- Main Content Area -->
+        <div class="w-4/5 pl-10 space-y-10">
+          
+          <!-- IHP Section -->
+          <h2 class="text-7xl font-bold mb-4 text-center mt-20" style="font-family: 'Times New Roman', serif;">Integrated Human Practice</h2>
+          <div class="bg-gray-100 p-6 rounded-lg shadow-md">~
+              <p class="text-xl italic text-center text-gray-700">"We cannot solve our problems with the same thinking we used when we created them."</p>
+              <p class="text-lg text-right text-gray-600 mt-2">- Albert Einstein</p>
+          </div>
+
+          <section id="ihp-section" class="bg-white p-6 shadow-md rounded-lg">
+            <h2 class="text-7xl font-bold mb-4 text-center" style="font-family: 'Times New Roman', serif;">Overview</h2>
+            <p class="text-lg">Our feet, often overlooked, are exposed daily to moisture, warmth, and the tight confines of shoes—perfect conditions for bacteria and fungi to thrive. In places like India, over 10 million people are affected by fungal infections annually. <strong>E.solei</strong>offers a proactive solution to foot health by preventing infections before they start, rather than treating them after they occur. The bio-active insole, made from a polymer bed hosting bio-engineered bacteria, releases <strong>linalool</strong>, a fragrant compound that inhibits harmful microbes. Unlike traditional foot creams or antifungal drugs, E.solei works continuously and can be adapted for other areas prone to infection, such as the groin or prosthetic sites.</p>
+            <br>
+            <p class="text-lg">The idea for E.solei was born from personal experience and community feedback. One of our team members, struggled with a persistent foot infection, and was forced to miss crucial lab meetings and brainstorming sessions due to another bout of foot fungal infection. This made us realize that foot health was not a minor inconvenience but a significant health issue that demanded attention. Through conversations with dermatologists, foot specialists, athletes, and others, we realized that current treatments were often inadequate. These insights led us to develop E.solei, an accessible and effective product designed to tackle foot health challenges before they become serious problems.</p>
+            <br>
+            <!-- <hr> -->
+            <h2 class="text-5xl text-center font-times-new-roman font-bold text-gray-800 mb-6 mt-4 bg-green-100" style="font-family: 'Times New Roman', serif;">How We Meet E Solei</h2>
+            <!-- <hr class ="mb-4 bg-gray-800"> -->
+            <div class="bg-peach p-6 rounded-lg border-2 border-gray-400 shadow-inner">
+                <div class="grid grid-cols-3 gap-4">
+                    <img src="https://static.igem.wiki/teams/5425/human-practices/eso-1.png" class="transition duration-500 ease-in-out transform hover:scale-105">
+                    <img src="https://static.igem.wiki/teams/5425/human-practices/eso-2.png" class="transition duration-500 ease-in-out transform hover:scale-105">
+                    <img src="https://static.igem.wiki/teams/5425/human-practices/eso-3.png" class="transition duration-500 ease-in-out transform hover:scale-105">
+                    <img src="https://static.igem.wiki/teams/5425/human-practices/eso-4.png" class="transition duration-500 ease-in-out transform hover:scale-105">
+                    <img src="https://static.igem.wiki/teams/5425/human-practices/eso-5.png" class="transition duration-500 ease-in-out transform hover:scale-105">
+                    <img src="https://static.igem.wiki/teams/5425/human-practices/eso-6.png" class="transition duration-500 ease-in-out transform hover:scale-105">
+                </div>
+            </div>
+            <p class = "text-lg mt-4">Our approach goes beyond just scientific innovation. We’re focused on enhancing human conditions by addressing real-world challenges through synthetic biology. By engaging with different communities, we’ve ensured that E.solei is both scientifically sound and socially relevant. This localized strategy demonstrates how synthetic biology can provide lasting, meaningful solutions that improve lives globally, showing that science can do more than advance knowledge—it can make a real-world impact.</p>
+            <img class = "w-1/2 mx-auto" src="https://static.igem.wiki/teams/5425/human-practices/graph/rese-removebg-preview.png">
+
+            <h3 class = "text-3xl font-bold">The REARIE Cycle: A Thoughtful Approach to Problem Solving</h3>
+            <p class = "text-lg mt-2 " style = "font-family: 'Times New Roman', Times, serif;">The REARIE Cycle—which stands for Research, Engage, Analyze, Refine, Implement, and Evaluate—provides a structured framework that has guided us throughout the development of E.solei. Each phase of the cycle allowed us to reflect on feedback, continuously improve the product, and ensure that our decisions align with both our scientific goals and the well-being of our end users.</p>
+          </section>
+    
+          <!-- Education & Outreach Section -->
+          <section id="knowing" class="bg-white p-6 shadow-md rounded-lg">
+            <h2 class="text-4xl font-bold mb-4 font-bold text-center">Knowing The Problem</h2>
+            <p class="text-lg" style="font-family:'Times New Roman', Times, serif;">
+                We took a comprehensive approach by conducting in-depth interviews with dermatologists and foot specialists to tap into expert knowledge, while also circulating a survey to a diverse group—ranging from army personnel and athletes to students. This combination of expert insight and real-world experiences provided us with a well-rounded understanding of the widespread issue of foot infections and the limitations of current treatments. These valuable perspectives were instrumental in shaping the innovative design and purpose of E.solei.
+            </p>
+        
+            <!-- Row for Images -->
+            <div class="flex items-center justify-center space-x-4">
+                <div class="cursor-pointer" onclick="toggleSection('dermatologists')">
+                    <img src="https://static.igem.wiki/teams/5425/human-practices/demolo.png" alt="Dermatologists"style="height:200px; width:400px">
+                    <p class = "text-1xl mt-2 text-center" style = "color:black; font-weight: bold;"> Dermatologists and Diabetic Foot Care Specialist </p>
+                </div>
+                <div class="cursor-pointer" onclick="toggleSection('survey')">
+                    <img src="https://static.igem.wiki/teams/5425/human-practices/survey.png" alt="Survey Form" style="height:200px; width:400px">
+                    <p class = "text-1xl mt-2 text-center" style = "color:black; font-weight: bold;"> Survey Forms</p>
+                </div>
+            </div>
+        
+            <!-- Hidden Sections that will appear on image click -->
+            <!-- Hidden Sections that will appear on image click -->
+            <div id="dermatologists" class="hidden mt-6" style="padding-top: 20px; position: relative;">
+              <!-- Heading -->
+              <h3 class="text-4xl font-semibold mb-10 text-center">Dermatologists and Diabetic Foot Care Specialist</h3>
+            
+              <!-- Vertical Line in the center -->
+              <div style="position: absolute; left: 50%; transform: translateX(-50%); top:115px; bottom: 0; width: 4px; background-color: black;"></div>
+            
+              <!-- First Box on the left -->
+               <div>
+                <div class="flex justify-between items-start mb-8">
+                  <div class="w-1/2 p-6 bg-gray-100 border border-gray-300 rounded-lg" style="position: relative; left: -18px;">
+                    <h3 class="text-3xl font-bold mb-2">Dr. Aparna Palit</h3>
+                    <p class="text-lg">Dermatologist, AIIMS, Kalyani</p>
+                    <p class="text-lg mt-4">
+                      On June 11th, 2024, the iGEM Team from IISER Kolkata had the opportunity to interview Dr. Aparna Palit, a dermatologist at AIIMS, Kalyani. The interview focused on fungal and bacterial foot infections prevalent in the locality, based on recent patient records.
+                    </p>
+                  </div>
+                  <img src="https://static.igem.wiki/teams/5425/human-practices/img-20240925-143430-326-1.webp" alt="dr.Ararna Palit" class="h-56 w-auto mt-20 mr-auto rounded-lg border-2 border-gray-300 ml-auto">
+                </div>
+            
+              <!-- Second Box on the right -->
+              <div class="flex justify-between items-start mb-8">
+                <div class="w-1/2 p-6 bg-gray-100 border border-gray-300 rounded-lg ml-auto" style="position: relative; right: -20px;">
+                  <h3 class="text-3xl font-bold mb-4">Key Takeaways</h3>
+                  <p class="text-lg">
+                    "We commonly encounter two types of fungal foot infections: Candida sp. and dermatophyte infections. Candidiasis is prevalent among people working in moist, muddy conditions, while dermatophyte infections are more common in industrial workers who wear closed shoes for long periods. Environmental factors, like keeping pets at home, can increase exposure to foot fungus, and commensal bacteria often cause foot odor."
+                  </p>
+                </div>
+              </div>
+            
+              <!-- Third Box on the left -->
+              <div class="flex justify-between items-start mb-8">
+                <div class="w-1/2 p-6 bg-gray-100 border border-gray-300 rounded-lg" style="position: relative; left: -18px;">
+                  <h3 class="text-3xl font-bold mb-4">Team Reflection and Intervention</h3>
+                  <p class="text-lg">
+                    The interview with Dr. Palit provided us with crucial insights into the prevalence, causes, and treatment of fungal foot infections, particularly in high-humidity environments like India. Understanding the specific infections (Candida and dermatophytes) and the environmental risks (such as prolonged exposure to moisture and pet-related fungal exposure) allowed us to refine our approach.
+                  </p>
+                </div>
+               
+              </div>
+            
+              <!-- Fourth Box on the right -->
+              <div class="flex justify-between items-start mb-8">
+                <div class="w-1/2 p-6 bg-gray-100 border border-gray-300 rounded-lg ml-auto" style="position: relative; right: -20px;">
+                  <h3 class="text-3xl font-bold mb-4">Implementation in Our Project</h3>
+                  <ul class="list-disc list-inside text-lg">
+                    <li><strong>Understanding Common Fungal Infections:</strong> Based on Dr. Palit's advice, we learned about the common Candida species and dermatophyte infections, which are prevalent among individuals working in moist environments while wearing shoes.</li>
+                    <li><strong>Education on Safe Remedies:</strong> We identified several misconceptions about home remedies for these infections. In our outreach, we made sure to incorporate information addressing these misconceptions, educating people on the correct treatments.</li>
+                    <li><strong>Risk Factors:</strong>  As suggested by Dr. Palit, we will also raise awareness about environmental and lifestyle factors, such as the impact of keeping pets and the importance of proper foot care in humid conditions.</li>
+                  </ul>
+                </div>
+              </div>
+               </div>
+               <div>
+              <div class="flex justify-between items-start mb-8">
+                <div class="w-1/2 p-6 bg-gray-100 border border-gray-300 rounded-lg" style="position: relative; left: -18px;">
+                  <h3 class="text-3xl font-bold mb-2 ">Dr. Ghanashyam Goyal</h3>
+                  <p class="text-lg">Diabetic Foot Care Specialist, ILS Hospitals, Salt Lake</p>
+                  <p class = "text -1xl">“Treat your feet just like you treat your face”</p>
+                  <p class="text-lg mt-4">
+                    The iGEM 2024 Team from IISER Kolkata interviewed Dr. Ghanashyam Goyal to gain insights into the prevalence of fungal and bacterial infections among diabetic patients, the severity of these infections, preventive measures, and strategies to market our product in the diabetic population. 
+                  </p>
+                </div>
+                <img src = "https://static.igem.wiki/teams/5425/human-practices/img-20240925-143500-765-1-1.webp" alt = "Dr. Aparna Palit" class = "h-56 w-auto mt-20 ml-auto rounded-lg border-2 border-gray-300 mr-auto">
+              </div>
+            
+              <!-- Second Box on the right -->
+              <div class="flex justify-between items-start mb-8">
+                <div class="w-1/2 p-6 bg-gray-100 border border-gray-300 rounded-lg ml-auto" style="position: relative; right: -20px;">
+                  <h3 class="text-3xl font-bold mb-4">Key Takeaways</h3>
+                  <p class="text-lg">
+                    The main causes of fungal infections in diabetic patients include walking barefoot, neglecting foot health, and untreated open wounds. Diabetic patients with neuropathy are particularly vulnerable due to compromised nerve function, which is why custom-made shoes with softer insoles are essential for providing stress relief and preventing infections. In severe cases, foot infections can lead to necrosis and even amputation, so it's crucial to maintain proper blood sugar control, have regular check-ups, and ensure good foot care—such as not walking barefoot and using customized insoles. To reach the diabetic customer segment, I recommend partnering with hospitals to distribute customized insoles and assess their effectiveness. You can conduct randomized control trials, where diabetic patients receive either customized or normal insoles, and monitor their susceptibility to infections over 6 months to 1 year to evaluate the product's benefits.
+                  </p>
+                </div>
+              </div>
+            
+              <!-- Third Box on the left -->
+              <div class="flex justify-between items-start mb-8">
+                <div class="w-1/2 p-6 bg-gray-100 border border-gray-300 rounded-lg" style="position: relative; left: -18px;">
+                  <h3 class="text-3xl font-bold mb-4">Team Reflection and Intervention</h3>
+                  <p class="text-lg">
+                    The interview provided us with critical insights into the heightened vulnerability of diabetic patients to foot infections and reinforced the importance of prevention and proper foot care. Dr. Goyal’s suggestions on distributing our product through hospitals and conducting trials have shaped our approach to targeting the diabetic population and refining our product’s design and functionality.
+                  </p>
+                </div>
+              </div>
+            
+              <!-- Fourth Box on the right -->
+              <div class="flex justify-between items-start mb-8">
+                <div class="w-1/2 p-6 bg-gray-100 border border-gray-300 rounded-lg ml-auto" style="position: relative; right: -20px;">
+                  <h3 class="text-3xl font-bold mb-4">Implementation in Our Project</h3>
+                  <ul class="list-disc list-inside text-lg">
+                    <li><strong>Focus on Diabetic Patients:</strong> In addition to focusing on workers and the general public, we have gained new insights into designing insoles specifically tailored for diabetic neuropathic patients, who are more prone to foot fungal infections.</li>
+                    <li><strong>Collaborative Marketing:</strong> We plan to partner with hospitals to introduce our product to diabetic patients, allowing us to reach a larger number of patients.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+            <div id="survey" class="hidden mt-6">
+              <br>
+                <h3 class="text-4xl font-semibold mb-2 text-center" style ="font-family: 'Times New Roman', Times, serif;">Survey Form Insights</h3>
+                <p class="text-lg"  style = "font-family: 'Times New Roman', Times, serif;">
+                  To gather valuable insights for our E. Solei Project, we conducted a survey targeting diverse groups, including students, athletes, office workers, and army personnel. The survey explored common foot issues like fungal infections and odor, along with footwear habits and preferences for foot care products. We also gauged public interest in using genetically modified organisms (GMOs) in foot care, assessing comfort levels and concerns. This feedback is crucial in refining our product to meet real needs while promoting foot health and sustainability.
+                  Key areas explored include Demographic Insights, Understanding Foot Issues, Consumer Preferences, and Perceptions of Genetically Modified Bacteria in Footcare. With 200 responses collected through academic institutions and social media, this feedback provides essential guidance for developing innovative, eco-friendly, and effective footcare solutions that align with consumer expectations.
+                </p>
+                <br>
+                <h3 class = "text-3xl font-bold, text-center">Survey Result Analysis</h3>
+                <br>
+                <ol class="list-decimal list-inside text-lg">
+                  <li class="flex flex-col items-start">
+                      <p class="text-lg" style="font-family: 'Times New Roman', Times, serif;">
+                          <strong>1. Demographic Insights: </strong> Our survey revealed a diverse group of participants, with 61% being students, followed by 13.8% office workers. The majority (62.7%) are aged 18-35, showing strong interest from younger adults. In terms of income, 41.9% of respondents come from middle-income households (4-10 lakh). Geographically, nearly half (49.7%) live in urban areas, with a balanced representation from rural and semi-urban regions. This mix gives us valuable insights into the varying foot care needs across different lifestyles and demographics!
+                      </p>
+                        <div class="bg-peach p-6 rounded-lg border-2 border-gray-400 shadow-inner mt-4">
+                          <div class="grid grid-cols-2 gap-4">
+                              <img src="https://static.igem.wiki/teams/5425/human-practices/graph/graph-1.png" class="transition duration-500 ease-in-out transform hover:scale-105">
+                              <img src="https://static.igem.wiki/teams/5425/human-practices/graph/graph-2.png" class="transition duration-500 ease-in-out transform hover:scale-105">
+                              <img src="https://static.igem.wiki/teams/5425/human-practices/graph/graph-4.png" class="transition duration-500 ease-in-out transform hover:scale-105">
+                              <img src="https://static.igem.wiki/teams/5425/human-practices/graph/graph-4.png" class="transition duration-500 ease-in-out transform hover:scale-105">
+                              <img src="https://static.igem.wiki/teams/5425/human-practices/graph/graph-5.png" class="transition duration-500 ease-in-out transform hover:scale-105">
+                          </div>
+                        </div>
+                  </li>
+                  <br>
+                  <li class="flex flex-col items-start">
+                    <p class="text-lg" style="font-family: 'Times New Roman', Times, serif;">
+                      <strong>2 Understanding Foot Issues and the Demand for Solutions: </strong> From the survey on foot-related issues, we learned that the majority of respondents (60.5%) commonly use open sandals or flip-flops, followed by casual shoes (52.3%). Interestingly, 35.9% reported frequently experiencing foot odor after long hours of wearing shoes, with 38.8% wearing closed shoes for 5-8 hours daily. Notably, 41.8% of participants have faced foot-related issues like redness and itchiness, with 50% of these individuals mentioning itchiness as the most common problem, alongside dry skin (42.5%) and blisters (35%). Additionally, over half of the respondents (53.1%) who had fungal infections reported recurrence after treatment. This feedback confirms the relevance of our project in addressing common issues such as odor, itchiness, and recurring infections.</p>
+                      <div class="bg-peach p-6 rounded-lg border-2 border-gray-400 shadow-inner mt-4">
+                        <div class="grid grid-cols-2 gap-4">
+                            <img src="https://static.igem.wiki/teams/5425/human-practices/graph/graph-21.png" class="transition duration-500 ease-in-out transform hover:scale-105">
+                            <img src="https://static.igem.wiki/teams/5425/human-practices/graph/graph-22.png" class="transition duration-500 ease-in-out transform hover:scale-105">
+                            <img src="https://static.igem.wiki/teams/5425/human-practices/graph/graph-23.png" class="transition duration-500 ease-in-out transform hover:scale-105">
+                            <img src="https://static.igem.wiki/teams/5425/human-practices/graph/graph-24.png" class="transition duration-500 ease-in-out transform hover:scale-105">
+                            <img src="https://static.igem.wiki/teams/5425/human-practices/graph/graph-25.png" class="transition duration-500 ease-in-out transform hover:scale-105">
+                        </div>
+                    </div>
+                    
+                      <div class="bg-peach p-6 rounded-lg border-2 border-gray-400 shadow-inner mt-4">
+                        <div class="grid grid-cols-1 gap-3">
+                            <img src="https://static.igem.wiki/teams/5425/human-practices/graph/table-21.png" class="transition duration-500 ease-in-out transform hover:scale-105">
+                            <img src="https://static.igem.wiki/teams/5425/human-practices/graph/table-22.png" class="transition duration-500 ease-in-out transform hover:scale-105">
+                            <img src="https://static.igem.wiki/teams/5425/human-practices/graph/table-23.png" class="transition duration-500 ease-in-out transform hover:scale-105">
+                        </div>
+                    </div>
+                    <br>
+                    </li>
+                    <li class="flex flex-col items-start">
+                      <p class="text-lg" style="font-family: 'Times New Roman', Times, serif;">
+                        <strong>3. Consumer Preferences and Product Expectations: </strong> From the survey results, we learned that the most desired benefits from a footcare product are protection against fungal infections (81.3%), elimination of foot odor (75%), and moisturizing and softening the skin (63.7%). Additionally, 91.3% of respondents prefer a single product that offers multiple benefits rather than separate products for each issue. The importance of scent was also highlighted, with 66.3% finding it either very or somewhat important. Awareness about the environmental impact of fungal creams was moderate, with 35% aware of their potential negative effects. Interestingly, while 31.3% would definitely pay extra for eco-friendly materials, the majority (62.5%) would consider it depending on the price. This indicates a strong demand for an all-in-one footcare solution with a focus on effectiveness, pleasant scent, and sustainability, as long as the price remains reasonable.</p>
+                        <div class="bg-peach p-6 rounded-lg border-2 border-gray-400 shadow-inner mt-4">
+                          <div class="grid grid-cols-2 gap-4">
+                              <img src="https://static.igem.wiki/teams/5425/human-practices/graph/graph-31.png" class="transition duration-500 ease-in-out transform hover:scale-105">
+                              <img src="https://static.igem.wiki/teams/5425/human-practices/graph/graph-33.png" class="transition duration-500 ease-in-out transform hover:scale-105">
+                              <img src="https://static.igem.wiki/teams/5425/human-practices/graph/graph-34.png" class="transition duration-500 ease-in-out transform hover:scale-105">
+                          </div>
+                      </div>
+                      <div class="bg-peach p-6 rounded-lg border-2 border-gray-400 shadow-inner mt-4">
+                        <div class="grid grid-cols-1 gap-3">
+                            <img src="https://static.igem.wiki/teams/5425/human-practices/graph/table-31.png" class="transition duration-500 ease-in-out transform hover:scale-105">
+                        </div>
+                    </div>
+                    </li>
+                        <br>
+                    <li class="flex flex-col items-start">
+                      <p class="text-lg" style="font-family: 'Times New Roman', Times, serif;">
+                        <strong>4. Perceptions of Genetically Modified Bacteria in Footcare: </strong> From the survey results, we found that familiarity with genetically modified organisms (GMOs) is fairly balanced, with 32% of respondents being very familiar and 36.6% somewhat familiar with their use in biotechnology. Comfort with the idea of using GMOs in everyday applications, such as footcare, showed a split, with 30.2% feeling very comfortable, while 29.7% were somewhat comfortable. A notable 41.2% of respondents have previously used probiotic products, indicating some level of familiarity with beneficial bacteria.
+                        Safety concerns topped the list, with 69.8% of participants worried about the potential risks to humans, followed by concerns about effectiveness (52.1%) and environmental impact (44.8%). Interestingly, the majority indicated that assurances of clinical safety (75%), regulatory certification (65.1%), and transparent product information (68.2%) would significantly increase their comfort levels in using footcare products containing GMOs. This indicates a clear need for educating consumers about the safety, efficacy, and sustainability of using GMOs in personal care products.
+                        </p>
+                        <div class="bg-peach p-6 rounded-lg border-2 border-gray-400 shadow-inner mt-4">
+                          <div class="grid grid-cols-2 gap-4">
+                              <img src="https://static.igem.wiki/teams/5425/human-practices/graph/graph-41.png" class="transition duration-500 ease-in-out transform hover:scale-105">
+                              <img src="https://static.igem.wiki/teams/5425/human-practices/graph/graph-42.png" class="transition duration-500 ease-in-out transform hover:scale-105">
+                              <img src="https://static.igem.wiki/teams/5425/human-practices/graph/graph-43.png" class="transition duration-500 ease-in-out transform hover:scale-105">
+                          </div>
+                      </div>
+                      <div class="bg-peach p-6 rounded-lg border-2 border-gray-400 shadow-inner mt-4">
+                        <div class="grid grid-cols-1 gap-3">
+                            <img src="https://static.igem.wiki/teams/5425/human-practices/graph/table-41.png" class="transition duration-500 ease-in-out transform hover:scale-105">
+                            <img src="https://static.igem.wiki/teams/5425/human-practices/graph/table-42.png" class="transition duration-500 ease-in-out transform hover:scale-105">
+                          </div>
+                      </div>
+                    </li>
+              </ol>
+            </div>
+        </section>
+        
+       
+        
+        
+    
+          <!-- Inclusivity Section -->
+<!-- Inclusivity Section -->
+<section id="stake" class="bg-white p-6 shadow-md rounded-lg">
+  <h2 class="text-3xl font-bold mb-4">Stake Holders</h2>
+  <div class="flex flex-wrap justify-center space-x-4">
+    <div class="cursor-pointer text-center" onclick="toggleSection('corporate', this)">
+        <img src="https://static.igem.wiki/teams/5425/corporate.png" alt="corporate" class="h-24 w-24 rounded-full border-4 border-gray-300">
+        <p class="text-1xl mt-2" style="color:black; font-weight: bold;">Corporate</p>
     </div>
+    <div class="cursor-pointer text-center" onclick="toggleSection('athelete', this)">
+        <img src="https://static.igem.wiki/teams/5425/human-practices/athelete.png" alt="Athletes" class="h-24 w-24 rounded-full border-4 border-gray-300">
+        <p class="text-1xl mt-2" style="color:black; font-weight: bold;">Athletes</p>
+    </div>
+    <div class="cursor-pointer text-center" onclick="toggleSection('student', this)">
+        <img src="https://static.igem.wiki/teams/5425/human-practices/student.png" alt="Students" class="h-24 w-24 rounded-full border-4 border-gray-300">
+        <p class="text-1xl mt-2" style="color:black; font-weight: bold;">Student</p>
+    </div>
+    <div class="cursor-pointer text-center" onclick="toggleSection('common', this)">
+        <img src="https://static.igem.wiki/teams/5425/human-practices/common.png" alt="common people" class="h-24 w-24 rounded-full border-4 border-gray-300">
+        <p class="text-1xl mt-2" style="color:black; font-weight: bold;">Common People</p>
+    </div>
+    <div class="cursor-pointer text-center" onclick="toggleSection('defence', this)">
+        <img src="https://static.igem.wiki/teams/5425/human-practices/defence.png" alt="Defence" class="h-24 w-24 rounded-full border-4 border-gray-300">
+        <p class="text-1xl mt-2" style="color:black; font-weight: bold;">Defence</p>
+    </div>
+</div>
+
+ <!-- Corporate Section -->athelete.png
+<div id="corporate" class="hidden mt-6">
+  <p class="text-lg" style="font-family:'Times New Roman', Times, serif;">
+      <strong>1. Visit to Axis Bank Office, Theatre Road, AC Market, Kolkata, West Bengal</strong><br>
+      As part of our iGEM project, we conducted interviews with corporate professionals in Kolkata to understand the challenges they face due to prolonged shoe-wearing as part of office discipline. During our visit to Axis Bank Office at Theatre Road, Kolkata, on June 29th, 2024, we engaged with bank officials who shared their experiences with foot health issues such as cracked skin, pain in the interdigital spaces, and fungal infections, which are common due to long hours of wearing closed shoes. Our discussions on foot care highlighted the potential benefits of a silica-based sole construction for preventing such problems. The officials expressed interest in our project and provided valuable insights through a survey, contributing to our understanding of the foot care challenges faced by professionals in corporate settings.
+  </p>
+  <br>
+  <h3><strong>Sumanta Mallick</strong></h3>
+  <div class="flex items-start">
+      <p class="text-lg flex-1" style="font-family:'Times New Roman', Times, serif;">
+          I wear shoes for long hours at work, and by the time I get home, my feet are itching with redness and swelling. Sometimes the discomfort is so bad that it’s hard to relax, and I even notice blisters forming occasionally from the moisture trapped in the shoes.
+      </p>
+      <img src="https://static.igem.wiki/teams/5425/human-practices/img-20240726-wa0023.webp" class="w-1/4 h-1/4 ml-4 border-2 border-gray-300 rounded-lg">
+  </div>
+  <h3><strong>Somnath Chakraborty</strong></h3>
+  <div class="flex items-start">
+      <p class="text-lg flex-1" style="font-family:'Times New Roman', Times, serif;">
+          I’ve used several foot creams, but the infection keeps returning no matter what I try. The closed shoes at work make it impossible for my feet to breathe, which just worsens the condition. Even though I keep changing socks regularly, the relief is only temporary.
+      </p>
+      <!-- <img src="/static/assets/somnath.jpg" class="w-1/4 h-1/4 ml-4 border-2 border-gray-300 rounded-lg"> -->
+  </div>
+  <br>
+  <h4><strong>Avik Das Poddar</strong></h4>
+  <div class="flex items-start">
+      <p class="text-lg flex-1" style="font-family:'Times New Roman', Times, serif;">
+          Wearing closed shoes all day leaves my feet smelly with flaky skin, and the constant dampness has caused cracks between my toes. I even consulted a dermatologist and tried the medications prescribed, but none of them have worked, and the condition keeps coming back, especially during the summer and rainy seasons.
+      </p>
+      <img src="/static/assets/avir.jpg" class="w-1/4 h-1/4 ml-4 border-2 border-gray-300 rounded-lg">
   </div>
 </div>
 
-<div class="row mt-4">
-  <div class="col-lg-8">
-    <h2>Overview</h2>
-    <hr>
-    <p>At iGEM we believe societal considerations should be upfront and integrated throughout the design and execution of synthetic biology projects. “Human Practices” refers to iGEM teams' efforts to actively consider how the world affects their work and their work affects the world. Through your Human Practices activities, your team should demonstrate how you have thought carefully and creatively about whether your project is responsible and good for the world. We invite you to explore issues relating (but not limited) to the ethics, safety, security, and sustainability of your project, and to show how this exploration feeds back into your project purpose, design, and execution.</p>
-    <p>Please note you can compete for the Silver Medal criterion #2 and the Best Integrated Human Practices prize with this page.</p>
-    <p>For more information, please see the <a href="https://responsibility.igem.org/human-practices/what-is-human-practices">Human Practices Hub</a>.</p>
-    <p>On this page, your team should document all of your Human Practices work and activities. You should write about the Human Practices topics you considered in your project, document any activities you conducted to explore these topics (such as engaging with experts and stakeholders), describe why you took a particular approach (including referencing any work you built upon), and explain if and how you integrated takeaways from your Human Practices work back into your project purpose, design and/or execution.</p>
+  <!-- Other Sections (Hidden by default) -->
+  <div id="athelete" class="mt-6">
+    <p class="text-lg" style="font-family: 'Times New Roman', Times, serif;">
+      We interviewed athletes of Maharaja Bhupinder Singh University Patiala and coaches from sports like badminton, kabaddi, and football to understand the foot health challenges caused by prolonged shoe use during training. Issues such as blisters, smelly feet, fungal infections, and discomfort were common, especially with non-breathable shoes. Coaches highlighted the lack of proper foot care practices, further stressing the need for better solutions.
+    </p>
+    <br>
+    <h3 class="text-lg font-semibold mb-4">Supriya Kaur</h3>
+  
+    <div id="layout-container" class="grid grid-cols-1 md:grid-cols-2 gap-3 p-3">
+      <!-- About Section -->
+      <div class="bg-gray-200 p-6 rounded-xl flex items-center justify-center text-sm font-bold h-auto width-auto">
+
+        <strong>
+          Athlete (Volleyball and Badminton)  
+        </strong><br>
+        I have to wear shoes for long hours, around 10-12 hours a day. I often experience itching blisters and have never used any specific product to address this issue.
+      </div>
+      <div class="bg-gray-300 p-6 rounded-xl flex items-center justify-center text-lg font-bold h-auto">
+        <strong>What We Learnt:</strong> Athletes like Supriya face foot issues like blisters due to prolonged shoe use, yet there is a lack of awareness about foot-specific care products. This highlights the need for products like E. Solei designed to alleviate these issues.
+      </div>
+    </div>
+    <h3 class="text-lg font-semibold mb-4">Smriti</h3>
+  
+    <div id="layout-container" class="grid grid-cols-1 md:grid-cols-2 gap-3 p-3">
+      <!-- About Section -->
+      <div class="bg-gray-200 p-6 rounded-xl flex items-center justify-center text-sm font-bold h-auto width-auto">
+
+        <strong>
+          Athlete (Volleyball)  
+        </strong><br>
+        Sports shoes with arches are highly expensive, and as we come from middle-class families, we can’t afford them. During theory classes, my feet sweat a lot, and I often deal with smelly feet.
+      </div>
+      <div class="bg-gray-300 p-6 rounded-xl flex items-center justify-center text-lg font-bold h-auto">
+        <strong>What We Learnt:</strong> The high cost of specialized footwear is a barrier for many athletes, and smelly feet due to sweat are common. This underscores the importance of developing affordable, effective solutions for foot odor and comfort.
+      </div>
+    </div>
+    <h3 class="text-lg font-semibold mb-4">Aarif</h3>
+  
+    <div id="layout-container" class="grid grid-cols-1 md:grid-cols-2 gap-3 p-3">
+      <!-- About Section -->
+      <div class="bg-gray-200 p-6 rounded-xl flex items-center justify-center text-sm font-bold h-auto width-auto">
+
+        <strong>
+          Athlete (BasketBall)  
+        </strong><br>
+        When I started playing sports, I had issues with corns. However, as I became more professional and started using high-quality shoes, the problem significantly decreased. Smelly feet, rashes, and infections are common issues among sportsmen.
+      </div>
+      <div class="bg-gray-300 p-6 rounded-xl flex items-center justify-center text-lg font-bold h-auto">
+        <strong>What We Learnt:</strong>Athletes, especially beginners, often face foot problems like corns and infections. While better shoes help, these issues persist, signaling a need for supplementary foot care products to enhance hygiene and health.
+      </div>
+    </div>
+    <h3 class="text-lg font-semibold mb-4"> Harjinder</h3>
+  
+    <div id="layout-container" class="grid grid-cols-1 md:grid-cols-2 gap-3 p-3">
+      <!-- About Section -->
+      <div class="bg-gray-200 p-6 rounded-xl flex items-center justify-center text-sm font-bold h-auto width-auto">
+
+        <strong>
+          Athlete (Kho Kho)  
+        </strong><br>
+        I wear mat shoes for kho kho, and they are designed to fit tightly, leaving no room for the feet to breathe. This often leads to blisters and boils.
+      </div>
+      <div class="bg-gray-300 p-6 rounded-xl flex items-center justify-center text-lg font-bold h-auto">
+        <strong>What We Learnt:</strong>Non-breathable shoes are a significant problem for athletes in specific sports, leading to foot issues like blisters and boils. This insight can help us focus on breathable, moisture-wicking designs in our product.
+      </div>
+    </div>
+    <br>
+    <h3 class = "text-4xl font-bold text-center">ATHLETIC COACHES</h3>
+
+    <h3 class="text-2xl font-semibold mb-4">Dr. Sandip bera </h3>
+  
+    <div id="layout-container" class="grid grid-cols-1 md:grid-cols-2 gap-3 p-3">
+      <!-- About Section -->
+      <div class="bg-gray-200 p-6 rounded-xl flex items-center justify-center text-sm font-bold h-auto width-auto">
+
+        <strong>
+          (BADMINTON) and Assistsant Teacher
+        </strong><br>
+        Athletes wear shoes for 5-6 hours at a stretch, and the quality matters a lot. We’ve seen issues like fungal infections, white discoloration, inflammation, and smelly feet, usually due to improper cleaning of socks. These cases happen 2-3 times a year. Regular shoe cleaning is essential, and proper foot care practices should be introduced during early training, which is often overlooked in sports.
+      </div>
+      <div class="bg-gray-300 p-6 rounded-xl flex items-center justify-center text-lg font-bold h-auto">
+        <strong>What We Learnt:</strong>The coach’s insights emphasized the need for E. Solei to tackle foot issues from prolonged shoe use while promoting foot care education during early training, ensuring both hygiene and comfort for athletes.
+      </div>
+    </div>
+    <h3 class="text-2xl font-semibold mb-4">Mohan Mandal</h3>
+  
+    <div id="layout-container" class="grid grid-cols-1 md:grid-cols-2 gap-3 p-3">
+      <!-- About Section -->
+      <div class="bg-gray-200 p-6 rounded-xl flex items-center justify-center text-sm font-bold h-auto width-auto">
+
+        <strong>
+          NIS coach and  International Kabbadi Coach
+        </strong><br>
+        The problem with kabaddi mat shoes is that they're usually tight-fitting and non-breathable .This often leads to issues like blisters, excessive sweating, and fungal infections because there’s no airflow, especially during prolonged wear.
+      </div>
+      <div class="bg-gray-300 p-6 rounded-xl flex items-center justify-center text-lg font-bold h-auto">
+        <strong>What We Learnt:</strong>Kabaddi mat shoes often cause blisters, sweating, and fungal infections due to poor airflow. In our E. Solei project, we’ll focus on moisture control, preventing infections, and reducing odor to improve comfort and foot health for kabaddi players during long training sessions.
+      </div>
+    </div>
+    <h3 class="text-2xl font-semibold mb-4">Chandan das</h3>
+  
+    <div id="layout-container" class="grid grid-cols-1 md:grid-cols-2 gap-3 p-3">
+      <!-- About Section -->
+      <div class="bg-gray-200 p-6 rounded-xl flex items-center justify-center text-sm font-bold h-auto width-auto">
+
+        <strong>
+          Head coach of IISER Football team
+        </strong><br>
+        Blisters are also a common issue, especially during the break-in period of new boots. Many players push through the discomfort, but without the right foot care, these blisters can worsen, affecting their performance. We really need better foot care solutions that can prevent these problems right from the start.
+      </div>
+      <div class="bg-gray-300 p-6 rounded-xl flex items-center justify-center text-lg font-bold h-auto">
+        <strong>What We Learnt:</strong>The coach's feedback highlighted common issues like redness, burning, moisture buildup, and blisters from prolonged boot use. To refine E. Solei, we will focus on moisture control, blister prevention, and odor reduction, ensuring comfort and protection from the first wear.
+      </div>
+    </div>
+
+    
   </div>
-  <div class="col-lg-4">
-    <h2>Inspirations</h2>
-    <hr>
-    <ul>
-      <li><a href="https://2019.igem.org/Team:Thessaly/Human_Practices">2019 Thessaly</a></li>
-      <li><a href="https://2019.igem.org/Team:Linkoping_Sweden/Human_Practices">2019 Linkoping Sweden</a></li>
-      <li><a href="https://2019.igem.org/Team:FDR-HB_Peru/Human_Practices">2019 FDR HB Peru</a></li>
-      <li><a href="https://2020.igem.org/Team:William_and_Mary/Human_Practices">2020 William and Mary</a></li>
-      <li><a href="https://2020.igem.org/Team:Rochester/Human_Practices">2020 Rochester</a></li>
-      <li><a href="https://2020.igem.org/Team:Leiden/Human_Practices">2020 Leiden</a></li>
-      <li><a href="https://2020.igem.org/Team:Baltimore_BioCrew/Human_Practices">2020 Baltimore BioCrew</a></li>
-    </ul>
+  
+  <div id="student" class="hidden mt-6">
+    <p class ="text-2xl text-bold"><strong>Sartaj, Master's Student, Age 23</strong></p>
+    <div class = flex items-start>
+    <p class = "text-lg flex-1" style = "font-family: 'Times New Roman', Times, serif;"><strong>Important Statement: </strong>In Kashmir, you can’t avoid wearing closed shoes, especially in the winter. It’s either boots or you risk getting frostbite or wet feet from the snow. But wearing them all day isn’t ideal for foot health either.Fungal infections aren’t something I deal with often, but I know many people around here who suffer, especially during the colder months when it’s harder to keep your feet dry.I use foot powder and creams regularly. And if the weather is warmer, I switch to more breathable shoes, but that’s not always possible here.The real challenge is managing moisture—whether it’s snow or rain, your feet are always at risk of getting damp, which can cause infections if you’re not careful.</p>
+    <img src = "https://static.igem.wiki/teams/5425/human-practices/img-20240925-143513-919-3.webp" class = "w-1/4 h-1/4 ml-4 border-2 border-gray-300 rounded-lg">
+    </div> 
+    <p class = "text-lg" style = "font-family: 'Times New Roman', Times, serif;"><strong>What We Learned:</strong>Sartaj’s insights on Kashmir’s cold, humid climate highlight the need for moisture control and antifungal protection. To refine E. Solei, we’ll focus on addressing these issues with our genetically modified E. coli, which releases Linalool to prevent fungal infections. Additionally, promoting proper foot care routines will be key to ensuring the product effectively mitigates foot health problems in such environments.</p>
+    <br>
+    <p class ="text-2xl text-bold"><strong>Tahir, Student, Age 24</strong></p>
+    <div class = flex items-start>
+    <p class = "text-lg flex-1" style = "font-family: 'Times New Roman', Times, serif;"><strong>Important Statement: </strong>In Kashmir, the cold and rainy seasons make it necessary to wear closed shoes for 8-10 hours a day. I've had fungal infections 3-4 times, especially in the humid months of June and July. The infections cause itching, redness, and smelly feet. To manage this, I focus on hygiene, frequently change socks, and use antifungal powders like Candid. When it gets severe, I’ve even tried leech and cupping therapy. The challenge is keeping feet dry in such conditions, which isn’t always possible, especially in extreme winters and during rainy days.</p>
+    <img src = "https://static.igem.wiki/teams/5425/human-practices/img-20240925-143440-216-1.webp" class = "w-1/4 h-1/4 ml-4 border-2 border-gray-300 rounded-lg">
+    </div>   
+    <p class = "text-lg" style = "font-family: 'Times New Roman', Times, serif;"><strong>What We Learned:</strong>Tahir’s experience brings attention to the recurring fungal infections caused by Kashmir's unique climate, especially during the humid months of June and July.His emphasis on personal hygiene and rotating between footwear reveals the need for long-term antifungal protection. Additionally, E. Solei could incorporate features that help keep feet dry and comfortable during prolonged shoe use in extreme conditions, ensuring that it offers practical support for individuals dealing with persistent infections.</p>
+   
+    <p class ="text-2xl text-bold"><strong>Fathima Bincy, Mentor, Age 27</strong></p>
+    <div class = flex items-start>
+    <p class = "text-lg flex-1" style = "font-family: 'Times New Roman', Times, serif;">Kerala’s climate, with its six months of rain and six months of summer, makes wearing shoes uncomfortable for long periods. I usually wear sandals, especially during the rainy season, but I’ve experienced foot infections during my school days, particularly in the rainy months. The infections caused itching between my toes when I wore shoes. I had to frequently visit the doctor and use ointments, but maintaining foot health can be challenging, especially with the warm and wet conditions here.</p>
+    <img src = "https://static.igem.wiki/teams/5425/human-practices/img-20240925-143342-881.webp" class = "w-1/4 h-1/4 ml-4 border-2 border-gray-300 rounded-lg">
+    </div> 
+    <p class = "text-lg" style = "font-family: 'Times New Roman', Times, serif;"><strong>What We Learned:</strong>Fathima’s experience highlights the impact of Kerala's wet and humid climate on foot health, with infections commonly occurring during the rainy season. To refine E. Solei, we will focus on creating a solution that reduces fungal infections, and is easy to incorporate into daily foot care routines, particularly in climates with prolonged wet conditions.</p>
+   
+    <p class ="text-2xl text-bold"><strong>Mohammed Salman,College student, Age 20</strong></p>
+    <div class = flex items-start>
+      <p class = "text-lg flex-1" style = "font-family: 'Times New Roman', Times, serif;"><strong>Important Statement: </strong>In Kashmir, the cold and rainy seasons make it necessary to wear closed shoes for 8-10 hours a day. I've had fungal infections 3-4 times, especially in the humid months of June and July. The infections cause itching, redness, and smelly feet. To manage this, I focus on hygiene, frequently change socks, and use antifungal powders like Candid. When it gets severe, I’ve even tried leech and cupping therapy. The challenge is keeping feet dry in such conditions, which isn’t always possible, especially in extreme winters and during rainy days.</p>
+      <img src = "https://static.igem.wiki/teams/5425/human-practices/img-20240925-143432-989-1.webp" class = "w-1/4 h-1/4 ml-4 border-2 border-gray-300 rounded-lg">
+      </div>
+    <p class = "text-lg" style = "font-family: 'Times New Roman', Times, serif;"><strong>What We Learned:</strong>Prolonged shoe use in Kerala’s humid climate can lead to foot infections, especially during the rainy season. The student's experience highlights the need for preventive solutions for fungal infections and foot health issues.</p>
   </div>
+
+
+
+  <div id="common" class="hidden mt-6">
+    <h3 class = "text-2xl font-bold">Ghoragaccha Village, Nadia District, West Bengal – Street Interview</h3>
+    <div class = flex items-start>
+      <p class = "text-lg" style = "font-family: 'Times New Roman', Times, serif;">During our visit to the countryside village of Ghoragaccha, we spoke with the women, as many of the farmers were working in the fields. Through a friendly conversation, they shared that they and their families often experience various skin irritations, which take a long time to heal. Some of the residents even encounter recurrent infections every one or two months. Due to their low yearly income, they cannot afford dermatologists or specialized physicians, relying instead on ointments from local compounders.</p>
+      <img src = "https://static.igem.wiki/teams/5425/human-practices/common-2.jpg" class = "w-1/4 h-1/4 ml-4 border-2 border-gray-300 rounded-lg">
+    </div>
+    <div class = flex items-start>
+      <p class = "text-lg" style = "font-family: 'Times New Roman', Times, serif;"><strong>One woman explained</strong>, "We believe the soil and water in the fields cause these irritations, probably from insects." We suggested they regularly wash their feet with warm water as a preventive measure, and their feedback made us reflect on 0the cost-effectiveness and broader applicability of our product.</p>
+      <img src = "https://static.igem.wiki/teams/5425/human-practices/common-1.jpg" class = "w-1/4 h-1/4 ml-4 border-2 border-gray-300 rounded-lg">
+    </div>
+    
+    <p class = "text-lg" style = "font-family: 'Times New Roman', Times, serif;"><strong>What We Learned: </strong>The villagers’ reliance on local remedies due to financial constraints highlights the need for affordable, accessible foot care solutions. This insight helped us realize the importance of making our E. Solei product not only effective but also cost-efficient, so it can benefit rural communities like Ghoragaccha.</p>
+    
+    <h3 class = "text-2xl font-bold">Local Workers of Nadia</h3>
+    <!-- <div class = flex items-start> -->
+      <p class = "text-lg" style = "font-family: 'Times New Roman', Times, serif;">During our conversation with several local workers, they shared common foot health concerns. Swelling and cuts are frequent, with about 4-5 out of 10 people experiencing infections. They noted that these infections often occur in individuals with weaker immunity.</p>
+      <!-- <img src = "/static/assets/common_.jpg" class = "w-1/4 h-1/4 ml-4 border-2 border-gray-300 rounded-lg"> -->
+      <p class = "text-lg" style = "font-family: 'Times New Roman', Times, serif;"><strong>One worker explained</strong>"It doesn’t happen to everyone, but those with weaker immunity are more likely to get infections." They shared that they first try natural remedies, and only consult a doctor if the condition doesn’t improve. The workers generally experience 2-4 infections annually, with a noticeable increase during the rainy season.</p>
+      <p class = "text-lg" style = "font-family: 'Times New Roman', Times, serif;"><strong>Another worker added</strong>"Wearing shoes for long hours makes it worse. The sweat inside the shoes encourages bacteria to grow." They emphasized that while they don’t typically wear shoes, they are required to do so for safety during risky jobs like construction.</p>
+      <p class = "text-lg" style = "font-family: 'Times New Roman', Times, serif;"><strong>What We Learned: </strong>The workers' experiences reveal the significant role sweat and prolonged shoe-wearing play in increasing the risk of foot infections. Their reliance on natural remedies and their limited use of footwear highlight the importance of creating a solution that controls bacterial growth which is also practical for those who wear shoes for long periods in high-risk environments. This feedback guided us in refining E. Solei to cater to the specific needs of laborers working in tough conditions.</p>
+      
+      <h3 class = "text-2xl font-bold">Ashaben Pandya, Housewife, Age 44, Gujarat</h3>
+      <div class = flex items-start>
+        <p class = "text-lg" style = "font-family: 'Times New Roman', Times, serif;">I've been dealing with a fungal infection for the last 10 years, and it gets much worse every winter. It's more manageable during the rainy season and decreases in summer. I get rashes, skin cuts, and peeling, and it feels really itchy—sometimes even bleeding. When it dries, black spots appear where I scratched. This all started after I moved to Ahmedabad. Back in Dabhoi, where the weather was cooler, I didn't have these problems. To manage it, I wear socks and apply petroleum jelly, but when my feet get wet and then dry, the itching gets worse. As you can see, the skin turns black after scratching, and there's swelling in some spots.</p>
+        <img src = "https://static.igem.wiki/teams/5425/human-practices/common-4.jpg" class = "w-1/4 h-1/4 ml-4 border-2 border-gray-300 rounded-lg">       
+        </div>
+        <br>
+        <div class = flex items-start>
+          <p class = "text-lg" style = "font-family: 'Times New Roman', Times, serif;"><strong>What We Learned: </strong>The workers' experiences reveal the significant role sweat and prolonged shoe-wearing play in increasing the risk of foot infections. Their reliance on natural remedies and their limited use of footwear highlight the importance of creating a solution that controls bacterial growth which is also practical for those who wear shoes for long periods in high-risk environments. This feedback guided us in refining E. Solei to cater to the specific needs of laborers working in tough conditions.</p>
+          <img src = "https://static.igem.wiki/teams/5425/human-practices/common-3.jpg" class = "w-1/4 h-1/4 ml-4  border-gray-300 rounded-lg">       
+        </div>
+
+        <h3 class = "text-2xl font-bold">Abdul Rasheed, Airport Employee, Age 55</h3>
+        <div class = flex items-start>
+          <p class = "text-lg" style = "font-family: 'Times New Roman', Times, serif;"><strong>Important Statement: </strong>I wear shoes for around 12 hours at the airport, and due to the climate in Kerala, I often experience foot infections. My dermatologist said it's likely caused by wearing wet socks. These types of fungal infections have become more frequent since the COVID outbreak. Although I’ve been using medication, the infection hasn’t fully cleared up, and I often forget to apply it regularly.</p>
+          <img src = "https://static.igem.wiki/teams/5425/human-practices/common-6.jpg" class = "w-1/4 h-1/4 ml-4 border-2 border-gray-300 rounded-lg">       
+          </div>
+          <p class = "text-lg" style = "font-family: 'Times New Roman', Times, serif;"><strong>What We Learned: </strong>Abdul Rasheed’s experience, along with his dermatologist's observation, shows that the frequency of fungal infections has increased since the COVID outbreak, due to prolonged shoe use and wet socks in Kerala’s humid climate. </p>
+
+        <h3 class = "text-2xl font-bold">Soopy Haji, Farmer, Age 74</h3>
+        <div class = flex items-start>
+          <p class = "text-lg" style = "font-family: 'Times New Roman', Times, serif;"><strong>Important Statement: </strong>The climate in Kerala is generally pleasant, with about six months of rainy season and six months of moderate summer. I usually wear slippers, but during farming, I often remove them. Foot infections are common, especially during the rainy season when my feet are exposed to muddy water and bacteria from fertilizers. I don’t usually seek medical treatment, instead relying on traditional remedies like liquid from burnt cashew nuts. Antifungal creams are not popular because they take too long to work.</p>
+          <img src = "https://static.igem.wiki/teams/5425/human-practices/screenshot-2024-09-27-025841.webp" class = "w-1/4 h-1/4 ml-4 border-2 border-gray-300 rounded-lg">       
+          </div>
+          <p class = "text-lg" style = "font-family: 'Times New Roman', Times, serif;"><strong>What We Learned: </strong>Soopy Haji’s experience highlights the significant foot health challenges faced by farmers in Kerala, particularly due to exposure to bacteria and muddy water during the rainy season. Traditional remedies are often preferred over modern antifungal treatments due to convenience. The increasing use of rubber boots is a step toward prevention, but persistent infections point to the need for more effective and practical solutions. </p>
+
+        <h3 class = "text-2xl font-bold">Abdul Lateef, Lecturer, Age 50</h3>
+        <div class = flex items-start>
+          <p class = "text-lg" style = "font-family: 'Times New Roman', Times, serif;"><strong>Important Statement: </strong>I wear shoes for around 12 hours at the airport, and due to the climate in Kerala, I often experience foot infections. My dermatologist said it's likely caused by wearing wet socks. These types of fungal infections have become more frequent since the COVID outbreak. Although I’ve been using medication, the infection hasn’t fully cleared up, and I often forget to apply it regularly.</p>
+          <img src = "https://static.igem.wiki/teams/5425/human-practices/img-20240925-143509-394-1.webp" class = "w-1/4 h-1/4 ml-4 border-2 border-gray-300 rounded-lg">       
+          </div>
+          <p class = "text-lg" style = "font-family: 'Times New Roman', Times, serif;"><strong>What We Learned: </strong>Abdul Rasheed’s experience, along with his dermatologist's observation, shows that the frequency of fungal infections has increased since the COVID outbreak, due to prolonged shoe use and wet socks in Kerala’s humid climate. </p>
+
+        <h3 class = "text-2xl font-bold">Hashmit, Pharmacist, Age 22
+        </h3>
+        <div class = flex items-start>
+          <p class = "text-lg" style = "font-family: 'Times New Roman', Times, serif;"><strong>Important Statement: </strong>Kashmir’s cold climate, especially in the winter and monsoon seasons, leads to an increase in fungal infections. I wear shoes for about 5-7 hours a day, and I experience fungal infections 2-3 times a year, with symptoms like itching, redness, and inflammation. To treat this, I use antifungal creams like luliconazole, candid, and butenafine. Personal cleanliness, changing socks frequently, and using ointments help, but the infections are most common during the colder months.</p>
+          <img src = "https://static.igem.wiki/teams/5425/human-practices/img-20240925-143438-699-1.webp" class = "w-1/4 h-1/4 ml-4 border-2 border-gray-300 rounded-lg">       
+          </div>
+          <p class = "text-lg" style = "font-family: 'Times New Roman', Times, serif;"><strong>What We Learned: </strong>Hashmit’s experience highlights the recurring fungal infections in Kashmir’s cold and damp climate due to prolonged shoe-wearing. His use of antifungal treatments underscores the need for effective solutions.</p>
+          
+          
+        </div>
+        <div id="defence" class="container mx-auto mt-6">
+          <h2 class="text-4xl font-bold text-center mb-6" style="font-family: 'Times New Roman', Times, serif;">Discussion with Border Security Forces on Footwear and Foot Health</h2>
+          
+          <p class="text-center font-semibold italic text-xl mb-4">"फ़ौजी लोगों का सबसे नाज़ुक हिस्सा उनका पैर होता है।"</p>
+          <p class="text-center font-semibold italic text-xl mb-6">"The most vulnerable part of soldiers is their feet."</p>
+      
+          <p class="text-lg mb-4" style="font-family: 'Times New Roman', Times, serif;">
+              We had the opportunity to interview personnel from the Border Security Force (BSF) stationed at a camp near IISER-Kolkata, including a <strong>Deputy Commandant</strong> and a <strong>Quarter Commandant</strong>. The purpose of our visit was to gather insights into the footwear usage and foot health concerns of soldiers, as we initially believed that army personnel who wear shoes for extended periods would be our key stakeholders.
+          </p>
+      
+          <h4 class="text-2xl font-bold mb-3" style="font-family: 'Times New Roman', Times, serif;">Important Dialogue</h4>
+      
+          <p class="text-lg mb-4" style="font-family: 'Times New Roman', Times, serif;">
+              <strong>Deputy Commandant:</strong> In the first few months of training, it's quite common to see issues like boils, redness, and white discoloration on the feet. But over time, the body adjusts, and these problems tend to reduce.
+          </p>
+      
+          <div class="flex items-start mb-6">
+              <p class="font-semibold text-lg flex-1" style="font-family: 'Times New Roman', Times, serif;">
+                  During the discussion, the soldiers also revealed that they use different types of shoes for specific purposes. They shared insights about three key types: Jungle Boots, Combat Boots, and DMS (Direct Moulded Sole) Shoes.
+              </p>
+              <img src="https://static.igem.wiki/teams/5425/human-practices/img-20240925-143546-909-1.webp" class="w-1/3 h-auto ml-4 border-2 border-gray-300 rounded-lg">
+          </div>
+      
+          <p class="text-lg mb-4" style="font-family: 'Times New Roman', Times, serif;">
+              <strong>Quarter Commandant:</strong> Jungle Boots are the most comfortable for long-range patrols. They're tough and breathable, perfect for rugged terrains, especially in Naxal areas where we might cover up to 30-40 kilometers in a single run.
+          </p>
+      
+          <p class="text-lg font-semibold mb-4" style="font-family: 'Times New Roman', Times, serif;">
+              The conversation also revealed critical information about the challenges faced by soldiers in extreme climates. For instance, in colder regions like Siachen, moisture inside their shoes can freeze into ice crystals, causing severe damage to their feet. Similarly, in hot desert regions like Jaisalmer, soldiers often experience pale skin and boils due to trapped heat inside their shoes.
+          </p>
+      
+          <p class="text-lg italic mb-4" style="font-family: 'Times New Roman', Times, serif;">
+              Soldier recently returned from the border: "Up in Siachen, the moisture in your boots actually freezes into ice. You can feel the crystals forming inside, and it gets so bad that some guys end up with frostbite. In the worst cases, we've even seen amputations because of it."
+          </p>
+      
+          <p class="text-lg mb-4" style="font-family: 'Times New Roman', Times, serif;">
+              While soldiers have adapted well to their footwear in more moderate climates, we were surprised to learn that foot care is not formally addressed in their training or routine. Foot-related issues are generally regarded as minor, and only a few soldiers face these problems at any given time. However, the soldiers did stress the importance of <strong>insoles</strong> for added comfort.
+          </p>
+      
+          <p class="text-lg italic mb-4" style="font-family: 'Times New Roman', Times, serif;">
+              "Insoles are key. They need to be thick and customized depending on the type of shoe we're wearing. It can make all the difference during long patrols."
+          </p>
+      
+          <div class="flex items-start mb-6">
+              <p class="text-lg flex-1 mb-4" style="font-family: 'Times New Roman', Times, serif;">
+                  From our discussion with BSF personnel, we learned that soldiers, especially during early training, face foot issues like boils and redness but eventually adapt to their footwear. Jungle Boots are preferred for their durability and breathability during long-range patrols in rugged terrains, while Combat Boots are less suited for extended wear, emphasizing the need for purpose-specific footwear. However, new recruits and those undergoing intensive training may still benefit from improved footwear options.
+              </p>
+              <img src="https://static.igem.wiki/teams/5425/human-practices/img-20240925-143422-570.webp" class="w-1/3 h-auto ml-4 border-2 border-gray-300 rounded-lg">
+          </div>
+      
+          <p class="text-lg mb-4" style="font-family: 'Times New Roman', Times, serif;">
+              Foot health becomes a serious concern in extreme climates. In freezing areas like Siachen, moisture inside shoes can freeze, leading to frostbite and even amputations. In desert regions like Jaisalmer, trapped heat causes boils and skin discoloration. These issues highlight the need for footwear that manages moisture and temperature effectively in extreme environments.
+          </p>
+      
+          <p class="text-lg mb-4" style="font-family: 'Times New Roman', Times, serif;">
+              Additionally, soldiers emphasized the importance of thick, customized insoles for long-duration missions. This feedback guided us in refining E. Solei by incorporating different strains of bacteria capable of withstanding extreme climatic conditions, particularly for those operating in high-altitude environments where foot health is most at risk. Additionally, we will need to focus on affordability and value, while broadening our perspective on potential stakeholders to ensure that our solution benefits a wider range of users.
+          </p>
+      
+          <h4 class="text-2xl font-semibold text-center mb-4" style="font-family: 'Times New Roman', Times, serif;">Discussion with Mr. Kaushal Sharma on Footwear, Foot Health, and Broader Applications for E. Solei</h4>
+      
+          <p class="text-lg font-semibold mb-2" style="font-family: 'Times New Roman', Times, serif;">Mr. Kaushal Sharma</p>
+          <p class="text-lg mb-4" style="font-family: 'Times New Roman', Times, serif;">Chief Security Officer, IISER-Kolkata</p>
+      
+          <p class="text-lg mb-4" style="font-family: 'Times New Roman', Times, serif;">
+              We had a discussion with Mr. Kaushal Sharma, the Chief Security Officer of our institute, about the challenges of long-term shoe wear, focusing on issues such as fungal and bacterial infections, unpleasant odors, and foot swelling. As a former army personnel, he shared the preventive measures he follows to maintain foot health.
+          </p>
+      
+          <p class="text-lg italic mb-4" style="font-family: 'Times New Roman', Times, serif;">
+              Mr. Sharma: "One thing that struck me during our conversation is how the material you're developing for footwear could have a much broader application. Think about people who are bedridden in hospitals or at home for long periods. They’re unable to move, and the constant exposure of certain parts of their body to the bed surface often leads to fungal infections and sores. If you could adapt this antimicrobial material into something like a bedsheet or covering, it would be incredibly beneficial for preventing these kinds of infections. This could address a major issue in healthcare, helping patients stay healthier and more comfortable."
+          </p>
+      
+          <p class="text-lg mb-4" style="font-family: 'Times New Roman', Times, serif;">
+              <strong>What We Learned:</strong> We learned the importance of strict hygiene practices to prevent foot-related issues in long-term shoe wear. Additionally, Mr. Sharma highlighted another potential application for <strong>E. Solei</strong> as an antimicrobial bed for bedridden patients in hospitals, where infections are a significant concern. This insight broadens the scope of our product to address a real-world problem in healthcare.
+          </p>
+      
+          <p class="text-lg font-semibold mb-2" style="font-family: 'Times New Roman', Times, serif;">Raj Kumar Ghosh</p>
+          <p class="text-lg mb-4" style="font-family: 'Times New Roman', Times, serif;"><strong>Designation:</strong> Unit Commander, IISER Kolkata</p>
+      
+          <div class="flex items-start mb-6">
+              <p class="text-lg flex-1 mb-4" style="font-family: 'Times New Roman', Times, serif;">
+                  Most of the security forces at our institute are retired army, navy, and other defense personnel. They have adapted to wearing shoes for long hours due to their past service. However, we now realize that their tolerance capacity has reduced over time, and many of them feel irritated by wearing shoes for extended periods, particularly in this climate.
+              </p>
+              <img src="https://static.igem.wiki/teams/5425/human-practices/img-20240925-143519-473-1.webp" class="w-1/3 h-auto ml-4 border-2 border-gray-300 rounded-lg">
+          </div>
+      
+       
+      
+          <div class="flex items-start mb-6">
+            <p class="text-lg mb-4" style="font-family: 'Times New Roman', Times, serif;">
+              <strong>What We Learned:</strong> We learned that while the security personnel have a background in defense services, where they were accustomed to harsh conditions, the local climate and prolonged wearing of shoes have affected their comfort levels over time. Even individuals with prior experience in extreme environments can experience reduced tolerance to such conditions in a different context.
+          </p>
+              <img src="https://static.igem.wiki/teams/5425/human-practices/screenshot-2024-09-27-125501-1.webpg" class="w-1/3 h-auto ml-4 border-2 border-gray-300 rounded-lg ht-20">
+          </div>
+      </div>
+      
+</section>
+
+    
+        <!-- Expert Insights Section -->
+<section id="expert" class="bg-white p-6 shadow-md rounded-lg" style="font-family: 'Times New Roman', Times, serif;">
+  <!-- Heading -->
+  <h3 class="text-4xl font-semibold mb-10 text-center">Engagement with Stakeholders and Expert Insights</h3>
+
+  <!-- First Box on the left -->
+  <h3 class="text-3xl font-bold mb-4">Stakeholder Feedback</h3>
+  <p class="text-lg mb-8">
+      After engaging with our stakeholders, including students, athletes, corporate employees, defense personnel, and the general public, we gained valuable insights that reshaped our project approach. Their feedback provided diverse perspectives on how our bacterial insole technology could fit into their daily lives, focusing on comfort, functionality, and affordability. These conversations gave us a deeper understanding of user needs and allowed us to refine our design accordingly.
+  </p>
+
+  <!-- Second Box on the right -->
+  <h3 class="text-3xl font-bold mb-4">Expert Insights</h3>
+  <p class="text-lg mb-8">
+      Our project focuses on two key components: the production of linalool—known for its antifungal, wound healing, antimicrobial, anti-inflammatory, and lavender fragrance properties—and the sustained production of linalool using live bacterial cultures. We encountered a significant challenge in controlling the bacterial population to prevent overgrowth, which could compromise the product's longevity. To address this issue, we developed a population control module incorporating a sensing system to regulate bacterial growth, ensuring that the product remains effective over time.
+  </p>
+  <br>
+  
+  <div class="flex justify-between items-start mb-8">
+      <div class="w-1/2 p-6 bg-gray-100 border border-gray-300 rounded-lg" style="position: relative; left: -18px;">
+          <h3 class="text-3xl font-bold mb-4">Dr. Sudin Bhattacharya</h3>
+          <p class="text-lg">Associate Professor, Biomedical Engineering and Pharmacology & Toxicology, Michigan State University</p>
+          <p class="text-lg mt-4">
+              Dr. Bhattacharya leads a lab at the intersection of computation and biology, using advanced quantitative tools to study cellular signaling and transcriptional networks, particularly how they are affected by environmental pollutants. Our iGEM 2024 team consulted Dr. Bhattacharya to explore the computational modeling aspects of our project.
+          </p>
+      </div>
+
+      <!-- Image on the right -->
+      <div class="w-1/3 ml-4">
+          <img src="https://static.igem.wiki/teams/5425/human-practices/expert-1.jpg" alt="Dr. Sudin Bhattacharya" class="rounded-lg border border-gray-300 mt-20
+          mb-4 mr-8 custom-height" />
+      </div>
+  </div>
+
+
+  <!-- Fourth Box: Key takeaways -->
+  <div class="flex justify-between items-start mb-8">
+      <div class="w-1/2 p-6 bg-gray-100 border border-gray-300 rounded-lg ml-auto">
+          <h3 class="text-3xl font-bold mb-4">Key Takeaways</h3>
+          <p class="text-lg">
+              During our meeting, Dr. Bhattacharya provided invaluable insights into refining our mathematical modeling, especially the model of the quorum sensing circuit. He suggested using computational tools like deep learning software for structure determination of antisense mRNAs to estimate their half-lives. Additionally, he recommended molecular docking to predict interactions between sense and antisense mRNAs of varying lengths, which could further enhance the precision of our modeling.
+          </p>
+      </div>
+  </div>
+
+  <!-- Fifth Box: Team Reflection -->
+  <div class="flex justify-between items-start mb-8">
+      <div class="w-1/2 p-6 bg-gray-100 border border-gray-300 rounded-lg" style="position: relative; left: -18px;">
+          <h3 class="text-3xl font-bold mb-4">Team Reflection and Intervention</h3>
+          <p class="text-lg">
+              Our interaction with Dr. Bhattacharya was a pivotal moment in developing our project’s computational models. His feedback on the quorum sensing circuit and guidance on molecular docking greatly enhanced our understanding of computational tools. The support and encouragement from him, along with a follow-up meeting with Dr. Christopher Contag, Director of his department, helped us significantly advance the technical aspects of our project.
+          </p>
+      </div>
+  </div>
+
+  <!-- Sixth Box: Implementation in our Project -->
+  <div class="flex justify-between items-start mb-8">
+    <!-- Image on the left -->
+    <div class="w-1/3 ml-4 ml-4">
+        <img src="https://static.igem.wiki/teams/5425/human-practices/expert-2.jpg" alt="Implementation in Project" class="rounded-lg border border-gray-300 mt-20 ml-6" />
+    </div>
+
+    <!-- Content on the right with gap -->
+    <div class="w-1/2 p-6 bg-gray-100 border border-gray-300 rounded-lg ml-auto">
+        <h3 class="text-3xl font-bold mb-4 ">Implementation in Our Project</h3>
+        <ul class="list-disc list-inside text-lg">
+            <li><strong>Mathematical Modeling:</strong> Incorporating Dr. Bhattacharya’s suggestions allowed us to improve the accuracy of our quorum sensing circuit model through advanced computational techniques.</li>
+            <li><strong>Population Control:</strong> By focusing on population control, we integrated a sensing system that ensures sustained and safe bacterial growth within the insoles.</li>
+            <li><strong>Collaboration and Guidance:</strong> Ongoing collaboration with experts like Dr. Bhattacharya and Dr. Contag has been instrumental in shaping our project’s direction.</li>
+        </ul>
+    </div>
 </div>
 
-{% endblock %}
+  <!-- Seventh Box: Dr. Christopher Contag -->
+  <div class="flex justify-between items-start mb-8">
+      <div class="w-1/2 p-6 bg-gray-100 border border-gray-300 rounded-lg" style="position: relative; left: -18px;">
+          <h3 class="text-3xl font-bold mb-4">Dr. Christopher Contag</h3>
+          <p class="text-lg">Director, Institute for Quantitative Health Science and Engineering, Michigan State University College of Human Medicine</p>
+          <p class="text-lg mt-4">
+              Dr. Christopher H. Contag is a pioneer in molecular imaging, with significant contributions to imaging techniques that reveal molecular processes in living organisms. With expertise in biomedical engineering, radiology, and microbiology, he has helped advance therapeutic strategies through innovative imaging approaches. We consulted Dr. Contag for insights into refining our project design, particularly regarding the engineering of our biological circuits.
+          </p>
+      </div>
+
+      <!-- Image on the right -->
+      <div class="w-1/3 ml-4">
+          <img src="https://static.igem.wiki/teams/5425/human-practices/expert-3.jpg" alt="Dr. Christopher Contag" class=" border border-gray-300 mt-20 mr-6 custom-height" />
+      </div>
+  </div>
+
+  <!-- Eighth Box: Key Takeaways -->
+  <div class="flex justify-between items-start mb-8">
+      <div class="w-1/2 p-6 bg-gray-100 border border-gray-300 rounded-lg ml-auto">
+          <h3 class="text-3xl font-bold mb-4">Key Takeaways</h3>
+          <ul class="list-disc list-inside text-lg">
+              <li><strong>Improving Oscillation Resolution:</strong> Using short-lived variants of fluorescent proteins to achieve better resolution in detecting oscillations in our engineered circuits.</li>
+              <li><strong>Exploration of the LuxABCDE System:</strong> Exploring the LuxABCDE system for its stability at lower temperatures, which could be beneficial for our experimental conditions.</li>
+              <li><strong>Design of Antisense RNA:</strong> Streamlining the functionality of antisense RNA, a key effector molecule in our system, for more effective regulation in our engineered circuits.</li>
+          </ul>
+      </div>
+  </div>
+
+  <!-- Ninth Box: Team Reflection -->
+  <div class="flex justify-between items-start mb-8">
+      <div class="w-1/2 p-6 bg-gray-100 border border-gray-300 rounded-lg" style="position: relative; left: -18px;">
+          <h3 class="text-3xl font-bold mb-4">Team Reflection and Intervention</h3>
+          <p class="text-lg">
+              Our conversation with Dr. Contag significantly enhanced our ability to measure and stabilize our system under different conditions. His expertise in molecular imaging and biological engineering was crucial in refining our experimental design. Dr. Contag also rigorously questioned the real-world application of E.solei, leading to valuable insights on optimizing its use for practical scenarios. His feedback has been pivotal in shaping both the technical and application aspects of our project.
+          </p>
+      </div>
+  </div>
+
+  <!-- Tenth Box: Implementation -->
+  <div class="flex justify-between items-start mb-8">
+      <div class="w-1/2 p-6 bg-gray-100 border border-gray-300 rounded-lg ml-auto">
+          <h3 class="text-3xl font-bold mb-4">Implementation in Our Project</h3>
+          <ul class="list-disc list-inside text-lg">
+              <li><strong>Enhancing System Resolution:</strong> Dr. Contag’s suggestions on using short-lived fluorescent proteins have guided us in refining our system’s resolution and efficiency.</li>
+              <li><strong>Stability at Different Conditions:</strong> Exploring the LuxABCDE system allows us to maintain stability in various temperature scales for more robust functionality.</li>
+              <li><strong>Real-World Application:</strong> His input has been instrumental in guiding us on how to optimize E.solei for effective and safe use in real-world applications.</li>
+          </ul>
+      </div>
+  </div>
+</section>
+
+
+        </div>
+      </div>
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+      <script>
+        function toggleSection(sectionId, element) {
+            // List of all possible sections that can be toggled
+            const sections = ['corporate', 'athelete', 'student', 'common', 'defence', 'dermatologists', 'survey'];
+    
+            // Hide all sections
+            sections.forEach(section => {
+                const sectionElement = document.getElementById(section);
+                if (sectionElement) {
+                    sectionElement.classList.add('hidden');
+                }
+            });
+    
+            // Show the clicked section
+            const targetSection = document.getElementById(sectionId);
+            if (targetSection) {
+                targetSection.classList.remove('hidden');
+    
+                // Scroll to the section after it's made visible
+                const yOffset = -100; // Adjust this value to match the height of your navbar
+                const y = targetSection.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                window.scrollTo({ top: y, behavior: 'smooth' });
+            }
+    
+            // Remove pop-out class from all elements
+            document.querySelectorAll('.pop-out').forEach(el => {
+                el.classList.remove('pop-out');
+            });
+    
+            // Add pop-out class to the clicked element
+            if (element) {
+                element.classList.add('pop-out');
+            }
+        }
+    
+        // Smooth scrolling for nav links
+    
+    
+        // Navbar scroll animation for sidebar behavior
+        window.addEventListener('scroll', function() {
+            const sidebar = document.getElementById('sidebar');
+            if (window.scrollY > 100) {
+                // Shrink and change background on scroll
+                sidebar.classList.add('bg-green-100', 'text-white', 'shadow-lg', 'scale-95');
+                sidebar.classList.remove('bg-peach');
+            } else {
+                // Revert when back to the top
+                sidebar.classList.remove('bg-green-100', 'text-white', 'shadow-lg', 'scale-95');
+                sidebar.classList.add('bg-peach');
+            }
+        });
+    
+        // Show image only when in "expert" section
+        document.addEventListener('DOMContentLoaded', function() {
+            const expertSection = document.getElementById('expert');
+            const scrollingImage = document.querySelector('.scrolling-image');
+    
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        scrollingImage.style.display = 'block';
+                    } else {
+                        scrollingImage.style.display = 'none';
+                    }
+                });
+            }, { threshold: 0.1 });
+    
+            observer.observe(expertSection);
+        });
+    </script>
+
+    </body>
+{% endblock %}  
+
+ 
