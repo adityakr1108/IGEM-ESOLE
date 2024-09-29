@@ -10,7 +10,6 @@
       <span class="text-lg font-bold font-display">IISER KOLKATA</span>
     </a>
     <div id="nav-menu" class="hidden lg:flex gap-10 text-lg">
-
       <!-- Home -->
       <a href="{{ url_for('pages', page='home') }}" class="font-medium text-primary">Home</a>
   
@@ -73,6 +72,7 @@
           <a href="{{ url_for('pages', page='education') }}" class="block px-4 py-2 hover:bg-gray-100"
             >Education & Outresearch</a
           >
+          <a href="{{ url_for('pages', page='inclusivity') }}" class="block px-4 py-2 hover:bg-gray-100">Inclusivity</a>
         <!-- Home -->
         <a href="{{ url_for('home') }}" class="font-medium text-primary">Home</a>
 
@@ -134,6 +134,7 @@
             <div class="dropdown-content hidden absolute bg-white shadow-md rounded-lg w-48 group-hover:block">
                 <a href="#" class="block px-4 py-2 hover:bg-gray-100">Startups</a>
             </div>
+
         </div>
       </div>
   
@@ -147,6 +148,9 @@
     <button class="p-2 lg:hidden" onclick="handleMenu()">
       <i class="fa-solid fa-bars text-gray-600"></i>
     </button>
+
+    </nav>
+  
 
     <!-- Mobile Menu -->
     <div id="nav-dialog" class="hidden fixed z-30 bg-white inset-0 p-3">
