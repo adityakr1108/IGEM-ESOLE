@@ -8,7 +8,7 @@ from flask_frozen import Freezer
 template_folder = path.abspath('./wiki')
 
 app = Flask(__name__, template_folder=template_folder)
-#app.config['FREEZER_BASE_URL'] = environ.get('CI_PAGES_URL')
+app.config['FREEZER_BASE_URL'] = 'https://2024.igem.wiki/' #environ.get('CI_PAGES_URL')
 app.config['FREEZER_DESTINATION'] = 'public'
 app.config['FREEZER_RELATIVE_URLS'] = True
 app.config['FREEZER_IGNORE_MIMETYPE_WARNINGS'] = True
@@ -28,8 +28,12 @@ def home():
 
 @app.route('/<page>')
 def pages(page):
-    return render_template(f'./pages/{page.lower()}.html')
+    return render_template(f'pages/{page.lower()}.html')
 
 # Main Function, Runs at http://0.0.0.0:8080
 if __name__ == "__main__":
+<<<<<<< HEAD
     app.run(port=8080)
+=======
+    app.run(port=8080,debug = True)
+>>>>>>> 35b1b703fdc039b9419897471eaa2ad67acc9a0f

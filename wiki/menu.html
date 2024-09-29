@@ -10,6 +10,7 @@
       <span class="text-lg font-bold font-display">IISER KOLKATA</span>
     </a>
     <div id="nav-menu" class="hidden lg:flex gap-10 text-lg">
+<<<<<<< HEAD
       <!-- Home -->
       <a href="{{ url_for('pages', page='home') }}" class="font-medium text-primary">Home</a>
   
@@ -74,6 +75,69 @@
             >Education & Outresearch</a
           >
           <a href="{{ url_for('pages', page='inclusivity') }}" class="block px-4 py-2 hover:bg-gray-100">Inclusivity</a>
+=======
+        <!-- Home -->
+        <a href="{{ url_for('home') }}" class="font-medium text-primary">Home</a>
+
+        <!-- Team -->
+        <div class="relative group">
+            <a href="#" class="font-medium hover:text-primary">Team</a>
+            <div class="dropdown-content hidden absolute bg-white shadow-md rounded-lg w-48 group-hover:block">
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100">Team Member</a>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100">Attribution</a>
+            </div>
+        </div>
+
+        <!-- Project -->
+        <div class="relative group">
+            <a href="#" class="font-medium hover:text-primary">Project</a>
+            <div class="dropdown-content hidden absolute bg-white shadow-md rounded-lg w-48 group-hover:block">
+                <a href="{{ url_for('pages', page='description') }}" class="block px-4 py-2 hover:bg-gray-100">Description</a>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100">Design</a>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100">Engineering</a>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100">Contribution</a>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100">Implementation</a>
+            </div>
+        </div>
+
+        <!-- Wetlabs -->
+        <div class="relative group">
+            <a href="#" class="font-medium hover:text-primary">Wetlabs</a>
+            <div class="dropdown-content hidden absolute bg-white shadow-md rounded-lg w-48 group-hover:block">
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100">Experiments</a>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100">Results</a>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100">Notebook</a>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100">Materials</a>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100">Safety</a>
+            </div>
+        </div>
+
+        <!-- Drylab -->
+        <div class="relative group">
+            <a href="#" class="font-medium hover:text-primary">Drylab</a>
+            <div class="dropdown-content hidden absolute bg-white shadow-md rounded-lg w-48 group-hover:block">
+                <a href="{{ url_for('pages', page='model') }}" class="block px-4 py-2 hover:bg-gray-100">Model</a>
+                <a href="{{ url_for('pages', page='software') }}" class="block px-4 py-2 hover:bg-gray-100">Software</a>
+            </div>
+        </div>
+
+        <!-- Human Practices -->
+        <div class="relative group">
+            <a href="#" class="font-medium hover:text-primary">Human Practices</a>
+            <div class="dropdown-content hidden absolute bg-white shadow-md rounded-lg w-48 group-hover:block">
+                <a href="{{ url_for('pages', page='model') }}" class="block px-4 py-2 hover:bg-gray-100">IHP</a>
+                <a href="{{ url_for('pages', page='education') }}" class="block px-4 py-2 hover:bg-gray-100">Education & Outreach</a>
+                <a href="{{ url_for('pages', page='inclusivity') }}" class="block px-4 py-2 hover:bg-gray-100">Inclusivity</a>
+            </div>
+        </div>
+
+        <!-- Entrepreneurship -->
+        <div class="relative group">
+            <a href="#" class="font-medium hover:text-primary">Entrepreneurship</a>
+            <div class="dropdown-content hidden absolute bg-white shadow-md rounded-lg w-48 group-hover:block">
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100">Startups</a>
+            </div>
+>>>>>>> 35b1b703fdc039b9419897471eaa2ad67acc9a0f
         </div>
       </div>
   
@@ -82,13 +146,17 @@
         <a href="" class="font-medium hover:text-primary">Entrepreneurship</a>
       </div>
     </div>
-  
+
     <!-- Mobile Menu Button -->
     <button class="p-2 lg:hidden" onclick="handleMenu()">
       <i class="fa-solid fa-bars text-gray-600"></i>
     </button>
+<<<<<<< HEAD
     </nav>
   
+=======
+
+>>>>>>> 35b1b703fdc039b9419897471eaa2ad67acc9a0f
     <!-- Mobile Menu -->
     <div id="nav-dialog" class="hidden fixed z-30 bg-white inset-0 p-3">
       <div id="nav-bar" class="flex justify-between items-center">
