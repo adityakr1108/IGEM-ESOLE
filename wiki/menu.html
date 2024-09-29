@@ -1,167 +1,140 @@
 <section class="h-24 overflow-hidden fixed top-0 left-0 right-0 z-10">
-    <img
-      src="https://static.igem.wiki/teams/5425/nav.svg"
-      alt="nav background"
-      class="w-full object-cover lg:translate-y-[-30px]"
-    />
-  </section>
-  <nav class="px-5 py-3 flex items-center fixed top-0 left-0 right-0 z-20">
-    <a href="#" id="brand" class="flex gap-2 items-center flex-1">
-      <span class="text-lg font-bold font-display">IISER KOLKATA</span>
+  <img
+    src="https://static.igem.wiki/teams/5425/nav.svg"
+    alt="nav background"
+    class="w-full object-cover lg:translate-y-[-30px]"
+  />
+</section>
+
+<nav class="px-5 py-3 flex items-center fixed top-0 left-0 right-0 z-20 bg-transparent">
+  <a href="#" id="brand" class="flex gap-2 items-center flex-1">
+    <span class="text-lg font-bold font-display">IISER KOLKATA</span>
+  </a>
+  
+  <!-- Desktop Menu -->
+  <div id="nav-menu" class="hidden lg:flex gap-10 text-lg">
+    <!-- Home -->
+    <a href="{{ url_for('pages', page='home') }}" class="font-medium text-primary">Home</a>
+
+    <!-- Team -->
+    <div class="relative group">
+      <a href="#" class="font-medium hover:text-primary">Team</a>
+      <div class="dropdown-content hidden absolute bg-white shadow-md rounded-lg w-48 group-hover:block">
+        <a href="{{ url_for('pages', page='team') }}" class="block px-4 py-2 hover:bg-gray-100">Team Member</a>
+        <a href="{{ url_for('pages', page='attributions') }}" class="block px-4 py-2 hover:bg-gray-100">Attribution</a>
+      </div>
+    </div>
+
+    <!-- Project -->
+    <div class="relative group">
+      <a href="#" class="font-medium hover:text-primary">Project</a>
+      <div class="dropdown-content hidden absolute bg-white shadow-md rounded-lg w-48 group-hover:block">
+        <a href="{{ url_for('pages', page='description') }}" class="block px-4 py-2 hover:bg-gray-100">Description</a>
+        <a href="{{ url_for('pages', page='design') }}" class="block px-4 py-2 hover:bg-gray-100">Design</a>
+        <a href="{{ url_for('pages', page='engineering') }}" class="block px-4 py-2 hover:bg-gray-100">Engineering</a>
+        <a href="{{ url_for('pages', page='contribution') }}" class="block px-4 py-2 hover:bg-gray-100">Contribution</a>
+        <a href="{{ url_for('pages', page='implementation') }}" class="block px-4 py-2 hover:bg-gray-100">Implementation</a>
+      </div>
+    </div>
+
+    <!-- Wetlabs -->
+    <div class="relative group">
+      <a href="#" class="font-medium hover:text-primary">Wetlabs</a>
+      <div class="dropdown-content hidden absolute bg-white shadow-md rounded-lg w-48 group-hover:block">
+        <a href="{{ url_for('pages', page='experiments') }}" class="block px-4 py-2 hover:bg-gray-100">Experiments</a>
+        <a href="{{ url_for('pages', page='model') }}" class="block px-4 py-2 hover:bg-gray-100">Results</a>
+        <a href="{{ url_for('pages', page='notebook') }}" class="block px-4 py-2 hover:bg-gray-100">Notebook</a>
+        <a href="{{ url_for('pages', page='safety') }}" class="block px-4 py-2 hover:bg-gray-100">Safety</a>
+      </div>
+    </div>
+
+    <!-- Drylab -->
+    <div class="relative group">
+      <a href="#" class="font-medium hover:text-primary">Drylab</a>
+      <div class="dropdown-content hidden absolute bg-white shadow-md rounded-lg w-48 group-hover:block">
+        <a href="{{ url_for('pages', page='model') }}" class="block px-4 py-2 hover:bg-gray-100">Model</a>
+        <a href="{{ url_for('pages', page='software') }}" class="block px-4 py-2 hover:bg-gray-100">Software</a>
+      </div>
+    </div>
+
+    <!-- Human Practices -->
+    <div class="relative group">
+      <a href="#" class="font-medium hover:text-primary">Human Practices</a>
+      <div class="dropdown-content hidden absolute bg-white shadow-md rounded-lg w-48 group-hover:block">
+        <a href="{{ url_for('pages', page='human-practices') }}" class="block px-4 py-2 hover:bg-gray-100">iHP</a>
+        <a href="{{ url_for('pages', page='education') }}" class="block px-4 py-2 hover:bg-gray-100">Education & Outreach</a>
+        <a href="{{ url_for('pages', page='inclusivity') }}" class="block px-4 py-2 hover:bg-gray-100">Inclusivity</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Menu Button -->
+  <button class="p-2 lg:hidden" onclick="handleMenu()">
+    <i class="fa-solid fa-bars text-gray-600"></i>
+  </button>
+</nav>
+
+<!-- Mobile Menu -->
+<div id="nav-dialog" class="hidden fixed z-30 bg-white inset-0 p-3 lg:hidden">
+  <div id="nav-bar" class="flex justify-between items-center">
+    <a href="#" id="brand" class="flex gap-2 items-center">
+      <span class="text-lg font-medium font-display">IISER KOLKATA</span>
     </a>
-    <div id="nav-menu" class="hidden lg:flex gap-10 text-lg">
-      <!-- Home -->
-      <a href="{{ url_for('pages', page='home') }}" class="font-medium text-primary">Home</a>
-  
-      <!-- Team -->
-      <div class="relative group">
-        <a href="#" class="font-medium hover:text-primary">Team</a>
-        <div
-          class="dropdown-content hidden absolute bg-white shadow-md rounded-lg w-48 group-hover:block"
-        >
-          <a href="{{ url_for('pages', page='team') }}" class="block px-4 py-2 hover:bg-gray-100">Team Member</a>
-          <a href="{{ url_for('pages', page='attributions') }}" class="block px-4 py-2 hover:bg-gray-100">Attribution</a>
-        </div>
-      </div>
-  
-      <!-- Project -->
-      <div class="relative group">
-        <a href="#" class="font-medium hover:text-primary">Project</a>
-        <div
-          class="dropdown-content hidden absolute bg-white shadow-md rounded-lg w-48 group-hover:block"
-        >
-          <a href="{{ url_for('pages', page='description') }}" class="block px-4 py-2 hover:bg-gray-100">Description</a>
-          <a href="{{ url_for('pages', page='design') }}" class="block px-4 py-2 hover:bg-gray-100">Design</a>
-          <a href="{{ url_for('pages', page='engineering') }}" class="block px-4 py-2 hover:bg-gray-100">Engineering</a>
-          <a href="{{ url_for('pages', page='contribution') }}" class="block px-4 py-2 hover:bg-gray-100">Contribution</a>
-          <a href="{{ url_for('pages', page='implementation') }}" class="block px-4 py-2 hover:bg-gray-100">Implementation</a>
-        </div>
-      </div>
-  
-      <!-- Wetlabs -->
-      <div class="relative group">
-        <a href="#" class="font-medium hover:text-primary">Wetlabs</a>
-        <div
-          class="dropdown-content hidden absolute bg-white shadow-md rounded-lg w-48 group-hover:block"
-        >
-          <a href="{{ url_for('pages', page='experiments') }}" class="block px-4 py-2 hover:bg-gray-100">Experiments</a>
-          <a href="{{ url_for('pages', page='model') }}" class="block px-4 py-2 hover:bg-gray-100">Results</a>
-          <a href="{{ url_for('pages', page='notebook') }}" class="block px-4 py-2 hover:bg-gray-100">Notebook</a>
-          <a href="{{ url_for('pages', page='safety') }}" class="block px-4 py-2 hover:bg-gray-100">Safety</a>
-        </div>
-      </div>
-  
-      <!-- Drylab -->
-      <div class="relative group">
-        <a href="#" class="font-medium hover:text-primary">Drylab</a>
-        <div
-          class="dropdown-content hidden absolute bg-white shadow-md rounded-lg w-48 group-hover:block"
-        >
-          <a href="{{ url_for('pages', page='model') }}" class="block px-4 py-2 hover:bg-gray-100">Model</a>
-          <a href="{{ url_for('pages', page='software') }}" class="block px-4 py-2 hover:bg-gray-100">Software</a>
-        </div>
-      </div>
-  
-      <!-- Human Practices -->
-      <div class="relative group">
-        <a href="#" class="font-medium hover:text-primary">Human Practices</a>
-        <div
-          class="dropdown-content hidden absolute bg-white shadow-md rounded-lg w-48 group-hover:block"
-        >
-          <a href="{{ url_for('pages', page='human-practices') }}" class="block px-4 py-2 hover:bg-gray-100">iHP</a>
-          <a href="{{ url_for('pages', page='education') }}" class="block px-4 py-2 hover:bg-gray-100"
-            >Education & Outresearch</a
-          >
-          <a href="{{ url_for('pages', page='inclusivity') }}" class="block px-4 py-2 hover:bg-gray-100">Inclusivity</a>
-        <!-- Home -->
-        <a href="{{ url_for('home') }}" class="font-medium text-primary">Home</a>
-
-        <!-- Team -->
-        <div class="relative group">
-            <a href="#" class="font-medium hover:text-primary">Team</a>
-            <div class="dropdown-content hidden absolute bg-white shadow-md rounded-lg w-48 group-hover:block">
-                <a href="#" class="block px-4 py-2 hover:bg-gray-100">Team Member</a>
-                <a href="#" class="block px-4 py-2 hover:bg-gray-100">Attribution</a>
-            </div>
-        </div>
-
-        <!-- Project -->
-        <div class="relative group">
-            <a href="#" class="font-medium hover:text-primary">Project</a>
-            <div class="dropdown-content hidden absolute bg-white shadow-md rounded-lg w-48 group-hover:block">
-                <a href="{{ url_for('pages', page='description') }}" class="block px-4 py-2 hover:bg-gray-100">Description</a>
-                <a href="#" class="block px-4 py-2 hover:bg-gray-100">Design</a>
-                <a href="#" class="block px-4 py-2 hover:bg-gray-100">Engineering</a>
-                <a href="#" class="block px-4 py-2 hover:bg-gray-100">Contribution</a>
-                <a href="#" class="block px-4 py-2 hover:bg-gray-100">Implementation</a>
-            </div>
-        </div>
-
-        <!-- Wetlabs -->
-        <div class="relative group">
-            <a href="#" class="font-medium hover:text-primary">Wetlabs</a>
-            <div class="dropdown-content hidden absolute bg-white shadow-md rounded-lg w-48 group-hover:block">
-                <a href="#" class="block px-4 py-2 hover:bg-gray-100">Experiments</a>
-                <a href="#" class="block px-4 py-2 hover:bg-gray-100">Results</a>
-                <a href="#" class="block px-4 py-2 hover:bg-gray-100">Notebook</a>
-                <a href="#" class="block px-4 py-2 hover:bg-gray-100">Materials</a>
-                <a href="#" class="block px-4 py-2 hover:bg-gray-100">Safety</a>
-            </div>
-        </div>
-
-        <!-- Drylab -->
-        <div class="relative group">
-            <a href="#" class="font-medium hover:text-primary">Drylab</a>
-            <div class="dropdown-content hidden absolute bg-white shadow-md rounded-lg w-48 group-hover:block">
-                <a href="{{ url_for('pages', page='model') }}" class="block px-4 py-2 hover:bg-gray-100">Model</a>
-                <a href="{{ url_for('pages', page='software') }}" class="block px-4 py-2 hover:bg-gray-100">Software</a>
-            </div>
-        </div>
-
-        <!-- Human Practices -->
-        <div class="relative group">
-            <a href="#" class="font-medium hover:text-primary">Human Practices</a>
-            <div class="dropdown-content hidden absolute bg-white shadow-md rounded-lg w-48 group-hover:block">
-                <a href="{{ url_for('pages', page='model') }}" class="block px-4 py-2 hover:bg-gray-100">IHP</a>
-                <a href="{{ url_for('pages', page='education') }}" class="block px-4 py-2 hover:bg-gray-100">Education & Outreach</a>
-                <a href="{{ url_for('pages', page='inclusivity') }}" class="block px-4 py-2 hover:bg-gray-100">Inclusivity</a>
-            </div>
-        </div>
-
-        <!-- Entrepreneurship -->
-        <div class="relative group">
-            <a href="#" class="font-medium hover:text-primary">Entrepreneurship</a>
-            <div class="dropdown-content hidden absolute bg-white shadow-md rounded-lg w-48 group-hover:block">
-                <a href="#" class="block px-4 py-2 hover:bg-gray-100">Startups</a>
-            </div>
-
-        </div>
-      </div>
-  
-      <!-- Entrepreneurship -->
-      <div class="relative group">
-        <a href="" class="font-medium hover:text-primary">Entrepreneurship</a>
-      </div>
-    </div>
-
-    <!-- Mobile Menu Button -->
-    <button class="p-2 lg:hidden" onclick="handleMenu()">
-      <i class="fa-solid fa-bars text-gray-600"></i>
+    <button class="p-2" onclick="handleMenu()">
+      <i class="fa-solid fa-xmark text-gray-600"></i>
     </button>
+  </div>
 
-    </nav>
-  
+  <!-- Mobile menu options -->
+  <div class="flex flex-col mt-5 space-y-4 text-lg">
+    <a href="{{ url_for('pages', page='home') }}" class="font-medium text-primary">Home</a>
 
-    <!-- Mobile Menu -->
-    <div id="nav-dialog" class="hidden fixed z-30 bg-white inset-0 p-3">
-      <div id="nav-bar" class="flex justify-between items-center">
-        <a href="#" id="brand" class="flex gap-2 items-center">
-          <span class="text-lg font-medium font-display">IISER KOLKATA</span>
-        </a>
-        <button class="p-2" onclick="handleMenu()">
-          <i class="fa-solid fa-xmark text-gray-600"></i>
-        </button>
-      </div>
-      <!-- Mobile menu options -->
-      <!-- Dropdowns for mobile go here... -->
+    <!-- Team -->
+    <div class="flex flex-col space-y-2">
+      <a href="#" class="font-medium hover:text-primary">Team</a>
+      <a href="{{ url_for('pages', page='team') }}" class="block px-4 py-2 hover:bg-gray-100">Team Member</a>
+      <a href="{{ url_for('pages', page='attributions') }}" class="block px-4 py-2 hover:bg-gray-100">Attribution</a>
     </div>
+
+    <!-- Project -->
+    <div class="flex flex-col space-y-2">
+      <a href="#" class="font-medium hover:text-primary">Project</a>
+      <a href="{{ url_for('pages', page='description') }}" class="block px-4 py-2 hover:bg-gray-100">Description</a>
+      <a href="{{ url_for('pages', page='design') }}" class="block px-4 py-2 hover:bg-gray-100">Design</a>
+      <a href="{{ url_for('pages', page='engineering') }}" class="block px-4 py-2 hover:bg-gray-100">Engineering</a>
+      <a href="{{ url_for('pages', page='contribution') }}" class="block px-4 py-2 hover:bg-gray-100">Contribution</a>
+      <a href="{{ url_for('pages', page='implementation') }}" class="block px-4 py-2 hover:bg-gray-100">Implementation</a>
+    </div>
+
+    <!-- Wetlabs -->
+    <div class="flex flex-col space-y-2">
+      <a href="#" class="font-medium hover:text-primary">Wetlabs</a>
+      <a href="{{ url_for('pages', page='experiments') }}" class="block px-4 py-2 hover:bg-gray-100">Experiments</a>
+      <a href="{{ url_for('pages', page='model') }}" class="block px-4 py-2 hover:bg-gray-100">Results</a>
+      <a href="{{ url_for('pages', page='notebook') }}" class="block px-4 py-2 hover:bg-gray-100">Notebook</a>
+      <a href="{{ url_for('pages', page='safety') }}" class="block px-4 py-2 hover:bg-gray-100">Safety</a>
+    </div>
+
+    <!-- Drylab -->
+    <div class="flex flex-col space-y-2">
+      <a href="#" class="font-medium hover:text-primary">Drylab</a>
+      <a href="{{ url_for('pages', page='model') }}" class="block px-4 py-2 hover:bg-gray-100">Model</a>
+      <a href="{{ url_for('pages', page='software') }}" class="block px-4 py-2 hover:bg-gray-100">Software</a>
+    </div>
+
+    <!-- Human Practices -->
+    <div class="flex flex-col space-y-2">
+      <a href="#" class="font-medium hover:text-primary">Human Practices</a>
+      <a href="{{ url_for('pages', page='human-practices') }}" class="block px-4 py-2 hover:bg-gray-100">iHP</a>
+      <a href="{{ url_for('pages', page='education') }}" class="block px-4 py-2 hover:bg-gray-100">Education & Outreach</a>
+      <a href="{{ url_for('pages', page='inclusivity') }}" class="block px-4 py-2 hover:bg-gray-100">Inclusivity</a>
+    </div>
+  </div>
+</div>
+
+<script>
+  function handleMenu() {
+    const navDialog = document.getElementById("nav-dialog");
+    navDialog.classList.toggle("hidden");
+  }
+</script>
