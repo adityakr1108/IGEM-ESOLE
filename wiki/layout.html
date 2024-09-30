@@ -4,8 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{% block title %} | IISER-Kolkata - iGEM 2024{% endblock %}</title>
-    <script src="{{ url_for ('static', filename='/js/tailwind.js')}}"></script>
-    <script src="{{ url_for ('static', filename='/js/flowbite.js')}}"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
 
     
 
@@ -13,6 +16,7 @@
       rel="shortcut icon"
       href="https://static.igem.wiki/teams/5425/foot-on-sole.png"
     />
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css"
@@ -24,13 +28,13 @@
       crossorigin="anonymous"
       defer
     ></script>
-    <!-- <link
+    <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-    /> -->
+    />
     <!-- <title>IISER || KOLKATA</title> -->
     <link rel="stylesheet" href="{{ url_for ('static', filename='/css/output.css')}}">
-    <link rel="stylesheet" href="{{ url_for ('static', filename='/css/flowbite.css')}}">
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
       /* For smoother dropdown transition */
       .dropdown-content {

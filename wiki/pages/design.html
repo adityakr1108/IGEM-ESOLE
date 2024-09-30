@@ -1,648 +1,711 @@
-{% extends "layout.html" %} {% block title %}Model{% endblock %} {% block
-  page_content %}
-  <style>
-    .main-container {
-          margin-top: 20px;
-      }
-  
-      p {
-          font-family: 'Times New Roman', Times, serif;
-      }
-  
-      .content-section {
-          display: none;
-          padding: 20px;
-          border: 2px solid #ffffff; /* Border for each section */
-          background-color: #ede7a6; /* Light background color */
-          border-radius: 8px;
-          margin-bottom: 20px;
-      }
-  
-      .content-section.active {
-          display: block;
-      }
-  
-      .button-group {
-          display: flex;
-          justify-content: center;
-          margin-bottom: 20px;
-      }
-  
-      .button-group button {
-          margin-right: 10px;
-          padding: 10px 20px;
-          background-color: #007bff;
-          color: white;
-          border: none;
-          cursor: pointer;
-          border-radius: 5px;
-          transition: background-color 0.3s ease;
-      }
-  
-      .button-group button:hover {
-          background-color: #0056b3;
-      }
-  
-      .button-group button.active {
-          background-color: #28a745;
-      }
-  
-      h2 {
-          font-family: 'Times New Roman', Times, serif;
-      }
-  
-      .index {
-          flex: 0 0 25%;
-          margin-right: 20px;
-          padding: 15px;
-          background-color: #f5f5f5;
-          border-right: 2px solid #ccc;
-          border-radius: 5px;
-          box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
-      }
-  
-      .index ul {
-          list-style: none;
-          padding-left: 0;
-      }
-  
-      .index ul li {
-          margin-bottom: 10px;
-          font-size: 1.25em;
-      }
-  
-      .index ul li a {
-          text-decoration: none;
-          color: #333;
-      }
-  
-      .index ul li a:hover {
-          text-decoration: underline;
-      }
-      #sidebar {
-              position: fixed;
-              top: 0;
-              left: -250px;
-              width: 250px;
-              height: 100%;
-              background-color: white;
-              box-shadow: 2px 0 5px rgba(0,0,0,0.5);
-              transition: left 0.3s ease;
-              z-index: 1000;
-          }
-  
-          #sidebar.open {
-              left: 0;
-          }
-  
-          #toggleButton {
-              z-index: 1001;
-          }
-          .overview-main {
-              font-family: 'Times New Roman', Times, serif;
-          }
-          .section-heading {
-              background-color: #e2e8f0;
-              padding: 20px;
-              border: 2px solid #cbd5e0;
-              border-radius: 8px;
-              margin-bottom: 16px;
-          }
-          .parameter-table {
-              width: 100%;
-              border-collapse: collapse;
-              margin-top: 20px;
-          }
-          .parameter-table th, .parameter-table td {
-              padding: 12px;
-              border: 1px solid #cbd5e0;
-              text-align: left;
-          }
-  </style>
-  <div class="flex flex-col items-center w-full">
-    <div class="w-full h-40 flex justify-center items-center mt-40">
-      <img src="path/to/your/image.jpg" alt="Model Image" class="max-h-full">
-    </div>
-    
-    <!-- Heading block -->
-    <div class="w-full max-w-10xl bg-[#dec5ec] text-white py-4 px-8 text-center">
-      <h1 class="font-bold text-8xl text-[#603d71]">Model</h1>
-    </div>
-    
-    <!-- Description -->
-  
-  
-  
-    <!-- Centering the tab headings -->
-    <div
-      class="border-b border-gray-200 dark:border-gray-700 flex justify-center"
-    >
-      <ul
-        class="flex flex-wrap text-1xl font-bold text-center space-x-4"
-        id="default-styled-tab"
-        data-tabs-toggle="#default-styled-tab-content"
-        data-tabs-active-classes="text-purple-600 border-purple-600"
-        data-tabs-inactive-classes="text-gray-500 hover:text-gray-600 border-transparent hover:border-gray-300"
-        role="tablist"
-      >
-        <li class="" role="presentation">
-          <button
-            class="inline-block p-4 border-b-2 rounded-t-lg"
-            id="profile-styled-tab"
-            data-tabs-target="#styled-profile"
-            type="button"
-            role="tab"
-            aria-controls="profile"
-            aria-selected="false"
-          >
-          Strategic Design
-          </button>
-        </li>
-        <li class="" role="presentation">
-          <button
-            class="inline-block p-4 border-b-2 rounded-t-lg"
-            id="dashboard-styled-tab"
-            data-tabs-target="#styled-dashboard"
-            type="button"
-            role="tab"
-            aria-controls="dashboard"
-            aria-selected="false"
-          >
-            System Design
-          </button>
-        </li>
-        <li class="" role="presentation">
-          <button
-            class="inline-block p-4 border-b-2 rounded-t-lg"
-            id="settings-styled-tab"
-            data-tabs-target="#styled-settings"
-            type="button"
-            role="tab"
-            aria-controls="settings"
-            aria-selected="false"
-          >
-              Safety Design
-          </button>
-        </li>
-      </ul>
-    </div>
-  
-    <!-- Tab content -->
-    <div id="default-styled-tab-content">
-      <div
-        class="hidden p-6 text-lg bg-[#fffbeb]"
-        id="styled-profile"
-        role="tabpanel"
-        aria-labelledby="profile-tab"
-      >
-        <!-- TAB ONE CONTENT -->
-       <div>
-          <div id="strategic" class="content">
-              <h1 class="text-2xl font-bold mb-4">Strategic Design</h1>
-              <p class="mb-4">Our objective is to engineer a living microbial system for use in foot care, embedded in a nutritive foot-bed. This innovative approach aims to solve common foot care issues that people experience daily, such as fungal infections, inflammation, and odor. By leveraging the ability of genetically engineered bacteria to continuously produce a beneficial compound, we aim to create a solution that goes beyond traditional creams and ointments.
-             <br>Specifically, we aim to use bacteria that produce linalool, our target compound, a naturally occurring molecule found in plant-based oils. Linalool offers multiple properties that align with foot-care: it is anti-fungal, anti- inflammatory, fragrant, and non-toxic. The living microbial system will be embedded within a nutritive foot-bed, allowing the genetically modified bacterium to use the substrate to sustain itself, produce and release linalool, which will diffuse throughout the foot environment.
-          </p>
-              
-              <h2 class="text-xl font-bold mt-4 mb-2">Live Application of Engineered Bacteria</h2>
-              <p class="mb-4">In contrast to conventional treatments that require frequent application, our approach integrates a living microbial system into a nutritive foot-bed, turning it into a long-term care solution. This foot bed is designed to fit into any shoe, where the bacteria embedded in the foot-bed use the nutrients within the foot-bed substrate to synthesize and secrete linalool over an extended period.</p>
-              
-              <h2 class="text-xl font-bold mt-4 mb-2">Why Use a Living Microbial System in the first place?</h2>
-              <p class="mb-4">The advantage of using a living microbial system is that it provides continuous, self-sustaining production of therapeutic molecules. By housing bacteria in a contained and controlled environment within the foot-bed, the system can deliver round-the-clock foot care. Instead of relying on externally applied products that wear off after a few hours, the living microbial system ensures that fresh linalool is produced as long as the foot-bed is in use, forming an intrinsic part of the foot environment with time.</p>
-              
-              <h2 class="text-xl font-bold mt-4 mb-2">Linalool: The Perfect Foot Care Molecule</h2>
-              <p class="mb-4">Linalool is a naturally occurring terpene alcohol found in many plants, such as lavender and coriander.It was specifically chosen for this project because of its multifaceted properties:
-              </p>
-              <ul class="list-disc ml-8 mb-4">
-                  <li><strong>Anti-inflammatory and Antifungal Properties:</strong> Linalool has been shown to reduce inflammation, making it particularly effective in soothing irritated skin. Its antifungal activity can help manage common foot-related conditions, such as Athlete’s Foot.</li>
-                  <li><strong>Fragrance and Non-toxicity:</strong> As a pleasant-smelling and non-toxic compound, linalool adds a fragrance to the foot-bed, improving the user experience, battling with bad-odour, a long-standing source of inconvenience and embarrassment.</li>
-                  <li><strong>Easy Diffusion: </strong>One of the key benefits of linalool is its volatile nature, allowing it to escape easily from the nutritive foot-bed and disperse throughout the shoe. This diffusion ensures that the entire foot is exposed to the compound, allowing it to reach the crevices and inter-digital spaces which are not otherwise reached by a foot-cream providing continuous protection and skin care.</li>
-              </ul>
-              
-              <img src="https://static.igem.wiki/teams/5425/drylab/population-with-qs.webp" alt="Linalool Production Pathway" class="max-w-xs my-4">
-              <p class="mb-4">LINALOOL: The production pathway (explanation)
-                  Diagram depicting all these properties </p>
-              <img src="https://static.igem.wiki/teams/5425/drylab/population-with-qs.webp" alt="Linalool Production Pathway" class="max-w-xs my-4">
-                  
-                  
-              <h2 class="text-md font-bold mt-4 mb-2">E.solei: Product Envisioning: Lifting the veil!
-              </h2>
-              <p class="mb-4">Linalool is a naturally occurring terpene alcohol found in many plants, such as lavender and coriander.It was specifically chosen for this project because of its multifaceted properties:
-              </p>
-              <p class="mb-4">By creating a living ecosystem, this foot-bed offers a longer-lasting solution compared to topical applications, which are either washed off or worn away. Importantly, this system requires minimal user intervention, making it a hassle-free foot care solution.</p>
-              
-              <h2 class="text-xl font-bold mt-4 mb-2">Choosing the chassis</h2>
-              <p class="mb-4">Why is <em>Lactobacillus rhamnosus</em> an ideal candidate for the foot-bed application for our iGEM project?</p>
-              <ol class="list-decimal ml-8 mb-4">
-                  <li><strong>Safety and Probiotic Nature:</strong> <em>Lactobacillus rhamnosus</em> is a well-established probiotic, commonly found in the gut and known for its safe use in various health applications. It has a proven track record in human-related treatments without causing harm, even when used in delicate environments like the gastrointestinal and urogenital tracts. This makes it a suitable candidate for integration into a nutritive foot-bed, minimizing the risk of harm if it comes into contact with skin or accidental exposure.</li>
-                  <li><strong>Antifungal and Antimicrobial Properties:</strong> <em>Lactobacillus rhamnosus</em> is known for producing antimicrobial compounds like 3-phenyllactic acid, which exhibit strong antifungal properties. This aligns with the production of linalool, a compound with antifungal and anti-inflammatory properties, thereby complementing it and enhancing the foot-bed's efficacy in managing skin health and preventing fungal infections.</li>
-                  <li><strong>Robustness and Skin Microbiome Compatibility:</strong> This species of <em>Lactobacillus</em> is resilient in various conditions, including acidic environments and bile salts, which makes it adaptable for the relatively dynamic environment of a foot-bed. It can also support the skin’s natural microbiome by outcompeting harmful pathogens without disrupting the overall microbial balance, which is critical in preventing skin irritation or infections.</li>
-                  <li><strong>Immunomodulatory Potential:</strong> <em>Lactobacillus rhamnosus</em> has been shown to have immunomodulatory effects, potentially aiding in reducing inflammation and improving skin health. Its presence can help maintain a healthy immune response on the skin, adding an additional layer of protection against pathogens.</li>
-              </ol>
-              <p class="mb-4">Thus we take home the fact that Lactobacillus rhamnosus provides a package of safe antimicrobial action, and skin- compatible properties, making it an ideal candidate for use in a live microbial system in the foot-bed designed to release therapeutic molecules such as linalool and manage skin conditions.
-                  Further details can be extracted from discussions on Microbial Cell Factories and Applied Microbiology and Biotechnology.
-                  For our project, the team carries out all experiments in Escherichia coli (BL21 and DH5- alpha strains) as chassis, which are to be replicated when the chassis is changed to Lactobacillus rhamnosus.
-              </p>
+{% extends "layout.html" %}
+{% block title %}Model{% endblock %}
+{% block page_content %}
+<img src="https://static.igem.wiki/teams/5425/bacteria-8107336.png" style="height:200px; width:200px; border-radius: 20px; margin-left: 42%;" class="items-center w-full h-96 mt-20" alt="Inclusivity Banner">
 
-              <h2 class="text-xl font-bold mt-4 mb-2">Safety Considerations for Living Microbial Systems in Footbeds:</h2>
-              <ul class="list-disc ml-8 mb-4">
-                  <li>Use of Non-Pathogenic Strains: The bacteria selected, <em>Lactobacillus rhamnosus</em>, is a safe probiotic strain that is non-pathogenic and commonly found in the human microbiome. It minimizes health risks while performing the desired function in the footbed.</li>
-                  <li>Physical Barrier Between Footbed and Environment: The footbed is designed with a physical barrier separating it from the external environment. This barrier ensures that bacteria remain contained within the footbed and prevents any unintended release of microbes into the surroundings, providing an additional layer of safety.</li>
-                  <li>Auxotrophy for Safety: The bacteria are engineered to be auxotrophic, making them dependent on specific nutrients provided by the footbed media. This ensures that the bacteria cannot survive or proliferate outside the controlled environment of the footbed, reducing the risk of environmental contamination.</li>
-                  <li>Minimalist Cell Design: The bacterial cells are genetically streamlined, only containing the essential components necessary for producing beneficial compounds like linalool. This reduces the risk of unforeseen genetic interactions or behaviors.</li>
-                  <li>Kill Switch: The living microbial system incorporates a kill switch, ensuring the bacteria can be safely deactivated or killed under specific conditions, such as environmental exposure or the end of the product’s lifespan, or detachment from the media layer.</li>
-                  <li>Safe Disposal Methods: Disposal protocols are put in place to neutralize any remaining bacterial activity and prevent live bacteria from escaping into the environment after the footbed has been used.</li>
-                  <li>Controlled Population Growth: The bacterial population within the footbed is regulated through a quorum sensing mechanism, controlling cell division and preventing overpopulation. This control minimizes the risks of nutrient depletion, toxic metabolite buildup, and overgrowth.</li>
-                  <li>Dependence on Footbed Media: Due to their auxotrophic nature, the bacteria are reliant on the nutritive footbed media for survival, which means they cannot propagate outside the footbed. This makes the microbial system self-limiting and enhances its biosafety.</li>
-              </ul>
-              <h2 class="text-xl font-bold mt-4 mb-2">Safety Considerations for Living Microbial Systems in Footbeds:</h2>
-              <ul class="list-disc ml-8 mb-4">
-                  <li>Use of Non-Pathogenic Strains: The bacteria selected, <em>Lactobacillus rhamnosus</em>, is a safe probiotic strain that is non-pathogenic and commonly found in the human microbiome. It minimizes health risks while performing the desired function in the footbed.</li>
-                  <li>Physical Barrier Between Footbed and Environment: The footbed is designed with a physical barrier separating it from the external environment. This barrier ensures that bacteria remain contained within the footbed and prevents any unintended release of microbes into the surroundings, providing an additional layer of safety.</li>
-                  <li>Auxotrophy for Safety: The bacteria are engineered to be auxotrophic, making them dependent on specific nutrients provided by the footbed media. This ensures that the bacteria cannot survive or proliferate outside the controlled environment of the footbed, reducing the risk of environmental contamination.</li>
-                  <li>Minimalist Cell Design: The bacterial cells are genetically streamlined, only containing the essential components necessary for producing beneficial compounds like linalool. This reduces the risk of unforeseen genetic interactions or behaviors.</li>
-                  <li>Kill Switch: The living microbial system incorporates a kill switch, ensuring the bacteria can be safely deactivated or killed under specific conditions, such as environmental exposure or the end of the product’s lifespan, or detachment from the media layer.</li>
-                  <li>Safe Disposal Methods: Disposal protocols are put in place to neutralize any remaining bacterial activity and prevent live bacteria from escaping into the environment after the footbed has been used.</li>
-                  <li>Controlled Population Growth: The bacterial population within the footbed is regulated through a quorum sensing mechanism, controlling cell division and preventing overpopulation. This control minimizes the risks of nutrient depletion, toxic metabolite buildup, and overgrowth.</li>
-                  <li>Dependence on Footbed Media: Due to their auxotrophic nature, the bacteria are reliant on the nutritive footbed media for survival, which means they cannot propagate outside the footbed. This makes the microbial system self-limiting and enhances its biosafety.</li>
-              </ul>
-              <h2 class="text-xl font-bold mt-4 mb-2">Addressing Major Problems with Living Bio-Material Therapeutics</h2>
-<img src="https://static.igem.wiki/teams/5425/drylab/population-with-qs.webp" alt="Population Control Visualization" class="max-w-xs my-4">
-<p class="mb-4">When integrating living microbial systems into applications such as a nutritive footbed, several inherent issues related to population control and environmental sustainability are encountered. Without proper mechanisms to manage bacterial growth, these systems can quickly become inefficient due to factors like:</p>
-<ul class="list-disc ml-8 mb-4">
-<li><strong>Uncontrolled Population Growth:</strong> Bacteria in a nutrient-rich medium can rapidly proliferate, leading to overpopulation which overwhelms the medium’s capacity and causes rapid nutrient depletion.</li>
-<li><strong>Nutrient Depletion:</strong> As bacterial numbers increase, they consume the available resources within the medium faster than it can be replenished, resulting in a shorter functional lifespan for the microbial system.</li>
-<li><strong>Toxic Metabolite Buildup:</strong> Excessive bacterial growth leads to the accumulation of metabolic byproducts which, without regulation, can become toxic to the bacteria themselves, ultimately reducing the system's overall efficacy.</li>
-<li><strong>Loss of Stability:</strong> Overcrowded bacterial populations experience stress from competition for limited resources, leading to decreased productivity and failure to produce the desired compounds like linalool.</li>
-</ul>
-<p class="mb-4">Our solution to the bacterial population problem in the footbed involves a dynamic system that intelligently automates itself and controls bacterial growth to maintain a stable and healthy population. This system ensures the bacteria never overgrow, which could lead to the accumulation of harmful byproducts, or die off too quickly, reducing their beneficial effects. By periodically pausing their ability to multiply, the system prevents the bacteria from exceeding the capacity of their environment. This controlled population management extends the lifespan of the footbed by preserving the nutrients in the media and allowing the bacteria to continuously produce beneficial compounds like linalool over an extended period.</p>
-<img src="https://static.igem.wiki/teams/5425/drylab/population-with-qs.webp" alt="Dynamic System Visualization" class="max-w-xs my-4">
-<h3 class="text-lg font-bold mt-4 mb-2">Traffic Police Analogy and Project Phases</h3>
-<ul class="list-disc ml-8 mb-4">
-<li><strong>Phase 1: Design and Proof of Concept</strong> - Design and incorporate population regulation model, characterize it, develop initial kill switch mechanism, and test bacteria for proof of concept in the lab.</li>
-<li><strong>Phase 2: System Integration</strong> - Finalize kill switch, co-transform population and linalool circuits, synthesize and optimize media for bacterial growth, and conduct small-scale tests for population control and linalool production.</li>
-<li><strong>Phase 3: Live Testing</strong> - Conduct live testing in real-world conditions, measure population stability and linalool production, test kill switch and safety mechanisms, and refine system based on test data.</li>
-</ul>
-<h2 class="text-xl font-bold mt-4 mb-2">System Design</h2>
-<p class="mb-4">Our bacterial population control circuit is designed around three key modules: the Sensing Module, Execution Module, and Regulation Module. These components work together to monitor bacterial population levels, control growth through cell cycle arrest, and regulate this growth to keep the population stable and healthy. This approach helps to avoid overpopulation, extend bacterial lifespan, and prevent the accumulation of toxic byproducts.</p>
-<h3 class="text-lg font-bold mt-4 mb-2">Sensing Module (Quorum Sensing-Based Population Detection)</h3>
-<p class="mb-4">The Sensing Module detects bacterial population size using a quorum sensing mechanism. As bacteria grow, they produce an autoinducer molecule called AHL (N-acyl homoserine lactone) via the enzyme LuxI. The AHL concentration rises with the bacterial population. When it hits a critical level, AHL binds to the LuxR transcription factor inside the bacteria. This binding causes AHL-LuxR complexes to dimerize, and these dimers pair up to form tetramers. These tetramers then bind to specific DNA sequences known as lux boxes, located upstream of the plux promoter. This binding activates the plux promoter, leading to the expression of genes in the Execution and Regulation modules, linking bacterial population size directly to gene expression.</p>
-<h3 class="text-lg font-bold mt-4 mb-2">Execution Module (Cell Cycle Arrest for Population Control)</h3>
-<p class="mb-4">The Execution Module controls bacterial growth once the population hits a preset threshold. This is achieved through the expression of a cell cycle arrest gene (cca) located downstream of the plux promoter. When enough AHL is produced, the plux promoter activates, leading to the expression of cca. The cca gene causes a halt in cell division across the bacterial population, preventing further growth.</p>
-<h3 class="text-lg font-bold mt-4 mb-2">Regulation Module (Recovery and Modulation of Population Growth)</h3>
-<p class="mb-4">The Regulation Module adds reversibility and fine control over the bacterial population. After triggering cell cycle arrest, the system allows periodic recovery to maintain a healthy population. This module features two negative feedback loops to manage AHL levels and modulate population control. TetR Control of AHL Production: To prevent continuous AHL production and indefinite population arrest, we regulate the luxI gene (responsible for AHL production) under the ptet promoter. TetR, a repressor protein, binds to the ptet promoter, blocking luxI expression and halting further AHL production. AHL Degradation by AiiA: We also need to remove existing AHL to allow recovery. The enzyme AiiA degrades AHL in the media. We’ve added a degradation tag to AiiA to ensure it breaks down AHL only as long as needed. As bacteria die and AHL is degraded, its concentration drops. When AHL falls below the critical threshold, LuxR dissociates from the plux promoter, stopping the expression of cca, TetR, and AiiA. This ends cell cycle arrest and allows the population to recover and grow.</p>
-<h3 class="text-lg font-bold mt-4 mb-2">Cyclic Control and Population Oscillations</h3>
-<p class="mb-4">Together, these modules create a dynamic system that oscillates between growth and arrest phases, keeping the bacterial population stable. Negative feedback loops ensure that when the population becomes too large, cell cycle arrest is triggered. As cells die and AHL levels drop, the population can recover and resume growth. This cyclical behavior keeps the population healthy and functional without depleting resources. The frequency and amplitude of these oscillations depend on parameters like AHL production and degradation rates, as well as the effectiveness of the arrest and recovery mechanisms. By fine-tuning these parameters, we can maintain a stable bacterial density that supports continuous linalool production while avoiding uncontrolled growth.</p>
-<img src="https://static.igem.wiki/teams/5425/drylab/population-with-qs.webp" alt="System Regulation Dynamics" class="max-w-xs my-4">
-<h2 class="text-xl font-bold mt-4 mb-2">Wet Lab Part Registry</h2>
-<p class="mb-4">Below is a list of genetic components used in our project:</p>
-<table class="table-auto w-full text-left mb-4">
-<thead>
-  <tr>
-    <th class="px-4 py-2">Gene Name</th>
-    <th class="px-4 py-2">Functional Description</th>
-    <th class="px-4 py-2">Biobrick ID</th>
-    <th class="px-4 py-2">Parts reference</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td class="border px-4 py-2">Tet Operator</td>
-    <td class="border px-4 py-2">Sequence for pTet inverting regulator. Promoter is constitutively ON and repressed by TetR.</td>
-    <td class="border px-4 py-2">BBa_R0040</td>
-    <td class="border px-4 py-2"><a href="https://parts.igem.org/Part:BBa_R0040">Link</a></td>
-  </tr>
-  <tr>
-    <td class="border px-4 py-2">RBS</td>
-    <td class="border px-4 py-2">Weak1 RBS based on Ron Weiss thesis.</td>
-    <td class="border px-4 py-2">B0032</td>
-    <td class="border px-4 py-2"><a href="https://parts.igem.org/Part:BBa_B0032">Link</a></td>
-  </tr>
-  <tr>
-    <td class="border px-4 py-2">LuxI</td>
-    <td class="border px-4 py-2"></td>
-    <td class="border px-4 py-2">BBa_C0161</td>
-    <td class="border px-4 py-2"><a href="https://parts.igem.org/Part:BBa_C0161:Experience">Link</a></td>
-  </tr>
-  <tr>
-    <td class="border px-4 py-2">Terminator</td>
-    <td class="border px-4 py-2"></td>
-    <td class="border px-4 py-2">B0012</td>
-    <td class="border px-4 py-2"><a href="https://parts.igem.org/Part:BBa_B0012">Link</a></td>
-  </tr>
-  <tr>
-    <td class="border px-4 py-2">P_tac promoter</td>
-    <td class="border px-4 py-2"></td>
-    <td class="border px-4 py-2">BBa_K864400</td>
-    <td class="border px-4 py-2"><a href="https://parts.igem.org/Part:BBa_K864400">Link</a></td>
-  </tr>
-  <tr>
-    <td class="border px-4 py-2">RBS</td>
-    <td class="border px-4 py-2">RBS based on Elowitz repressilator. Used at the upstream of the AiiA gene coding sequence.</td>
-    <td class="border px-4 py-2">B0034</td>
-    <td class="border px-4 py-2"><a href="https://parts.igem.org/wiki/index.php/Part:BBa_B0034">Link</a></td>
-  </tr>
-  <tr>
-    <td class="border px-4 py-2">LuxR</td>
-    <td class="border px-4 py-2"></td>
-    <td class="border px-4 py-2">BBa_C0062</td>
-    <td class="border px-4 py-2"><a href="https://parts.igem.org/Part:BBa_C0062">Link</a></td>
-  </tr>
-  <tr>
-    <td class="border px-4 py-2">Terminator</td>
-    <td class="border px-4 py-2"></td>
-    <td class="border px-4 py-2">B0010</td>
-    <td class="border px-4 py-2"><a href="https://parts.igem.org/Part:BBa_B0010">Link</a></td>
-  </tr>
-  <tr>
-    <td class="border px-4 py-2">P_lux Promoter</td>
-    <td class="border px-4 py-2">pLuxR is a commonly used inducible promoter. Used to produce AHL molecule in a regulated manner.</td>
-    <td class="border px-4 py-2">BBa_R0062</td>
-    <td class="border px-4 py-2"><a href="https://parts.igem.org/Part:BBa_R0062">Link</a></td>
-  </tr>
-  <tr>
-    <td class="border px-4 py-2">RBS</td>
-    <td class="border px-4 py-2">Modified RBS, anchors Ribosomes to start transcription. Strong RBS based on Ron Weiss thesis.</td>
-    <td class="border px-4 py-2">B0030</td>
-    <td class="border px-4 py-2"><a href="https://parts.igem.org/Part:BBa_B0030">Link</a></td>
-  </tr>
-  <tr>
-    <td class="border px-4 py-2">Tet_R</td>
-    <td class="border px-4 py-2">Coding region for the TetR protein without the Ribosome Binding Site. TetR binds to the pTet regulator, inhibits its operation.</td>
-    <td class="border px-4 py-2">BBa_C0040</td>
-    <td class="border px-4 py-2"><a href="https://parts.igem.org/Part:BBa_C0040">Link</a></td>
-  </tr>
-  <tr>
-    <td class="border px-4 py-2">AiiA</td>
-    <td class="border px-4 py-2"></td>
-    <td class="border px-4 py-2">B0015</td>
-    <td class="border px-4 py-2"><a href="https://parts.igem.org/Part:BBa_B0015">Link</a></td>
-  </tr>
-</tbody>
-</table>
-<div class="text-gray-800 space-y-4">
-  <h2 class="text-2xl font-bold mt-4 mb-2">Addressing Major Problems with Living Bio-Material Therapeutics</h2>
-  <img src="https://static.igem.wiki/teams/5425/drylab/population-with-qs.webp" alt="Population Control Visualization" class="max-w-full my-4">
-  <p>
-      When integrating living microbial systems into applications such as a nutritive footbed, several inherent issues related to population control and environmental sustainability arise. Without proper mechanisms to manage bacterial growth, these systems can quickly become inefficient due to several factors:
+<!-- Heading Section -->
+<div class="heading" style=" padding: 20px; border-radius: 10px;">
+    <h1 class="text-6xl font-bold text-center">Design</h1>
+</div>
+
+<main class="page-container flex mt-10">
+  <!-- Left Nav Section -->
+  <nav class="left-nav w-1/4 border-2 border-gray-300 p-4 rounded-lg shadow-lg mr-8">
+    <button onclick="showSection('section1')" class="text-xl py-2 w-full bg-[#c1a0d2] text-white rounded-lg hover:bg-[#dec5ec] hover:scale-105 transition duration-300 ease-in-out mb-4" aria-label="Go to Section 1">
+      STRATEGIC DESIGN
+    </button>
+    <button onclick="showSection('section2')" class="text-xl py-2 w-full bg-[#c1a0d2] text-white rounded-lg hover:bg-[#dec5ec] hover:scale-105 transition duration-300 ease-in-out mb-4" aria-label="Go to Section 2">
+      SYSTEM DESIGN
+    </button>
+    <button onclick="showSection('section3')" class="text-xl py-2 w-full bg-[#c1a0d2] text-white rounded-lg hover:bg-[#dec5ec] hover:scale-105 transition duration-300 ease-in-out mb-4" aria-label="Go to Section 3">
+      PROOF
+    </button>
+  </nav>
+
+  <!-- Right Content Section -->
+  <div class="right-content w-3/4 border-2 border-gray-300 p-6 rounded-lg shadow-lg">
+    <!-- Strategic Design Section (Visible by default) -->
+    <section id="section1" class="content-section">
+      <h2 class="text-4xl font-bold mb-4">Strategic Design</h2>
+      <p class="text-lg mb-6">
+        Our objective is to engineer a living microbial system for use in foot care, embedded in a nutritive foot-bed. This innovative approach aims to solve common foot care issues that people experience daily, such as fungal infections, inflammation, and odor. By leveraging the ability of genetically engineered bacteria to continuously produce a beneficial compound, we aim to create a solution that goes beyond traditional creams and ointments.
+      </p>
+        <p class="text-lg mb-6">Specifically, we aim to use bacteria that produce linalool, our target compound, a naturally occurring molecule found in plant-based oils. Linalool offers multiple properties that align with foot-care: it is anti-fungal, anti- inflammatory, fragrant, and non-toxic. The living microbial system will be embedded within a nutritive foot-bed, allowing the genetically modified bacterium to use the substrate to sustain itself, produce and release linalool, which will diffuse throughout the foot environment.</p> 
+      <h3 class="text-3xl font-semibold mt-8 mb-4">Live Application of Engineered Bacteria</h3>
+      <p class="text-lg mb-6">
+        In contrast to conventional treatments that require frequent application, lower regions of applicability and have a limited active window, our approach integrates a living microbial system into a nutritive foot-bed, turning it into a long-term care solution. This foot bed is designed to fit into any shoe, where the bacteria embedded in the foot-bed use the nutrients within the foot-bed substrate to synthesize and secrete linalool over an extended period.
+      </p>
+      <p class = "text-2xl font-semibold">Why Use a Living Microbial System in the first place?</p>
+      <p class = "text-lg">The advantage of using a living microbial system is that it provides continuous, self-sustaining production of therapeutic molecules. By housing bacteria in a contained and controlled environment within the foot-bed, the system can deliver round-the-clock foot care. Instead of relying on externally applied products that wear off after a few hours, the living microbial system ensures that fresh linalool is produced as long as the foot-bed is in use, forming an intrinsic part of the foot environment with time.</p>
+      <h2 class = "font-semi-bold">Linalool: The Perfect Foot Care Molecule</h2>
+      <p class = "text-lg">Linalool is a naturally occurring terpene alcohol found in many plants, such as lavender and coriander.It was specifically chosen for this project because of its multifaceted properties:</p>
+        <!-- Benefits List Section -->
+        <div class="w-full mt-4 py-4 bg-gray-50 border border-gray-300 rounded-lg shadow-lg">
+            <ul class="list-disc pl-8 w-full">
+              <li class="text-lg mb-4">
+                <strong>Anti-inflammatory and Antifungal Properties:</strong> Linalool has been shown to reduce inflammation, making it particularly effective in soothing irritated skin. Its antifungal activity can help manage common foot-related conditions, such as Athlete’s Foot.
+              </li>
+              <li class="text-lg mb-4">
+                <strong>Fragrance and Non-toxicity:</strong> As a pleasant-smelling and non-toxic compound, linalool adds a fragrance to the foot-bed, improving the user experience and combating bad odors. The compound is generally regarded as safe for topical use, even over long periods.
+              </li>
+              <li class="text-lg mb-4">
+                <strong>Easy Diffusion:</strong> One of the key benefits of linalool is its volatile nature, allowing it to escape easily from the nutritive foot-bed and disperse throughout the shoe. This diffusion ensures that the entire foot is exposed to the compound, providing continuous protection and skincare even in hard-to-reach areas.
+              </li>
+            </ul>
+          </div>
+          <img src="https://static.igem.wiki/teams/5425/drylab/population-with-qs.webp" class="w-full h-auto rounded-lg shadow-lg  rounded-lg" alt="Population with QS">
+          <div class="w-full p-8 bg-gray-50 border border-gray-300 rounded-lg shadow-lg">
+            <!-- Section: LINALOOL Production Pathway Explanation -->
+            <h2 class="text-4xl font-bold mb-6 text-center">LINALOOL: The Production Pathway</h2>
+            <p class="text-lg mb-6">
+              Linalool, a naturally occurring molecule found in plant-based oils, has been engineered for production in a living microbial system. This process allows continuous production and release of Linalool, addressing common foot care issues such as fungal infections, inflammation, and odor.
+            </p>
+            
+            <!-- Diagram Section -->
+            <div class="w-full flex justify-center mb-6">
+              <img src="https://static.igem.wiki/teams/5425/drylab/population-with-qs.webp" alt="Linalool Production Pathway" class="w-full h-auto rounded-lg shadow-lg ">
+            </div>
+          
+            <!-- Section: Product Envisioning -->
+            <h3 class="text-3xl font-semibold mb-4">E. Solei: Product Envisioning - Lifting the Veil!</h3>
+            <p class="text-lg mb-6">
+                As the user walks, the bacteria embedded in the nutritive foot-bed metabolize the substrate and convert it into linalool, which then diffuses into the surrounding environment (the shoe and foot). This continuous release ensures that the foot is always in contact with linalool, providing round-the- clock protection against fungal growth, inflammation, and bad odor.
+            </p>
+            <p class="text-lg mb-6">
+                By creating a living ecosystem, this foot-bed offers a longer-lasting solution compared to topical applications, which are either washed off or worn away. Importantly, this system requires minimal user intervention, making it a hassle-free foot care solution.
+            </p>
+          
+            <!-- Section: Choosing the Chassis -->
+            <h3 class="text-3xl font-semibold mb-4">Choosing the Chassis: Why Lactobacillus rhamnosus?</h3>
+            <p clss  = "text-1xl font-semi-bold">
+                Why is Lactobacillus rhamnosus an ideal candidate for the foot-bed application for our iGEM project?</p>
+            <!-- List of Benefits -->
+            <ul class="list-disc list-inside bg-white p-6 rounded-lg shadow-md mb-6">
+              <li class="text-lg mb-4">
+                <strong>Safety and Probiotic Nature:</strong> Lactobacillus rhamnosus is a well-established probiotic, commonly found in the gut and known for its safe use in various health applications. It has a proven track record in human-related treatments without causing harm, even when used in delicate environments like the gastrointestinal and urogenital tracts. This makes it a suitable candidate for integration into a nutritive foot-bed, minimizing the risk of harm if it comes into contact with skin or accidental exposure.
+              </li>
+              <li class="text-lg mb-4">
+                <strong>Antifungal and Antimicrobial Properties:</strong>  Lactobacillus rhamnosus is known for producing antimicrobial compounds like 3-phenyllacticacid, which exhibit strong antifungal properties. This aligns with the production of linalool, a compound with antifungal and anti-inflammatory properties, thereby complementing it and enhancing the foot-bed's efficacy in managing skin health and preventing fungal infections (Athlete's foot, etc.).
+              </li>
+              <li class="text-lg mb-4">
+                <strong>Robustness and Skin Microbiome Compatibility:</strong> This species of Lactobacillus is resilient in various conditions, including acidic environments and bile salts, which makes it adaptable for the relatively dynamic environment of a foot-bed. It can also support the skin’s natural micro-biome by outcompeting harmful pathogens without disrupting the overall microbial balance, which is critical in preventing skin irritation or infections.
+                
+              </li>
+              <li class="text-lg mb-4">
+                <strong>Immunomodulatory Potential:</strong> Lactobacillus rhamnosus has been shown to have immunomodulatory effects, potentially aiding in reducing inflammation and improving skin health. Its presence can help maintain a healthy immune response on the skin, adding an additional layer of protection against pathogens.
+                
+              </li>
+            </ul>
+          
+            <p class="text-lg mb-6">
+                Thus we take home the fact that Lactobacillus rhamnosus provides a package of safe antimicrobial action, and skin- compatible properties, making it an ideal candidate for use in a live microbial system in the foot-bed designed to release therapeutic molecules such as linalool and manage skin conditions.
+            </p>
+            <p class = "text-lg">Further details can be extracted from discussions on Microbial Cell Factories and Applied Microbiology and Biotechnology.
+            </p>
+            <p class = "text-lg">For our project, the team carries out all experiments in Escherichia coli (BL21 and DH5- alpha strains) as chassis, which are to be replicated when the chassis is changed to Lactobacillus rhamnosus.
+            </p>
+
+            <div class="w-full p-8 bg-gray-50 border border-gray-300 rounded-lg shadow-lg">
+                <!-- Safety Considerations Heading -->
+                <h2 class="text-4xl font-bold mb-6 text-center">Safety Considerations for Living Microbial Systems in Footbeds</h2>
+              
+                <!-- Image for Illustration -->
+                <div class="w-full flex justify-center mb-6">
+                  <img src="https://static.igem.wiki/teams/5425/drylab/population-with-qs.webp" alt="Safety Diagram" class="w-full h-auto rounded-lg shadow-lg hover:scale-105 transition-transform duration-500 ease-in-out">
+                </div>
+              
+                <!-- List of Safety Considerations -->
+                <ul class="list-disc list-inside bg-white p-6 rounded-lg shadow-md mb-6">
+                  <li class="text-lg mb-4">
+                    <strong>Use of Non-Pathogenic Strains:</strong> The bacteria selected, <em>Lactobacillus rhamnosus</em>, is a safe probiotic strain that is non-pathogenic and commonly found in the human microbiome. It minimizes health risks while performing the desired function in the footbed.
+                  </li>
+                  <li class="text-lg mb-4">
+                    <strong>Physical Barrier Between Footbed and Environment:</strong> The footbed is designed with a physical barrier separating it from the external environment. This barrier ensures that bacteria remain contained within the footbed and prevents any unintended release of microbes into the surroundings, providing an additional layer of safety.
+                  </li>
+                  <li class="text-lg mb-4">
+                    <strong>Auxotrophy for Safety:</strong> The bacteria are engineered to be auxotrophic, making them dependent on specific nutrients provided by the footbed media. This ensures that the bacteria cannot survive or proliferate outside the controlled environment of the footbed, reducing the risk of environmental contamination.
+                  </li>
+                  <li class="text-lg mb-4">
+                    <strong>Minimalist Cell Design:</strong> The bacterial cells are genetically streamlined, only containing the essential components necessary for producing beneficial compounds like linalool. This reduces the risk of unforeseen genetic interactions or behaviors.
+                  </li>
+                  <li class="text-lg mb-4">
+                    <strong>Kill Switch:</strong> The living microbial system incorporates a kill switch, ensuring the bacteria can be safely deactivated or killed under specific conditions, such as environmental exposure or the end of the product’s lifespan, or detachment from the media layer.
+                  </li>
+                  <li class="text-lg mb-4">
+                    <strong>Safe Disposal Methods:</strong> Disposal protocols are put in place to neutralize any remaining bacterial activity and prevent live bacteria from escaping into the environment after the footbed has been used.
+                  </li>
+                  <li class="text-lg mb-4">
+                    <strong>Controlled Population Growth:</strong> The bacterial population within the footbed is regulated through a quorum sensing mechanism, controlling cell division and preventing overpopulation. This control minimizes the risks of nutrient depletion, toxic metabolite buildup, and overgrowth.
+                  </li>
+                  <li class="text-lg mb-4">
+                    <strong>Dependence on Footbed Media:</strong> Due to their auxotrophic nature, the bacteria are reliant on the nutritive footbed media for survival, which means they cannot propagate outside the footbed. This makes the microbial system self-limiting and enhances its biosafety.
+                  </li>
+                </ul>
+              
+                <!-- Conclusion -->
+                <p class="text-lg">
+                  These multi-layered safety measures ensure that the microbial system is both effective and secure for long-term use in footbed applications, while protecting both the user and the environment.
+                </p>
+              </div>
+              
+          <img src = "https://static.igem.wiki/teams/5425/drylab/population-with-qs.webp" class = "w-full h-auto rounded-lg shadow-lg-in-out">
+  <p class = "text-3xl gont-bold">Addressing a major problem with living bio-material therapeutics </p>
+          <p class="text-lg mb-6 font-semibold">
+    When integrating living microbial systems into applications such as a nutritive footbed, there are several inherent issues related to population control and environmental sustainability. Without proper mechanisms to manage bacterial growth, these systems can quickly become inefficient due to several factors:
   </p>
-  <ul class="list-disc ml-8 mb-4">
-      <li><strong>Uncontrolled Population Growth:</strong> Bacteria in a nutrient-rich medium can rapidly proliferate, leading to overpopulation. This unchecked growth overwhelms the medium’s capacity, causing rapid nutrient depletion.</li>
-      <li><strong>Nutrient Depletion:</strong> As bacterial numbers increase, they consume the available resources within the medium faster than it can be replenished. This results in a shorter functional lifespan for the microbial system.</li>
-      <li><strong>Toxic Metabolite Buildup:</strong> Excessive bacterial growth leads to the accumulation of metabolic byproducts. Without regulation, these byproducts can become toxic to the bacteria themselves, ultimately reducing the system's overall efficacy.</li>
-      <li><strong>Loss of Stability:</strong> Overcrowded bacterial populations experience stress from competition for limited resources. This stress can lead to decreased productivity and failure to produce the desired compounds, such as linalool in the footbed application.</li>
+
+  <ul class="list-disc list-inside bg-white p-6 rounded-lg shadow-md mb-6">
+    <li class="text-lg mb-4">
+      <strong>Uncontrolled Population Growth:</strong> Bacteria in a nutrient-rich medium can rapidly proliferate, leading to overpopulation. This unchecked growth overwhelms the medium’s capacity, causing rapid nutrient depletion.
+    </li>
+    <li class="text-lg mb-4">
+      <strong>Nutrient Depletion:</strong> As bacterial numbers increase, they consume the available resources within the medium faster than it can be replenished. This results in a shorter functional lifespan for the microbial system.
+    </li>
+    <li class="text-lg mb-4">
+      <strong>Toxic Metabolite Buildup:</strong> Excessive bacterial growth leads to the accumulation of metabolic byproducts. Without regulation, these byproducts can become toxic to the bacteria themselves, ultimately reducing the system's overall efficacy.
+    </li>
+    <li class="text-lg mb-4">
+      <strong>Loss of Stability:</strong> Overcrowded bacterial populations experience stress from competition for limited resources. This stress can lead to decreased productivity and failure to produce the desired compounds, such as linalool in the footbed application.
+    </li>
   </ul>
-  <p>
-      These challenges highlight the key limitations of using living microbial systems in practical, long-term applications.
+  <p class = "text-lg">produce the desired compounds, such as linalool in the footbed application.
+    These challenges highlight the key limitations of using living microbial systems in practical, long-term applications.
+    </p>
+
+  <!-- Facing the Challenges Section -->
+  <h3 class="text-3xl font-semibold mb-4">Facing the Challenges</h3>
+  <p class="text-lg mb-6">
+    Our solution to the bacterial population problem in the footbed involves a dynamic system that intelligently automates itself and controls bacterial growth to maintain a stable and healthy population. This system ensures the bacteria never overgrow, which could lead to the accumulation of harmful byproducts, or die off too quickly, which would reduce their beneficial effects. By periodically pausing their ability to multiply, the system prevents the bacteria from exceeding the capacity of their environment. This controlled population management extends the lifespan of the footbed by preserving the nutrients in the media and allowing the bacteria to continuously produce beneficial compounds, like linalool, over an extended period. This way, we create a sustainable, safe, and efficient solution that supports long-term foot care without the need for frequent replacements or interventions.
+</p>
+
+<img src = "https://static.igem.wiki/teams/5425/drylab/population-with-qs.web" class = "w-full h-auto rounded-lg shadow-lg ">
+  <!-- Traffic Police Analogy Section -->
+  <h3 class="text-3xl font-semibold mb-4">Traffic Police Analogy</h3>
+  <p class="text-lg mb-6">
+    The system works much like traffic police, regulating bacterial "traffic" to ensure smooth operation. The bacteria are allowed to multiply when needed, but once the population reaches optimal levels, the system "halts" further growth until necessary. This way, it balances population stability and efficiency.
   </p>
-  <h3 class="text-xl font-bold mt-4 mb-2">Facing the Challenges</h3>
-  <p>
-      Our solution to the bacterial population problem in the footbed involves a dynamic system that intelligently automates itself and controls bacterial growth to maintain a stable and healthy population. This system ensures the bacteria never overgrow, which could lead to the accumulation of harmful byproducts, or die off too quickly, which would reduce their beneficial effects. By periodically pausing their ability to multiply, the system prevents the bacteria from exceeding the capacity of their environment. This controlled population management extends the lifespan of the footbed by preserving the nutrients in the media and allowing the bacteria to continuously produce beneficial compounds, like linalool, over an extended period. This way, we create a sustainable, safe, and efficient solution that supports long-term foot care without the need for frequent replacements or interventions.
-  </p>
-  <h3 class="text-xl font-bold mt-4 mb-2">Traffic Police Analogy and Project Phases</h3>
-  <ol class="list-decimal ml-8 mb-4">
-      <li><strong>Phase 1: Design and Proof of Concept</strong>
-          <ul>
-              <li>Design & incorporate population regulation model.</li>
-              <li>Characterize population regulation model.</li>
-              <li>Incorporate & characterize linalool-producing circuit.</li>
-              <li>Develop initial kill switch mechanism.</li>
-              <li>Test bacteria for proof of concept in lab.</li>
-              <li>Initial testing of media and viability.</li>
-              <li>Refine based on initial results.</li>
-          </ul>
-      </li>
-      <li><strong>Phase 2: System Integration</strong>
-          <ul>
-              <li>Finalize & incorporate kill switch.</li>
-              <li>Co-transform population & linalool circuits.</li>
-              <li>Synthesize & optimize media for bacterial growth.</li>
-              <li>Test media-bacteria compatibility.</li>
-              <li>Small-scale tests for population control & linalool production.</li>
-          </ul>
-      </li>
-      <li><strong>Phase 3: Live Testing</strong>
-          <ul>
-              <li>Conduct live testing in real-world conditions.</li>
-              <li>Measure population stability & linalool production.</li>
-              <li>Test kill switch & safety mechanisms.</li>
-              <li>Refine system based on test data.</li>
-          </ul>
-      </li>
-  </ol>
-</div>
 
-          </div> 
-      </div>
-      </div>
+  <!-- Phases of Development Section -->
+  <h3 class="text-3xl font-semibold mb-4">Phases of Development</h3>
+
+  <ul class="list-disc list-inside bg-white p-6 rounded-lg shadow-md mb-6">
+    <!-- Phase 1 -->
+    <li class="text-lg mb-4">
+      <strong>Phase 1 - Design and Proof of Concept:</strong>
+      <ul class="list-disc list-inside ml-6 mt-2">
+        <li>Design & incorporate population regulation model.</li>
+        <li>Characterize population regulation model.</li>
+        <li>Incorporate & characterize linalool-producing circuit.</li>
+        <li>Develop initial kill switch mechanism.</li>
+        <li>Test bacteria for proof of concept in lab.</li>
+        <li>Initial testing of media and viability.</li>
+        <li>Refine based on initial results.</li>
+      </ul>
+    </li>
   
-      <!-- TAB TWO COTETN -->
+    <!-- Phase 2 -->
+    <li class="text-lg mb-4">
+      <strong>Phase 2 - System Integration:</strong>
+      <ul class="list-disc list-inside ml-6 mt-2">
+        <li>Finalize & incorporate kill switch.</li>
+        <li>Co-transform population & linalool circuits.</li>
+        <li>Synthesize & optimize media for bacterial growth.</li>
+        <li>Test media-bacteria compatibility.</li>
+        <li>Small-scale tests for population control & linalool production.</li>
+      </ul>
+    </li>
   
-      <div
-        class="hidden p-6 text-lg bg-[#fffbeb] "
-        id="styled-dashboard"
-        role="tabpanel"
-        aria-labelledby="dashboard-tab"
-      >
-      <div class= p-6">
-          <h2 class="text-2xl font-bold text-gray-800 mb-4">System Design</h2>
-          <p class="text-lg text-gray-700 mb-4">
-              Our bacterial population control circuit is designed around three key modules: the Sensing Module, Execution Module, and Regulation Module. These components work together to monitor bacterial population levels, control growth through cell cycle arrest, and regulate this growth to keep the population stable and healthy. This approach helps to avoid overpopulation, extend bacterial lifespan, and prevent the accumulation of toxic byproducts.
-          </p>
+    <!-- Phase 3 -->
+    <li class="text-lg mb-4">
+      <strong>Phase 3 - Live Testing:</strong>
+      <ul class="list-disc list-inside ml-6 mt-2">
+        <li>Conduct live testing in real-world conditions.</li>
+        <li>Measure population stability & linalool production.</li>
+        <li>Test kill switch & safety mechanisms.</li>
+        <li>Refine system based on test data.</li>
+      </ul>
+    </li>
+</section>
+
+    <!-- System Design Section (Hidden by default) -->
+<section id="section2" class="content-section hidden">
+      <h2 class="text-3xl font-bold mb-4">SYSTEM DESIGN</h2>
+      <p class = "text-lg mb-6">Our bacterial population control circuit is designed around three key modules: the Sensing Module, Execution Module, and Regulation Module. These components work together to monitor bacterial population levels, control growth through cell cycle arrest, and regulate this growth to keep the population stable and healthy. This approach helps to avoid overpopulation, extend bacterial lifespan, and prevent the accumulation of toxic byproducts.</p>
+      <section class="bg-white p-6 rounded-lg shadow-md mb-6">
+        <h2 class="text-2xl font-bold mb-4">Sensing Module (Quorum Sensing-Based Population Detection)</h2>
+        <p class="text-lg mb-4">
+            The Sensing Module detects bacterial population size using a quorum sensing mechanism. As bacteria grow, they produce an autoinducer molecule called AHL (N-acyl homoserine lactone) via the enzyme LuxI. The AHL concentration rises with the bacterial population. When it hits a critical level, AHL binds to the LuxR transcription factor inside the bacteria.
+        </p>
+        <p class="text-lg mb-4">
+            This binding causes AHL-LuxR complexes to dimerize, and these dimers pair up to form tetramers. These tetramers then bind to specific DNA sequences known as lux boxes, located upstream of the plux promoter. This binding activates the plux promoter, leading to the expression of genes in the Execution and Regulation modules. Essentially, this module links bacterial population size directly to gene expression. More bacteria mean more AHL, and once the threshold is reached, the gene expression cascade kicks in.
+        </p>
+        <p class="text-lg mb-4 text-blue-500 underline">
+            <a href="https://static.igem.wiki/teams/5425/drylab/population-with-qs.webp" target="_blank">(Insert Figure of Circuit and Components)</a>
+        </p>
+    </section>
+
+    <section class="bg-white p-6 rounded-lg shadow-md mb-6">
+        <h2 class="text-2xl font-bold mb-4">Execution Module (Cell Cycle Arrest for Population Control)</h2>
+        <p class="text-lg mb-4">
+            The Execution Module controls bacterial growth once the population hits a preset threshold. This is achieved through the expression of a cell cycle arrest gene (cca) located downstream of the plux promoter. When enough AHL is produced, the plux promoter activates, leading to the expression of cca.
+        </p>
+        <p class="text-lg mb-4">
+            The cca gene causes a halt in cell division across the bacterial population, preventing further growth. This is crucial because unchecked growth could lead to nutrient depletion and the buildup of toxic byproducts, reducing linalool production efficiency.
+        </p>
+        <h3 class="text-xl font-semibold mb-4">Introducing our cell cycle arrest gene</h3>
+        <ul class="list-disc list-inside ml-4 mb-4">
+            <li class="text-lg">Antisense against dnaA</li>
+        </ul>
+        <h3 class="text-xl font-semibold mb-4">Why antisense?</h3>
+        <p class="text-lg mb-4">
+            Steric Blocking Antisense Technology involves using antisense RNA to inhibit gene expression by binding to target mRNA, preventing translation. This technique gained traction in the 1990s, paving the way for therapeutic applications in genetic disorders.
+        </p>
+        <p class="text-lg mb-4">
+            Longer antisense RNAs may be more effective at silencing DnaA compared to shorter oligonucleotides for several reasons. Their increased length allows for tighter and more stable binding to the target mRNA, enhancing the silencing effect. Additionally, longer RNAs can cover more regions of the mRNA, potentially blocking multiple functional sites and more effectively preventing translation. They can also be designed to specifically target the desired mRNA, which reduces the chances of interacting with unintended transcripts—an issue often seen with shorter oligonucleotides.
+        </p>
+        <p class="text-lg mb-4">
+            Furthermore, longer antisense RNAs tend to be more stable within the cell, allowing for prolonged gene silencing. Finally, they can engage different pathways for RNA degradation, providing multiple mechanisms for effective silencing. These advantages collectively make longer antisense RNAs a powerful tool for targeting DnaA and other genes.
+        </p>
+        <p class="text-lg mb-4">
+            The silencing effect of longer antisense RNAs is reversible due to several factors. First, once the antisense RNA is degraded or removed, the target mRNA can be free to resume translation and expression. This is particularly important because the cellular mechanisms involved in RNA degradation do not permanently alter the mRNA itself. Additionally, the binding of longer antisense RNAs is non-covalent, meaning that it doesn’t create permanent changes in the target or the cell’s genetic material.
+        </p>
+        <p class="text-lg mb-4">
+            This allows for a dynamic regulation of gene expression, where the effects can be turned on or off as needed, enabling researchers to study gene function and potentially tailor therapies without long-lasting impacts.
+        </p>
+        <p class="text-lg mb-4 text-blue-500 underline">
+            <a href="https://static.igem.wiki/teams/5425/antisense.png" target="_blank">Link: Antisense RNA Mechanism Figure</a>
+        </p>
+        <p class="text-lg mb-4">
+            <strong>Why dnaA?</strong><br>
+            In our project, we aim to control bacterial population growth in a reversible manner without permanently affecting cell viability. To achieve this, we targeted DnaA, a key regulator of replication initiation. DnaA reaches its peak concentration and plays a vital role by binding to the origin of replication (oriC) in its ATP-bound form (DnaA-ATP). This binding triggers DNA unwinding and initiates replication.
+        </p>
+        <p class="text-lg mb-4">
+            DnaA utilizes the energy from ATP hydrolysis to introduce a bend or kink in the DNA, creating tension in the double helix. This tension facilitates the unwinding of DNA at the AT-rich regions of oriC, allowing the replication process to commence effectively.
+        </p>
+        <p class="text-lg mb-4 text-blue-500 underline">
+            <a href="https://static.igem.wiki/teams/5425/e-solei-brief-presentation-1.webp" target="_blank">Presentation Link 1</a>
+        </p>
+        <p class="text-lg mb-4 text-blue-500 underline">
+            <a href="https://static.igem.wiki/teams/5425/e-solei-brief-presentation.webp" target="_blank">Presentation Link 2</a>
+        </p>
+    </section>
+
+    <section class="bg-white p-6 rounded-lg shadow-md mb-6">
+        <h2 class="text-2xl font-bold mb-4">Complete Arrest and Population Recovery</h2>
+        <p class="text-lg mb-4">
+            Our approach focuses on the reversible regulation of DnaA expression through the use of antisense RNA, which binds to DnaA mRNA, blocking its translation and temporarily halting DNA replication. This mechanism stops cell division without permanently compromising cell viability. The regulation of antisense RNA production is dependent on a quorum-sensing module that responds to population density. When the bacterial population reaches a certain threshold, the quorum-sensing system activates antisense RNA production, inhibiting DnaA expression and halting replication. As the population declines, the system reduces antisense RNA production, allowing replication to resume.
+        </p>
+        <p class="text-lg mb-4">
+            Complete arrest isn’t ideal for long-term functionality since cells naturally die over time. To keep the population sustainable, we need periodic recovery. As old or damaged cells die, new ones should replace them, keeping the population functional. This is where the Regulation Module comes in, managing population recovery.
+        </p>
+    </section>
+    <section class="bg-white p-6 rounded-lg shadow-md mb-6">
+        <h2 class="text-2xl font-bold mb-4">Regulation Module (Recovery and Modulation of Population Growth)</h2>
+        <p class="text-lg mb-4">
+            The Regulation Module adds reversibility and fine control over the bacterial population. After triggering cell cycle arrest, the system allows periodic recovery to maintain a healthy population.
+
+        </p>
+        <p class="text-lg mb-4">
+            This module features two negative feedback loops to manage AHL levels and modulate population control:
+        </p>
+        
+        <!-- TetR Control of AHL Production -->
+        <h3 class="text-xl font-semibold mb-4">TetR Control of AHL Production</h3>
+        <p class="text-lg mb-4">
+            To prevent continuous AHL production and indefinite population arrest, we regulate the luxI gene (responsible for AHL production) under the ptet promoter. TetR, a repressor protein, binds to the ptet promoter, blocking luxI expression and halting further AHL production. This keeps AHL levels from rising and prolonging arrest.
+        </p>
+        
+        <!-- AHL Degradation by AiiA -->
+        <h3 class="text-xl font-semibold mb-4">AHL Degradation by AiiA</h3>
+        <p class="text-lg mb-4">
+            We also need to remove existing AHL to allow recovery. The enzyme AiiA degrades AHL in the media. We’ve added a degradation tag to AiiA to ensure it breaks down AHL only as long as needed. This way, AHL concentrations decrease once the population is arrested.
+        </p>
+        <p class="text-lg mb-4">
+            Both TetR and AiiA are expressed under the <strong>plux</strong> promoter, so they’re produced only when AHL levels are high. As bacteria die and AHL is degraded, its concentration drops. When AHL falls below the critical threshold, LuxR dissociates from the <strong>plux</strong> promoter, stopping the expression of <strong>cca</strong>, TetR, and AiiA. This ends cell cycle arrest and allows the population to recover and grow.
+        </p>
+        
+        <p class="text-lg mb-4 text-blue-500 underline">
+            <a href="https://static.igem.wiki/teams/5425/drylab/population-with-qs.webp" target="_blank">(Insert Figure of Circuit and Components)</a>
+        </p>
+    </section>
+    <!-- Cyclic Control and Population Oscillations Section -->
+    <section class="bg-white p-6 rounded-lg shadow-md mb-6">
+        <h2 class="text-2xl font-bold mb-4">Cyclic Control and Population Oscillations</h2>
+        <p class="text-lg mb-4">
+          Together, these modules create a dynamic system that oscillates between growth and arrest phases, keeping the bacterial population stable. Negative feedback loops ensure that when the population becomes too large, cell cycle arrest is triggered. As cells die and AHL levels drop, the population can recover and resume growth.
+        </p>
+        <p class="text-lg mb-4">
+          This cyclical behavior keeps the population healthy and functional without depleting resources.The frequency and amplitude of these oscillations depend on parameters like AHL production and degradation rates, as well as the effectiveness of the arrest and recovery mechanisms. By fine-tuning these parameters, we can maintain a stable bacterial density that supports continuous linalool production while avoiding uncontrolled growth.
+
+        </p>
+        <p class="text-lg mb-4 text-blue-500 underline">
+            <a href="https://static.igem.wiki/teams/5425/drylab/population-with-qs.webp" target="_blank">(Insert Figure of Circuit and Components)</a>
+        </p>
+    </section>
+
+    <section class="bg-white p-6 rounded-lg shadow-md mb-6">
+        <h2 class="text-2xl font-bold mb-4">MEV SYSTEM DESIGN</h2>
+        <p class="text-lg mb-4">
+          Our project revolves around production of Linalool, a monoterpene, efficiently to battle against bad odor and foot microbial infections, with a genetically modified organism, placed in the vicinity of the foot but not in its direct contact. An integral part of E.solei the production of Linalool in our experimental chassis (E.coli), which we categorize as our Module 1. For this we delve deeper into the origin and pathways through which monoterpenes like Linalool as produced in other organisms.
+        </p>
+
+        <!-- MEV Pathway in Plants -->
+        <h3 class="text-xl font-semibold mb-4">The Mevalonate Pathway (MEV) in Plant Species: The BluePrint</h3>
+        <p class="text-lg mb-4">
+            The mevalonate pathway in plants is a crucial metabolic route responsible for synthesising isoprenoids, which include a wide variety of essential compounds such as terpenes, sterols, and hormones. This pathway begins with the condensation of acetyl-CoA to form HMG-CoA, which is then converted to mevalonate by the enzyme HMG-CoA reductase. Mevalonate is subsequently phosphorylated and decarboxylated to produce isopentenyl pyrophosphate (IPP) and dimethylallyl pyrophosphate (DMAPP), the fundamental building blocks of isoprenoids.
+        </p>
+
+        <p class="text-lg mb-4">
+          The MEV pathway governs productions of isoprenoids which contribute to the formation of secondary metabolites, having ecological functions such as attracting pollinators or deterring herbivores.
+
+        </p>
+
+        <!-- Image Placeholder -->
+        <p class="text-lg text-blue-500 underline mb-4"><a href="#">(Insert Image of MEV Pathway)</a></p>
+
+        <p class="text-lg mb-4">
+          The production of Linalool, needed us to direct the MEV pathway from the compounds DMAPP to GPP (geranyl diphosphate) and finally Linalool. For this we needed to put in two genes of our own : namely GPPS (geranyl diphosphate synthase) and LIS (Linalool synthase).
+
+        </p>
+
+        <p class="text-lg mb-4">
+          Initially the team had believed in trying to place the entirety of the pathway into our chassis E.coli for the production of linalool, just like other research teams have done before. However, this required us to place a plasmid (of approx. length 15 kb) with the full gene circuit, inside our chassis. Due to time constraints this made us wonder if we could come up with something new.
+        </p>
+
+        <!-- Image Placeholder -->
+        <p class="text-lg text-blue-500 underline mb-4"><a href="#">(Insert Image of Gene Circuit)</a></p>
+    </section>
+
+    <!-- MEP Pathway in E. coli Section -->
+    <section class="bg-white p-6 rounded-lg shadow-md mb-6">
+        <h3 class="text-xl font-semibold mb-4">The MEP Pathway in E. coli: The Link</h3>
+        <p class="text-lg mb-4">
+          Unlike some other organisms, E. coli primarily utilizes the non-mevalonate pathway (the MEP pathway) for isoprenoid synthesis. It is intrinsic to the organism and  vital for various cellular functions, including membrane composition and the production of signaling molecules. The pathway begins with the condensation of pyruvate and glyceraldehyde-3-phosphate but culminates in the production of isopentenyl pyrophosphate (IPP) and dimethylallyl pyrophosphate (DMAPP), which are essential for synthesizing various isoprenoids.        </p>
+
+        <p class="text-lg mb-4">
+          This was the link we were searching for. Due to further time constraints, the team decided to follow the path less traveled. We decided to exploit the MEP pathway due to the formation of a common substrate between MEV and MEP pathway : DMAPP. For our further reactions we planned on housing the two new genes with a pSB1C3 backbone and transforming that plasmid into the chassis.
+        </p>
+
+        <p class="text-lg mb-4">
+          Our perspective: The two new genes placed inside would act on DMAPP substrate present in the cytosol of the chassis, and act on at least a part of it to synthesise Linalool. We agree that it might lead to less production of Linalool because of flux division of DMAPP between this pathway and other existing pathways and also due to the MEP pathway being a low metabolic flux pathway. 
+        </p>
+
+        <p class="text-lg mb-4">
+          However, even if unsuccessful it would provide valuable insight on the preference of Linalool production and other types of terpene productions like FPP (farnesyl pyrophosphate), and also enzyme reactivity comparison.        </p>
+
+        <!-- Image Placeholder -->
+        <p class="text-lg text-blue-500 underline mb-4"><a href="#">(Insert Image of MEP Pathway)</a></p>
+    </section>
+
+    <!-- Future Prospects Section -->
+    <section class="bg-white p-6 rounded-lg shadow-md mb-6">
+        <h3 class="text-xl font-semibold mb-4">Future Prospects: Optimisation of Linalool Production</h3>
+        <p class="text-lg mb-4">
+          The team did extensive research on ways to improve the mevalonate pathway but due to time constraints could not carry out experiments on the same. 
+        </p>
+
+        <h4 class="text-lg font-semibold mb-4">Choice of Media</h4>
+        <p class="text-lg mb-4">
+          Research showed that using different compositions of growth media can alter the amount of the compound of interest being produced. MEP pathway begins with the condensation of pyruvate which hints at the fact that there must be a carbon source like glucose further up the pathway which fuels the availability of pyruvate substrate. This is the logic behind using various carbon sources as growth media.        </p>
+
+        <p class="text-lg mb-4">
+          Several research experiments were done in the past on Lycopene production in  E. coli wherein, the MEV pathway was exploited along with the MEP pathway. When glucose, fructose, glycerol, or arabinose were supplied as an auxiliary carbon source, respectively, to the LB medium for lycopene production, fructose exhibited the highest lycopene yield. 
+        </p>
+
+        <p class="text-lg mb-4">
+          This approach remains largely uncultivated and the team wants to delve deeper into the same approach for optimizing production of Linalool        </p>
+    </section>
+
+    <section class="bg-white p-6 rounded-lg shadow-md">
+        <h2 class="text-2xl font-bold mb-6">Wet Lab Part Registry</h2>
+
+        <table class="min-w-full bg-white table-auto">
+            <thead>
+                <tr class="w-full bg-gray-200">
+                    <th class="text-left px-4 py-2">Gene Name</th>
+                    <th class="text-left px-4 py-2">Functional Description</th>
+                    <th class="text-left px-4 py-2">Biobrick ID</th>
+                    <th class="text-left px-4 py-2">Parts Reference</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Tet Operator Row -->
+                <tr class="bg-gray-100 hover:bg-gray-300 transition duration-200">
+                    <td class="px-4 py-2">Tet Operator</td>
+                    <td class="px-4 py-2"></td>
+                    <td class="px-4 py-2"></td>
+                    <td class="px-4 py-2"></td>
+                </tr>
+                
+                <!-- P_tet promoter Row -->
+                <tr class="hover:bg-gray-300 transition duration-200">
+                    <td class="px-4 py-2">P_tet promoter</td>
+                    <td class="px-4 py-2">Sequence for pTet inverting regulator. Promoter is constitutively ON and repressed by TetR. TetR repression is inhibited by tetracycline or its analog.</td>
+                    <td class="px-4 py-2">BBa_R0040</td>
+                    <td class="px-4 py-2 text-blue-500 underline">
+                        <a href="https://parts.igem.org/Part:BBa_R0040" target="_blank">Link</a>
+                    </td>
+                </tr>
+
+                <!-- RBS Row -->
+                <tr class="bg-gray-100 hover:bg-gray-300 transition duration-200">
+                    <td class="px-4 py-2">RBS</td>
+                    <td class="px-4 py-2">Derivative of BBa_0030. Weak1 RBS based on Ron Weiss thesis.</td>
+                    <td class="px-4 py-2">B0032</td>
+                    <td class="px-4 py-2 text-blue-500 underline">
+                        <a href="https://parts.igem.org/Part:BBa_B0032" target="_blank">Link</a>
+                    </td>
+                </tr>
+
+                <!-- LuxI Row -->
+                <tr class="hover:bg-gray-300 transition duration-200">
+                    <td class="px-4 py-2">LuxI</td>
+                    <td class="px-4 py-2"></td>
+                    <td class="px-4 py-2"></td>
+                    <td class="px-4 py-2 text-blue-500 underline">
+                        <a href="https://parts.igem.org/Part:BBa_C0161:Experience" target="_blank">Link</a>
+                    </td>
+                </tr>
+
+                <!-- Terminator Row -->
+                <tr class="bg-gray-100 hover:bg-gray-300 transition duration-200">
+                    <td class="px-4 py-2">Terminator</td>
+                    <td class="px-4 py-2"></td>
+                    <td class="px-4 py-2">B0012</td>
+                    <td class="px-4 py-2 text-blue-500 underline">
+                        <a href="https://parts.igem.org/Part:BBa_B0012" target="_blank">Link</a>
+                    </td>
+                </tr>
+
+                <!-- P_tac promoter Row -->
+                <tr class="hover:bg-gray-300 transition duration-200">
+                    <td class="px-4 py-2">P_tac promoter</td>
+                    <td class="px-4 py-2"></td>
+                    <td class="px-4 py-2">BBa_K864400</td>
+                    <td class="px-4 py-2 text-blue-500 underline">
+                        <a href="https://parts.igem.org/Part:BBa_K864400" target="_blank">Link</a>
+                    </td>
+                </tr>
+
+                <!-- RBS Row -->
+                <tr class="bg-gray-100 hover:bg-gray-300 transition duration-200">
+                    <td class="px-4 py-2">RBS</td>
+                    <td class="px-4 py-2">RBS based on Elowitz repressilator. We used it at the upstream of the AiiA gene coding sequence.</td>
+                    <td class="px-4 py-2">B0034</td>
+                    <td class="px-4 py-2 text-blue-500 underline">
+                        <a href="https://parts.igem.org/wiki/index.php/Part:BBa_B0034" target="_blank">Link</a>
+                    </td>
+                </tr>
+
+                <!-- LuxR Row -->
+                <tr class="hover:bg-gray-300 transition duration-200">
+                    <td class="px-4 py-2">LuxR</td>
+                    <td class="px-4 py-2"></td>
+                    <td class="px-4 py-2"></td>
+                    <td class="px-4 py-2 text-blue-500 underline">
+                        <a href="https://parts.igem.org/Part:BBa_C0062" target="_blank">Link</a>
+                    </td>
+                </tr>
+
+                <!-- Terminator Row -->
+                <tr class="bg-gray-100 hover:bg-gray-300 transition duration-200">
+                    <td class="px-4 py-2">Terminator</td>
+                    <td class="px-4 py-2"></td>
+                    <td class="px-4 py-2">B0010</td>
+                    <td class="px-4 py-2 text-blue-500 underline">
+                        <a href="https://parts.igem.org/Part:BBa_B0010" target="_blank">Link</a>
+                    </td>
+                </tr>
+
+                <!-- P_lux Promoter Row -->
+                <tr class="hover:bg-gray-300 transition duration-200">
+                    <td class="px-4 py-2">P_lux Promoter</td>
+                    <td class="px-4 py-2">pLuxR is a commonly used inducible promoter. We used this to produce AHL molecule in a regulated manner.</td>
+                    <td class="px-4 py-2"></td>
+                    <td class="px-4 py-2 text-blue-500 underline">
+                        <a href="https://parts.igem.org/Part:BBa_R0062" target="_blank">Link</a>
+                    </td>
+                </tr>
+
+                <!-- RBS Row -->
+                <tr class="bg-gray-100 hover:bg-gray-300 transition duration-200">
+                    <td class="px-4 py-2">RBS</td>
+                    <td class="px-4 py-2">Modified RBS, anchors Ribosomes to start transcription. Strong RBS based on Ron Weiss thesis.</td>
+                    <td class="px-4 py-2">B0030</td>
+                    <td class="px-4 py-2 text-blue-500 underline">
+                        <a href="https://parts.igem.org/Part:BBa_B0030" target="_blank">Link</a>
+                    </td>
+                </tr>
+
+                <!-- Tet_R Row -->
+                <tr class="hover:bg-gray-300 transition duration-200">
+                    <td class="px-4 py-2">Tet_R</td>
+                    <td class="px-4 py-2">Coding region for the TetR protein without the Ribosome Binding Site. TetR binds to the pTet regulator and inhibits its operation.</td>
+                    <td class="px-4 py-2">BBa_C0040</td>
+                    <td class="px-4 py-2 text-blue-500 underline">
+                        <a href="https://parts.igem.org/Part:BBa_C0040" target="_blank">Link</a>
+                    </td>
+                </tr>
+
+                <!-- AiiA Row -->
+                <tr class="bg-gray-100 hover:bg-gray-300 transition duration-200">
+                    <td class="px-4 py-2">AiiA</td>
+                    <td class="px-4 py-2"></td>
+                    <td class="px-4 py-2"></td>
+                    <td class="px-4 py-2"></td>
+                </tr>
+
+                <!-- Degradation Tag Row -->
+                <tr class="hover:bg-gray-300 transition duration-200">
+                    <td class="px-4 py-2">Degradation Tag</td>
+                    <td class="px-4 py-2"></td>
+                    <td class="px-4 py-2"></td>
+                    <td class="px-4 py-2"></td>
+                </tr>
+
+                <!-- Terminator Row -->
+                <tr class="bg-gray-100 hover:bg-gray-300 transition duration-200">
+                    <td class="px-4 py-2">Terminator</td>
+                    <td class="px-4 py-2"></td>
+                    <td class="px-4 py-2">B0015</td>
+                    <td class="px-4 py-2 text-blue-500 underline">
+                        <a href="https://parts.igem.org/Part:BBa_B0015" target="_blank">Link</a>
+                    </td>
+                </tr>
+
+                <!-- CCA Row -->
+                <tr class="hover:bg-gray-300 transition duration-200">
+                    <td class="px-4 py-2">CCA</td>
+                    <td class="px-4 py-2"></td>
+                    <td class="px-4 py-2"></td>
+                    <td class="px-4 py-2"></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</section>
+
+    <!-- Proof of Concept Section (Hidden by default) -->
+    <section id="section3" class="content-section hidden">
+      <h2 class="text-3xl font-bold mb-4">PROOF OF CONCEPT</h2>
+      
+      <section class="max-w-4xl mx-auto p-8 bg-white my-8 shadow-lg rounded">
+        <h1 class="text-3xl font-bold mb-4">PROOF OF CONCEPT OF LIVE APPLICATION</h1>
+        <p class="mb-4">
+          The concept of embedding engineered bacteria into a nutritive footbed aims to create a system where the bacteria can continuously produce and release linalool, a compound with antifungal and anti-inflammatory properties. For this to work, several key aspects must be validated. First, bacterial viability will be tested by embedding the bacteria in the footbed material and measuring their growth and activity over time to ensure they can survive and thrive in this environment. This is essential to maintain long-term production of linalool.
+        </p>
+        <p class="mb-4">
+          Next, the bacteria must be able to produce and release linalool consistently. Experiments will confirm the presence of linalool biosynthesis genes and use gas chromatography-mass spectrometry (GC-MS) to measure linalool production over time. Additionally, diffusion tests will be conducted to ensure linalool is evenly distributed across the footbed. These experiments will validate that the engineered bacteria can effectively perform their designed functions in a real-world setting, while population control mechanisms, such as quorum sensing, will regulate bacterial growth to avoid overgrowth and ensure safe, stable operation.
+        </p>
+      </section>
+    
+      <!-- Section: Proof of Concept for Antisense mRNA Knockdown -->
+      <section class="max-w-4xl mx-auto p-8 bg-white my-8 shadow-lg rounded">
+        <h2 class="text-2xl font-bold mb-4">Proof of Concept for Antisense mRNA Knockdown</h2>
+        <p class="mb-4">
+          Antisense mRNA technology is a well-established method for gene silencing, where an mRNA a molecule complementary to a target mRNA binds to it, preventing translation. For the knockdown of the dnaA gene in E. coli, which is critical for initiating DNA replication, an antisense mRNA was designed to bind specifically to dnaA transcripts, thereby reducing its protein levels.
+                  </p>
+        <p class="mb-4">
+          Several studies have demonstrated the efficacy of antisense RNA in bacteria. In the context of our project, the antisense mRNA will be cloned into a plasmid under an inducible promoter. Upon induction, the antisense mRNA will bind to dnaA mRNA, inhibiting its translation and thereby downregulating DNA replication. The reduction in dnaA levels will be confirmed by Western blotting or quantitative RT-PCR. This knockdown approach is expected to help control cell proliferation as part of the broader population control system in our project.
+                  </p>
+        <p class="mb-4">
+          <strong>References:</strong>
+        </p>
+        <!-- You can add any specific references here if needed -->
+      </section>
+    
+      <!-- Section: Proof of Concept for Choosing dnaA as a Cell Cycle Arrest Protein -->
+      <section class="max-w-4xl mx-auto p-8 bg-white my-8 shadow-lg rounded">
+        <h2 class="text-2xl font-bold mb-4">Proof of Concept for Choosing <em>dnaA</em> as a Cell Cycle Arrest Protein</h2>
+        <p class="mb-4">
+          In our project, we have selected dnaA as the target protein for inducing cell cycle arrest due to its critical role in the initiation of DNA replication in Escherichia coli. The functionality of dnaA is well-documented; it is essential for the timely and accurate initiation of chromosomal replication. Previous studies have demonstrated that the downregulation or inactivation of dnaA effectively halts DNA replication, providing a mechanism to regulate bacterial growth under various environmental stresses, such as energy depletion and nutrient limitation (Charbon et al.).         </p>
+        <p class="mb-4">
+          Specifically, Godefroid Charbon and colleagues found that energy starvation leads to the arrest of chromosomal replication in E. coli, primarily mediated through the downregulation of dnaA (Charbon et al.). Additionally, Li et al. constructed temperature-sensitive mutants of dnaA in Streptomyces, demonstrating that these mutants can be synchronized to induce cell cycle arrest at specific temperatures, which highlights the potential of manipulating dnaA in bacterial systems for controlled growth regulation. This synchronization allows for precise control over bacterial populations, providing a platform for studying cell cycle dynamics under different conditions.        </p>
+        <p class="mb-4">
+          By harnessing the regulatory mechanisms of dnaA, our project aims to implement a precise control system for bacterial population management, ensuring that the engineered bacteria can maintain an optimal population density while minimizing the risk of toxic byproduct accumulation. This approach not only enhances our understanding of bacterial growth regulation but also opens avenues for innovative applications in synthetic biology. Arresting chromosome replication upon energy starvation in Escherichia coli
           
-          <!-- Sensing Module -->
-          <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2">1. Sensing Module (Quorum Sensing-Based Population Detection)</h3>
-          <p class="text-gray-700 mb-4">
-              The Sensing Module detects bacterial population size using a quorum sensing mechanism. As bacteria grow, they produce an autoinducer molecule called AHL (N-acyl homoserine lactone) via the enzyme LuxI. The AHL concentration rises with the bacterial population. When it hits a critical level, AHL binds to the LuxR transcription factor inside the bacteria.
-          </p>
-          <p class="text-gray-700 mb-4">
-              This binding causes AHL-LuxR complexes to dimerize, and these dimers pair up to form tetramers. These tetramers then bind to specific DNA sequences known as lux boxes, located upstream of the plux promoter. This binding activates the plux promoter, leading to the expression of genes in the Execution and Regulation modules. Essentially, this module links bacterial population size directly to gene expression. More bacteria mean more AHL, and once the threshold is reached, the gene expression cascade kicks in.
-          </p>
-          <img src="https://static.igem.wiki/teams/5425/drylab/population-with-qs.webp" alt="Quorum Sensing Mechanism" class="w-full max-w-md mx-auto mb-6">
-          
-          <!-- Execution Module -->
-          <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2">2. Execution Module (Cell Cycle Arrest for Population Control)</h3>
-          <p class="text-gray-700 mb-4">
-              The Execution Module controls bacterial growth once the population hits a preset threshold. This is achieved through the expression of a cell cycle arrest gene (cca) located downstream of the plux promoter. When enough AHL is produced, the plux promoter activates, leading to the expression of cca.
-          </p>
-          <p class="text-gray-700 mb-4">
-              The cca gene causes a halt in cell division across the bacterial population, preventing further growth. This is crucial because unchecked growth could lead to nutrient depletion and the buildup of toxic byproducts, reducing linalool production efficiency.
-          </p>
-          <p class="text-gray-700 mb-4">
-              To explain our choice of the cell cycle arrest gene: Antisense against dnaA. Why antisense? Steric Blocking Antisense Technology involves using antisense RNA to inhibit gene expression by binding to target mRNA, preventing translation. This technique gained traction in the 1990s, paving the way for therapeutic applications in genetic disorders.
-          </p>
-          <img src="https://static.igem.wiki/teams/5425/antisense.png" alt="Antisense RNA" class="w-full max-w-md mx-auto mb-6">
-      
-          <!-- Regulation Module -->
-          <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2">3. Regulation Module (Recovery and Modulation of Population Growth)</h3>
-          <p class="text-gray-700 mb-4">
-              The Regulation Module adds reversibility and fine control over the bacterial population. After triggering cell cycle arrest, the system allows periodic recovery to maintain a healthy population. This module features two negative feedback loops to manage AHL levels and modulate population control: TetR Control of AHL Production and AHL Degradation by AiiA.
-          </p>
-          <p class="text-gray-700 mb-4">
-              We also need to remove existing AHL to allow recovery. The enzyme AiiA degrades AHL in the media. We’ve added a degradation tag to AiiA to ensure it breaks down AHL only as long as needed. This way, AHL concentrations decrease once the population is arrested.
-          </p>
-          <img src="https://static.igem.wiki/teams/5425/drylab/population-with-qs.webp" alt="Population Control System" class="w-full max-w-md mx-auto mb-6">
-      
-          <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2">4. Cyclic Control and Population Oscillations</h3>
-          <p class="text-gray-700 mb-4">
-              Together, these modules create a dynamic system that oscillates between growth and arrest phases, keeping the bacterial population stable. Negative feedback loops ensure that when the population becomes too large, cell cycle arrest is triggered. As cells die and AHL levels drop, the population can recover and resume growth. This cyclical behavior keeps the population healthy and functional without depleting resources. The frequency and amplitude of these oscillations depend on parameters like AHL production and degradation rates, as well as the effectiveness of the arrest and recovery mechanisms. By fine-tuning these parameters, we can maintain a stable bacterial density that supports continuous linalool production while avoiding uncontrolled growth.
-          </p>
-          <!-- Compact and styled Table of Components -->
-<div class="overflow-x-auto mt-8">
-<!-- Enhanced and Complete Table of Components with Tailwind CSS -->
-<div class="overflow-x-auto mt-8">
-  <table class="min-w-full text-sm text-left text-gray-500">
-      <thead class="text-xs text-gray-700 uppercase bg-gray-50">
-          <tr>
-              <th class="px-3 py-2">Gene Name</th>
-              <th class="px-3 py-2">Functional Description</th>
-              <th class="px-3 py-2">Biobrick ID</th>
-              <th class="px-3 py-2">Parts Reference</th>
-          </tr>
-      </thead>
-      <tbody class="bg-white border-b">
-          <tr>
-              <td class="px-3 py-2 font-medium text-gray-900">Tet Operator</td>
-              <td class="px-3 py-2">Sequence for pTet inverting regulator. Promoter is constitutively ON and repressed by TetR. TetR repression is inhibited by the addition of tetracycline or its analog.</td>
-              <td class="px-3 py-2">BBa_R0040</td>
-              <td class="px-3 py-2"><a href="https://parts.igem.org/Part:BBa_R0040" target="_blank" class="text-blue-600 hover:underline">Link</a></td>
-          </tr>
-          <tr class="bg-gray-50">
-              <td class="px-3 py-2 font-medium text-gray-900">RBS</td>
-              <td class="px-3 py-2">Weak1 RBS based on Ron Weiss thesis.</td>
-              <td class="px-3 py-2">B0032</td>
-              <td class="px-3 py-2"><a href="https://parts.igem.org/Part:BBa_B0032" target="_blank" class="text-blue-600 hover:underline">Link</a></td>
-          </tr>
-          <tr>
-              <td class="px-3 py-2 font-medium text-gray-900">LuxI</td>
-              <td class="px-3 py-2">-</td>
-              <td class="px-3 py-2">-</td>
-              <td class="px-3 py-2"><a href="https://parts.igem.org/Part:BBa_C0161:Experience" target="_blank" class="text-blue-600 hover:underline">Link</a></td>
-          </tr>
-          <tr class="bg-gray-50">
-              <td class="px-3 py-2 font-medium text-gray-900">Terminator</td>
-              <td class="px-3 py-2">-</td>
-              <td class="px-3 py-2">B0012</td>
-              <td class="px-3 py-2"><a href="https://parts.igem.org/Part:BBa_B0012" target="_blank" class="text-blue-600 hover:underline">Link</a></td>
-          </tr>
-          <tr>
-              <td class="px-3 py-2 font-medium text-gray-900">P_tac promoter</td>
-              <td class="px-3 py-2">-</td>
-              <td class="px-3 py-2">BBa_K864400</td>
-              <td class="px-3 py-2"><a href="https://parts.igem.org/Part:BBa_K864400" target="_blank" class="text-blue-600 hover:underline">Link</a></td>
-          </tr>
-          <tr class="bg-gray-50">
-              <td class="px-3 py-2 font-medium text-gray-900">RBS</td>
-              <td class="px-3 py-2">RBS based on Elowitz repressilator. Used at the upstream of the AiiA gene coding sequence.</td>
-              <td class="px-3 py-2">B0034</td>
-              <td class="px-3 py-2"><a href="https://parts.igem.org/wiki/index.php/Part:BBa_B0034" target="_blank" class="text-blue-600 hover:underline">Link</a></td>
-          </tr>
-          <tr>
-              <td class="px-3 py-2 font-medium text-gray-900">LuxR</td>
-              <td class="px-3 py-2">-</td>
-              <td class="px-3 py-2">-</td>
-              <td class="px-3 py-2"><a href="https://parts.igem.org/Part:BBa_C0062" target="_blank" class="text-blue-600 hover:underline">Link</a></td>
-          </tr>
-          <tr class="bg-gray-50">
-              <td class="px-3 py-2 font-medium text-gray-900">Terminator</td>
-              <td class="px-3 py-2">-</td>
-              <td class="px-3 py-2">B0010</td>
-              <td class="px-3 py-2"><a href="https://parts.igem.org/Part:BBa_B0010" target="_blank" class="text-blue-600 hover:underline">Link</a></td>
-          </tr>
-          <tr>
-              <td class="px-3 py-2 font-medium text-gray-900">P_lux Promoter</td>
-              <td class="px-3 py-2">pLuxR is a commonly used inducible promoter. Used to produce AHL molecule in a regulated manner.</td>
-              <td class="px-3 py-2">BBa_R0062</td>
-              <td class="px-3 py-2"><a href="https://parts.igem.org/Part:BBa_R0062" target="_blank" class="text-blue-600 hover:underline">Link</a></td>
-          </tr>
-          <tr class="bg-gray-50">
-              <td class="px-3 py-2 font-medium text-gray-900">RBS</td>
-              <td class="px-3 py-2">Modified RBS, anchors Ribosomes to start transcription. Strong RBS based on Ron Weiss thesis.</td>
-              <td class="px-3 py-2">B0030</td>
-              <td class="px-3 py-2"><a href="https://parts.igem.org/Part:BBa_B0030" target="_blank" class="text-blue-600 hover:underline">Link</a></td>
-          </tr>
-          <tr>
-              <td class="px-3 py-2 font-medium text-gray-900">Tet_R</td>
-              <td class="px-3 py-2">Coding region for the TetR protein without the Ribosome Binding Site. TetR binds to the pTet regulator and inhibits its operation.</td>
-              <td class="px-3 py-2">BBa_C0040</td>
-              <td class="px-3 py-2"><a href="https://parts.igem.org/Part:BBa_C0040" target="_blank" class="text-blue-600 hover:underline">Link</a></td>
-          </tr>
-          <tr class="bg-gray-50">
-              <td class="px-3 py-2 font-medium text-gray-900">AiiA</td>
-              <td class="px-3 py-2">Degradation Tag</td>
-              <td class="px-3 py-2">B0015</td>
-              <td class="px-3 py-2"><a href="https://parts.igem.org/Part:BBa_B0015" target="_blank" class="text-blue-600 hover:underline">Link</a></td>
-          </tr>
-      </tbody>
-  </table>
-</div>
+                  </p>
+        <p class="mb-4">
+          <strong>Reference:</strong> Arresting chromosome replication upon energy starvation in <em>Escherichia coli</em>.
+        </p>
+      </section>
+    
+      <!-- Section: Proof of Concept for Quorum Sensing Math Model -->
+      <section class="max-w-4xl mx-auto p-8 bg-white my-8 shadow-lg rounded">
+        <h2 class="text-2xl font-bold mb-4">Proof of Concept for Quorum Sensing Math Model</h2>
+        <p class="mb-4">
+          Our deterministic math model for the main quorum sensing circuit focuses upon controlling the bacterial population at a level quite below the original carrying capacity of the control bacterial population, thereby increasing the media potential in the process due to slower consumption of substrates as well as slower accumulation of secondary metabolites in the media. We also aim to achieve an oscillation at the population level to reflect the efficient working of the negative feedback loop in the main circuit, as demonstrated in several studies performing quorum sensing in bacterial populations.
+        </p>
+        <p class="mb-4">
+          Our target of controlling the population at the desired threshold level by inducing cell arrest rather than cell lysis is achieved by modifying the logistic growth equation to incorporate a growth reduction factor to the population growth term, proportional to the concentration of the antisense mRNA of DnaA transcribed by our circuit. An additional death term has also been introduced to bring about the death phase in the bacterial population, upon referring to the growth equation formulated by Xiang Li et al. The logistic growth equation for our model is given below :-
+        </p>
+        <pre class="bg-gray-200 p-4 rounded overflow-x-auto mb-4">
+    dN/dt = (r₀/(1 + m * [CCA]ᵣ³))N – (r₀/K)N² – aN * t⁴ / (t⁴ + b⁴)(1 + c * Sⁿ)
+        </pre>
+        <p class="mb-4">
+          We are thus able to observe the desired results upon setting suitable parameters for the ODE model of the main circuit, as well as able to fit the model with the Wetlab data upon changing some of the parameters. The plots of population vs time for the unfitted, as well as the fitted models are given below :-        </p>
+        <p class="mb-4">
+          Fig left: Population without quorum sensing (Unfitted)<br>
+          Fig right: Population with quorum sensing (Unfitted)
+        </p>
+        <p class="mb-4">
+          <img src="https://static.igem.wiki/teams/5425/drylab/population-without-qs.webp" alt="Population without Quorum Sensing (Unfitted)" class="w-full rounded shadow mb-4">
+          <img src="https://static.igem.wiki/teams/5425/drylab/population-with-qs.webp" alt="Population with Quorum Sensing (Unfitted)" class="w-full rounded shadow mb-4">
+        </p>
+        <p class="mb-4">
+          Fig: Populations without (left) and with (right) quorum sensing (Fitted)
+        </p>
+        <p class="mb-4">
+          <img src="https://static.igem.wiki/teams/5425/drylab/fitted-control-fitted-qs-2.webp" alt="Populations with Quorum Sensing (Fitted)" class="w-full rounded shadow mb-4">
+        </p>
+        <p class="mb-4">
+          Fig: Long term predictions of our fitted models
+        </p>
+        <p class="mb-4">
+          <img src="https://static.igem.wiki/teams/5425/drylab/control-long-term-qs-long-term-1-2.webp" alt="Long Term Predictions of Fitted Models" class="w-full rounded shadow mb-4">
+        </p>
+        <p class="mb-4">
+          <strong>References</strong>
+        </p>
+        <ul class="list-disc pl-8 mb-4">
+          <li>
+            <em>Quorum Sensing for Population-Level Control of Bacteria and Potential Therapeutic Applications</em> - Shengbo Wu 1 2 3, Jiaheng Liu 1 3 4, Chunjiang Liu 1 2 3, Aidong Yang 5, Jianjun Qiao 6 7 8
+          </li>
+          <li>
+            <em>Quantifying the Optimal Strategy of Population Control of Quorum Sensing Network in Escherichia coli</em> - Xiang Li, Jun Jin, Xiaocui Zhang, Fei Xu, Jinjin Zhong, Zhiyong Yin, Hong Qi, Zhaoshou Wang & Jianwei Shuai
+          </li>
+          <li>
+            <em>Mathematical Modelling of Bacterial Quorum Sensing: A Review</em> - Judith Pérez-Velázquez 1 2, Meltem Gölgeli 3 4, Rodolfo García-Contreras
+          </li>
+          <li>
+            <em>A Synchronized Quorum of Genetic Clocks</em> - Tal Danino, Octavio Mondragón-Palomino, Lev Tsimring & Jeff Hasty
+          </li>
+          <li>
+            <em>Modelling and Analysing Biological Oscillations in Quorum Sensing Networks</em> - Menghan Chen, Haihong Liu, Fang Yan
+          </li>
+        </ul>
+      </section>
 
-</div>
-
-      </div>
-      
-      </div>
-  
-      <!-- TAB THREE CONTENT -->
-  
-      <div
-        class="hidden p-6 text-lg"
-        id="styled-settings"
-        role="tabpanel"
-        aria-labelledby="settings-tab"
-      >
-      <div class="mt-8 px-6">
-          <h2 class="text-2xl font-semibold mb-4">Proof of Concept</h2>
-      
-          <h3 class="text-xl font-semibold mt-4 mb-2">Proof of Concept of Live Application</h3>
-          <p class="mb-4">
-              The concept of embedding engineered bacteria into a nutritive footbed aims to create a system where the bacteria can continuously produce and release linalool, a compound with antifungal and anti-inflammatory properties. For this to work, several key aspects must be validated. First, bacterial viability will be tested by embedding the bacteria in the footbed material and measuring their growth and activity over time to ensure they can survive and thrive in this environment. This is essential to maintain long-term production of linalool.
-          </p>
-          <p class="mb-4">
-              Next, the bacteria must be able to produce and release linalool consistently. Experiments will confirm the presence of linalool biosynthesis genes and use gas chromatography-mass spectrometry (GC-MS) to measure linalool production over time. Additionally, diffusion tests will be conducted to ensure linalool is evenly distributed across the footbed. These experiments will validate that the engineered bacteria can effectively perform their designed functions in a real-world setting, while population control mechanisms, such as quorum sensing, will regulate bacterial growth to avoid overgrowth and ensure safe, stable operation.
-          </p>
-      
-          <h3 class="text-xl font-semibold mt-4 mb-2">Proof of Concept for Antisense mRNA Knockdown</h3>
-          <p class="mb-4">
-              Antisense mRNA technology is a well-established method for gene silencing, where an mRNA molecule complementary to a target mRNA binds to it, preventing translation. For the knockdown of the dnaA gene in E. coli, which is critical for initiating DNA replication, an antisense mRNA was designed to bind specifically to dnaA transcripts, thereby reducing its protein levels. Several studies have demonstrated the efficacy of antisense RNA in bacteria. In the context of our project, the antisense mRNA will be cloned into a plasmid under an inducible promoter. Upon induction, the antisense mRNA will bind to dnaA mRNA, inhibiting its translation and thereby downregulating DNA replication. The reduction in dnaA levels will be confirmed by Western blotting or quantitative RT-PCR. This knockdown approach is expected to help control cell proliferation as part of the broader population control system in our project.
-          </p>
-      
-          <h3 class="text-xl font-semibold mt-4 mb-2">Proof of Concept for Choosing dnaA as a Cell Cycle Arrest Protein</h3>
-          <p class="mb-4">
-              In our project, we have selected dnaA as the target protein for inducing cell cycle arrest due to its critical role in the initiation of DNA replication in Escherichia coli. The functionality of dnaA is well-documented; it is essential for the timely and accurate initiation of chromosomal replication. Previous studies have demonstrated that the downregulation or inactivation of dnaA effectively halts DNA replication, providing a mechanism to regulate bacterial growth under various environmental stresses, such as energy depletion and nutrient limitation. Specifically, Godefroid Charbon and colleagues found that energy starvation leads to the arrest of chromosomal replication in E. coli, primarily mediated through the downregulation of dnaA. Additionally, Li et al. constructed temperature-sensitive mutants of dnaA in Streptomyces, demonstrating that these mutants can be synchronized to induce cell cycle arrest at specific temperatures, which highlights the potential of manipulating dnaA in bacterial systems for controlled growth regulation. This synchronization allows for precise control over bacterial populations, providing a platform for studying cell cycle dynamics under different conditions. By harnessing the regulatory mechanisms of dnaA, our project aims to implement a precise control system for bacterial population management, ensuring that the engineered bacteria can maintain an optimal population density while minimizing the risk of toxic byproduct accumulation.
-          </p>
-      
-          <h3 class="text-xl font-semibold mt-4 mb-2">Proof of Concept for Quorum Sensing Math Model</h3>
-          <p class="mb-4">
-              Our deterministic math model for the main quorum sensing circuit focuses upon controlling the bacterial population at a level quite below the original carrying capacity of the control bacterial population, thereby increasing the media potential in the process due to slower consumption of substrates as well as slower accumulation of secondary metabolites in the media. We also aim to achieve an oscillation at the population level to reflect the efficient working of the negative feedback loop in the main circuit, as demonstrated in several studies performing quorum sensing in bacterial populations.
-          </p>
-          <p class="mb-4">
-              Our target of controlling the population at the desired threshold level by inducing cell arrest rather than cell lysis is achieved by modifying the logistic growth equation to incorporate a growth reduction factor to the population growth term, proportional to the concentration of the antisense mRNA of DnaA transcribed by our circuit. An additional death term has also been introduced to bring about the death phase in the bacterial population, upon referring to the growth equation formulated by Xiang Li et al. The logistic growth equation for our model is given below:
-              <code>dNdt = r0(1+m*[CCA]r3)N – r0K N2 – aNt4(t4+ b4)(1+c*Sn)</code>
-          </p>
-          <div class="flex flex-wrap justify-between">
-              <img src="https://static.igem.wiki/teams/5425/drylab/population-with-qs.webp" alt="Population with Quorum Sensing" class="max-w-xs mb-4">
-              <img src="https://static.igem.wiki/teams/5425/drylab/population-without-qs.webp" alt="Population without Quorum Sensing" class="max-w-xs mb-4">
-              <img src="https://static.igem.wiki/teams/5425/drylab/fitted-control-fitted-qs-2.webp" alt="Fitted Model Control" class="max-w-xs mb-4">
-              <img src="https://static.igem.wiki/teams/5425/drylab/control-long-term-qs-long-term-1-2.webp" alt="Long Term Predictions" class="max-w-xs mb-4">
-          </div>
-          <div class="mt-8">
-              <h3 class="text-lg font-semibold">References</h3>
-              <ul class="list-disc pl-5">
-                  <li>Quorum sensing for population-level control of bacteria and potential therapeutic applications - Shengbo Wu, Jiaheng Liu, Chunjiang Liu, Aidong Yang, Jianjun Qiao</li>
-                  <li>Quantifying the optimal strategy of population control of quorum sensing network in Escherichia coli - Xiang Li, Jun Jin, Xiaocui Zhang, Fei Xu, Jinjin Zhong, Zhiyong Yin, Hong Qi, Zhaoshou Wang, Jianwei Shuai</li>
-                  <li>Mathematical Modelling of Bacterial Quorum Sensing: A Review - Judith Pérez-Velázquez, Meltem Gölgeli, Rodolfo García-Contreras</li>
-                  <li>A synchronized quorum of genetic clocks - Tal Danino, Octavio Mondragón-Palomino, Lev Tsimring, Jeff Hasty</li>
-                  <li>Modelling and analysing biological oscillations in quorum sensing networks - Menghan Chen, Haihong Liu, Fang Yan</li>
-              </ul>
-          </div>
-      </div>
-      
-      </div>
-  
-      <!-- TAB FOUR COTETN -->
-  
-      
-    </div>
+    </section>
   </div>
-  
-  {% endblock %}
+</main>
+
+<script>
+  function showSection(sectionId) {
+    // Hide all sections
+    const sections = document.querySelectorAll('.content-section');
+    sections.forEach(section => {
+      section.classList.add('hidden');
+    });
+
+    // Show the selected section
+    const selectedSection = document.getElementById(sectionId);
+    selectedSection.classList.remove('hidden');
+  }
+
+  // By default, show the first section
+  document.addEventListener('DOMContentLoaded', () => {
+    showSection('section1');
+  });
+</script>
+{% endblock %}
