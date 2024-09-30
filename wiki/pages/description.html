@@ -1,168 +1,150 @@
 {% extends "layout.html" %}
-<!-- IISER KOLKATA -->
+{% block title %}Model{% endblock %}
 {% block page_content %}
-<header class="bg-blue-600 text-white py-8">
-    <div class="container mx-auto">
-        <h1 class="text-4xl font-bold text-center shine">Description</h1>
-    </div>
-</header>
-
-<section class="bg-gray-100 py-16">
-    <div class="container mx-auto px-6">
-        <h2 class="text-3xl font-bold text-center text-gray-800 shine2">Project Inspiration</h2>
-        <div class="mt-6 text-lg text-gray-700 leading-relaxed">
-            <p>
-                As you are reading this, you stand on your feet, and around you millions of others wade through their daily lives in this mile-a-minute world. Let us pause for a second and wonder how many of those million footfalls are ‘comfortable’ in the true sense.
-                A moisture-retaining, dark, warm setting, ideal for the micro-world is more than accounted for by your shoes. If worn for long periods regularly, these shoes cause bacteria and fungi to thrive, giving rise to deadly bacterial and fungal foot infections which are anything but skin-deep.
-            </p>
-            <p class="mt-4">
-                It is said that 20% of the entire population of India, which accounts for about 200 million of us, are likely to have Athlete’s foot, a serious foot fungal infection, at some point in life. And Athlete’s Foot is just the tip of the iceberg! There are many more such diseases wreaking havoc, causing pain, inflammation, and days gone by on medications.
-            </p>
-        </div>
-        <div class="flex justify-center mt-8">
-            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg mr-2 hover:bg-blue-700" aria-label="Strategic Design">PART I</button>
-            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg mr-2 hover:bg-blue-700" aria-label="System Design">PART II</button>
-            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700" aria-label="Proof of Concept">PART III</button>
-        </div>
-    </div>
-</section>
-
-<main class="container mx-auto px-6 py-16">
-    <div class="relative">
-        <div class="absolute h-full w-1 bg-blue-600 left-1/2 transform -translate-x-1/2"></div>
-        <div class="relative z-10 w-8 h-8 bg-blue-600 rounded-full left-1/2 transform -translate-x-1/2"></div>
+<div class="flex flex-col items-center w-full">
+    <div class="w-full h-40 flex justify-center items-center mt-40">
+        <img src="path/to/your/image.jpg" alt="Model Image" class="max-h-full">
     </div>
     
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 mt-12">
-        <!-- Section 1 -->
-        <section id="section1" class="content-section bg-white p-6 shadow-lg rounded-lg">
-            <h2 class="text-2xl font-bold text-blue-600">EXISTING SOLUTIONS AND WHAT THEY LACK TO TREAT YOU</h2>
-            <p class="mt-4 text-gray-700">Imagine bad odour and a stubborn itch on the foot, being your top priority. Of course, we do have existing solutions such as foot creams, artificial fragrances, and other topical remedies for a foot sore. However, let us pause and think, what does that bottle of medicine actually do to you?</p>
-        </section>
-
-        <!-- Section 2 -->
-        <section id="section2" class="content-section bg-white p-6 shadow-lg rounded-lg">
-            <h2 class="text-2xl font-bold text-blue-600">What is in your bottle of perfume?</h2>
-            <p class="mt-4 text-gray-700">Bringing it down to the common-man’s problems, foot creams and other topical remedies greatly increase consumer effort, besides having lower regions of applicability. A foot cream might not reach the crevices of your foot-skin, is quite washable and thus it reduces efficiency by a huge factor, not to mention the cost of it all and repeated expenditure on such drugs!</p>
-        </section>
-
-        <!-- Section 3 -->
-        <section id="section3" class="content-section bg-white p-6 shadow-lg rounded-lg">
-            <h2 class="text-2xl font-bold text-blue-600">YOU CAN NEITHER SAVE YOUR FEET NOR THE EARTH! WHAT COMES OF IT ALL?</h2>
-            <p class="mt-4 text-gray-700">An ingenious foot-care solution is the need of the hour!</p>
-            <h2 class="mt-6 text-2xl font-bold text-blue-600">WHAT ARE WE BRINGING TO THE TABLE?</h2>
-            <p class="mt-4 text-gray-700">Team E.solei takes a step ahead of your everyday foot cream by designing a foot insole, to be placed inside the shoe, which would house an ecosystem of bacteria.</p>
-        </section>
-
-        <!-- Section 4 -->
-        <section id="section4" class="content-section bg-white p-6 shadow-lg rounded-lg">
-            <h2 class="text-2xl font-bold text-blue-600">WHAT WILL OUR PRODUCT LOOK LIKE?</h2>
-            <p class="mt-4 text-gray-700">E.solei comes in the form of a foot insole, split into several layers. Within the insole, a layer of biocompatible, nutrient-extractable polymer houses the GM bacteria. This layer is guarded by a non-porous layer at the bottom.</p>
-        </section>
-
-        <!-- Section 5 -->
-        <section id="section5" class="content-section bg-white p-6 shadow-lg rounded-lg">
-            <h2 class="text-2xl font-bold text-blue-600">BUILDING UP</h2>
-            <h3 class="mt-4 text-xl font-semibold text-blue-500">Linalool: Looking Beyond Medications</h3>
-            <p class="mt-4 text-gray-700">We chose Linalool as our target compound, which would be produced by the GM Bacteria. Linalool is a plant metabolite that has a pleasant fragrance and is a volatile oil compound. It is also involved in various industries, including soap, fragrance, and food additive manufacturing.</p>
-        </section>
-
-        <!-- Section 6 -->
-        <section id="section6" class="content-section bg-white p-6 shadow-lg rounded-lg">
-            <h2 class="text-2xl font-bold text-blue-600">Our Chassis: The Protagonist</h2>
-            <p class="mt-4 text-gray-700">Lactobacillus rhamnosus is a well-established pro-biotic commonly found in the gut. It is known for producing antimicrobial compounds like 3-phenyllactic acid, which exhibits strong antifungal properties. This would complement the production of linalool, enhancing the foot-bed's efficacy in managing skin health.</p>
-        </section>
-
-        <!-- Section 7 -->
-        <section id="section7" class="content-section bg-white p-6 shadow-lg rounded-lg">
-            <h2 class="text-2xl font-bold text-blue-600">MAPPING THE PATH</h2>
-            <p class="mt-4 text-gray-700">Our project can be traced by four milestones:<br>PRODUCTION OF LINALOOL and SUSTAINED PRODUCTION OF LINALOOL BY REGULATING THE POPULATION LEVELS</p>
-        </section>
-
-        <!-- Section 8 -->
-        <section id="section8" class="content-section bg-white p-6 shadow-lg rounded-lg">
-            <h2 class="text-2xl font-bold text-blue-600">MODULE 1: PRODUCTION OF THE TARGET COMPOUND LINALOOL</h2>
-            <p class="mt-4 text-gray-700">Linalool is produced as a metabolite in plants through the Mevalonate Pathway (MEV Pathway). We aim to incorporate this pathway in our chassis and turn on the production of Linalool.</p>
-        </section>
-
-        <!-- Section 9 -->
-        <section id="section9" class="content-section bg-white p-6 shadow-lg rounded-lg">
-            <h2 class="text-2xl font-bold text-blue-600">MODULE 2: SUSTENANCE OF LINALOOL PRODUCTION</h2>
-            <p class="mt-4 text-gray-700">We regulate the population level of the GM bacteria, maintaining oscillations around a stable population level. By optimizing Linalool production and media usage, we increase the depletion time of the media and sustain product usage.</p>
-        </section>
-
-        <!-- Section 10 -->
-        <section id="section10" class="content-section bg-white p-6 shadow-lg rounded-lg">
-            <h2 class="text-2xl font-bold text-blue-600">Future Plan</h2>
-            <h3 class="mt-4 text-xl font-semibold text-blue-500">Creating a GMO with a mind of its own!</h3>
-            <p class="mt-4 text-gray-700">We plan to incorporate the two modules mentioned above in our chassis by co-transforming the plasmids housing the genes for both. This will allow for automated regulation of population levels and efficient usage of nutrient media.</p>
-        </section>
-
-        <!-- Section 11 -->
-        <section id="section11" class="content-section bg-white p-6 shadow-lg rounded-lg">
-            <h2 class="text-2xl font-bold text-blue-600">Building up the store for the Chassis!</h2>
-            <p class="mt-4 text-gray-700">The GMO is housed in a biopolymer that acts as a nutrient-extractable source. The bacteria are made dormant prior to embedding through Lyophilisation techniques, and a kill-switch ensures no leakage of bacteria into the environment.</p>
-        </section>
-
-        <!-- Section 12 -->
-        <section id="section12" class="content-section bg-white p-6 shadow-lg rounded-lg">
-            <h2 class="text-2xl font-bold text-blue-600">Description References</h2>
-            <ol class="list-decimal mt-4 ml-6 text-gray-700">
-                <li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2907807/#:~:text=Fungal%20infection%20of%20the%20feet,body%20and%20to%20other%20people." target="_blank" class="text-blue-600 hover:underline">Fungal infection of the feet and its relation to overall health.</a></li>
-                <li><a href="https://diabetesjournals.org/care/article/46/1/209/148198/Etiology-Epidemiology-and-Disparities-in-the" target="_blank" class="text-blue-600 hover:underline">Etiology, Epidemiology, and Disparities in the Prevalence of Foot Ulcers in Diabetic Patients.</a></li>
-                <li><a href="https://www.researchgate.net/figure/Diabetes-related-foot-ulcer-prevalence-and-incidence-and-major-amputation-incidence-in_fig1_320334185" target="_blank" class="text-blue-600 hover:underline">Diabetes-related foot ulcer prevalence and incidence data from ResearchGate.</a></li>
-                <li><a href="https://jfootankleres.biomedcentral.com/articles/10.1186/s13047-020-00383-2" target="_blank" class="text-blue-600 hover:underline">Journal of Foot and Ankle Research - Key findings in diabetic foot ulcers.</a></li>
-                <!-- Add more references as needed -->
-            </ol>
-        </section>
+    <!-- Heading block -->
+    <div class="w-full max-w-10xl bg-[#dec5ec] p-10 text-center mb-8">
+        <h1 class="font-bold text-8xl text-[#603d71]">PROJECT INSPIRATION</h1>
     </div>
-</main>
+    <div class="container mx-auto px-4">
+        <!-- Existing Solutions Section -->
+        <div class="flex flex-col md:flex-row items-center mb-8 curved-section border-2 border-gray-300 overflow-hidden">
+            <div class="md:w-1/2 p-6 animate-slideInLeft order-2 md:order-1">
+                <h2 class="text-2xl font-bold mb-3">EXISTING SOLUTIONS AND WHAT THEY LACK TO TREAT YOU</h2>
+                <p class="mb-3">Imagine bad odour and a stubborn itch on the foot, being your top priority. Of course, we do have existing solutions such as foot creams, artificial fragrances, and other topical remedies for a foot sore. However, let us pause and think, what does that bottle of medicine actually do to you?</p>
+                <p>The most common drugs used to treat foot microbial infections such as terbinafine, clotrimazole, ketoconazole, among others, lead to various side-effects, gynaecomastia, hormonal imbalances such as adrenal insufficiency, and liver diseases among others.</p>
+            </div>
+            <div class="md:w-1/2 p-6 animate-fadeIn order-1 md:order-2">
+                <img src="https://static.igem.wiki/teams/5425/foot-on-sole.png" alt="Foot on sole" class="rounded-lg shadow-lg w-full h-auto">
+            </div>
+        </div>
 
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const sections = document.querySelectorAll('.content-section');
-        const timelineBar = document.querySelector('.timeline-bar');
-        const timelineIndicator = document.querySelector('.timeline-indicator');
-        let lastScrollTop = 0;
+        <!-- What Is In Your Bottle of Perfume Section -->
+        <div class="flex flex-col md:flex-row items-center mb-8 curved-section border-2 border-gray-300 overflow-hidden">
+            <div class="md:w-1/2 p-6 animate-slideInLeft order-2 md:order-1">
+                <h2 class="text-2xl font-bold mb-3">WHAT IS IN YOUR BOTTLE OF PERFUME?</h2>
+                <p>Bringing it down to the common-man's problems, foot creams and other topical remedies greatly increase consumer effort, besides having lower regions of applicability. A foot cream might not reach the crevices of your foot-skin, is quite washable and thus it reduces efficiency by a huge factor, not to mention the cost of it all and repeated expenditure on such drugs!</p>
+            </div>
+            <div class="md:w-1/2 p-6 animate-fadeIn order-1 md:order-2">
+                <img src="https://static.igem.wiki/teams/5425/foot-on-sole.png" alt="Bottle of perfume" class="rounded-lg shadow-lg w-full h-auto">
+            </div>
+        </div>
 
-        function updateTimeline() {
-            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-            const scrollPercent = scrollTop / docHeight;
+        <!-- Ingenious Foot-Care Solution Section -->
+        <div class="flex flex-col md:flex-row items-center mb-8 curved-section-alt-right border-2 border-gray-300 overflow-hidden">
+            <div class="md:w-1/2 p-6 animate-fadeIn">
+                <img src="https://static.igem.wiki/teams/5425/foot-on-sole.png" alt="Foot-care solution" class="rounded-lg shadow-lg w-full h-auto">
+            </div>
+            <div class="md:w-1/2 p-6 animate-slideInRight">
+                <h2 class="text-2xl font-bold mb-3">AN INGENIOUS FOOT-CARE SOLUTION IS THE NEED OF THE HOUR</h2>
+                <p class="mb-3">And on top of it all, all our topical, oral drugs and fragrances, that are 'supposed to' keep your infection and odour at bay, use harmful chemicals such as parabens, toluene, triclosan, etc. which not only harm our skin, but also contribute to the carbon footprint.</p>
+                <p class="font-bold">YOU CAN NEITHER SAVE YOUR FEET NOR THE EARTH! WHAT COMES OF IT ALL?</p>
+            </div>
+        </div>
 
-            const slowScrollPercent = Math.pow(scrollPercent, 1.5);
+        <!-- What Will Our Product Look Like Section -->
+        <div class="flex flex-col md:flex-row items-center mb-8 curved-section border-2 border-gray-300 overflow-hidden">
+            <div class="md:w-1/2 p-6 animate-slideInLeft order-2 md:order-1">
+                <h2 class="text-2xl font-bold mb-3">WHAT WILL OUR PRODUCT LOOK LIKE?</h2>
+                <p>E.solei comes in the form of a foot insole, split into several layers. Within the insole, a layer of biocompatible, nutrient-extractable polymer houses the GM bacteria. This layer is guarded by a non-porous layer at the bottom, which prevents the bacteria from leaking out. Another porous layer sandwiches the biopolymer layer from top, designed in such a way that the target volatile escapes but not the bacteria.</p>
+            </div>
+            <div class="md:w-1/2 p-6 animate-fadeIn order-1 md:order-2">
+                <img src="https://static.igem.wiki/teams/5425/foot-on-sole.png" alt="Product design" class="rounded-lg shadow-lg w-full h-auto">
+            </div>
+        </div>
 
-            timelineBar.style.transform = `scaleY(${slowScrollPercent})`;
-            timelineIndicator.style.top = `${slowScrollPercent * 100}%`;
-        }
+        <!-- Building Up Section -->
+        <div class="flex flex-col md:flex-row items-center mb-8 curved-section-alt-right border-2 border-gray-300 overflow-hidden">
+            <div class="md:w-1/2 p-6 animate-fadeIn">
+                <img src="https://static.igem.wiki/teams/5425/foot-on-sole.png" alt="Building up" class="rounded-lg shadow-lg w-full h-auto">
+            </div>
+            <div class="md:w-1/2 p-6 animate-slideInRight">
+                <h2 class="text-2xl font-bold mb-3">BUILDING UP</h2>
+                <p>We chose Linalool as our target compound, which would be produced by the GM Bacteria. A mono-terpenoid, as well as a tertiary alcohol, Linalool is produced as a plant metabolite. It has a pleasant fragrance and is a volatile oil compound. Besides being involved industrially in the manufacturing of soaps, fragrances, food additives as flavours, insecticides, it also a part of complex pollination mechanism of various plant species to ensure reproduction and survival.</p>
+            </div>
+        </div>
 
-        function checkVisibility() {
-            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            const windowHeight = window.innerHeight;
-
-            sections.forEach((section, index) => {
-                const sectionTop = section.getBoundingClientRect().top + scrollTop;
-                const sectionBottom = sectionTop + section.offsetHeight;
-
-                if (scrollTop > lastScrollTop) {
-                    if (scrollTop > sectionTop - windowHeight * 0.75 && scrollTop < sectionBottom) {
-                        section.classList.add('visible');
-                    }
-                } else {
-                    if (scrollTop < sectionBottom - windowHeight * 0.25 && scrollTop + windowHeight > sectionTop) {
-                        section.classList.add('visible');
-                    } else {
-                        section.classList.remove('visible');
-                    }
-                }
-            });
-
-            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-            updateTimeline();
-        }
-
-        window.addEventListener('scroll', checkVisibility);
-        checkVisibility();
-    });
-</script>
+        <!-- Our Chassis: The Protagonist Section -->
+        <div class="flex flex-col md:flex-row items-center mb-8 curved-section border-2 border-gray-300 overflow-hidden">
+            <div class="md:w-1/2 p-6 animate-slideInLeft order-2 md:order-1">
+                <h2 class="text-2xl font-bold mb-3">OUR CHASSIS: THE PROTAGONIST</h2>
+                <p>Lactobacillus rhamnosus is a well-established pro-biotic, commonly found in the gut and known for its safe use in various health applications. It is known for producing antimicrobial compounds like 3-phenyllactic acid, which exhibits strong antifungal properties. This would complement the production of linalool, a compound with antifungal and anti-inflammatory properties, enhancing the foot-bed's efficacy in managing skin health and preventing fungal infections, such as Athlete's Foot.</p>
+            </div>
+            <div class="md:w-1/2 p-6 animate-fadeIn order-1 md:order-2">
+                <img src="https://static.igem.wiki/teams/5425/foot-on-sole.png" alt="Lactobacillus rhamnosus" class="rounded-lg shadow-lg w-full h-auto">
+            </div>
+        </div>
+    </div>
+    <div class="container mx-auto px-4 py-8">
+        <h1 class="text-4xl font-bold text-center mb-8">MAPPING THE PATH</h1>
+        <p class="text-center mb-6">Our project can be traced by four milestones.</p>
+        <p class="text-center mb-8">The course of E.solei can be divided into two primary modules:</p>
+    
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            <div class="bg-[#c1a0d2] p-6 rounded-lg shadow-md">
+                <h2 class="text-2xl font-semibold text-center">PRODUCTION OF LINALOOL</h2>
+            </div>
+            <div class="bg-[#c1a0d2] p-6 rounded-lg shadow-md">
+                <h2 class="text-2xl font-semibold mb-4 text-center">SUSTAINED PRODUCTION OF LINALOOL BY REGULATING THE POPULATION LEVELS</h2>
+            </div>
+        </div>
+    
+        <h2 class="text-3xl font-bold text-center mb-12">TRACED IN FOUR MILESTONES</h2>
+    
+        <div class="mb-16">
+            <h2 class="text-2xl font-bold mb-6 text-center">MODULE 1: PRODUCTION OF THE TARGET COMPOUND LINALOOL</h2>
+            <div class="p-6 rounded-lg shadow-md">
+                <p class="mb-4">Linalool is produced as a metabolite in plants through the Mevalonate Pathway (MEV Pathway). We aim to incorporate this pathway in our chassis and turn on the production of Linalool.</p>
+                <p class="mb-4">The MEV pathway intrinsically creates mono-terpenes with two isoprene units. We choose to redirect the pathway into producing our desired compound. For this we place genes of interest and transform them into our GM bacteria.</p>
+            </div>
+        </div>
+    
+        <div class="mb-16">
+            <h2 class="text-2xl font-bold mb-6 text-center">MODULE 2: SUSTENANCE OF LINALOOL PRODUCTION</h2>
+            <div class="bg-pink-50 p-6 rounded-lg shadow-md">
+                <p class="mb-4">In many of the treatments exploiting the concept of Live Application we face problems of small activation window of the product due to which the efficiency of the product goes down and we required repeated, frequent application.</p>
+                <p class="mb-4">Here we regulate the population level of the GM bacteria and hence by maintaining oscillations about a particular population level we optimize Linalool production and media usage. Hence we increase the depletion time for the media, sustaining linalool production and product usage for a longer period of time.</p>
+            </div>
+        </div>
+    
+        <div class="mb-16">
+            <h2 class="text-2xl font-bold mb-6 text-center">FUTURE PLANS</h2>
+            <div class="bg-purple-50 p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold mb-4">Creating a GMO with a mind of its own!</h3>
+                <p class="mb-4">We plan to incorporate the above two modules mentioned in our chassis by co-transforming the plasmids housing the genes for the two modules. These co-transformed bacteria would behave as an automated machine where each would sense and halt its division in such a way so that the overall population is maintained. Our GMO is thus equipped to utilize the nutrient-media efficiently and produce Linalool for a longer time than other such products.</p>
+            </div>
+        </div>
+    
+        <div class="mb-16">
+            <h2 class="text-2xl font-bold mb-6 text-center">Building up the store for the Chassis!</h2>
+            <div class="bg-indigo-50 p-6 rounded-lg shadow-md">
+                <p class="mb-4">The GMO is housed in biopolymer which simultaneously acts as a nutrient-extractable source for the GMO which lives on incorporated within that layer. We would alter pore size and porosity in such a way so as to ensure no leakage of bacteria outside the foot insole.</p>
+                <p class="mb-4">The bacteria being made dormant prior to embedding by standard Lyophilisation techniques are induced, signaling the start of usage of product and Linalool's emergence into the picture.</p>
+                <p class="mb-4">We design a kill-switch which would induce death in the bacteria whenever it detaches from its medium, ensuring no escape of GMO into the environment and thereby safety.</p>
+                <p class="mb-4">Polymers are cheap, and easily available and hence the perfect choice for providing a base camp for our GMO.</p>
+                <p class="mb-4">E.solei finally comes in as a foot insole, suitable for any type of shoe but more so as a small step we take for a whopping 9 million of us, out of which someone would be sitting right this second at the clinic, in pain with a foot fungal infection, wondering what an ingenious foot care solution would look like!</p>
+            </div>
+        </div>
+    
+        <div>
+            <h2 class="text-2xl font-bold mb-6 text-center">DESCRIPTION REFERENCES</h2>
+            <ol class="list-decimal pl-6">
+                <li class="mb-2"><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2907807/" class="text-blue-600 hover:underline">Fungal infection of the feet</a></li>
+                <li class="mb-2"><a href="https://diabetesjournals.org/care/article/46/1/209/148198/Etiology-Epidemiology-and-Disparities-in-the" class="text-blue-600 hover:underline">Etiology, Epidemiology, and Disparities in the Burden of Diabetic Foot Ulcers</a></li>
+                <li class="mb-2"><a href="https://www.researchgate.net/figure/Diabetes-related-foot-ulcer-prevalence-and-incidence-and-major-amputation-incidence-in_fig1_320334185" class="text-blue-600 hover:underline">Diabetes-related foot ulcer prevalence and incidence</a></li>
+                <li class="mb-2"><a href="https://jfootankleres.biomedcentral.com/articles/10.1186/s13047-020-00383-2" class="text-blue-600 hover:underline">Journal of Foot and Ankle Research</a></li>
+                <li class="mb-2"><a href="https://journals.sagepub.com/doi/abs/10.1177/1934578X0800300727" class="text-blue-600 hover:underline">Linalool in plant reproduction and survival</a></li>
+                <li class="mb-2"><a href="https://www.sciencedirect.com/science/article/pii/S1578219014002455" class="text-blue-600 hover:underline">Science Direct article</a></li>
+                <li class="mb-2"><a href="https://internationalprobiotics.org/home/7-things-lacticaseibacillus-rhamnosus-is-good-for/" class="text-blue-600 hover:underline">7 things Lacticaseibacillus rhamnosus is good for</a></li>
+                <li class="mb-2"><a href="https://www.creative-proteomics.com/blog/index.php/mevalonate-pathway-origins-regulation-health-implications/" class="text-blue-600 hover:underline">Mevalonate Pathway: Origins, Regulation, Health Implications</a></li>
+            </ol>
+        </div>
+    </div>
+    
+      
+</div>          
 {% endblock %}

@@ -1,8 +1,254 @@
 {% extends "layout.html" %}
-{% block title %}Implementation{% endblock %}
-{% block lead %}Describe your implementation here.{% endblock %}
+
+{% block title %}Model{% endblock %}
 
 {% block page_content %}
 
-
-{% endblock %}  
+    <div class="flex flex-col items-center w-full">
+    <div class="w-full h-40 flex justify-center items-center mt-40">
+      <img src="path/to/your/image.jpg" alt="Model Image" class="max-h-full">
+    </div>
+    
+    <!-- Heading block -->
+    <div class="w-full max-w-10xl bg-[#dec5ec] text-white py-4 px-8 text-center">
+      <h1 class="font-bold text-8xl text-[#603d71]">Implementation</h1>
+    </div>
+    <div class="font-bold text-center text-2xl mt-8 mb-[-30px]">PRODUCTION:</div>
+    <div class="overflow-x-auto ">
+        <div class="overflow-x-auto mt-6">
+            <div class="overflow-x-auto mt-6 px-14 mb-6">
+                <table class="w-auto min-w-full bg-white">
+                    <thead class="bg-gray-800 text-white">
+                        <tr>
+                            <th class="w-1/2 px-4 py-2 text-left">Lab-Level Production Strategies</th>
+                            <th class="w-1/2 px-4 py-2 text-left">Bulk-Level Production Strategies</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-gray-700">
+                        <tr>
+                            <td class="border px-4 py-2">
+                                <strong>1. Preparation of Competent Cells:</strong> Using established techniques, competent E. coli cells are prepared using TFB1, TFB2, and CaCl2-RbCl. Electroporation might improve plasmid DNA absorption.
+                            </td>
+                            <td class="border px-4 py-2">
+                                <strong>1. Scale-Up of Competent Cells:</strong> For bulk production, large-scale cultures of Lactobacillus rhamnosus are grown to high cell densities. Fermentation techniques optimize growth conditions like nutrient availability and pH.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="border px-4 py-2">
+                                <strong>2. Cotransformation:</strong> Two different plasmids are concurrently injected into prepared competent cells to optimize absorption efficiency.
+                            </td>
+                            <td class="border px-4 py-2">
+                                <strong>2. Co-transformation in Bioreactors:</strong> Conducted in bioreactors for greater control over environmental parameters like mixing and oxygenation.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="border px-4 py-2">
+                                <strong>3. Selection and Screening:</strong> Cells are plated on antibiotic-resistant media to select effective colonies using molecular methods.
+                            </td>
+                            <td class="border px-4 py-2">
+                                <strong>3. High-Throughput Screening:</strong> Rapid identification and isolation of transformed colonies using automated systems for colony picking and PCR validation.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="border px-4 py-2">
+                                <strong>4. Small-Scale Cultivation:</strong> Positive colonies are inoculated into small liquid cultures like LB broth to facilitate further growth and analysis.
+                            </td>
+                            <td class="border px-4 py-2">
+                                <strong>4. Cryopreservation:</strong> Transformed strains are cryopreserved to ensure long-term viability and plasmid stability.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="border px-4 py-2">
+                                <!-- Empty cell for alignment -->
+                            </td>
+                            <td class="border px-4 py-2">
+                                <strong>5. Scale-Up Culture Conditions:</strong> Optimising culture media and growth conditions in larger fermenters. Continuous monitoring of growth parameters is crucial.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="border px-4 py-2">
+                                <!-- Empty cell for alignment -->
+                            </td>
+                            <td class="border px-4 py-2">
+                                <strong>6. Quality Control:</strong> Comprehensive quality control measures, including assessments of plasmid stability and gene expression levels.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+        </div>
+        
+    </div>
+    <div class="overflow-x-auto mt-6 px-14">
+        <table class="w-full bg-white shadow-md rounded-lg">
+            <thead class="bg-gray-800 text-white">
+                <tr>
+                    <th class="px-4 py-2">Production References</th>
+                </tr>
+            </thead>
+            <tbody class="text-gray-700">
+                <tr>
+                    <td class="border px-4 py-2">
+                        Sambrook, J., & Russell, D. W. (2001). "Molecular Cloning: A Laboratory Manual." Cold Spring Harbor Laboratory Press.
+                    </td>
+                </tr>
+                <tr>
+                    <td class="border px-4 py-2">
+                        Inoue, H., Nojima, H., & Okayama, H. (1990). "High efficiency transformation of Escherichia coli with plasmids." Gene, 96(1), 23-28. doi:10.1016/0378-1119(90)90261-I.
+                    </td>
+                </tr>
+                <tr>
+                    <td class="border px-4 py-2">
+                        Gibson, D. G., et al. (2009). "Enzymatic assembly of DNA molecules up to 1 Mb in size." Nature Methods, 6(5), 343-345. doi:10.1038/nmeth.1318.
+                    </td>
+                </tr>
+                <tr>
+                    <td class="border px-4 py-2">
+                        Zhang, Y., & Wang, Z. (2018). "Advances in microbial cell factories for the production of biochemicals." Biotechnology Advances, 36(5), 1255-1267. doi:10.1016/j.biotechadv.2018.01.002.
+                    </td>
+                </tr>
+                <tr>
+                    <td class="border px-4 py-2">
+                        Khan, A. M., et al. (2018). "High-throughput transformation of Escherichia coli for plasmid production." PLoS ONE, 13(10), e0205722. doi:10.1371/journal.pone.0205722.
+                    </td>
+                </tr>
+                <tr>
+                    <td class="border px-4 py-2">
+                        Huang, Y., et al. (2020). "Cryopreservation of bacteria: a review of current strategies." Microbiology, 166(1), 1-9. doi:10.1099/mic.0.000885.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="container mx-auto px-8 py-12 text-black">
+        <div class="mb-16">
+            <h1 class="text-4xl font-bold text-center mb-10">Packing</h1>
+            
+            <div class="rounded-lg shadow-lg p-8 mb-12 border">
+                <h2 class="text-2xl font-semibold mb-6">Choice of Polymer</h2>
+                <p class="font-semibold mb-4">Everything you see around you, from your toothbrush bristles to the pen you are holding, is made from a polymer. These large compounds, made of repeating units called monomers, include naturally-occurring polymers like cellulose and natural rubber. Our project, E.solei, uses a bio-compatible polymer infused with nutrients to promote the growth of our genetically modified organism (GMO) and subsequent production of Linalool.</p>
+                <p class="font-semibold mb-4">We propose using an alginate-collagen brush polymer, ideal for housing our GMO, Lactobacillus rhamnosus, due to its excellent binding properties and distinguished hydrophobicity.</p>
+                <img src="path_to_image" alt="Polymer Image" class="mx-auto my-4 rounded-lg shadow-md">
+            </div>
+    
+            <div class="rounded-lg shadow-lg p-8 mb-12 border">
+                <h2 class="text-2xl font-semibold mb-6">Composition and Structural Attributes</h2>
+                <p class="font-semibold mb-4">Alginate, derived from brown algae, is biocompatible, biodegradable, and undergoes rapid ionic gelation. Combined with collagen, it forms a hydrogel that enhances mechanical stability and is less prone to swelling.</p>
+                <p class="font-semibold mb-4">The polymer brush we propose will have brush-like extensions to which our GMO will adhere, due to its hydrophobic surface properties.</p>
+                <img src="path_to_image" alt="Structural Attributes" class="mx-auto my-4 rounded-lg shadow-md">
+            </div>
+    
+            <div class="rounded-lg shadow-lg p-8 border">
+                <h2 class="text-2xl font-semibold mb-6">Packaging and Usage</h2>
+                <p class="font-semibold mb-4">The product is packaged in two layers, each with a brush polymer and lyophilised bacteria adhered to the surface. Before use, the encasing is removed, and an inducer medium is sprayed to activate the bacteria.</p>
+                <img src="path_to_image" alt="Packaging Usage" class="mx-auto my-4 rounded-lg shadow-md">
+            </div>
+            
+            <h2 class="text-2xl font-semibold mb-4 text-center">References for Packing and Choice of Polymer</h2>
+            <ul class="list-disc pl-12 mb-4">
+                <li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9225620/" class="text-blue-400 hover:text-blue-300">Alginate properties and applications</a></li>
+                <li><a href="https://pubs.acs.org/doi/epdf/10.1021/acsami.7b14416" class="text-blue-400 hover:text-blue-300">Alginate-collagen interaction</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Polymer_brush" class="text-blue-400 hover:text-blue-300">Polymer Brush</a></li>
+            </ul>
+        </div>
+    
+        <div class="mb-16">
+            <h1 class="text-4xl font-bold text-center mb-10">Distribution</h1>
+            <div class="rounded-lg shadow-lg p-8 mb-12 border">
+                <p class="font-semibold mb-4">Our cold-chain logistics maintain an ideal temperature of around 4°C to ensure the viability of the E.solei foot insoles during distribution. A D2C model allows customers to purchase insoles online with temperature-controlled delivery.A subscription service further ensures regular, fresh deliveries without
+                    hassle.
+                    Additionally, pharmacies, specialised health stores, and healthcare providers
+                    like podiatrists will offer the insoles, leveraging their experience in handling
+                    temperature-sensitive products. International distribution will also meet local
+                    GMO regulations, with reliable regional partnerships ensuring safe, compliant
+                    delivery.
+                    Through these tailored distribution strategies, E.solei foot insoles arrive fresh and ready to support your foot health, no matter where or how you choose to buy them.
+                    </p>
+                <img src="path_to_image" alt="Distribution Strategy" class="mx-auto my-4 rounded-lg shadow-md">
+            </div>
+            
+            <h2 class="text-2xl font-semibold mb-4 text-center">References for Production</h2>
+            <ul class="list-disc pl-12 mb-4">
+                <li><a href="https://www.researchgate.net/publication/376446684_Cold_chain_logistics" class="text-blue-400 hover:text-blue-300">Cold chain logistics research</a></li>
+                <li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6463069/" class="text-blue-400 hover:text-blue-300">Cold chain management</a></li>
+                <li><a href="https://www.fda.gov/food/agricultural-biotechnology/how-gmos-are-regulated-united-states" class="text-blue-400 hover:text-blue-300">GMO regulations in the United States</a></li>
+                <li><a href="https://www.fao.org/policy-support/tools-and-publications/resources-details/en/c/1477336/" class="text-blue-400 hover:text-blue-300">Resources-details</a></li>
+                <li><a class="text-blue-400 hover:text-blue-300" href="https://www.cbinsights.com/research/direct-to-consumer-retail-strategies/">direct-to-consumer-retail-strategies</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="container mx-auto px-8 py-12 text-black">
+        <div class="mb-16">
+            <h1 class="text-4xl font-bold text-center mb-10">Disposal</h1>
+            
+            <div class="rounded-lg shadow-lg p-8 mb-12 border">
+                <h2 class="text-2xl font-semibold mb-6">Disposal of Product</h2>
+                <p class="font-semibold mb-4">It is crucial to implement proper disposal mechanisms for the Genetically Modified Organism (GMO) when released outside laboratory conditions. Improper disposal can lead to mutations, including horizontal gene transfer, and potentially cancerous developments or severe allergies, resulting in harmful effects on both humans and other animals. Additionally, environmental hazardous chemicals might be released by mutated organisms due to faulty disposal measures.</p>
+                <p class="font-semibold mb-4">To combat these risks, our product, E. solei, incorporates comprehensive disposal strategies for every layer of manufacturing, ensuring safety and minimizing environmental impact.</p>
+            </div>
+            
+            <div class="container mx-auto px-8 py-12 text-black">
+                <div class="mb-16">
+                    <h1 class="text-4xl font-bold text-center mb-10">Disposal</h1>
+                    
+                    <!-- Strategy for Hosting Bed Section -->
+                    <h2 class="text-3xl font-semibold mb-6">Strategy for Hosting Bed:</h2>
+                    <div class="grid grid-cols-2 gap-8 mb-12">
+                        <div class="p-8 border rounded-lg shadow-lg">
+                            <h3 class="text-2xl font-semibold mb-4">Perspective 1: Alginate</h3>
+                            <p class="mb-4 font-semibold">The hosting material of the product is composed of Alginate, a hydrocolloid obtained primarily from brown algae. It is non-toxic to tissues and cells, hence poses no risk from skin contact on accidental exposure to the broken product cassette. Alginate can be degraded at high temperatures (above 250°C) and can also be dismantled by cation chelation. Recyclability is ensured through the pH control of the chelator.</p>
+                        </div>
+                        <div class="p-8 border rounded-lg shadow-lg">
+                            <h3 class="text-2xl font-semibold mb-4">Perspective 2: Collagen and Chitosan</h3>
+                            <p class="mb-4 font-semibold">Collagen, a major structural component in animals, is completely biodegradable and is degraded by enzymatic actions. It has no harmful effects on exposure to animals or humans. Chitosan, known for its biodegradability and low toxicity, is degraded by Lysozyme enzyme exposure and breaks down into non-toxic residues more quickly in the soil.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Strategy for Structure and GMO Section -->
+                    <h2 class="text-3xl font-semibold mb-6">Strategy for Structure and GMO</h2>
+                    <div class="grid grid-cols-2 gap-8 mb-12">
+                        <div class="p-8 border rounded-lg shadow-lg">
+                            <h3 class="text-2xl font-semibold mb-4">Perspective 3: Brush Polymers</h3>
+                            <p class="mb-4 font-semibold">Brush polymers are composed of several polymer chains organized to perform specific functions. These are recycled by exposure to high temperatures, degraded by the action of microorganisms, and are eco-friendly, hence having diverse biomedical applications.</p>
+                        </div>
+                        <div class="p-8 border rounded-lg shadow-lg">
+                            <h3 class="text-2xl font-semibold mb-4">Perspective 4: Lactobacillus rhamnosus</h3>
+                            <p class="mb-4 font-semibold">Lactobacillus rhamnosus, a probiotic bacteria, is considered safe for humans and animals. Our proposed kill switch machinery adds extra safety by automatically killing the bacteria upon detachment from its substrate. In its lyophilized form, the bacteria remain inactive until product activation, ensuring safety against unintentional release or breakage.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Conclusion Paragraph -->
+                    <div class="mb-8 p-8 border rounded-lg shadow-lg">
+                        <p class="font-semibold">As every layer of our product is biodegradable or recyclable with no harm to the environment, the materials will be collected in a disposal bag provided with the product packaging, labelled as “recyclable”. This allows for sorted collection by the waste management personnel of the area.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="container mx-auto px-8 py-12">
+                <div class="mb-16 text-blue-700">
+                    <h1 class="text-4xl font-bold text-black text-center mb-10">References for Disposal</h1>
+                    <ol class="list-decimal pl-6 space-y-3">
+                        <li class="text-lg font-semibold"><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5452316/" class="hover:text-blue-800">NCBI: Alginate in biomedicine</a></li>
+                        <li class="text-lg font-semibold"><a href="https://www.sciencedirect.com/science/article/pii/S0144861720311681" class="hover:text-blue-800">ScienceDirect: Alginate-based materials</a></li>
+                        <li class="text-lg font-semibold"><a href="https://www.webmd.com/vitamins/ai/ingredientmono-1671/lacticaseibacillus-rhamnosus" class="hover:text-blue-800">WebMD: Lacticaseibacillus rhamnosus overview</a></li>
+                        <li class="text-lg font-semibold"><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7994123/" class="hover:text-blue-800">NCBI: Probiotics in animal health</a></li>
+                        <li class="text-lg font-semibold"><a href="https://puppington.co/blogs/pup-wellness/why-your-dog-needs-probiotics-and-choosing-the-best-probiotics-for-your-dog" class="hover:text-blue-800">Puppington: Benefits of Lactobacillus rhamnosus for dogs</a></li>
+                        <li class="text-lg font-semibold"><a href="https://pubmed.ncbi.nlm.nih.gov/16594522/" class="hover:text-blue-800">PubMed: Risks associated with genetic modifications</a></li>
+                        <li class="text-lg font-semibold"><a href="https://www.healthline.com/nutrition/gmo-pros-and-cons" class="hover:text-blue-800">Healthline: Pros and Cons of GMOs</a></li>
+                        <li class="text-lg font-semibold"><a href="https://www.sciencedirect.com/topics/biochemistry-genetics-and-molecular-biology/alginate" class="hover:text-blue-800">ScienceDirect: Alginate properties</a></li>
+                        <li class="text-lg font-semibold"><a href="https://medical.evonik.com/en/media/stories/rejuvenating-and-regenerating-the-skin-with-biodegradable-polymers-243885.html" class="hover:text-blue-800">Evonik: Biodegradable polymers in skin care</a></li>
+                        <li class="text-lg font-semibold"><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7504732/" class="hover:text-blue-800">NCBI: Chitosan and its applications</a></li>
+                        <li class="text-lg font-semibold"><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10530273/" class="hover:text-blue-800">NCBI: Chitosan in biomedical research</a></li>
+                    </ol>
+                </div>
+            </div>
+                        
+        </div>
+    </div>
+    
+    
+    
+    
+    
+</div>
+{% endblock %}

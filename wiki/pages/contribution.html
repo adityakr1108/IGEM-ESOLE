@@ -1,20 +1,52 @@
 {% extends "layout.html" %}
-  
-{% block title %}Contribution{% endblock %}
-{% block lead %}Make a useful contribution for future iGEM teams. Use this page to document that contribution.{% endblock %}
+
+{% block title %}Model{% endblock %}
 
 {% block page_content %}
-
-<div class="row mt-4">
-  <div class="col">
-    <div class="bd-callout bd-callout-info">
-      <h4>Bronze Medal Criterion #4</h4>
-      <p>Make a useful contribution for future iGEM teams. Use this page to document that contribution.</p>
-      <p>If you are making a contribution by adding information to an existing Part or creating a new Part, you must document your contribution on the Part's Main Page on the <a href="https://parts.igem.org/Main_Page">Registry</a> for your team to be eligible for this criteria. You can use this page to link to that part and include additional information about your contribution.</p>
-      <hr>
-      <p>Please see the <a href="https://competition.igem.org/judging/medals">2024 Medals Page</a> for more information.</p>
+<div class="flex flex-col items-center w-full">
+    <div class="w-full h-40 flex justify-center items-center mt-40">
+      <img src="path/to/your/image.jpg" alt="Model Image" class="max-h-full">
     </div>
-  </div>
+    
+    <!-- Heading block -->
+    <div class="w-full max-w-10xl bg-[#dec5ec] text-white py-4 px-8 text-center">
+      <h1 class="font-bold text-8xl text-[#603d71]">Contribution</h1>
+    </div>
+
+<div class="container mx-auto px-4 py-8">
+    <h1 class="text-4xl font-bold text-center mb-8">Contribution in Synthetic Biology</h1>
+    <p class="text-lg mb-6">Our iGEM project brings several groundbreaking contributions, including a novel genetic circuit that integrates population control, safety mechanisms, and targeted therapeutic applications.</p>
+
+    <div class="bg-white p-6 rounded-lg shadow-md mb-8">
+        <h2 class="text-2xl font-semibold mb-4">Innovative Genetic Circuit</h2>
+        <p>A key innovation in our design is the use of antisense mRNA to target dnaA, a gene essential for initiating DNA replication in bacteria. This approach, which has not been widely explored, offers a new and novel method for controlling bacterial growth by specifically downregulating dnaA expression.</p>
+    </div>
+
+    <h2 class="text-3xl font-bold text-center mb-8">Part Contributions</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+        <div class="bg-[#f9f9f9] p-6 rounded-lg shadow-md">
+            <h3 class="text-xl font-semibold mb-2">Part: BBa_K5425004</h3>
+            <p class="mb-2">Population Control Module - A composite part that regulates cell density through quorum sensing.</p>
+            <p><strong>Length:</strong> 3933 bp</p>
+        </div>
+        <div class="bg-[#f9f9f9] p-6 rounded-lg shadow-md">
+            <h3 class="text-xl font-semibold mb-2">Part: BBa_K5425005</h3>
+            <p class="mb-2">Oscillation characterization circuit - Designed to fine-tune the parameters of the population control module.</p>
+            <p><strong>Length:</strong> 4240 bp</p>
+        </div>
+        <!-- Add more parts as needed -->
+    </div>
+
+    <h2 class="text-3xl font-bold text-center mb-8">Applications of Our Parts</h2>
+    <div class="bg-blue-50 p-6 rounded-lg shadow-md mb-8">
+        <p>The bacterial population control circuit we have developed offers exciting future extensions and possibilities, making it a powerful tool in synthetic biology. Applications in bioproduction, bioremediation, and therapeutic applications are discussed, demonstrating the broad potential of our innovation.</p>
+    </div>
+
+    <h2 class="text-3xl font-bold text-center mb-8">Human Practices Contribution</h2>
+    <div class="bg-green-50 p-6 rounded-lg shadow-md">
+        <p>As part of our lasting impact, we created educational posters for each stall, which were key in engaging students during the event. These posters are now archived as resources for future iGEM teams to build on our outreach efforts.</p>
+        <a href="https://drive.google.com/drive/u/2/folders/1D_MNp_nUI8ES7oXcRIzrGju2A-ipF5wF" class="text-blue-600 hover:underline">Link to posters pdf</a>
+    </div>
 </div>
 
 {% endblock %}
