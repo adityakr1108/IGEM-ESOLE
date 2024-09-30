@@ -5,25 +5,187 @@
 
 {% block page_content %}
 
-<div class="row mt-4">
-  <div class="col-lg-8">
-    <h2>What should this page contain?</h2>
-    <hr>
-    <p>Describe the research, experiments, and protocols you used in your iGEM project. These should be detailed enough for another team to repeat your experiments.</p>
-    <p>If you made Parts this year, please remember to put all information, characterization, and measurement data on the Part's Main Page on the <a href="https://parts.igem.org/Main_Page">Registry</a>.</p>
-  </div>
-  <div class="col-lg-4">
-    <h2>Inspirations</h2>
-    <hr>
-    <ul>
-      <li><a href="https://2019.igem.org/Team:Nantes/Experiments">2019 Nantes</a></li>
-      <li><a href="https://2019.igem.org/Team:TU_Eindhoven/Experiments">2019 TU Eindhoven</a></li>
-      <li><a href="https://2019.igem.org/Team:Mingdao/Demonstrate">2019 Mingdao</a></li>
-      <li><a href="https://2020.igem.org/Team:Amsterdam/Experiments">2020 Amsterdam</a></li>
-      <li><a href="https://2020.igem.org/Team:NCTU_Formosa/Experiments">2020 NCTU Formosa</a></li>
-      <li><a href="https://2020.igem.org/Team:USAFA/Experiments">2020 USAFA</a></li>
-    </ul>
-  </div>
+<img src="https://static.igem.wiki/teams/5425/bacteria-8107336.png" style="height:200px; width:200px; border-radius: 20px; margin-left: 42%;" class="items-center w-full h-96 mt-20" alt="Inclusivity Banner">
+
+<div class="heading" style=" font-family:Architype Bayer-type W90; padding: 20px; border-radius: 10px;">
+  <h1 class="text-8xl font-bold text-center">experiment</h1>
 </div>
+
+<!-- Introduction Section -->
+<section class="bg-gray-100 border-2 border-gray-300 p-10 rounded-lg">
+  <div class="introduction-section" style="text-align: left;">
+    <h2 class="text-4xl font-bold mb-6">Introduction</h2>
+    <p class="text-lg leading-7">Preparing competent cells of <i>E. coli</i> strains BL21, DH5 alpha, and TOP10 involves a specific set of steps. Competent cells are vital for efficient transformation and DNA uptake during experiments.</p>
+
+    <!-- Materials Section -->
+    <div class="materials-section mt-10">
+        <h2 class="text-4xl font-bold mb-6">Materials</h2>
+
+        <!-- Expandable Section 1: TFB-1 Preparation -->
+        <button class="collapsible bg-blue-600 text-white py-2 px-5 rounded-lg mb-4 hover:bg-blue-700 transition-all w-full text-left">
+            + TFB-1 (pH 5.1) for 30 ml
+        </button>
+        <div class="content" style="display: none;">
+          <table class="w-full max-w-4xl mx-auto border-2 border-gray-500 rounded-lg text-left mb-8">
+            <thead>
+                <tr class="bg-blue-700 text-white">
+                    <th class="py-3 px-4 border-b-4 border-gray-500">Component</th>
+                    <th class="py-3 px-4 border-b-4 border-gray-500">Quantity</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="bg-gray-100 hover:bg-gray-300 transition-all">
+                    <td class="py-3 px-4 border-b border-gray-400">10 mM RbCl</td>
+                    <td class="py-3 px-4 border-b border-gray-400">0.36 g</td>
+                </tr>
+                <tr class="bg-white hover:bg-gray-300 transition-all">
+                    <td class="py-3 px-4 border-b border-gray-400">50 mM MnCl2</td>
+                    <td class="py-3 px-4 border-b border-gray-400">0.19 g</td>
+                </tr>
+                <tr class="bg-gray-100 hover:bg-gray-300 transition-all">
+                    <td class="py-3 px-4 border-b border-gray-400">30 mM CH3COOH+</td>
+                    <td class="py-3 px-4 border-b border-gray-400">0.08 g</td>
+                </tr>
+                <tr class="bg-white hover:bg-gray-300 transition-all">
+                    <td class="py-3 px-4 border-b border-gray-400">100 mM CaCl2</td>
+                    <td class="py-3 px-4 border-b border-gray-400">0.03 g</td>
+                </tr>
+                <tr class="bg-gray-100 hover:bg-gray-300 transition-all">
+                    <td class="py-3 px-4 border-b border-gray-400">15% Glycerol</td>
+                    <td class="py-3 px-4 border-b border-gray-400">4.5 ml</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        </div>
+
+        <!-- Expandable Section 2: TFB-2 Preparation -->
+        <button class="collapsible bg-blue-600 text-white py-2 px-5 rounded-lg mb-4 hover:bg-blue-700 transition-all w-full text-left">
+            + TFB-2 (pH 6.8) for 15 ml
+        </button>
+        <div class="content" style="display: none;">
+          <table class="w-full max-w-4xl mx-auto border-2 border-gray-500 rounded-lg text-left mb-8">
+            <thead>
+                <tr class="bg-blue-700 text-white">
+                    <th class="py-3 px-4 border-b-4 border-gray-500">Component</th>
+                    <th class="py-3 px-4 border-b-4 border-gray-500">Quantity</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="bg-gray-100 hover:bg-gray-300 transition-all">
+                    <td class="py-3 px-4 border-b border-gray-400">10 mM MOPS</td>
+                    <td class="py-3 px-4 border-b border-gray-400">0.031 g</td>
+                </tr>
+                <tr class="bg-white hover:bg-gray-300 transition-all">
+                    <td class="py-3 px-4 border-b border-gray-400">10 mM RbCl</td>
+                    <td class="py-3 px-4 border-b border-gray-400">0.012 g</td>
+                </tr>
+                <tr class="bg-gray-100 hover:bg-gray-300 transition-all">
+                    <td class="py-3 px-4 border-b border-gray-400">15 mM CaCl2</td>
+                    <td class="py-3 px-4 border-b border-gray-400">0.124 g</td>
+                </tr>
+                <tr class="bg-white hover:bg-gray-300 transition-all">
+                    <td class="py-3 px-4 border-b border-gray-400">15% Glycerol</td>
+                    <td class="py-3 px-4 border-b border-gray-400">2.25 ml</td>
+                </tr>
+            </tbody>
+        </table>
+        
+
+
+        </div>
+
+    <!-- Procedure Section -->
+    <div class="procedure-section mt-10">
+      <h2 class="text-4xl font-bold mb-6">Procedure</h2>
+      <ol class="list-decimal list-inside text-lg leading-7">
+          <li>Pick a single colony of cell and inoculate in 10 ml of LB.</li>
+          <li>Grow it overnight at 37°C with shaking.</li>
+          <li>Add 1 ml of overnight grown culture to 100 ml of pre-warmed LB broth in a 500 ml flask.</li>
+          <li>Shake and grow at 37°C until the OD reaches 0.5.</li>
+          <li>Cool the culture on ice for 5 min and then transfer it to a round-bottom centrifuge tube (Falcon).</li>
+          <li>Collect the cells by centrifugation (5 min, 4000g) at 4°C.</li>
+          <li>Discard the supernatant and keep the cells on ice.</li>
+          <li>Resuspend the cells in cold TFB-1 buffer (30 ml) and incubate on ice for 90 min.</li>
+          <li>Collect the cells by centrifugation (5 min, 4000g, 4°C).</li>
+          <li>Discard the supernatant and keep the cells on ice.</li>
+          <li>Resuspend the cells in 4 ml of ice-cold TFB-2.</li>
+          <li>Prepare 50 to 100 ml aliquots in 1.5 ml centrifuge tubes.</li>
+          <li>Store the tubes in -80°C.</li>
+      </ol>
+  </div>
+
+  <!-- Caution Section -->
+  <div class="caution-section mt-10 bg-red-100 border-l-4 border-red-500 p-6 text-red-700">
+      <h3 class="text-2xl font-bold">Caution</h3>
+      <ul class="list-disc list-inside text-lg">
+          <li>All steps must be performed on ice.</li>
+          <li>The lab hood should be bathed in UV light for more than 30 minutes before starting the procedure.</li>
+      </ul>
+  </div>
+    </div>
+  </div>
+</section>
+
+<!-- Transformation Section -->
+<section class="bg-gray-100 border-2 border-gray-300 p-10 rounded-lg mt-5">
+  <div class="transformation-section" style="text-align: left;">
+    <h2 class="text-4xl font-bold mb-6">Transformation</h2>
+
+    <h3 class="text-2xl font-bold mb-4">Introduction</h3>
+    <p class="text-lg leading-7">Transfer of miniprep plasmids or ligation mixture into <i>Escherichia coli</i> KRX or BL21.</p>
+
+    <!-- Materials Section -->
+    <h3 class="text-2xl font-bold mb-4 mt-8">Materials</h3>
+    <ul class="list-disc list-inside text-lg leading-7">
+        <li>Ice</li>
+        <li>Competent cells</li>
+        <li>Ligation mixture or miniprep plasmids</li>
+        <li>SOC Medium</li>
+        <li>Hot water bath</li>
+        <li>Incubator</li>
+        <li>Timer</li>
+        <li>Agar plates</li>
+        <li>Cell spreader</li>
+        <li>Bunsen burner</li>
+        <li>Laminar air flow hood</li>
+    </ul>
+
+    <!-- Procedure Section -->
+    <h3 class="text-2xl font-bold mb-4 mt-8">Procedure</h3>
+    <ol class="list-decimal list-inside text-lg leading-7">
+        <li>Take out the competent cells (100μl) from -80°C storage and place in ice.</li>
+        <li>Add ligation mixture (10μl) or miniprep Plasmids (1 or 2 μl) to the 100μl competent cells by pipetting.</li>
+        <li>Close the tube and mix them by gently tapping on the side of the tube.</li>
+        <li>Keep the tube in ice for 30 mins.</li>
+        <li>Set the hot water bath to 42°C and keep the SOC media in the incubator at 37°C.</li>
+        <li>Heat shock the tube for 45 seconds at 42°C, then place it back in ice for 5 mins.</li>
+        <li>Add SOC media to make up the volume to 1000μl and incubate it for 1.5 hours with shaking at 37°C.</li>
+        <li>Spread 100 μl on an agar plate and incubate at 37°C for 12-16 hours.</li>
+    </ol>
+
+    <!-- Caution Section -->
+    <div class="caution-section mt-10 bg-red-100 border-l-4 border-red-500 p-6 text-red-700">
+        <h3 class="text-2xl font-bold">Caution</h3>
+        <p class="text-lg">The LB can be used as a media, but SOC is more favorable for bacterial growth and efficient colonies.</p>
+    </div>
+  </div>
+</section>
+
+<script>
+    // Collapsible Sections
+    var collapsibles = document.getElementsByClassName("collapsible");
+    for (var i = 0; i < collapsibles.length; i++) {
+        collapsibles[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        });
+    }
+</script>
 
 {% endblock %}
