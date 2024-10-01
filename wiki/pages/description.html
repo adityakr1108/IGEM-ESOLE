@@ -1,5 +1,5 @@
 {% extends "layout.html" %}
-{% block title %}Model{% endblock %}
+{% block title %}Description{% endblock %}
 {% block page_content %}
 <img src="https://static.igem.wiki/teams/5425/bacteria-8107336.png" style="height:200px; width:200px; border-radius: 20px; margin-left: 42%;" class="items-center w-full h-96 mt-20" alt="Inclusivity Banner">
 
@@ -184,8 +184,9 @@
             </div>
         </div>
     </section>
-</main>
 
+</main>
+<link rel="stylesheet" href="{{ url_for ('static', filename='/css/description.css')}}">
 <script>
   function showSection(sectionId) {
     // Hide all sections
