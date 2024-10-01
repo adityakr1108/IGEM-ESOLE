@@ -8,8 +8,10 @@
 <img src="https://static.igem.wiki/teams/5425/bacteria-8107336.png" style="height:200px; width:200px; border-radius: 20px; margin-left: 42%;" class="items-center w-full h-96 mt-20" alt="Inclusivity Banner">
 
 <div class="heading" style=" font-family:Architype Bayer-type W90; padding: 20px; border-radius: 10px;">
-  <h1 class="text-8xl font-bold text-center">materials</h1>
+  <h1 class="text-8xl font-bold text-center">Materials</h1>
 </div>
+<h2 class="text-5xl font-bold text-left">Strains</h2>
+<br><br>
 <!-- Strain Table -->
 <div class="overflow-x-auto">
   <table class="min-w-full border border-gray-300 bg-white shadow-md sm:rounded-lg">
@@ -51,7 +53,9 @@
     </tbody>
   </table>
 </div>
-
+<br><br>
+<h2 class="text-5xl font-bold text-left">Plasmids</h2>
+<br><br>
 <!-- Plasmid Table -->
 <div class="overflow-x-auto mt-6">
   <table class="min-w-full border border-gray-300 bg-white shadow-md sm:rounded-lg">
@@ -60,7 +64,6 @@
         <th class="px-4 py-2 text-left text-gray-700">Plasmid</th>
         <th class="px-4 py-2 text-left text-gray-700">Speciality</th>
         <th class="px-4 py-2 text-left text-gray-700">Why Used?</th>
-        <th class="px-4 py-2 text-left text-gray-700">Source Link</th>
       </tr>
     </thead>
     <tbody>
@@ -68,30 +71,28 @@
         <td class="px-4 py-2">pUC19</td>
         <td class="px-4 py-2">Ori derived from pMB1, ampicillin, lacZa promoter</td>
         <td class="px-4 py-2">Cloning and propagation of the DH5alpha protein producing genes</td>
-        <td class="px-4 py-2"><a href="#" class="text-blue-500 hover:underline">Source</a></td>
       </tr>
       <tr class="border-t border-gray-300">
         <td class="px-4 py-2">C11</td>
         <td class="px-4 py-2">Chloramphenicol selective marker, lux system can be expressed</td>
-        <td class="px-4 py-2">-</td>
-        <td class="px-4 py-2"><a href="https://parts.igem.org/Part:BBa_J364000" class="text-blue-500 hover:underline">https://parts.igem.org/Part:BBa_J364000</a></td>
       </tr>
       <tr class="border-t border-gray-300">
         <td class="px-4 py-2">M20</td>
         <td class="px-4 py-2">Chloramphenicol resistant pSB1C3SA, IPTG inducible pTac promoter</td>
         <td class="px-4 py-2">Inserted variable lengths of CCA (Antisense) sequence</td>
-        <td class="px-4 py-2"><a href="https://parts.igem.org/Part:BBa_K2572025" class="text-blue-500 hover:underline">https://parts.igem.org/Part:BBa_K2572025</a></td>
       </tr>
       <tr class="border-t border-gray-300">
         <td class="px-4 py-2">pBbA5c-MevT(CO)-T1-MBIS(CO, ispA)</td>
         <td class="px-4 py-2">Chloramphenicol</td>
         <td class="px-4 py-2">Insertion of genes GPPS and LIS for linalool production</td>
-        <td class="px-4 py-2"><a href="https://www.addgene.org/" class="text-blue-500 hover:underline">Addgene</a></td>
       </tr>
     </tbody>
   </table>
 </div>
-
+<br><br>
+<h2 class="text-5xl font-bold text-left">Primers</h2>
+<br><br>
+<p>For the PCM Circuit: </p>
 <!-- Primers Table -->
 <div class="overflow-x-auto mt-6">
   <table class="min-w-full border border-gray-300 bg-white shadow-md sm:rounded-lg">
@@ -123,11 +124,195 @@
         <td class="px-4 py-2">ATGGCACGACTAAGCTTGGACG</td>
         <td class="px-4 py-2">Insert-2 amplify</td>
       </tr>
+      <tr class="border-t border-gray-300"></tr>
+        <td class="px-4 py-2">I2-amp-FP</td>
+        <td class="px-4 py-2">CCATTTCCTCCTGCATGATC AAA ATG CAA GTG AGA AC</td>
+        <td class="px-4 py-2">Insert-2 amplify</td>
+      </tr>
+      <tr class="border-t border-gray-300"></tr>
+        <td class="px-4 py-2">I3-amp-FP</td>
+        <td class="px-4 py-2">TTATTAGTTCTCACTTGCATTTTGATC ATG CAG G</td>
+        <td class="px-4 py-2">Insert-3 amplify</td>
+      </tr>
+      <tr class="border-t border-gray-300"></tr>
+        <td class="px-4 py-2">T7-O(P)-RP</td>
+        <td class="px-4 py-2">AGCGGCCGCTACTAGTATTCAAAAAACCCCTCAAGACCCGTTT</td>
+        <td class="px-4 py-2">Insert-3 amplify</td>
+      </tr>
       <!-- Add more primer rows as needed -->
     </tbody>
   </table>
 </div>
-
+<p>For PCM Characterization: </p>
+<!-- Primers Table -->
+<div class="overflow-x-auto mt-6">
+  <table class="min-w-full border border-gray-300 bg-white shadow-md sm:rounded-lg">
+    <thead class="bg-gray-100">
+      <tr>
+        <th class="px-4 py-2 text-left text-gray-700">Primers</th>
+        <th class="px-4 py-2 text-left text-gray-700">Sequence</th>
+        <th class="px-4 py-2 text-left text-gray-700">Used For</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="border-t border-gray-300">
+        <td class="px-4 py-2">PL(Tet-R)-RP </td>
+        <td class="px-4 py-2">TCGTCCAAGCTTAGTCGTG</td>
+        <td class="px-4 py-2">GFP of tetR 3761 bp amplification</td>
+      </tr>
+      <tr class="border-t border-gray-300">
+        <td class="px-4 py-2">GFP-amp-FP(tetR)</td>
+        <td class="px-4 py-2">ATGGCACGACTAAGCTTGGA ATG AGC AAA GGA GAA GAA CTT TTC ACT GG</td>
+        <td class="px-4 py-2">GFP 757 bp for tetR amp.</td>
+      </tr>
+      <tr class="border-t border-gray-300">
+        <td class="px-4 py-2">PL(Antisense)-RP </td>
+        <td class="px-4 py-2">CGA CGG TTT CGC TTT CAC TG</td>
+        <td class="px-4 py-2">GFP of anti 5308 bp amplification</td>
+      </tr>
+      <tr class="border-t border-gray-300">
+        <td class="px-4 py-2">GFP-amp-FP(Antisense)  </td>
+        <td class="px-4 py-2">TACAGTGAAAGCGAAACCGTATG AGC AAA GGA GAA GAA CTT TTC ACT GG</td>
+        <td class="px-4 py-2">GFP 757 bp for anti amp.</td>
+      </tr>
+      <tr class="border-t border-gray-300"></tr>
+        <td class="px-4 py-2">GFP-amp-RP</td>
+        <td class="px-4 py-2">CCTTGCCCTTTTTTGCCGGA CTA TTT GTA GAG CTC ATC CAT G</td>
+        <td class="px-4 py-2">GFP 757 bp for tetR and anti amp.</td>
+      </tr>
+      <tr class="border-t border-gray-300"></tr>
+        <td class="px-4 py-2">PL(hisTerm)-amp-FP </td>
+        <td class="px-4 py-2">TCCGGCAAAAAAGGGCAAGG</td>
+        <td class="px-4 py-2">For both GFP  backbone amplification</td>
+      </tr>
+      <!-- Add more primer rows as needed -->
+    </tbody>
+  </table>
+</div>
+<br><br>
+<p>Antisense at different length: </p>
+<!-- Primers Table -->
+<div class="overflow-x-auto mt-6">
+  <table class="min-w-full border border-gray-300 bg-white shadow-md sm:rounded-lg">
+    <thead class="bg-gray-100">
+      <tr>
+        <th class="px-4 py-2 text-left text-gray-700">Primers</th>
+        <th class="px-4 py-2 text-left text-gray-700">Sequence</th>
+        <th class="px-4 py-2 text-left text-gray-700">Used For</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="border-t border-gray-300">
+        <td class="px-4 py-2">PL-Anti-FP </td>
+        <td class="px-4 py-2">TCC GGC AAA AAA GGG CAA GGT GTC ACC</td>
+        <td class="px-4 py-2">To linearize the PSB1C3SA backbone of M20.</td>
+      </tr>
+      <tr class="border-t border-gray-300">
+        <td class="px-4 py-2">PL-Anti-RP</td>
+        <td class="px-4 py-2">AAGTAAATTGTGAGCGCTCACAATTCCACACATTATACGAGCCG</td>
+        <td class="px-4 py-2">To linearize the PSB1C3SA backbone of M20.</td>
+      </tr>
+      <tr class="border-t border-gray-300">
+        <td class="px-4 py-2">Anti-FP</td>
+        <td class="px-4 py-2">CCTTGCCCTTTTTTGCCGGAATGTCACTTTCGCTTTGGC</td>
+        <td class="px-4 py-2">Common FP to amplify variable  bp of CCA from PCM. With overhangs to attach </td>
+      </tr>
+      <tr class="border-t border-gray-300">
+        <td class="px-4 py-2">Anti-RP1</td>
+        <td class="px-4 py-2">AGCGCTCACAATTTACTTTAACTCATCCTGCAATCGGGC</td>
+        <td class="px-4 py-2">To amplify first 51 bp of CCA from PCM. With overhangs to attach to M20 PSB1C3SA</td>
+      </tr>
+      <tr class="border-t border-gray-300"></tr>
+        <td class="px-4 py-2">Anti-RP2</td>
+        <td class="px-4 py-2">AGCGCTCACAATTTACTTCCAATCGAGGACAAAACGG</td>
+        <td class="px-4 py-2">To amplify first 150 bp of CCA from PCM. With overhangs to attach to M20 PSB1C3SA</td>
+      </tr>
+      <tr class="border-t border-gray-300"></tr>
+        <td class="px-4 py-2">Anti-RP3</td>
+        <td class="px-4 py-2">AGCGCTCACAATTTACTTTCGTCACTGCCGCTTGTG</td>
+        <td class="px-4 py-2">To amplify first 277 bp of CCA from PCM. With overhangs to attach to M20 PSB1C3SA linearised backbone.</td>
+      </tr>
+      <tr class="border-t border-gray-300"></tr>
+        <td class="px-4 py-2">Anti-RP4</td>
+        <td class="px-4 py-2">AGCGCTCACAATTTACTTGTTAGAACGATAGGTCGGTTCTG</td>
+        <td class="px-4 py-2">To amplify first 393 bp (selected for low hairpin, etc reasons) of CCA from PCM. With overhangs to attach to M20 PSB1C3SA</td>
+      </tr>
+      <tr class="border-t border-gray-300"></tr>
+        <td class="px-4 py-2">Anti-RP4</td>
+        <td class="px-4 py-2">AGCGCTCACAATTTACTTGTTAGAACGATAGGTCGGTTCTG</td>
+        <td class="px-4 py-2">To amplify first 393 bp (selected for low hairpin, etc reasons) of CCA from PCM. With overhangs to attach to M20 PSB1C3SA</td>
+      </tr>
+      <tr class="border-t border-gray-300"></tr>
+        <td class="px-4 py-2">Anti-RP5</td>
+        <td class="px-4 py-2">AGCGCTCACAATTTACTTCGTTTACGTTAGAACGATAGGTCGGTTCTG</td>
+        <td class="px-4 py-2">To amplify all 400 bp of CCA from our assembled PCM.</td>
+      </tr>
+      <!-- Add more primer rows as needed -->
+    </tbody>
+  </table>
+</div>
+<br><br>
+<h2 class="text-5xl font-bold text-left">MEV Primers</h2>
+<br><br>
+<p>Primers for Assembly: </p>
+<!-- Primers Table -->
+<div class="overflow-x-auto mt-6">
+  <table class="min-w-full border border-gray-300 bg-white shadow-md sm:rounded-lg">
+    <thead class="bg-gray-100">
+      <tr>
+        <th class="px-4 py-2 text-left text-gray-700">Primers</th>
+        <th class="px-4 py-2 text-left text-gray-700">Sequence</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="border-t border-gray-300">
+        <td class="px-4 py-2">GPPS_FP</td>
+        <td class="px-4 py-2">TTTCACACAGGAAAGATGGAATTTGAC </td>
+      </tr>
+      <tr class="border-t border-gray-300">
+        <td class="px-4 py-2">GPPS_RP</td>
+        <td class="px-4 py-2">CATTTTCTCCTCTTTAATTTA ATTCTGACGAAATGCCACGTAG</td>
+      </tr>
+      <tr class="border-t border-gray-300">
+        <td class="px-4 py-2">LIS_FP</td>
+        <td class="px-4 py-2">TAAATTAAAGAGGAGAAA ATGAGCATCAACATTAACATGCCG</td>
+      </tr>
+      <tr class="border-t border-gray-300"></tr>
+        <td class="px-4 py-2">LIS_RP</td>
+        <td class="px-4 py-2">TATAAACGCAGAAAGGCCCACCCG </td>
+      </tr>
+      </tr>
+      <!-- Add more primer rows as needed -->
+    </tbody>
+  </table>
+</div>
+<br><br>
+<p>Primers for Cloning: </p>
+<!-- Primers Table -->
+<div class="overflow-x-auto mt-6">
+  <table class="min-w-full border border-gray-300 bg-white shadow-md sm:rounded-lg">
+    <thead class="bg-gray-100">
+      <tr>
+        <th class="px-4 py-2 text-left text-gray-700">Primers</th>
+        <th class="px-4 py-2 text-left text-gray-700">Sequence</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="border-t border-gray-300">
+        <td class="px-4 py-2">PL-FP</td>
+        <td class="px-4 py-2">TGGGCCTTTCTGCGTTTATA TCC GGC AAA AAA GGG CAA GGT GTC ACC</td>
+      </tr>
+      <tr class="border-t border-gray-300">
+        <td class="px-4 py-2">PL-RP</td>
+        <td class="px-4 py-2">TCCATCTTTCCTGTGTGAAAAAGTAAATTGTGAGCGCTCACAATTCCACACATTATACGAGCCG</td>
+      </tr>
+      </tr>
+      <!-- Add more primer rows as needed -->
+    </tbody>
+  </table>
+</div>
+<br><br>
+<h2 class="text-5xl font-bold text-left">Chemicals</h2>
 <!-- Chemicals Table -->
 <div class="overflow-x-auto mt-6">
   <table class="min-w-full border border-gray-300 bg-white shadow-md sm:rounded-lg">
@@ -135,27 +320,33 @@
       <tr>
         <th class="px-4 py-2 text-left text-gray-700">Chemical Name</th>
         <th class="px-4 py-2 text-left text-gray-700">Used For</th>
-        <th class="px-4 py-2 text-left text-gray-700">Link</th>
       </tr>
     </thead>
     <tbody>
       <tr class="border-t border-gray-300">
         <td class="px-4 py-2">Dry AHL(N-(3-Oxododecanoyl)-L-homoserine lactone)</td>
         <td class="px-4 py-2">For induction checking in PCM</td>
-        <td class="px-4 py-2"><a href="https://www.sigmaaldrich.com/IN/en/search/o9139?focus=products&page=1&perpage=30&sort=relevance&term=o9139&type=product" class="text-blue-500 hover:underline">Dry AHL Link</a></td>
       </tr>
       <tr class="border-t border-gray-300">
         <td class="px-4 py-2">Anhydro tetracycline</td>
         <td class="px-4 py-2">To check how tetR binding affects upon induction</td>
-        <td class="px-4 py-2"><a href="https://www.takarabio.com/products/transfection-and-cell-culture/antibiotic-selection/anhydrotetracycline?srsltid=AfmBOoqfDuSb22UOTg8MNCZwrHJ7AHELES_mBkESklCfwz-IasYJnUVw" class="text-blue-500 hover:underline">Anhydro tetracycline Link</a></td>
       </tr>
       <tr class="border-t border-gray-300">
         <td class="px-4 py-2">IPTG</td>
         <td class="px-4 py-2">To check ptac promoter affecting upon induction</td>
-        <td class="px-4 py-2"><a href="https://www.sigmaaldrich.com/IN/en/product/sial/i6758?srsltid=AfmBOooVR5duyO-zSOGb9ElKRvy1qQyn-CLWe4DZh1xNe0Ze_BVeOVOs" class="text-blue-500 hover:underline">IPTG Link</a></td>
       </tr>
     </tbody>
   </table>
 </div>
+<br>
+<h2 class="text-5xl font-bold text-left">References</h2>
+<br>
+<ul>
+  <li>1. <a href="https://parts.igem.org/Part:BBa_J364000" class="text-blue-500 hover:underline">https://parts.igem.org/Part:BBa_J364000</a></li>
+  <li>2. <a href="https://parts.igem.org/Part:BBa_K2572025" class="text-blue-500 hover:underline">https://parts.igem.org/Part:BBa_K2572025</a></li>
+  <li>3. <a href="https://www.addgene.org/" class="text-blue-500 hover:underline">Addgene</a></li>
+  <li>4. <a href="https://www.sigmaaldrich.com/IN/en/search/o9139?focus=products&page=1&perpage=30&sort=relevance&term=o9139&type=product" class="text-blue-500 hover:underline">Dry AHL Link</a></li>
+  <li>5. <a href="https://www.sigmaaldrich.com/IN/en/product/sial/i6758?srsltid=AfmBOooVR5duyO-zSOGb9ElKRvy1qQyn-CLWe4DZh1xNe0Ze_BVeOVOs" class="text-blue-500 hover:underline">IPTG Link</a></li>
+</ul>
 
 {% endblock %}

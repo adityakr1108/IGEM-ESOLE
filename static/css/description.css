@@ -9,6 +9,7 @@
 body {
   background-color: var(--secondary-bg-color);
   margin: 0;
+  padding: 0;
   font-family: Arial, sans-serif;
 }
 
@@ -45,18 +46,24 @@ body {
   font-weight: 500;
   color: var(--primary-text-color);
 }
-.overview-content-btns {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
-  margin-top: 40px;
+
+.page-container {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
-.overview-content-btns button {
-  background-color: transparent;
-  color: var(--primary-text-color);
+.horizontal-nav {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.nav-button {
   border: 2px solid var(--primary-text-color);
+  background-color: #c1a0d2;
+  color: black;
   padding: 12px 30px;
   border-radius: 50px;
   cursor: pointer;
@@ -65,121 +72,46 @@ body {
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 1px;
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
 }
 
-.overview-content-btns button::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  background-color: var(--primary-text-color);
-  transition: all 0.3s ease;
-  z-index: -1;
+.nav-button:hover {
+  background-color: #dec5ec;
+  transform: scale(1.05);
 }
 
-.overview-content-btns button:hover {
-  color: var(--primary-bg-color);
-}
-
-.overview-content-btns button:hover::before {
+.content-container {
+  background-color: #ffffff;
   width: 100%;
-}
-
-.overview-content-btns button:active {
-  transform: scale(0.95);
-}
-
-.page-container {
-  max-width: 1200px;
-  margin: 50px auto 0;
-  padding-bottom: 50px;
-  display: flex;
-  position: relative;
-  justify-content: space-between;
-}
-
-.timeline {
-  width: 4px;
-  background-color: #e0e0e0;
-  position: absolute;
-  left: 50%;
-  top: 0;
-  bottom: 0;
-  transform: translateX(-50%);
-  z-index: 1000;
-}
-
-.timeline-bar {
-  width: 100%;
-  height: 100%;
-  background-color: var(--primary-bg-color);
-  transform-origin: top;
-  transform: scaleY(0);
-  transition: transform 0.5s ease-out;
-}
-
-.timeline-indicator {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  transition: top 0.5s ease-out;
-}
-
-.shoe-indicator {
-  width: 40px;
-  height: auto;
-  transform: translateY(-50%) translateX(-50%);
-}
-
-.sections-container {
-  width: 100%;
-  
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .content-section {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-bottom: 50px;
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 1s ease-out, transform 1s ease-out;
-  width: 45%;
-}
-
-.content-section.visible {
+  display: block;
   opacity: 1;
-  transform: translateY(0);
+  transform: none;
+  width: 100%;
+  margin-bottom: 20px;
 }
 
 .content-section h2 {
   color: var(--primary-bg-color);
   font-size: 32px;
   margin-bottom: 20px;
-  align-self: flex-start;
 }
 
 .content-section p {
   line-height: 1.6;
 }
 
-.content-section.left {
-  margin-right: auto;
-  margin-right: 50px;
+@media (max-width: 768px) {
+  .horizontal-nav .flex {
+      flex-direction: column;
+      align-items: stretch;
+  }
+
+  .nav-button {
+      margin-bottom: 10px;
+  }
 }
-
-.content-section.right {
-  margin-left: auto;
-}
-
-.content-section > * {
-  flex: 1;
-}
-
-
-/* ... rest of your existing CSS ... */
