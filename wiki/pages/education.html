@@ -3,6 +3,116 @@
 {% block title %}Education{% endblock %}
 
 {% block page_content %}
+<style>
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+}
+
+.gallery-image {
+    width: 450px;
+    height: 300px;
+    object-fit: cover; /* Ensures images fill the container without stretching */
+}
+
+/* Adjust the layout for medium and larger screens */
+@media (min-width: 640px) {
+    .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .gallery {
+    grid-template-columns: repeat(3, 1fr);
+    } */
+}
+
+    .flex {
+        display: flex;
+    }
+
+   
+
+    .space-x-10 > * + * {
+        margin-left: 2.5rem;
+    }
+
+    .stall-image img {
+        transition: transform 0.3s ease;
+    }
+
+    .stall-image img:hover {
+        transform: scale(1.1);
+    }
+
+    .content-card {
+        margin-top: 2rem;
+        width: 100%;
+        background-color: #f9f9f9;
+        border-radius: 10px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 2rem;
+        display: none;
+        animation: slideIn 0.5s ease forwards;
+    }
+
+    .card-content {
+        display: none;
+    }
+
+    .card-content.active {
+        display: block;
+    }
+
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1.5rem;
+    }
+
+    /* Adjust the layout for medium and larger screens */
+    @media (min-width: 640px) {
+        .gallery {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .gallery {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    @keyframes slideIn {
+        from {
+            transform: translateY(20px);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .flex {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .space-x-10 > * + * {
+            margin-left: 0;
+            margin-top: 1.5rem;
+        }
+
+        .content-card {
+            width: 100%;
+        }
+    }
+</style>
 
 <!-- Education & Outreach Section -->
 <img src="https://static.igem.wiki/teams/5425/bacteria-8107336.png" style="height:200px; width:200px; border-radius: 20px; margin-left: 42%;" class="items-center w-full h-96 mt-20" alt="Education">
@@ -177,118 +287,6 @@
 
 
 <!-- Styles -->
-<style>
-  .gallery {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 1.5rem;
-  }
-
-  .gallery-image {
-    width: 450px;
-    height: 300px;
-    object-fit: cover; /* Ensures images fill the container without stretching */
-  }
-
-  /* Adjust the layout for medium and larger screens */
-  @media (min-width: 640px) {
-    .gallery {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-
-  @media (min-width: 1024px) {
-    .gallery {
-      grid-template-columns: repeat(3, 1fr);
-    } */
-  }
-
-    .flex {
-        display: flex;
-    }
-
-    .hidden {
-        display: none;
-    }
-
-    .space-x-10 > * + * {
-        margin-left: 2.5rem;
-    }
-
-    .stall-image img {
-        transition: transform 0.3s ease;
-    }
-
-    .stall-image img:hover {
-        transform: scale(1.1);
-    }
-
-    .content-card {
-        margin-top: 2rem;
-        width: 100%;
-        background-color: #f9f9f9;
-        border-radius: 10px;
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-        padding: 2rem;
-        display: none;
-        animation: slideIn 0.5s ease forwards;
-    }
-
-    .card-content {
-        display: none;
-    }
-
-    .card-content.active {
-        display: block;
-    }
-
-    .gallery {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        gap: 1.5rem;
-    }
-
-    /* Adjust the layout for medium and larger screens */
-    @media (min-width: 640px) {
-        .gallery {
-            grid-template-columns: repeat(2, 1fr);
-        }
-    }
-
-    @media (min-width: 1024px) {
-        .gallery {
-            grid-template-columns: repeat(3, 1fr);
-        }
-    }
-
-    @keyframes slideIn {
-        from {
-            transform: translateY(20px);
-            opacity: 0;
-        }
-        to {
-            transform: translateY(0);
-            opacity: 1;
-        }
-    }
-
-    /* Responsive adjustments */
-    @media (max-width: 768px) {
-        .flex {
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .space-x-10 > * + * {
-            margin-left: 0;
-            margin-top: 1.5rem;
-        }
-
-        .content-card {
-            width: 100%;
-        }
-    }
-</style>
 
 <!-- JavaScript -->
 <script>

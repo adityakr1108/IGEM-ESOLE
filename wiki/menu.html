@@ -17,7 +17,7 @@
   <div id="nav-menu" class="hidden lg:flex gap-10 text-lg">
     <!-- Home -->
     <a href="{{ url_for('pages', page='home') }}" class="font-medium text-primary">Home</a>
-
+    
     <!-- Team Dropdown -->
     <div class="relative group">
       <a href="#" class="font-medium hover:text-primary">Team</a>
@@ -60,7 +60,7 @@
         <a href="{{ url_for('pages', page='software') }}" class="block px-4 py-2 hover:bg-gray-100">Software</a>
       </div>
     </div>
-
+    
     <!-- Human Practices Dropdown -->
     <div class="relative group">
       <a href="#" class="font-medium hover:text-primary">Human Practices</a>
@@ -70,8 +70,9 @@
         <a href="{{ url_for('pages', page='inclusivity') }}" class="block px-4 py-2 hover:bg-gray-100">Inclusivity</a>
       </div>
     </div>
+    <a href="{{ url_for('pages', page='entrepreneurship') }}" class="font-medium text-primary">Entrepreneurship</a>
   </div>
-
+  
   <!-- Mobile Menu Button -->
   <button class="p-2 lg:hidden" onclick="handleMenu()">
     <i class="fa-solid fa-bars text-gray-600"></i>
