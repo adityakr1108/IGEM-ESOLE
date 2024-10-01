@@ -1,50 +1,233 @@
 {% extends "layout.html" %}
-  
-{% block title %}Safety{% endblock %}
-{% block lead %}Describe all the safety issues of your project.{% endblock %}
-
+{% block title %}Design{% endblock %}
+{% block lead %}{% endblock %}
 {% block page_content %}
+<style>
+  .sticky {
+    position: sticky;
+    top: 1rem; /* adjust to fit your layout */
+  }
+  .nav-link.font-bold {
+    background-color: #dec5ec !important;
+    color: #ffffff !important;
+  }
+</style>
+<img src="https://static.igem.wiki/teams/5425/bacteria-8107336.png" style="height:200px; width:200px; border-radius: 20px; margin-left: 42%;" class="items-center w-full h-96 mt-20" alt="Inclusivity Banner">
 
-<div class="row mt-4">
-  <div class="col">
-    <div class="bd-callout bd-callout-info">
-      <h4>Safety and Security Award</h4>
-      <p>Synthetic biology will need to be used safely and securely if local people are to solve local problems all around the world. The Safety and Security Committee is challenging teams to apply biological engineering approaches to manage risks associated with synthetic biology. Can you take the next step in incremental progress towards knowledge, understanding, and tools that will make the use of synthetic biology safer and more secure?</p>
-      <p>To compete for the Safety and Security award, please describe your work on this page and also fill out the description on the <a href="https://competition.igem.org/deliverables/judging-form">judging form</a>.</p>
-      <hr>
-      <p>Please see the <a href="https://competition.igem.org/judging/awards">2024 Awards Page</a> for more information.</p>
+<!-- Heading Section -->
+<div class="heading" style="padding: 20px; border-radius: 10px;">
+    <h1 class="text-6xl font-bold text-center">safety</h1>
+</div>
+
+<!-- Left Nav Section -->
+<main class="page-container flex mt-20">
+  <div class="sticky">
+    <nav class="left-nav sticky top-4 w-1/3 border-2 border-gray-300 p-4 rounded-lg shadow-lg mr-80">
+      <a href="#section1" id="nav-section1" class="nav-link text-lg py-2 w-full bg-[#c1a0d2] text-white rounded-lg hover:bg-[#dec5ec] hover:scale-105 transition duration-300 ease-in-out mb-4 block text-center" aria-label="Go to Section 1">
+        OverView
+      </a>
+      <a href="#section2" id="nav-section2" class="nav-link text-lg py-2 w-full bg-[#c1a0d2] text-white rounded-lg hover:bg-[#dec5ec] hover:scale-105 transition duration-300 ease-in-out mb-4 block text-center" aria-label="Go to Section 2">
+        Laboratory Safety
+      </a>
+      <a href="#section3" id="nav-section3" class="nav-link text-lg py-2 w-full bg-[#c1a0d2] text-white rounded-lg hover:bg-[#dec5ec] hover:scale-105 transition duration-300 ease-in-out mb-4 block text-center" aria-label="Go to Section 3">
+        Design Safety
+      </a>
+      <a href="#section4" id="nav-section4" class="nav-link text-lg py-2 w-full bg-[#c1a0d2] text-white rounded-lg hover:bg-[#dec5ec] hover:scale-105 transition duration-300 ease-in-out block text-center" aria-label="Go to Section 4">
+        Ethical and Safety
+      </a>
+    </nav>
+  </div>
+  
+
+  <!-- Right Content Section -->
+  <div id="content" class="w-3/4">
+    <div id="section1" class="section-content border border-gray-300 p-6 rounded-lg shadow-lg mb-6">
+      <h2 class="text-3xl font-bold mb-4">Quantitative Assay</h2>
+      <p>
+        At the heart of our iGEM project, E-Sole I, is the commitment to safety, both within our laboratory and in the potential real-world application of our microbial foot care system. Guided by the principles of responsible research and engineering, we have implemented comprehensive safety measures to mitigate any risks associated with our work. Safety is not an afterthought; it is integral to every stage of our project, from design to implementation.
+      </p>
+    </div>    
+    <div id="section2" class="section-content border border-gray-300 p-6 rounded-lg shadow-lg mb-6">
+      <h2 class="text-3xl font-bold mb-4">Design</h2>
+      <h3 class="text-2xl font-bold mb-4">Regulatory Compliance and Safety Protocols</h3>
+      <p>
+        The Department of Biotechnology (DBT), under the Government of India, regulates biosafety and biosecurity for research laboratories nationwide. Comprehensive rules and regulations governing laboratory safety are accessible through the DBT's official platform, ensuring that all research institutions comply with national standards. At IISER Kolkata, we also follow an internal set of laboratory safety protocols, established and overseen by the Institutional Biosafety Committee (IBSC). These protocols are essential for maintaining a secure lab environment, reducing the risk of accidents, and ensuring the safety of all personnel involved.
+      </p>
+      <p>
+        Our team underwent rigorous lab safety training under the supervision of Dr. G. Lekha, a Scientific Officer at IISER Kolkata. This training emphasized the proper handling and disposal of biosafety hazards, as well as the use of essential safety equipment like biosafety cabinets, fire extinguishers, and eyewash stations. The training culminated in biosafety exams, and all team members were awarded safety training certificates upon successful completion, verifying their qualifications to conduct lab work safely. As a precaution, the laboratory was fumigated to eliminate potential airborne pathogens before starting wet-lab activities.
+      </p>
+    
+      <!-- Adding images related to Laboratory Safety Practices -->
+      <div class="mt-6">
+        <img src="https://static.igem.wiki/teams/5425/safety/img-20240926-wa0098-66f8fa38ba47f.webp" alt="Lab Safety Image 1" class="rounded-lg mb-4 w-full">
+        <img src="https://static.igem.wiki/teams/5425/safety/img-20240929-121846.jpg" alt="Lab Safety Image 2" class="rounded-lg mb-4 w-full">
+      </div>
+    
+      <h3 class="text-2xl font-bold mb-4">Laboratory Safety Practices</h3>
+      <p>
+        In compliance with Biosafety Level 1 (BSL-1) standards, all experiments related to cloning and the expression of the quorum-sensing unit were conducted in designated BSL-1 laboratories. The bacteria used in these experiments include BSL-1 strains like E. coli DH5α, TOP10, and BL21. The fungal strain used Chaetomium thermophilum, which too falls under BSL-1. For containment and risk minimization, all experiments were performed using class biosafety cabinets, ensuring that our research complies with the highest safety standards.
+      </p>
+      <p>
+        These stringent safety measures, along with the adherence to both DBT and IBSC regulations, ensure that all research activities are conducted in a responsible and risk-mitigated manner.
+      </p>
+    
+      <h3 class="text-2xl font-bold mb-4">Laboratory Safety Equipment</h3>
+      <p>The iGEM Laboratory at IISER Kolkata is fully equipped with all the necessary safety equipment to ensure a secure and safe working environment for our research activities. The key safety features of the lab include:</p>
+    
+      <ul class="list-disc pl-6 mb-4">
+        <li>❖ Fire-retardant workbenches designed to withstand heat and chemical exposure.</li>
+        <div class="mt-4">
+          <img src="https://static.igem.wiki/teams/5425/safety/lab-pic-66f8fa3ab3039.webp" alt="Lab Safety Image 3" class="rounded-lg mb-4 w-full">
+        </div>
+        <li>❖ Biosafety cabinets for handling microorganisms and hazardous materials in a controlled environment, minimizing contamination risks.</li>
+        <div class="mt-4">
+          <img src="https://static.igem.wiki/teams/5425/safety/lab-pic-2-66f8fa389e264.webp" alt="Lab Safety Image 4" class="rounded-lg mb-4 w-full">
+        </div>
+        <li>❖ Autoclave sterilisers for effective sterilization of media, glassware, and biological waste, ensuring that no harmful organisms are released.</li>
+        <li>❖ Shower stations for immediate use in case of chemical spills or accidental exposure.</li>
+        <div class="mt-4">
+          <img src="https://static.igem.wiki/teams/5425/safety/shower-66f8fa44153b0.webp" alt="Lab Safety Image 5" class="rounded-lg mb-4 w-full">
+        </div>
+        <li>❖ Fire-safety equipment, including fire hoses and extinguishers, with all team members trained in their proper use.</li>
+        <div class="mt-4">
+          <img src="https://static.igem.wiki/teams/5425/safety/sf2-66f8fa41b637b.webp" alt="Lab Safety Image 6" class="rounded-lg mb-4 w-full">
+        </div>
+        <li>❖ Three separate waste disposal bins:
+          <ul class="list-disc pl-6 mt-2">
+            <li>➢ Biohazard waste for biological and potentially infectious materials.</li>
+            <li>➢ Sharp discard for safely disposing of needles, syringes, and sharp instruments.</li>
+            <li>➢ General waste for non-hazardous laboratory materials.</li>
+          </ul>
+        </li>
+        <div class="mt-4">
+          <img src="https://static.igem.wiki/teams/5425/safety/safety-66f8fa3b6a456.webp" alt="Lab Safety Image 7" class="rounded-lg mb-4 w-full">
+        </div>
+        <li>❖ First aid box facility located nearby to provide immediate medical assistance in case of minor injuries or accidents.</li>
+        <div class="mt-4">
+          <img src="https://static.igem.wiki/teams/5425/safety/sf-3-66f8fa3dc3cb4.webp" alt="Lab Safety Image 8" class="rounded-lg mb-4 w-full">
+        </div>
+      </ul>
+    </div>
+    
+    <div id="section3" class="section-content border border-gray-300 p-6 rounded-lg shadow-lg mb-6">
+      <h2 class="text-3xl font-bold mb-4">Construction of PCM</h2>
+      <p>
+        Proof section details the experiments and evidence that support the feasibility and effectiveness of the design.
+      </p>
+    
+      <!-- New Design Safety Content -->
+      <h3 class="text-2xl font-bold mb-4">Design Safety</h3>
+      <p>
+        In the development of our microbial foot care system, E.Sole I, we have placed a strong emphasis on design safety to proactively address potential risks in both the laboratory and future real-world applications. Our goal is to ensure that the use of our genetically modified bacteria (GM bacteria) is both safe and effective for users, while minimizing risks to the environment. The following safety measures are integrated into our project design:
+      </p>
+    
+      <h4 class="text-xl font-bold mb-2">1. Bacterial Strain Selection</h4>
+      <p>
+        We initially conducted our research using the E. coli strains BL21, DH5α, and TOP 10, which are widely recognized as safe, non-pathogenic, and suitable for biosafety level 1 (BSL-1) environments. These strains were chosen for their ease of manipulation and efficiency in gene cloning, making them ideal for our lab work.
+      </p>
+      <p>
+        For the final product, we plan to use Lactobacillus rhamnosus as the microbial chassis embedded in the footbed. This strain is a well-known probiotic, commonly found in human gut microbiomes and widely used in health applications. Due to its non-pathogenic nature and long history of safe use, Lactobacillus rhamnosus poses minimal risk to humans, even upon direct contact with the skin. Its compatibility with the skin microbiome further ensures that it will not cause irritation or disrupt the natural microbial balance, making it an excellent choice for prolonged use in foot care.
+      </p>
+    
+      <h4 class="text-xl font-bold mb-2">2. Apoptosis Module for Safety Control</h4>
+      <p>
+        To prevent any risks of environmental contamination or uncontrolled bacterial growth, we have designed a kill-switch (apoptosis module) that triggers bacterial cell death if the bacteria escape from the footbed or come into contact with non-target environments. This apoptosis module ensures that the bacteria do not persist outside the intended system, reducing the likelihood of unintended consequences. This safeguard is particularly important for preventing the accidental release of genetically modified organisms (GMOs) into the environment, thus ensuring both user and environmental safety.
+      </p>
+    
+      <h4 class="text-xl font-bold mb-2">3. Containment Strategy</h4>
+      <p>
+        Our containment strategy is designed to ensure that the GM bacteria remain securely housed within the footbed system. The bacteria are embedded in a nutritive biopolymer layer that is both biocompatible and non-porous, preventing their release into the external environment. The footbed structure includes a non-porous layer at the bottom to contain the bacteria and a porous layer at the top, allowing only the beneficial compound, linalool, to diffuse out. This containment system ensures that while the bacteria continue to function and produce linalool, they remain isolated from direct contact with the outside environment.
+      </p>
+    
+      <h4 class="text-xl font-bold mb-2">4. Biocompatible and Non-Toxic Materials</h4>
+      <p>
+        The materials used in the footbed are biocompatible and non-toxic, ensuring that they are safe for continuous contact with human skin. The porous layer allows the volatile linalool to escape while ensuring that the bacteria do not leak out. Additionally, by maintaining compatibility with the skin’s natural microbiome, our design minimizes the risk of skin irritation or infections. This makes our footbed suitable for long-term wear and safe for a broad range of users.
+      </p>
+    
+      <h4 class="text-xl font-bold mb-2">5. Preventing Environmental Impact</h4>
+      <p>
+        We understand that environmental safety is paramount in synthetic biology projects. To address this, our containment and kill-switch strategies are complemented by the use of biodegradable materials for the footbed. In the event of disposal, the materials used in the product will break down safely without releasing harmful byproducts into the environment. Furthermore, the kill-switch ensures that the bacteria will not survive outside the controlled footbed environment, further preventing any unintended ecological impact.
+      </p>
+    </div>
+    
+    <div id="section4" class="section-content border border-gray-300 p-6 rounded-lg shadow-lg mb-6">
+      <h2 class="text-3xl font-bold mb-4">Characterisation of PCM Circuit</h2>
+      
+      <!-- New Ethical Design and Safety Content -->
+      <h3 class="text-2xl font-bold mb-4">Ethical Design and Safety</h3>
+      <p>
+        Ethical considerations are central to our iGEM project, E.Sole I, particularly in the field of synthetic biology. We adhere to ethical standards and comply with all regulatory requirements throughout the project.
+      </p>
+      <ul class="list-disc ml-6 mb-4">
+        <li><strong>Transparency and Risk Management:</strong> We openly communicated potential risks related to synthetic biology, engaging experts to ensure safety measures like the kill-switch, which prevents bacterial overgrowth or environmental release, were effectively integrated into our design.</li>
+        <li><strong>iGEM Responsibility Program:</strong> In line with iGEM’s Responsibility Program, we evaluated the environmental and societal impacts of our project. By carefully managing the risks of using GMOs, we ensure that our approach remains innovative, safe, and responsible.</li>
+        <li><strong>Regulatory Compliance:</strong> Our work adheres to strict regulations regarding GMOs. With approval from the Institutional Biosafety Committee (IBSC), our experiments under Category I were conducted following all biosafety protocols.</li>
+      </ul>
+      
+      <!-- Public Engagement and Consent -->
+      <h3 class="text-2xl font-bold mb-4">Public Engagement and Consent</h3>
+      <p>
+        As part of E.Sole I, we engaged with the public through interviews, surveys, and webinars, ensuring compliance with all ethical and legal standards.
+      </p>
+      <ul class="list-disc ml-6 mb-4">
+        <li><strong>Public Interaction:</strong> We obtained prior approval from legal authorities for public-facing activities. Participants were fully informed, and informed consent was obtained before collecting any data or recording webinars.</li>
+        <li><strong>Survey and Webinars:</strong> Data gathered from surveys and webinars were used only with explicit consent from participants, ensuring respect for privacy and ethical data handling.</li>
+      </ul>
+      
+      <!-- Proposed Implementation and Safety -->
+      <h3 class="text-2xl font-bold mb-4">Proposed Implementation and Safety</h3>
+      <p>
+        From lab work to future product development, safety has been prioritized at every stage of E.Sole I.
+      </p>
+      <ul class="list-disc ml-6 mb-4">
+        <li><strong>Safe Lab Practices:</strong> We identified potential risks early on and implemented strict safety protocols in the lab to prevent contamination and environmental release of GMOs.</li>
+        <li><strong>Future Plans:</strong> In scaling up for production, we will use bioreactors with robust safety controls to ensure that the product can be manufactured safely and responsibly. More details on future safety measures can be found in our Proposed Implementation section.</li>
+      </ul>
+      <p>
+        By embedding ethical safety practices into the design, public engagement, and future production phases, E.Sole I aims to provide a safe, effective, and responsible solution for foot care.
+      </p>
+    
+      <!-- References Section -->
+      <h3 class="text-2xl font-bold mb-4">References</h3>
+      <ul class="list-disc ml-6">
+        <li><a href="https://responsibility.igem.org/" target="_blank" class="text-blue-500 underline">iGEM Responsibility Program</a></li>
+        <li><a href="https://ibkp.dbtindia.gov.in/" target="_blank" class="text-blue-500 underline">Institutional Biosafety Committee (IBSC)</a></li>
+        <li><a href="https://static.igem.wiki/teams/5425/safety-manual-dbs-14-02-2024.pdf" target="_blank" class="text-blue-500 underline">Safety Manual (DBS)</a></li>
+        <li><a href="https://microbialcellfactories.biomedcentral.com/articles/10.1186/1475-2859-13-S1-S7" target="_blank" class="text-blue-500 underline">Microbial Cell Factories</a></li>
+      </ul>
     </div>
   </div>
-</div>
+</main>
 
-<div class="row mt-4">
-  <div class="col">
-    <h2>What should this page contain?</h2>
-    <hr>
-    <p>On this page of your wiki, you should write about how you are addressing any safety issues in your project. The wiki is a place where you can go beyond the questions on the safety forms, and write about whatever safety topics are most interesting in your project. (You do not need to copy your safety forms onto this wiki page.)</p>
-    <div class="bd-callout bd-callout-info">
-      <p>Please visit the <a href="https://responsibility.igem.org/safety-policies/introduction">Safety Policies page</a> to find this year's safety requirements & deadlines, and to learn about safe & responsible research in iGEM.</p>
-    </div>
-  </div>
-</div>
+<script>
+    window.addEventListener('scroll', function() {
+    const sections = document.querySelectorAll('.section-content');
+    const navLinks = document.querySelectorAll('.nav-link');
 
-<div class="row mt-4">
-  <div class="col-lg-8">
-    <h2>Safe Project Design</h2>
-    <hr>
-    <p>Does your project include any safety features? Have you made certain decisions about the design to reduce risks? Write about them here! For example:</p>
-    <ul>
-      <li>Choosing a non-pathogenic chassis</li>
-      <li>Choosing parts that will not harm humans / animals / plants</li>
-      <li>Substituting safer materials for dangerous materials in a proof-of-concept experiment</li>
-      <li>Including an "induced lethality" or "kill-switch" device</li>
-    </ul>
-  </div>
-  <div class="col-lg-4">
-    <h2>Safe Lab Work</h2>
-    <hr>
-    <p>What safety procedures do you use every day in the lab? Did you perform any unusual experiments, or face any unusual safety issues? Write about them here!</p>
-  </div>
-</div>
+    let currentSection = '';
+
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.clientHeight;
+
+      if (window.scrollY >= sectionTop - sectionHeight / 3) {
+        currentSection = section.getAttribute('id');
+      }
+    });
+
+    navLinks.forEach(link => {
+      link.classList.remove('bg-[#dec5ec]', 'font-bold');
+      if (link.getAttribute('href').substring(1) === currentSection) {
+        link.classList.add('bg-[#dec5ec]', 'font-bold');
+      }
+    });
+  });
+</script>
+
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+</style>
 
 {% endblock %}

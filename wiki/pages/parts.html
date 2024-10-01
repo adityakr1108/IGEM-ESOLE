@@ -4,11 +4,58 @@
 {% block lead %}Describe the parts you used in your iGEM project.{% endblock %}
 
 {% block page_content %}
-<img src="https://static.igem.wiki/teams/5425/bacteria-8107336.png" style="height:200px; width:200px; border-radius: 20px; margin-left: 42%;" class="items-center w-full h-96 mt-20" alt="Inclusivity Banner">
-
-<!-- Heading Section -->
-<div class="heading" style=" padding: 20px; border-radius: 10px;">
-    <h1 class="text-6xl font-bold text-center">parts</h1>
-</div>
+<main class="flex-grow mb-10 bg-amber-50 pt-20" style="background-image: url('https://static.igem.wiki/teams/5425/petals.png');">
+  
+    <img src="https://static.igem.wiki/teams/5425/bacteria-8107336.png" style="height:200px; width:200px; border-radius: 20px; margin-left: 42%;" class="items-center w-full h-96 mt-20" alt="Inclusivity Banner">
+    
+    <!-- Heading Section -->
+    <div class="heading" style=" padding: 20px; border-radius: 10px;">
+        <h1 class="text-6xl font-bold text-center">Parts</h1>
+    </div>
+    <!-- Strain Table -->
+<div class="overflow-x-auto">
+    <table class="min-w-full border border-gray-300 bg-white shadow-md sm:rounded-lg">
+      <thead class="bg-gray-100">
+        <tr>
+          <th class="px-4 py-2 text-left text-gray-700">Part Number</th>
+          <th class="px-4 py-2 text-left text-gray-700">Part Name</th>
+          <th class="px-4 py-2 text-left text-gray-700">Type</th>
+          <th class="px-4 py-2 text-left text-gray-700">Description</th>
+          <th class="px-4 py-2 text-left text-gray-700">Length</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="border-t border-gray-300">
+            <td class="px-4 py-2 text-left text-gray-700"><a href="https://parts.igem.org/Part:BBa_K5425004">Part:BBa_K5425004</a></td>
+            <td class="px-4 py-2 text-left text-gray-700">Population Control Module </td>
+            <td class="px-4 py-2 text-left text-gray-700">COMPOSITE</td>
+            <td class="px-4 py-2 text-left text-gray-700">The population control module is a carefully engineered circuit that regulates cell density through quorum sensing.</td>
+            <td class="px-4 py-2 text-left text-gray-700">3933 bp</td>
+        </tr>
+        <tr class="border-t border-gray-300">
+            <td class="px-4 py-2 text-left text-gray-700"><a href="https://parts.igem.org/Part:BBa_K5425002">Part:BBa_K5425002</a></td>
+            <td class="px-4 py-2 text-left text-gray-700">Antisense dnaA </td>
+            <td class="px-4 py-2 text-left text-gray-700">BASIC</td>
+            <td class="px-4 py-2 text-left text-gray-700">This part encodes an antisense mRNA that is complementary to approximately 400 bp of the primary transcript of dnaA (a replication initiator protein) in Escherichia coli.</td>
+            <td class="px-4 py-2 text-left text-gray-700">437 bp</td>
+        </tr>
+        <tr class="border-t border-gray-300">
+            <td class="px-4 py-2 text-left text-gray-700"><a href="https://parts.igem.org/Part:BBa_K5425005">Part:BBa_K5425005</a></td>
+            <td class="px-4 py-2 text-left text-gray-700">Oscillation characterization circuit </td>
+            <td class="px-4 py-2 text-left text-gray-700">COMPOSITE</td>
+            <td class="px-4 py-2 text-left text-gray-700">This circuit is designed to fine-tune the parameters of various components of part BBa_K5425004.</td>
+            <td class="px-4 py-2 text-left text-gray-700">4240 bp</td>
+        </tr>
+        <tr class="border-t border-gray-300">
+            <td class="px-4 py-2 text-left text-gray-700"><a href="https://parts.igem.org/Part:BBa_K5425007">Part:BBa_K5425007</a></td>
+            <td class="px-4 py-2 text-left text-gray-700">Threshold characterization circuit </td>
+            <td class="px-4 py-2 text-left text-gray-700">COMPOSITE</td>
+            <td class="px-4 py-2 text-left text-gray-700">This circuit was designed to determine the threshold population at which the pLux promoter becomes active due to the binding of TetR and AHL.</td>
+            <td class="px-4 py-2 text-left text-gray-700">2555 bp</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
 
 {% endblock %}  

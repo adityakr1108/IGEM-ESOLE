@@ -42,25 +42,26 @@
   .build-button { top: 57px; left: 206px; }
   .test-button { top: 205px; left: 194px; }
   .learn-button { top: 196px; left: 60px; }
-
-  .iteratonRowContainer {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    top:5%
+  .iterationRowContainer {
+      position: fixed;
+      bottom: 1rem;
+      left: 0;
+      width: 100%;
   }
+
+  .section-container {
+      max-height: 50%;
+      overflow-y: auto;
+  }
+
 </style>
 </head>
 
 <body class="m-0 font-sans bg-gray-100 flex">
-  <section class = "content_1 py-20">
-  <div class="iterationRowContainer absolute w-[80vw] bottom-[10%] left-[10%] grid grid-cols-4 z-10">
-    <div class="iterationRow font-medium text-2xl py-1 text-center border-b-4 border-[#114f85] transition-all duration-100 ease-linear cursor-pointer hover:-translate-y-1 hover:font-bold" onclick="goToSlide(0)">Iteration 1</div>
-    <div class="iterationRow font-medium text-2xl py-1 text-center border-b-4 border-[#114f85] transition-all duration-100 ease-linear cursor-pointer hover:-translate-y-1 hover:font-bold" onclick="goToSlide(1)">Iteration 2</div>
-    <div class="iterationRow font-medium text-2xl py-1 text-center border-b-4 border-[#114f85] transition-all duration-100 ease-linear cursor-pointer hover:-translate-y-1 hover:font-bold" onclick="goToSlide(2)">Iteration 3</div>
-    <div class="iterationRow font-medium text-2xl py-1 text-center border-b-4 border-[#114f85] transition-all duration-100 ease-linear cursor-pointer hover:-translate-y-1 hover:font-bold" onclick="goToSlide(3)">Iteration 4</div>
-  </div>
+  
+  
   <section class = "main-section mt-20">
+    
 <!-- Circle Container -->
 <div id="circleContainer" class="relative">
   <!-- Image -->
@@ -76,7 +77,7 @@
 <!-- Sections and slides for Learn, Design, Build, Test -->
 
 <!-- Learn Section -->
-<div id="learn" class="section-container absolute right-[8%] top-[30%] w-[55%] h-[48%] bg-white p-0 rounded-lg shadow-inner overflow-hidden hidden transition-all duration-300 ease-in-out">
+<div id="learn" class="section-container padding-10 absolute right-[8%] top-[30%] w-[55%] bg-white p-0 rounded-lg shadow-inner overflow-hidden hidden transition-all duration-300 ease-in-out">
   <div class="nav-buttons flex justify-center items-center gap-4 mt-4 relative">
     <button class="left-button absolute left-2 px-4 py-2 text-2xl bg-teal-500 text-white rounded-full cursor-pointer hover:bg-blue-800 transition-all duration-300 ease-in-out hover:-translate-y-1" onclick="prevSlide('learn')">&#9664;</button>
     <h2 class="text-center text-2xl font-bold">Learn</h2>
@@ -87,31 +88,53 @@
   <div class="slide active block opacity-100 animate-fade-in">
     <h2 class="text-2xl mb-4 text-center">Learn - Slide 1</h2>
     <p class="text-base leading-relaxed text-center px-5 py-5">
-      Introduction to the learning process. This slide explains the foundations of our learning approach and how it integrates into the project development.
+      The math modellers found that the AiiA degradation tag (dtag) could help produce a stronger oscillation, hence is incorporated into the circuit. AiiA then lives just long enough for one round of oscillation, and doesn’t degrade AHL signal when the signal is actually needed, in the start of the next round of oscillation.
+    <img src="https://static.igem.wiki/teams/5425/mmm.jpg" style=" border-radius: 20px; padding: 20px; ">
+    Finally, the circuit was finalised as follows.
+    <img src="https://static.igem.wiki/teams/5425/drylab/qs-circuit.webp" style=" border-radius: 20px; padding: 20px;">
     </p>
   </div>
   <div class="slide hidden opacity-0">
     <h2 class="text-2xl mb-4 text-center">Learn - Slide 2</h2>
     <p class="text-base leading-relaxed text-center px-5 py-5">
-      Here we dive deeper into the knowledge acquisition phase, outlining how research and team collaboration play a key role.
-    </p>
+      <p>1.   The RNA-RNA Docking showed a directly linear relationship between length of antisense mRNA and the spontaneity (given by the drop in Gibb’s free energy) of the steric blocking.
+        <img src="https://static.igem.wiki/teams/5425/ll/rna1.jpg" style=" border-radius: 20px; padding: 20px;" >
+        <img src="https://static.igem.wiki/teams/5425/ll/rna2.jpg" style=" border-radius: 20px; padding: 20px;" > </p>
+        <img src="https://static.igem.wiki/teams/5425/ll/rna3.jpg" style=" border-radius: 20px; padding: 20px;" > </p>
+      </p>
+    <p>Fig:  Sense-Antisense mRNA Steric Blocking was deemed feasible through a molecular docking simulation.</p>
+    <p><img src ="https://static.igem.wiki/teams/5425/drylab/fitted-rna-rna.webp" style=" border-radius: 20px; padding: 20px;"></p>
+  <p><img src="https://static.igem.wiki/teams/5425/drylab/fitting-parameters-rna-rna.webp" style=" border-radius: 20px; padding: 20px;"></p>  
+<p>Fig: The longer the antisense mRNA, the more spontaneous the Steric Blocking is. Of course, the simulation invokes approximations and assumptions, which are detailed in the Wet Lab Engineering Cycle.
+</p>  
+<br><br>
+<p>
+  2.    The Spectrophotometric Assay showed a clear oscillation (note the kink!) of the growth curve in IPTG induction cases, but not in the control, quite in line with the expectation. This was a first remarkable observation for us. For then, the graph raised some questions. Firstly, the OD at which oscillation (or what we expect to be so) was observed, was at the same saturation OD as for the control (IPTG) case. But, in the IPTG cases, the growth was expected to oscillate about a lower saturation OD than in the control. 
+  </p>
+  <p>
+    While analysing the result we obtained, we identified that one of key drawbacks of the experimental design is that, there MAY be manual error creeping in as for every reading, we take the culture off incubation, measure the OD, and keep a manual record of time all while. We switched to microplate reader for the first time.
+    
+    The most probable take away from the Microplate Reader Assay is that, IPTG alone cannot prominently induce an oscillatory or stunted growth curve for the cells with our PCM construct. But, IPTG+dry tetracycline and IPTG+AHL could induce a fluctuation from the control curve. In fact, we could see a clear oscillation in the growth curve. This evidences our engineererd plasmid is working.
+    Analyzing the observation, we concluded that our tetR protein may be somewhat constitutively bound to the tetO region before the pTet promoter in the first transcription unit of our PCM construct and so only a very strong induction condition could cause the fluctuation in growth curve viz a viz the controls. A replicate experiment is underway, to confirm the results.
+    <img src="https://static.igem.wiki/teams/5425/experimental-assay/0-66f72baa51a1b.webp" style=" border-radius: 20px; padding: 20px;" > </p>
+
+  </p>
+</p>
   </div>
   <div class="slide hidden opacity-0">
     <h2 class="text-2xl mb-4 text-center">Learn - Slide 3</h2>
     <p class="text-base leading-relaxed text-center px-5 py-5">
-      Practical implementation of learning strategies. This slide discusses the tools and methods used to reinforce team skills.
-    </p>
+      As a part of our human practices, we had attended talks with several synthetic biologists across the globe. Before starting our wet lab work, we wanted solid verification from them. After several brainstorming sessions we came up with certain limitations of our design to produce Linalool. According to them, the MEV pathway can be successfully functioned if the chassis is pre-engineered to bear the stress of such a long enzymatic reactive pathway, alternatively we could order engineered or mutated strains to incorporate the MEV pathway. But due to time constraints and safety purposes, we discarded the solution of ordering a new strain for our experiments. Another path showed up when we were advised to manipulate the Methylerythritol pathway (MEP pathway).  The MEP pathway is an innate metabolic pathway in E.coli that also produces isoprene for bacterial growth. Interestingly, the MEV and MEP pathway shares common intermediate substrates (DMAPP and IPP) among them, DMAPP being the former precursor of linalool. As it is clear that we could rather channelise the MEP pathway by just inserting GPPS and LIS into the bacteria to produce Linalool to reduce metabolic burden of the cloned organism.    </p>
   </div>
   <div class="slide hidden opacity-0">
     <h2 class="text-2xl mb-4 text-center">Learn - Slide 4</h2>
     <p class="text-base leading-relaxed text-center px-5 py-5">
-      Summary of the learning phase. We review what has been learned and how it impacts the next stages of the project.
-    </p>
+      The HiFi Assembly Protocol was optimized for a successful engineering of plasmid PCM. The knowledge helped us calculate optimized HiFi assembly reaction mixtures for our future experiments.    </p>
   </div>
 </div>
 
 <!-- Design Section -->
-<div id="design" class="section-container absolute right-[8%] top-[30%] w-[55%] h-[48%] bg-white p-0 rounded-lg shadow-inner overflow-hidden hidden transition-all duration-300 ease-in-out">
+<div id="design" class="section-container absolute padding-10 right-[8%] top-[30%] w-[55%] bg-white p-0 rounded-lg shadow-inner overflow-hidden hidden transition-all duration-300 ease-in-out">
   <div class="nav-buttons flex justify-center items-center gap-4 mt-4 relative">
     <button class="left-button absolute left-2 px-4 py-2 text-2xl bg-teal-500 text-white rounded-full cursor-pointer hover:bg-blue-800 transition-all duration-300 ease-in-out hover:-translate-y-1" onclick="prevSlide('design')">&#9664;</button>
     <h2 class="text-center text-2xl font-bold">Design</h2>
@@ -122,31 +145,37 @@
   <div class="slide active block opacity-100 animate-fade-in">
     <h2 class="text-2xl mb-4 text-center">Design - Slide 1</h2>
     <p class="text-base leading-relaxed text-center px-5 py-5">
-      Overview of the design phase. This slide introduces the design thinking process applied in our project.
-    </p>
-  </div>
+      Parallel to the linalool production module (LPM), we wanted an auto-regulated cell cycle regulation by another co-transformed plasmid. This plasmid will let each bacterium sense the cell density around itself. So that, when the bacterial density reaches an optimal threshold, a signal will trigger a feedback loop mechanism- which will cause cell cycle ‘arrest’. We needed two things.
+      Firstly, we needed a signalling molecule- which can be produced in proportion to the cell density outside- inside each bacterium itself. With the help of literature study, we came across the AHL molecule, 
+     We identified the AHL to be utilised into the LuxI-LuxR Quorum Sensing Machinery of Vibrio fischeri1- which fulfilled our second need of the feedback loop, as well. All we needed to do was to transform this system into E. coli strain BL21.
+     <img src="https://static.igem.wiki/teams/5425/engineering/untitled-design-5.webp" style=" border-radius: 20px; padding: 20px;">   </p>
+    </div>
   <div class="slide hidden opacity-0">
     <h2 class="text-2xl mb-4 text-center">Design - Slide 2</h2>
     <p class="text-base leading-relaxed text-center px-5 py-5">
-      Design principles and approaches. This slide details the methods used to create a robust project blueprint.
-    </p>
+      Multiple strategies to trigger cell cycle arrest were discussed and tallied against our criteria of arrest- reversibility, speed, and non-toxicity to cells. A cell cycle death was hence ruled out, due to the rapid build up of toxic wastes that would make our (limited) food medium unusable.3  Hence, we went for a ‘softer’ strategy- simple, steric blocking of a key protein of cell cycle at its mRNA stage itself. Unlike DICER, etc. this strategy does NOT cleave the mRNA- it just prevents its translation. The following questions were raised:
+      Which gene to silence? We discussed an array of proteins involved in the replication fork of bacterial division4. Ultimately, we narrowed down to two- DnaB (a helicase) vs DnaA (initiator of cell replication). The knockout of the DnaB molecule was reportedly irreversible 5, pushing us to go for DnaA protein. Further, the DnaA molecule was BLASTed by our bio modellers and found to be a largely conserved protein- allowing us to silence the protein across a variety of strains of E. coli- including our expression strain BL21.
+      Which part of the DnaA’s mRNA should be sterically blocked? It was a million-dollar question. It was reported for a similarly long gene that about 400 bp long gene of the initial 5’ region (wrt coding strand), and also covering the Shine Dalgarno sequence upstream was sterically blocked and the gene’s expression could be silenced. 6  BLASTing, we could not find any information for the Shine Dalgarno sequence of this gene dnaA.
+      How long should the antisense mRNA be? Antisense Oligonuleotides were ruled on reported accounts of wide off site targeting despite their short size.6  A longer mRNA would mean more chances of effective blocking, but also more chances of secondary loop formation. We had to do our odds. The above paper6  motivated us into experimenting forward with the first 400 bp case.
+      We decided to silence the first 400 bp of the dnaA gene. (dnaA is the gene, DnaA is the protein). We designed a DNA sequence, under a pLux promoter, which coded for the antisense mRNA against the first 400 bp of the dnaA gene. It would sterically block its sense mRNA and hence stop dnaA at translation. Needless to say, no ribosome binding site was given. As we anyway don’t want its protein to be expressed.
+          </p>
   </div>
   <div class="slide hidden opacity-0">
     <h2 class="text-2xl mb-4 text-center">Design - Slide 3</h2>
     <p class="text-base leading-relaxed text-center px-5 py-5">
-      Iterative design process. This slide explains how iterative feedback loops are integrated into the design process.
+      After thorough research for finding a biodegradable, eco-friendly, harmless overall green measure to manufacture our innovative cosmetic approach, we have found the most appropriate molecule fulfilling our desired properties in Linalool, a monoterpenoid mostly found in plants as a fragrant metabolite, moreover having antifungal and antimicrobial properties, a perfect combination for total foot care. Delving deep, we found that the plant enzymatic pathway known as Mevalonate Pathway (MEV Pathway) produces the Linalool where the direct enzyme Linalool synthase converts Geraniol diphosphate to Linalool. The MEV pathway is extensively researched and manipulated for different monoterpene production. We are grateful to the iGEM KEYSTONE China Team for their improved part for MEV pathway plasmid. Literature shows successful production of Linalool by incorporating the whole MEV pathways in bacteria. So we moved on building our model based on the design.
     </p>
   </div>
   <div class="slide hidden opacity-0">
     <h2 class="text-2xl mb-4 text-center">Design - Slide 4</h2>
     <p class="text-base leading-relaxed text-center px-5 py-5">
-      Final design considerations. This slide reviews the final design decisions before moving into the build phase.
+      We decided to go with the proprietary Hi Fi assembly offered by New England Biolabs. It is scarless, remarkably accurate and the we could leverage the experience of ex iGEMers from IISER-K and our advisors in this method. We identified that many of the Kit 2024 parts- had pSB13C backbone, with inserts at the same position. The backbone was chosen to be a pSB13C one, and the pair of linearization primers were cleverly designed so that they could linearise the backbones of most of those kit parts having pSB13C.
     </p>
   </div>
 </div>
 
 <!-- Build Section -->
-<div id="build" class="section-container absolute right-[8%] top-[30%] w-[55%] h-[48%] bg-white p-0 rounded-lg shadow-inner overflow-hidden hidden transition-all duration-300 ease-in-out">
+<div id="build" class="section-container absolute padding-10 right-[8%] top-[30%] w-[55%] bg-white p-0 rounded-lg shadow-inner overflow-hidden hidden transition-all duration-300 ease-in-out">
   <div class="nav-buttons flex justify-center items-center gap-4 mt-4 relative">
     <button class="left-button absolute left-2 px-4 py-2 text-2xl bg-teal-500 text-white rounded-full cursor-pointer hover:bg-blue-800 transition-all duration-300 ease-in-out hover:-translate-y-1" onclick="prevSlide('build')">&#9664;</button>
     <h2 class="text-center text-2xl font-bold">Build</h2>
@@ -157,31 +186,34 @@
   <div class="slide active block opacity-100 animate-fade-in">
     <h2 class="text-2xl mb-4 text-center">Build - Slide 1</h2>
     <p class="text-base leading-relaxed text-center px-5 py-5">
-      Overview of the build phase. This slide introduces the implementation and development process.
-    </p>
+      Once the circuit was built, the question of reversibility of Cell Cycle Arrest posed before us. Consider a situation wherein, the AHL concentration has been now enough to trigger cell cycle arrest, and so has happened. The signal is anyway getting produced, as per our circuit planned so far. But now, the signal is no more needed! How to decrease this signal?
+      Moreover, once the AHL signal is reduced, and as the cell density falls below the aforementioned threshold due to inevitable cell death, a reverse mechanism should restart Cell Cycle- which would then trigger another round of cell cycle arrest, and so on. We, thus, expect an oscillatory growth curve for the bacteria, oscillating around the logarithmic growth phase. How to have this reversibility? We used the tetR negative regulation of the Quorum Sensing.
+      We also decided to integrate a gene coding for the AiiA molecule, which is reported 2  to degrade the signal AHL. When cell cycle arrest occurs, tetR and AiiA both are produced. tetR represses pTetpromoter and hence downregulates AHL production, while AiiA degrades any AHL persistent in the environment at the moment.
+          </p>
   </div>
   <div class="slide hidden opacity-0">
     <h2 class="text-2xl mb-4 text-center">Build - Slide 2</h2>
     <p class="text-base leading-relaxed text-center px-5 py-5">
-      Key challenges during the build phase. We outline the main obstacles and how they were addressed.
-    </p>
+      The 3rd fragment of our Population Control Module (PCM) circuit contained this Cell Cycle Arrest (CCA) sequence. It was ordered from our sponsor Twist BioScience and then, alongwith the other fragments, HiFi assembled into a pSB1C3 backbone. The assembled plasmids were then transformed into bacteria.    </p>
   </div>
   <div class="slide hidden opacity-0">
     <h2 class="text-2xl mb-4 text-center">Build - Slide 3</h2>
     <p class="text-base leading-relaxed text-center px-5 py-5">
-      Collaboration and teamwork during the build. This slide focuses on how different team members contributed to the build phase.
-    </p>
+      We had put a little modification to the already built plasmid of the KEYSTONE Team according to our need i.e. to produce Linalool. We proposed to put GPPS and LIS gene by knocking out the idi gene from their design. The plan is to put DMAPP as a substrate of GPPS to produce the precursor of LIS (Linalool Synthase). For cloning the desired functional plasmid we ordered the pBbA5c-MevT (CO)-T1-MBIS(CO, ispA) . We have planned to knock out the ispA gene and insert GPPS and LIS in it. Hence we have ordered the mentioned plasmid from Addgene. 
+      (Plasmid ordered from addgene: https://www.addgene.org/35152/sequences/)
+          
   </div>
   <div class="slide hidden opacity-0">
     <h2 class="text-2xl mb-4 text-center">Build - Slide 4</h2>
     <p class="text-base leading-relaxed text-center px-5 py-5">
-      Summary and next steps. This slide reviews the results of the build phase and introduces the testing phase.
+      We decided to keep blunt overhangs in each fragment, so that they are Hi Fi compatible. The inserts of quorum sensing circuit were ordered in three parts from our sponsors- Twist Biosciences. The backbones were linearized out from Kit parts, as said.
+
     </p>
   </div>
 </div>
 
 <!-- Test Section -->
-<div id="test" class="section-container absolute right-[8%] top-[30%] w-[55%] h-[48%] bg-white p-0 rounded-lg shadow-inner overflow-hidden hidden transition-all duration-300 ease-in-out">
+<div id="test" class="section-container absolute padding-10 right-[8%] top-[30%] w-[55%]  bg-white p-0 rounded-lg shadow-inner overflow-hidden hidden transition-all duration-300 ease-in-out">
   <div class="nav-buttons flex justify-center items-center gap-4 mt-4 relative">
     <button class="left-button absolute left-2 px-4 py-2 text-2xl bg-teal-500 text-white rounded-full cursor-pointer hover:bg-blue-800 transition-all duration-300 ease-in-out hover:-translate-y-1" onclick="prevSlide('test')">&#9664;</button>
     <h2 class="text-center text-2xl font-bold">Test</h2>
@@ -192,32 +224,42 @@
   <div class="slide active block opacity-100 animate-fade-in">
     <h2 class="text-2xl mb-4 text-center">Test - Slide 1</h2>
     <p class="text-base leading-relaxed text-center px-5 py-5">
-      Introduction to the testing phase. This slide outlines the goals and structure of the testing phase.
-    </p>
+      Our math modellers ran an in-silico kinetic study on the above circuit.    </p>
   </div>
   <div class="slide hidden opacity-0">
     <h2 class="text-2xl mb-4 text-center">Test - Slide 2</h2>
     <p class="text-base leading-relaxed text-center px-5 py-5">
-      Testing methods and tools. We explain the tools used to ensure the project meets quality standards.
-    </p>
+      The testing of its efficacy was done through:
+      RNA-RNA Docking
+      Wet Lab: Once the Population Control Module (PCM) was constructed through Hifi Assembly, two assays were done to check the pattern of growth curve- whether an oscillatory growth is at all visible?
+      a spectrophotometric growth curve analysis, with IPTG induction. Three identical secondary cultures- one control, one with IPTG induction at 0th time point, and another with IPTG induction after 2 hours of setting the secondary culture, were given, for the E. coli strain BL21 cells transformed with PCM/Main Construct Hifi Assembled plasmid.
+      Microplate Reader Assay: A 96 well microplate was preplanned to contain transformed E. coli BL21 cells with the PCM, and then IPTG, IPTG+AHL, IPTG+Anhydrous Tetracycline in various concentrations in various wells, and in some wells, we had no inducer (as control).
+          </p>
   </div>
   <div class="slide hidden opacity-0">
     <h2 class="text-2xl mb-4 text-center">Test - Slide 3</h2>
     <p class="text-base leading-relaxed text-center px-5 py-5">
-      Test results and analysis. This slide provides an overview of the results from the testing phase.
-    </p>
+      Due to time constraint, we could not perform the experiment regarding our newer approach to produce Linalool before our wiki submission, however, we have designed required primers in silico to linearize M20 plasmid from iGEM kit, amplify the gene insert GPPS and LIS and HiFi assembly the inserts with the plasmid backbone. The detailed primers and cloned in silico plasmids are documented in the Material part of our website.    </p>
   </div>
   <div class="slide hidden opacity-0">
     <h2 class="text-2xl mb-4 text-center">Test - Slide 4</h2>
     <p class="text-base leading-relaxed text-center px-5 py-5">
-      Conclusion of the testing phase. We summarize the outcomes and plan for the next iteration.
+      The HiFi Assembly was successfully done.  Colony PCRs revealed the same. The plasmids were extracted and successfully transformed into DH5-alpha E. coli to increase copies. The plasmids extracted from their primary culture was then transformed into competent E. coli strain BL21 expression host. The construct has also been sent for a sequencing. We used this construct as the template for GFP characterization experiments and for the experiment to have an empirical idea on the best length of antisense mRNA. This is a successful engineering.
     </p>
   </div>
+  
+
+  
+</div>
+<!-- Iteration Rows -->
+<div class="iterationRowContainer  w-[80vw] bottom-[10%] left-[10%] grid grid-cols-4 z-10">
+  <div class="iterationRow font-medium text-2xl py-1 text-center border-b-4 border-[#114f85] transition-all duration-100 ease-linear cursor-pointer hover:-translate-y-1 hover:font-bold" onclick="goToSlide(0)">Iteration 1</div>
+  <div class="iterationRow font-medium text-2xl py-1 text-center border-b-4 border-[#114f85] transition-all duration-100 ease-linear cursor-pointer hover:-translate-y-1 hover:font-bold" onclick="goToSlide(1)">Iteration 2</div>
+  <div class="iterationRow font-medium text-2xl py-1 text-center border-b-4 border-[#114f85] transition-all duration-100 ease-linear cursor-pointer hover:-translate-y-1 hover:font-bold" onclick="goToSlide(2)">Iteration 3</div>
+  <div class="iterationRow font-medium text-2xl py-1 text-center border-b-4 border-[#114f85] transition-all duration-100 ease-linear cursor-pointer hover:-translate-y-1 hover:font-bold" onclick="goToSlide(3)">Iteration 4</div>
 </div>
 
-<!-- Iteration Rows -->
 
-</section>
 
 </section>
 <!-- JavaScript -->
@@ -228,8 +270,12 @@
     build: 0,
     test: 0
   };
-
-  let currentSection = 'learn'; // Default section
+var tracker1
+var tracker2
+var tracker3
+var tracker4
+  let currentSection = 'design'; // Default section
+  let currentIndex  = 0; // Default Index
 
   function rotateAndShowSection(sectionId, angle) {
     showSection(sectionId);
@@ -248,8 +294,8 @@
     updateIterationRows(sectionId);
 
     // Show the first slide when switching sections
-    currentSlides[sectionId] = 0;
-    showSlide(sectionId, 0);
+    // currentSlides[sectionId] = 0;
+    showSlide(sectionId, currentIndex);
   }
 
   function updateIterationRows(sectionId) {
@@ -276,6 +322,7 @@
     slides[index].classList.add('block', 'opacity-100', 'animate-fade-in');
 
     currentSlides[sectionId] = index;
+    currentIndex = index;
 
     // Update iteration row based on the current slide index
     document.querySelectorAll('.iterationRow').forEach((row, idx) => {
@@ -306,6 +353,7 @@
 
   function goToSlide(index) {
     showSlide(currentSection, index);
+	currentIndex = index;
   }
 
   // Initialize the page by showing the default section and updating iteration rows
