@@ -4,97 +4,187 @@
 <img src="https://static.igem.wiki/teams/5425/bacteria-8107336.png" style="height:200px; width:200px; border-radius: 20px; margin-left: 42%;" class="items-center w-full h-96 mt-20" alt="Inclusivity Banner">
 
 <!-- Heading Section -->
-<div class="heading" style=" padding: 20px; border-radius: 10px;">
+<div class="heading" style="padding: 20px; border-radius: 10px;">
     <h1 class="text-6xl font-bold text-center">Contribution</h1>
 </div>
 
+<!-- Navigation Bar -->
+<nav class="nav-bar border-2 border-gray-300 p-4 rounded-lg mb-6">
+    <ul class="flex justify-center space-x-8">
+        <li><a href="#section1" class="text-lg font-semibold">Synthetic Biology</a></li>
+        <li><a href="#section2" class="text-lg font-semibold">Applications</a></li>
+        <li><a href="#section3" class="text-lg font-semibold">Human Practices</a></li>
+        <li><a href="#section4" class="text-lg font-semibold">Drylab</a></li>
+
+    </ul>
+</nav>
+
 <main class="page-container flex mt-10">
-  <!-- Left Nav Section -->
-  <nav class="left-nav w-1/4 border-2 border-gray-300 p-4 rounded-lg shadow-lg mr-8">
-    <button onclick="showSection('section1')" class="text-xl font-bold py-2 w-full bg-[#c1a0d2] text-black rounded-lg hover:bg-[#dec5ec] hover:scale-105 transition duration-300 ease-in-out mb-4" aria-label="Go to Section 1">
-        Contribution in Synthetic Biology
-    </button>
-    <button onclick="showSection('section2')" class="text-xl font-bold py-2 w-full bg-[#c1a0d2] text-black rounded-lg hover:bg-[#dec5ec] hover:scale-105 transition duration-300 ease-in-out mb-4" aria-label="Go to Section 2">
-        Applications of Our Parts
-    </button>
-    <button onclick="showSection('section3')" class="text-xl font-bold py-2 w-full bg-[#c1a0d2] text-black rounded-lg hover:bg-[#dec5ec] hover:scale-105 transition duration-300 ease-in-out mb-4" aria-label="Go to Section 3">
-        Human Practices Contribution
-    </button>
-  </nav>
+    <!-- Right Content Section -->
+    <div class="right-content border-2 border-gray-300 p-6 rounded-lg shadow-lg">
+        <!-- Section 1 -->
+        <section id="section1" class="content-section">
+            <div class="container mx-auto px-4 py-8">
+                <h1 class="text-4xl font-bold text-center mb-8">Contribution in Synthetic Biology</h1>
+                <p class="text-lg mb-6">Our iGEM project brings several groundbreaking contributions, including a novel genetic circuit that integrates population control, safety mechanisms, and targeted therapeutic applications.</p>
+            
+                <div class="bg-white p-6 rounded-lg shadow-md mb-8">
+                    <h2 class="text-2xl font-semibold mb-4">Innovative Genetic Circuit</h2>
+                    <p> A key innovation in our design is the use of antisense mRNA to target dnaA, a gene essential for initiating DNA replication in bacteria. This approach, which has not been widely explored, offers a new and novel method for controlling bacterial growth by specifically downregulating dnaA expression. By reducing dnaA protein levels, we can achieve reversible cell cycle arrest, adding precision to our quorum sensing-based population regulation system. This unique targeting of dnaA through antisense technology, combined with our linalool-producing circuit, enhances our system's ability to maintain stable bacterial populations while ensuring biosafety through additional features like auxotrophy and a kill switch.</p>
+                </div>
+            
+                <h2 class="text-3xl font-bold text-center mb-8">Part Contributions</h2>
+                <p class="text-lg mb-6">The main part contributed by us is   Part:BBa_K5425004
+                    This is the complete circuit responsible for regulating reversible cell growth arrest. It is designed to control bacterial population dynamics through a quorum sensing mechanism.
+                    Other parts contributed are:</p>
+    
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                   
+                    <div class="bg-[#f9f9f9] p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold mb-2">Part: Part:BBa_K5425004</h3>
+                        <p><strong>Part name:</strong> Population Control Module </p>
+                        <p class="mb-2">The population control module is a carefully engineered circuit that regulates cell density through quorum sensing.</p>
+                        <p><strong>Type:</strong> COMPOSITE</p>
+                        <p><strong>Length:</strong> 3933 bp</p>
+                    </div>
+                    <div class="bg-[#f9f9f9] p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold mb-2">Part: Part:BBa_K5425002</h3>
+                        <p><strong>Part name:</strong> Antisense dnaA</p>
+                        <p class="mb-2">This part encodes an antisense mRNA that is complementary to approximately 400 bp of the primary transcript of dnaA (a replication initiator protein) in Escherichia coli.</p>
+                        <p><strong>Type:</strong> BASIC</p>
+                        <p><strong>Length:</strong> 437 bp</p>
+                    </div>
+                    <div class="bg-[#f9f9f9] p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold mb-2">Part: Part:BBa_K5425005</h3>
+                        <p><strong>Part name:</strong> Oscillation characterization circuit</p>
+                        <p class="mb-2">This circuit is designed to fine-tune the parameters of various components of part BBa_K5425004.</p>
+                        <p><strong>Type:</strong> COMPOSITE</p>
+                        <p><strong>Length:</strong> 4240 bp</p>
+                    </div>
+                    <div class="bg-[#f9f9f9] p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold mb-2">Part: Part:BBa_K5425007</h3>
+                        <p><strong>Part name:</strong> Threshold characterization circuit</p>
+                        <p class="mb-2">This circuit was designed to determine the threshold population at which the pLux promoter becomes active due to the binding of TetR and AHL.</p>
+                        <p><strong>Type:</strong> COMPOSITE</p>
+                        <p><strong>Length:</strong> 2555 bp</p>
+                    </div>
+                    <!-- Add more parts as needed -->
+            </div>
+        </section>
 
-  <!-- Right Content Section -->
-  <div class="right-content w-3/4 border-2 border-gray-300 p-6 rounded-lg shadow-lg">
-    <!-- Strategic Design Section (Visible by default) -->
-    <section id="section1" class="content-section">
-        <div class="container mx-auto px-4 py-8">
-            <h1 class="text-4xl font-bold text-center mb-8">Contribution in Synthetic Biology</h1>
-            <p class="text-lg mb-6">Our iGEM project brings several groundbreaking contributions, including a novel genetic circuit that integrates population control, safety mechanisms, and targeted therapeutic applications.</p>
-        
+        <!-- Section 2 -->
+        <section id="section2" class="content-section">
+            <h1 class="text-4xl font-bold text-center mb-8">Applications of Population Control Module for the Future</h1>
+            <p class="text-lg mb-6">The bacterial population control circuit we have developed offers exciting future extensions and possibilities, making it a powerful tool in synthetic biology. Here are several ways it could be applied in the future and come handy to synthetic biologist in the following listed ways.</p>
+            
             <div class="bg-white p-6 rounded-lg shadow-md mb-8">
-                <h2 class="text-2xl font-semibold mb-4">Innovative Genetic Circuit</h2>
-                <p>A key innovation in our design is the use of antisense mRNA to target dnaA, a gene essential for initiating DNA replication in bacteria. This approach, which has not been widely explored, offers a new and novel method for controlling bacterial growth by specifically downregulating dnaA expression.</p>
+                <h2 class="text-2xl font-semibold mb-4">Bioproduction and Metabolic Engineering:</h2>
+                <p> In industrial contexts, bacterial populations are often used to produce valuable compounds like biofuels, pharmaceuticals, fragrances, and more. Our circuit can optimize these production processes by maintaining a healthy, stable bacterial population, preventing overgrowth that could lead to resource depletion and the accumulation of toxic byproducts. This control would enable more efficient and continuous bioproduction, enhancing both productivity and sustainability.</p>
             </div>
-        
-            <h2 class="text-3xl font-bold text-center mb-8">Part Contributions</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-                <div class="bg-[#f9f9f9] p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-2">Part: BBa_K5425004</h3>
-                    <p class="mb-2">Population Control Module - A composite part that regulates cell density through quorum sensing.</p>
-                    <p><strong>Length:</strong> 3933 bp</p>
-                </div>
-                <div class="bg-[#f9f9f9] p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-2">Part: BBa_K5425005</h3>
-                    <p class="mb-2">Oscillation characterization circuit - Designed to fine-tune the parameters of the population control module.</p>
-                    <p><strong>Length:</strong> 4240 bp</p>
-                </div>
-                <!-- Add more parts as needed -->
-            </div>
-        
-        </section> 
-    <!-- System Design Section (Hidden by default) -->
-    <section id="section2" class="content-section hidden">
-        <div class="bg-blue-50 p-6 rounded-lg shadow-md mb-8">
-            <h2 class="text-3xl font-bold text-center mb-8">Applications of Our Parts</h2>
-
-            <p>The bacterial population control circuit we have developed offers exciting future extensions and possibilities, making it a powerful tool in synthetic biology. Applications in bioproduction, bioremediation, and therapeutic applications are discussed, demonstrating the broad potential of our innovation.</p>
-        </div>
     
-        </section> 
-
-    <!-- Proof of Concept Section (Hidden by default) -->
-    <section id="section3" class="content-section hidden">
-        
-        <h2 class="text-3xl font-bold text-center mb-8">Human Practices Contribution</h2>
-        <div class="bg-green-50 p-6 rounded-lg shadow-md">
-            <p>As part of our lasting impact, we created educational posters for each stall, which were key in engaging students during the event. These posters are now archived as resources for future iGEM teams to build on our outreach efforts.</p>
-            <a href="https://drive.google.com/drive/u/2/folders/1D_MNp_nUI8ES7oXcRIzrGju2A-ipF5wF" class="text-blue-600 hover:underline">Link to posters pdf</a>
-            <div class="flex flex-col items-center space-y-4">
-                <img src="https://static.igem.wiki/teams/5425/screenshot-2024-10-01-114911.png" alt="" class="w-1/2">
-                <img src="https://static.igem.wiki/teams/5425/screenshot-2024-10-01-114929.png" alt="" class="w-1/2">
+            <div class="bg-white p-6 rounded-lg shadow-md mb-8">
+                <h2 class="text-2xl font-semibold mb-4">Bioremediation:</h2>
+                <p> The system could also be adapted for environmental applications such as bioremediation, where bacteria are employed to break down contaminants. By controlling bacterial growth, we could design self-sustaining systems that effectively clean polluted environments like soil and water without overwhelming the ecosystem. This would allow for more targeted and efficient treatment of contaminated sites.</p>
             </div>
-        </div>
-        
-    </section>
     
-  </div>
+            <div class="bg-white p-6 rounded-lg shadow-md mb-8">
+                <h2 class="text-2xl font-semibold mb-4">Therapeutic Applications:</h2>
+                <p> In medicine, genetically engineered bacteria are being explored as vehicles for drug delivery to specific tissues, such as targeting cancer cells or modifying the gut microbiome. Our circuit could be used to regulate the population of therapeutic bacteria, ensuring that they deliver drugs at the right time and location while preventing overgrowth that could lead to complications. This population control would help optimize the safety and efficacy of bacterial therapies in clinical settings.
+                    </p><br>
+                    <p>By incorporating population control into various fields, this circuit could revolutionize how we use bacteria in both industrial and medical applications, offering a more controlled and sustainable approach to harnessing microbial functions.
+                    </p>
+            </div>
+                
+            <!-- Add the rest of the content here -->
+        </section>
+
+        <!-- Section 3 -->
+        <section id="section3" class="content-section">
+            <h2 class="text-3xl font-bold text-center mb-8">Human Practices Contribution</h2>
+            <div class="bg-green-50 p-6 rounded-lg shadow-md">
+                <p>As part of our lasting impact, we created educational posters for each stall, which were key in engaging students during the event. These posters covered topics like bacterial diversity, chemical safety in cosmetics, and synthetic biology innovations. Now archived, they serve as resources for future iGEM teams to build on our outreach efforts. By contributing these materials, we aim to ensure that public awareness of synthetic biology continues to grow, fostering greater accessibility and engagement for future generations.
+                </p>
+                <div class="flex flex-col items-center space-y-4">
+                    <img src="https://static.igem.wiki/teams/5425/human-practices/institute-open-day-poster-collage.webp" alt="">
+                </div>
+            </div>
+        </section>
+        <!-- Section 4: DryLab Contribution -->
+<section id="section4" class="content-section">
+    <div class="container mx-auto px-4 py-8">
+        <h1 class="text-4xl font-bold text-center mb-8">DryLab Contribution</h1>
+
+        <!-- Population Equation -->
+        <div class="bg-white p-6 rounded-lg shadow-md mb-8">
+            <h2 class="text-2xl font-semibold mb-4">Population Equation</h2>
+            <p class="text-lg mb-6">
+                We developed a new growth equation taking reference from the original logistic growth model, which helps in measuring the onset of the death phase of the bacterial population as a function of toxic secondary metabolite accumulation and substrate concentration in the medium.
+            </p>
+            <p class="text-lg mb-6">
+                The resulting equation is given below:
+            </p>
+            <pre class="bg-gray-100 p-4 rounded-md overflow-auto">
+dN/dt  =  r0/((1+(m*[CCA])^r3))N –  r0/K  N² –  (aNt⁴)/((t⁴+ b⁴)(1+(c*S)^n))
+            </pre>
+            <p class="text-lg mb-6">
+                We introduced this new term, 
+                <code>(aNt⁴)/((t⁴+ b⁴)(1+(c*S)^n))</code>, which governs the above-stated death phase onset.
+            </p>
+        </div>
+
+        <!-- AntiRNA Software -->
+        <div class="bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-2xl font-semibold mb-4">AntiRNA Software</h2>
+            <p class="text-lg mb-6">
+                We developed AntiRNA, which can predict the best antisense mRNA length for binding to the sense mRNA of DnaA to obtain the best desired output from our quorum sensing circuit. This is done by integrating our developed math model for quorum sensing with the IntaRNA docking software and DegScore deep learning algorithm.
+            </p>
+            <p class="text-lg mb-6">
+                Our algorithm just takes the sense mRNA sequence as input, and by following the directions generated by the code, it produces the best antisense mRNA length.
+            </p>
+            <p class="text-lg mb-6">
+                The repository link of our software is <a href="<link>" class="text-blue-600 underline">here</a>.
+            </p>
+        </div>
+    </div>
+</section>
+
+
+
+        
+    </div>
 </main>
 
-<script>
-  function showSection(sectionId) {
-    // Hide all sections
-    const sections = document.querySelectorAll('.content-section');
-    sections.forEach(section => {
-      section.classList.add('hidden');
-    });
+<!-- Add smooth scrolling CSS -->
+<style>
+    html {
+        scroll-behavior: smooth;
+    }
+</style>
 
-    // Show the selected section
-    const selectedSection = document.getElementById(sectionId);
-    selectedSection.classList.remove('hidden');
-  }
-
-  // By default, show the first section
-  document.addEventListener('DOMContentLoaded', () => {
-    showSection('section1');
-  });
-</script>
 {% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
