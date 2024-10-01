@@ -42,10 +42,24 @@
   .build-button { top: 57px; left: 206px; }
   .test-button { top: 205px; left: 194px; }
   .learn-button { top: 196px; left: 60px; }
+
+  .iteratonRowContainer {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    top:5%;
+  }
 </style>
 </head>
 
 <body class="m-0 font-sans bg-gray-100 flex">
+  <section class = "content_1 ">
+  <div class="iterationRowContainer absolute w-[80vw] bottom-[10%] left-[10%] grid grid-cols-4 z-10">
+    <div class="iterationRow font-medium text-2xl py-1 text-center border-b-4 border-[#114f85] transition-all duration-100 ease-linear cursor-pointer hover:-translate-y-1 hover:font-bold" onclick="goToSlide(0)">Iteration 1</div>
+    <div class="iterationRow font-medium text-2xl py-1 text-center border-b-4 border-[#114f85] transition-all duration-100 ease-linear cursor-pointer hover:-translate-y-1 hover:font-bold" onclick="goToSlide(1)">Iteration 2</div>
+    <div class="iterationRow font-medium text-2xl py-1 text-center border-b-4 border-[#114f85] transition-all duration-100 ease-linear cursor-pointer hover:-translate-y-1 hover:font-bold" onclick="goToSlide(2)">Iteration 3</div>
+    <div class="iterationRow font-medium text-2xl py-1 text-center border-b-4 border-[#114f85] transition-all duration-100 ease-linear cursor-pointer hover:-translate-y-1 hover:font-bold" onclick="goToSlide(3)">Iteration 4</div>
+  </div>
   <section class = "main-section mt-20">
 <!-- Circle Container -->
 <div id="circleContainer" class="relative">
@@ -202,12 +216,9 @@
 </div>
 
 <!-- Iteration Rows -->
-<div class="iterationRowContainer absolute w-[80vw] bottom-[10%] left-[10%] grid grid-cols-4 z-10">
-  <div class="iterationRow font-medium text-2xl py-1 text-center border-b-4 border-[#114f85] transition-all duration-100 ease-linear cursor-pointer hover:-translate-y-1 hover:font-bold" onclick="goToSlide(0)">Iteration 1</div>
-  <div class="iterationRow font-medium text-2xl py-1 text-center border-b-4 border-[#114f85] transition-all duration-100 ease-linear cursor-pointer hover:-translate-y-1 hover:font-bold" onclick="goToSlide(1)">Iteration 2</div>
-  <div class="iterationRow font-medium text-2xl py-1 text-center border-b-4 border-[#114f85] transition-all duration-100 ease-linear cursor-pointer hover:-translate-y-1 hover:font-bold" onclick="goToSlide(2)">Iteration 3</div>
-  <div class="iterationRow font-medium text-2xl py-1 text-center border-b-4 border-[#114f85] transition-all duration-100 ease-linear cursor-pointer hover:-translate-y-1 hover:font-bold" onclick="goToSlide(3)">Iteration 4</div>
-</div>
+
+</section>
+
 </section>
 <!-- JavaScript -->
 <script>
