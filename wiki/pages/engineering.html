@@ -3,11 +3,6 @@
 {% block lead %}{% endblock %}
 {% block page_content %}
 
-<img src="https://static.igem.wiki/teams/5425/bacteria-8107336.png" style="height:200px; width:200px; border-radius: 20px; margin-left: 42%;" class="items-center w-full h-96 mt-20" alt="Inclusivity Banner">
-
-<div class="heading" style=" font-family:Architype Bayer-type W90; padding: 20px; border-radius: 10px;">
-  <h1 class="text-8xl font-bold text-center">experiment</h1>
-</div>
 <style>
   @keyframes fade-in {
     from {
@@ -27,7 +22,7 @@
   /* Position the buttons on the image */
   .button-area {
     position: absolute;
-    background-color: rgba(0, 128, 128, 0.);
+    background-color: rgba(0, 128, 128, 0.01);
     color: white;
     border-radius: 50%;
     width: 100px;
@@ -43,16 +38,6 @@
     transform: scale(1.1);
   }
 
-  .section-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 20px;
-    top:95%;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-
   .design-button { top: 50px; left: 52px; }
   .build-button { top: 57px; left: 206px; }
   .test-button { top: 205px; left: 194px; }
@@ -62,13 +47,13 @@
     display: flex;
     justify-content: center;
     gap: 20px;
-    top:5%;
+    top:5%
   }
 </style>
 </head>
 
 <body class="m-0 font-sans bg-gray-100 flex">
-  <section class = "content_1 ">
+  <section class = "content_1 py-20">
   <div class="iterationRowContainer absolute w-[80vw] bottom-[10%] left-[10%] grid grid-cols-4 z-10">
     <div class="iterationRow font-medium text-2xl py-1 text-center border-b-4 border-[#114f85] transition-all duration-100 ease-linear cursor-pointer hover:-translate-y-1 hover:font-bold" onclick="goToSlide(0)">Iteration 1</div>
     <div class="iterationRow font-medium text-2xl py-1 text-center border-b-4 border-[#114f85] transition-all duration-100 ease-linear cursor-pointer hover:-translate-y-1 hover:font-bold" onclick="goToSlide(1)">Iteration 2</div>

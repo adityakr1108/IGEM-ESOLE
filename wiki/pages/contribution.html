@@ -1,52 +1,100 @@
 {% extends "layout.html" %}
-
 {% block title %}Model{% endblock %}
-
 {% block page_content %}
-<div class="flex flex-col items-center w-full">
-    <div class="w-full h-40 flex justify-center items-center mt-40">
-      <img src="path/to/your/image.jpg" alt="Model Image" class="max-h-full">
-    </div>
-    
-    <!-- Heading block -->
-    <div class="w-full max-w-10xl bg-[#dec5ec] text-white py-4 px-8 text-center">
-      <h1 class="font-bold text-8xl text-[#603d71]">Contribution</h1>
-    </div>
+<img src="https://static.igem.wiki/teams/5425/bacteria-8107336.png" style="height:200px; width:200px; border-radius: 20px; margin-left: 42%;" class="items-center w-full h-96 mt-20" alt="Inclusivity Banner">
 
-<div class="container mx-auto px-4 py-8">
-    <h1 class="text-4xl font-bold text-center mb-8">Contribution in Synthetic Biology</h1>
-    <p class="text-lg mb-6">Our iGEM project brings several groundbreaking contributions, including a novel genetic circuit that integrates population control, safety mechanisms, and targeted therapeutic applications.</p>
-
-    <div class="bg-white p-6 rounded-lg shadow-md mb-8">
-        <h2 class="text-2xl font-semibold mb-4">Innovative Genetic Circuit</h2>
-        <p>A key innovation in our design is the use of antisense mRNA to target dnaA, a gene essential for initiating DNA replication in bacteria. This approach, which has not been widely explored, offers a new and novel method for controlling bacterial growth by specifically downregulating dnaA expression.</p>
-    </div>
-
-    <h2 class="text-3xl font-bold text-center mb-8">Part Contributions</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-        <div class="bg-[#f9f9f9] p-6 rounded-lg shadow-md">
-            <h3 class="text-xl font-semibold mb-2">Part: BBa_K5425004</h3>
-            <p class="mb-2">Population Control Module - A composite part that regulates cell density through quorum sensing.</p>
-            <p><strong>Length:</strong> 3933 bp</p>
-        </div>
-        <div class="bg-[#f9f9f9] p-6 rounded-lg shadow-md">
-            <h3 class="text-xl font-semibold mb-2">Part: BBa_K5425005</h3>
-            <p class="mb-2">Oscillation characterization circuit - Designed to fine-tune the parameters of the population control module.</p>
-            <p><strong>Length:</strong> 4240 bp</p>
-        </div>
-        <!-- Add more parts as needed -->
-    </div>
-
-    <h2 class="text-3xl font-bold text-center mb-8">Applications of Our Parts</h2>
-    <div class="bg-blue-50 p-6 rounded-lg shadow-md mb-8">
-        <p>The bacterial population control circuit we have developed offers exciting future extensions and possibilities, making it a powerful tool in synthetic biology. Applications in bioproduction, bioremediation, and therapeutic applications are discussed, demonstrating the broad potential of our innovation.</p>
-    </div>
-
-    <h2 class="text-3xl font-bold text-center mb-8">Human Practices Contribution</h2>
-    <div class="bg-green-50 p-6 rounded-lg shadow-md">
-        <p>As part of our lasting impact, we created educational posters for each stall, which were key in engaging students during the event. These posters are now archived as resources for future iGEM teams to build on our outreach efforts.</p>
-        <a href="https://drive.google.com/drive/u/2/folders/1D_MNp_nUI8ES7oXcRIzrGju2A-ipF5wF" class="text-blue-600 hover:underline">Link to posters pdf</a>
-    </div>
+<!-- Heading Section -->
+<div class="heading" style=" padding: 20px; border-radius: 10px;">
+    <h1 class="text-6xl font-bold text-center">Contribution</h1>
 </div>
 
+<main class="page-container flex mt-10">
+  <!-- Left Nav Section -->
+  <nav class="left-nav w-1/4 border-2 border-gray-300 p-4 rounded-lg shadow-lg mr-8">
+    <button onclick="showSection('section1')" class="text-xl font-bold py-2 w-full bg-[#c1a0d2] text-black rounded-lg hover:bg-[#dec5ec] hover:scale-105 transition duration-300 ease-in-out mb-4" aria-label="Go to Section 1">
+        Contribution in Synthetic Biology
+    </button>
+    <button onclick="showSection('section2')" class="text-xl font-bold py-2 w-full bg-[#c1a0d2] text-black rounded-lg hover:bg-[#dec5ec] hover:scale-105 transition duration-300 ease-in-out mb-4" aria-label="Go to Section 2">
+        Applications of Our Parts
+    </button>
+    <button onclick="showSection('section3')" class="text-xl font-bold py-2 w-full bg-[#c1a0d2] text-black rounded-lg hover:bg-[#dec5ec] hover:scale-105 transition duration-300 ease-in-out mb-4" aria-label="Go to Section 3">
+        Human Practices Contribution
+    </button>
+  </nav>
+
+  <!-- Right Content Section -->
+  <div class="right-content w-3/4 border-2 border-gray-300 p-6 rounded-lg shadow-lg">
+    <!-- Strategic Design Section (Visible by default) -->
+    <section id="section1" class="content-section">
+        <div class="container mx-auto px-4 py-8">
+            <h1 class="text-4xl font-bold text-center mb-8">Contribution in Synthetic Biology</h1>
+            <p class="text-lg mb-6">Our iGEM project brings several groundbreaking contributions, including a novel genetic circuit that integrates population control, safety mechanisms, and targeted therapeutic applications.</p>
+        
+            <div class="bg-white p-6 rounded-lg shadow-md mb-8">
+                <h2 class="text-2xl font-semibold mb-4">Innovative Genetic Circuit</h2>
+                <p>A key innovation in our design is the use of antisense mRNA to target dnaA, a gene essential for initiating DNA replication in bacteria. This approach, which has not been widely explored, offers a new and novel method for controlling bacterial growth by specifically downregulating dnaA expression.</p>
+            </div>
+        
+            <h2 class="text-3xl font-bold text-center mb-8">Part Contributions</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                <div class="bg-[#f9f9f9] p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-2">Part: BBa_K5425004</h3>
+                    <p class="mb-2">Population Control Module - A composite part that regulates cell density through quorum sensing.</p>
+                    <p><strong>Length:</strong> 3933 bp</p>
+                </div>
+                <div class="bg-[#f9f9f9] p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-2">Part: BBa_K5425005</h3>
+                    <p class="mb-2">Oscillation characterization circuit - Designed to fine-tune the parameters of the population control module.</p>
+                    <p><strong>Length:</strong> 4240 bp</p>
+                </div>
+                <!-- Add more parts as needed -->
+            </div>
+        
+        </section> 
+    <!-- System Design Section (Hidden by default) -->
+    <section id="section2" class="content-section hidden">
+        <div class="bg-blue-50 p-6 rounded-lg shadow-md mb-8">
+            <h2 class="text-3xl font-bold text-center mb-8">Applications of Our Parts</h2>
+
+            <p>The bacterial population control circuit we have developed offers exciting future extensions and possibilities, making it a powerful tool in synthetic biology. Applications in bioproduction, bioremediation, and therapeutic applications are discussed, demonstrating the broad potential of our innovation.</p>
+        </div>
+    
+        </section> 
+
+    <!-- Proof of Concept Section (Hidden by default) -->
+    <section id="section3" class="content-section hidden">
+        
+        <h2 class="text-3xl font-bold text-center mb-8">Human Practices Contribution</h2>
+        <div class="bg-green-50 p-6 rounded-lg shadow-md">
+            <p>As part of our lasting impact, we created educational posters for each stall, which were key in engaging students during the event. These posters are now archived as resources for future iGEM teams to build on our outreach efforts.</p>
+            <a href="https://drive.google.com/drive/u/2/folders/1D_MNp_nUI8ES7oXcRIzrGju2A-ipF5wF" class="text-blue-600 hover:underline">Link to posters pdf</a>
+            <div class="flex flex-col items-center space-y-4">
+                <img src="https://static.igem.wiki/teams/5425/screenshot-2024-10-01-114911.png" alt="" class="w-1/2">
+                <img src="https://static.igem.wiki/teams/5425/screenshot-2024-10-01-114929.png" alt="" class="w-1/2">
+            </div>
+        </div>
+        
+    </section>
+    
+  </div>
+</main>
+
+<script>
+  function showSection(sectionId) {
+    // Hide all sections
+    const sections = document.querySelectorAll('.content-section');
+    sections.forEach(section => {
+      section.classList.add('hidden');
+    });
+
+    // Show the selected section
+    const selectedSection = document.getElementById(sectionId);
+    selectedSection.classList.remove('hidden');
+  }
+
+  // By default, show the first section
+  document.addEventListener('DOMContentLoaded', () => {
+    showSection('section1');
+  });
+</script>
 {% endblock %}
