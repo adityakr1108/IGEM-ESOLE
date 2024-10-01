@@ -1,53 +1,82 @@
 {% extends "layout.html" %}
-  
-{% block title %}Results{% endblock %}
-{% block lead %}You can describe the results of your project and your future plans here.{% endblock %}
-
+{% block title %}Design{% endblock %}
+{% block lead %}{% endblock %}
 {% block page_content %}
 
-<div class="row mt-4">
-  <div class="col-lg-5">
-    <h2>What should this page contain?</h2>
-    <hr>
-    <ul>
-      <li>Clearly and objectively describe the results of your work.</li>
-      <li>Future plans for the project.</li>
-      <li>Considerations for replicating the experiments.</li>
-    </ul>
-  </div>
-  <div class="col-lg-7">
-    <h2>Describe what your results mean</h2>
-    <hr>
-    <ul>
-      <li>Interpretation of the results obtained during your project. Don't just show a plot/figure/graph/other, tell us what you think the data means. This is an important part of your project that the judges will look for.</li>
-      <li>Show data, but remember <b>all measurement and characterization data must also be on the Part's Main Page on the <a href="https://parts.igem.org/Main_Page">Registry</a>.</b> Otherwise these data will not be in consideration for any medals or part awards!</li>
-      <li>Consider including an analysis summary section to discuss what your results mean. Judges like to read what you think your data means, beyond all the data you have acquired during your project.</li>
-    </ul>
-  </div>
+<img src="https://static.igem.wiki/teams/5425/bacteria-8107336.png" style="height:200px; width:200px; border-radius: 20px; margin-left: 42%;" class="items-center w-full h-96 mt-20" alt="Inclusivity Banner">
+
+<!-- Heading Section -->
+<div class="heading" style="padding: 20px; border-radius: 10px;">
+    <h1 class="text-6xl font-bold text-center">Results</h1>
 </div>
 
-<div class="row mt-4">
-  <div class="col-lg-8">
-    <h2>Project Achievements</h2>
-    <hr>
-    <p>You can also include a list of bullet points (and links) of the successes and failures you have had over your summer. It is a quick reference page for the judges to see what you achieved during your summer.</p>
-    <ul>
-      <li>A list of linked bullet points of the successful results during your project</li>
-      <li>A list of linked bullet points of the unsuccessful results during your project and what you learned from them. This is about being scientifically honest. If you worked on an area for a long time with no success, tell us so we know where you put your effort. Furthermore, you can still impress the judges by thoughtfully discussing what went wrong and how you might change things. </li>
-    </ul>
+<main class="page-container flex mt-10">
+  <!-- Left Nav Section -->
+  <nav class="left-nav w-1/4 border-2 border-gray-300 p-4 rounded-lg shadow-lg mr-8">
+    <button onclick="showSection('section1')" class="text-lg py-2 w-full bg-[#c1a0d2] text-white rounded-lg hover:bg-[#dec5ec] hover:scale-105 transition duration-300 ease-in-out mb-4" aria-label="Go to Section 1">
+      Quantitative Assay
+    </button>
+    <button onclick="showSection('section2')" class="text-lg py-2 w-full bg-[#c1a0d2] text-white rounded-lg hover:bg-[#dec5ec] hover:scale-105 transition duration-300 ease-in-out mb-4" aria-label="Go to Section 2">
+      Fungal Assay
+    </button>
+    <button onclick="showSection('section3')" class="text-lg py-2 w-full bg-[#c1a0d2] text-white rounded-lg hover:bg-[#dec5ec] hover:scale-105 transition duration-300 ease-in-out mb-4" aria-label="Go to Section 3">
+      Construction Of PCM
+    </button>
+    <button onclick="showSection('section4')" class="text-lg py-2 w-full bg-[#c1a0d2] text-white rounded-lg hover:bg-[#dec5ec] hover:scale-105 transition duration-300 ease-in-out mb-4" aria-label="Go to Section 4">
+      Characterisation of PCM Circuit
+    </button>
+    <button onclick="showSection('section5')" class="text-lg py-2 w-full bg-[#c1a0d2] text-white rounded-lg hover:bg-[#dec5ec] hover:scale-105 transition duration-300 ease-in-out" aria-label="Go to Section 5">
+      Antisense
+    </button>
+  </nav>
+
+  <!-- Right Content Section -->
+  <div id="content" class="w-3/4">
+    <div id="section1" class="section-content border border-gray-300 p-6 rounded-lg shadow-lg mb-6 hidden">
+      <h2 class="text-3xl font-bold mb-4">Quantive Assay</h2>
+      <p>
+        This section contains the details about the strategic design process. Here you can discuss how the design choices were made based on strategic considerations.
+      </p>
+    </div>
+    <div id="section2" class="section-content border border-gray-300 p-6 rounded-lg shadow-lg mb-6 hidden">
+      <h2 class="text-3xl font-bold mb-4">Fungal Assay</h2>
+      <p>
+        This section outlines the system design. It explains the architecture, components, and methodologies used for the design of the system.
+      </p>
+    </div>
+    <div id="section3" class="section-content border border-gray-300 p-6 rounded-lg shadow-lg mb-6 hidden">
+      <h2 class="text-3xl font-bold mb-4">Construction of PCM</h2>
+      <p>
+        Proof section details the experiments and evidence that support the feasibility and effectiveness of the design.
+      </p>
+    </div>
+    <div id="section4" class="section-content border border-gray-300 p-6 rounded-lg shadow-lg mb-6 hidden">
+      <h2 class="text-3xl font-bold mb-4">Characterisation of PCM Circuit</h2>
+      <p>
+        This section focuses on validation processes to ensure that the design meets the necessary requirements and performs as expected.
+      </p>
+    </div>
+    <div id="section5" class="section-content border border-gray-300 p-6 rounded-lg shadow-lg mb-6 hidden">
+      <h2 class="text-3xl font-bold mb-4">Antisense</h2>
+      <p>
+        The implementation section covers how the design was brought to life, including any challenges faced during the development phase.
+      </p>
+    </div>
   </div>
-  <div class="col-lg-4">
-    <h2>Inspirations</h2>
-    <hr>
-    <ul>
-      <li><a href="https://2019.igem.org/Team:Newcastle/Results">2019 Newcastle</a></li>
-      <li><a href="https://2019.igem.org/Team:Munich/Results">2019 Munich</a></li>
-      <li><a href="https://2019.igem.org/Team:Tec-Chihuahua/Results">2019 Tec Chihuahua</a></li>
-      <li><a href="https://2020.igem.org/Team:Aalto-Helsinki/Results">2020 Aalto Helsinki</a></li>
-      <li><a href="https://2020.igem.org/Team:GreatBay_SCIE/Results">2020 GreatBay SCIE</a></li>
-      <li><a href="https://2020.igem.org/Team:Queens_Canada/Results">2020 Queens Canada</a></li>
-    </ul>
-  </div>
-</div>
+</main>
+
+<script>
+  function showSection(sectionId) {
+    // Hide all sections
+    document.querySelectorAll('.section-content').forEach(section => {
+      section.classList.add('hidden');
+    });
+    // Show the selected section
+    document.getElementById(sectionId).classList.remove('hidden');
+  }
+
+  // Initially show the first section
+  showSection('section1');
+</script>
 
 {% endblock %}

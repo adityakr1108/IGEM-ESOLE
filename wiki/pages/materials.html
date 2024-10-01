@@ -1,10 +1,161 @@
 {% extends "layout.html" %}
-  
-{% block title %}Measurement{% endblock %}
-{% block lead %}Synthetic Biology needs great measurement approaches for characterizing parts, and efficient new methods for characterizing many parts at once. Describe your measurement approaches on this page.{% endblock %}
+
+{% block title %}Materials{% endblock %}
 
 {% block page_content %}
-  
 
+
+<img src="https://static.igem.wiki/teams/5425/bacteria-8107336.png" style="height:200px; width:200px; border-radius: 20px; margin-left: 42%;" class="items-center w-full h-96 mt-20" alt="Inclusivity Banner">
+
+<div class="heading" style=" font-family:Architype Bayer-type W90; padding: 20px; border-radius: 10px;">
+  <h1 class="text-8xl font-bold text-center">materials</h1>
+</div>
+<!-- Strain Table -->
+<div class="overflow-x-auto">
+  <table class="min-w-full border border-gray-300 bg-white shadow-md sm:rounded-lg">
+    <thead class="bg-gray-100">
+      <tr>
+        <th class="px-4 py-2 text-left text-gray-700">Strain</th>
+        <th class="px-4 py-2 text-left text-gray-700">Use</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="border-t border-gray-300">
+        <td class="px-4 py-2">Escherichia coli BL21 (DE3)</td>
+        <td class="px-4 py-2">For protein expression</td>
+      </tr>
+      <tr class="border-t border-gray-300">
+        <td class="px-4 py-2">Escherichia coli DH5α</td>
+        <td class="px-4 py-2">For the cloning of our plasmid of interest</td>
+      </tr>
+      <tr class="border-t border-gray-300">
+        <td class="px-4 py-2">Escherichia coli TOP10</td>
+        <td class="px-4 py-2">To increase the copy number of the plasmid</td>
+      </tr>
+      <tr class="border-t border-gray-300">
+        <td class="px-4 py-2">S. cerevisiae</td>
+        <td class="px-4 py-2">Plasmid for MEV pathway</td>
+      </tr>
+      <tr class="border-t border-gray-300">
+        <td class="px-4 py-2">Chaetomium thermophilum var. thermophilum 1495</td>
+        <td class="px-4 py-2">Fungal assay in the presence of different Linalool conc.</td>
+      </tr>
+      <tr class="border-t border-gray-300">
+        <td class="px-4 py-2">Vibrio fischeri</td>
+        <td class="px-4 py-2">Quorum sensing system</td>
+      </tr>
+      <tr class="border-t border-gray-300">
+        <td class="px-4 py-2">Pseudomonas sp.</td>
+        <td class="px-4 py-2">AHL for Lux system induction</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Plasmid Table -->
+<div class="overflow-x-auto mt-6">
+  <table class="min-w-full border border-gray-300 bg-white shadow-md sm:rounded-lg">
+    <thead class="bg-gray-100">
+      <tr>
+        <th class="px-4 py-2 text-left text-gray-700">Plasmid</th>
+        <th class="px-4 py-2 text-left text-gray-700">Speciality</th>
+        <th class="px-4 py-2 text-left text-gray-700">Why Used?</th>
+        <th class="px-4 py-2 text-left text-gray-700">Source Link</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="border-t border-gray-300">
+        <td class="px-4 py-2">pUC19</td>
+        <td class="px-4 py-2">Ori derived from pMB1, ampicillin, lacZa promoter</td>
+        <td class="px-4 py-2">Cloning and propagation of the DH5alpha protein producing genes</td>
+        <td class="px-4 py-2"><a href="#" class="text-blue-500 hover:underline">Source</a></td>
+      </tr>
+      <tr class="border-t border-gray-300">
+        <td class="px-4 py-2">C11</td>
+        <td class="px-4 py-2">Chloramphenicol selective marker, lux system can be expressed</td>
+        <td class="px-4 py-2">-</td>
+        <td class="px-4 py-2"><a href="https://parts.igem.org/Part:BBa_J364000" class="text-blue-500 hover:underline">https://parts.igem.org/Part:BBa_J364000</a></td>
+      </tr>
+      <tr class="border-t border-gray-300">
+        <td class="px-4 py-2">M20</td>
+        <td class="px-4 py-2">Chloramphenicol resistant pSB1C3SA, IPTG inducible pTac promoter</td>
+        <td class="px-4 py-2">Inserted variable lengths of CCA (Antisense) sequence</td>
+        <td class="px-4 py-2"><a href="https://parts.igem.org/Part:BBa_K2572025" class="text-blue-500 hover:underline">https://parts.igem.org/Part:BBa_K2572025</a></td>
+      </tr>
+      <tr class="border-t border-gray-300">
+        <td class="px-4 py-2">pBbA5c-MevT(CO)-T1-MBIS(CO, ispA)</td>
+        <td class="px-4 py-2">Chloramphenicol</td>
+        <td class="px-4 py-2">Insertion of genes GPPS and LIS for linalool production</td>
+        <td class="px-4 py-2"><a href="https://www.addgene.org/" class="text-blue-500 hover:underline">Addgene</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Primers Table -->
+<div class="overflow-x-auto mt-6">
+  <table class="min-w-full border border-gray-300 bg-white shadow-md sm:rounded-lg">
+    <thead class="bg-gray-100">
+      <tr>
+        <th class="px-4 py-2 text-left text-gray-700">Primers</th>
+        <th class="px-4 py-2 text-left text-gray-700">Sequence</th>
+        <th class="px-4 py-2 text-left text-gray-700">Used For</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="border-t border-gray-300">
+        <td class="px-4 py-2">PL-RP</td>
+        <td class="px-4 py-2">AGGGATGTCAATCTCTATCACTGATAGGGAATTTCTAGAAGCGGCCGCGAAT</td>
+        <td class="px-4 py-2">Plasmid linearisation</td>
+      </tr>
+      <tr class="border-t border-gray-300">
+        <td class="px-4 py-2">Ptet-FP</td>
+        <td class="px-4 py-2">GATAGAGATTGACATCCCTA</td>
+        <td class="px-4 py-2">Insert-1 grad. Amplify FP</td>
+      </tr>
+      <tr class="border-t border-gray-300">
+        <td class="px-4 py-2">I1-amp-RP</td>
+        <td class="px-4 py-2">GAGCGCCATTGAAATTACGTCGTCCAAGCTTAGTCGTG</td>
+        <td class="px-4 py-2">Insert-1 amplify RP</td>
+      </tr>
+      <tr class="border-t border-gray-300">
+        <td class="px-4 py-2">I2-amp-FP</td>
+        <td class="px-4 py-2">ATGGCACGACTAAGCTTGGACG</td>
+        <td class="px-4 py-2">Insert-2 amplify</td>
+      </tr>
+      <!-- Add more primer rows as needed -->
+    </tbody>
+  </table>
+</div>
+
+<!-- Chemicals Table -->
+<div class="overflow-x-auto mt-6">
+  <table class="min-w-full border border-gray-300 bg-white shadow-md sm:rounded-lg">
+    <thead class="bg-gray-100">
+      <tr>
+        <th class="px-4 py-2 text-left text-gray-700">Chemical Name</th>
+        <th class="px-4 py-2 text-left text-gray-700">Used For</th>
+        <th class="px-4 py-2 text-left text-gray-700">Link</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="border-t border-gray-300">
+        <td class="px-4 py-2">Dry AHL(N-(3-Oxododecanoyl)-L-homoserine lactone)</td>
+        <td class="px-4 py-2">For induction checking in PCM</td>
+        <td class="px-4 py-2"><a href="https://www.sigmaaldrich.com/IN/en/search/o9139?focus=products&page=1&perpage=30&sort=relevance&term=o9139&type=product" class="text-blue-500 hover:underline">Dry AHL Link</a></td>
+      </tr>
+      <tr class="border-t border-gray-300">
+        <td class="px-4 py-2">Anhydro tetracycline</td>
+        <td class="px-4 py-2">To check how tetR binding affects upon induction</td>
+        <td class="px-4 py-2"><a href="https://www.takarabio.com/products/transfection-and-cell-culture/antibiotic-selection/anhydrotetracycline?srsltid=AfmBOoqfDuSb22UOTg8MNCZwrHJ7AHELES_mBkESklCfwz-IasYJnUVw" class="text-blue-500 hover:underline">Anhydro tetracycline Link</a></td>
+      </tr>
+      <tr class="border-t border-gray-300">
+        <td class="px-4 py-2">IPTG</td>
+        <td class="px-4 py-2">To check ptac promoter affecting upon induction</td>
+        <td class="px-4 py-2"><a href="https://www.sigmaaldrich.com/IN/en/product/sial/i6758?srsltid=AfmBOooVR5duyO-zSOGb9ElKRvy1qQyn-CLWe4DZh1xNe0Ze_BVeOVOs" class="text-blue-500 hover:underline">IPTG Link</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 {% endblock %}

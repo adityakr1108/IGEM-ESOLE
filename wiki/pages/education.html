@@ -96,6 +96,14 @@
         }
     }
 
+  .gallery-image {
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+  }
+
+  .gallery-image:hover {
+    transform: scale(1.05); /* Increase the size to 110% */
+  }
     /* Responsive adjustments */
     @media (max-width: 768px) {
         .flex {
@@ -178,12 +186,12 @@
 <section class="mt-10">
   <h2 class="text-4xl font-bold text-center">Human Practices Gallery</h2>
   <div class="gallery grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-8">
-      <img src="https://static.igem.wiki/teams/5425/human-practices/img-20240925-143450-047-1.webp" alt="Gallery Image 1" class="rounded-lg gallery-image">
-      <img src="https://static.igem.wiki/teams/5425/human-practices/img-20240925-143453-616.webp" alt="Gallery Image 2" class="rounded-lg gallery-image">
-      <img src="https://static.igem.wiki/teams/5425/human-practices/img-20240925-143451-658-1.webp" alt="Gallery Image 3" class="rounded-lg gallery-image">
-      <img src="https://static.igem.wiki/teams/5425/human-practices/photo-1-2024-09-27-11-50-36-66f64f0880f4e.webp" alt="Gallery Image 4" class="rounded-lg gallery-image">
-      <img src="https://static.igem.wiki/teams/5425/human-practices/photo-2-2024-09-27-11-50-36-66f64f072ce25.webp" alt="Gallery Image 5" class="rounded-lg gallery-image">
-      <img src="https://static.igem.wiki/teams/5425/human-practices/photo-3-2024-09-27-11-50-36-66f64f0fed72f.webp" alt="Gallery Image 6" class="rounded-lg gallery-image">
+    <img src="https://static.igem.wiki/teams/5425/human-practices/img-20240925-143450-047-1.webp" alt="Gallery Image 1" class="rounded-lg gallery-image">
+    <img src="https://static.igem.wiki/teams/5425/human-practices/img-20240925-143453-616.webp" alt="Gallery Image 2" class="rounded-lg gallery-image">
+    <img src="https://static.igem.wiki/teams/5425/human-practices/img-20240925-143451-658-1.webp" alt="Gallery Image 3" class="rounded-lg gallery-image">
+    <img src="https://static.igem.wiki/teams/5425/human-practices/photo-1-2024-09-27-11-50-36-66f64f0880f4e.webp" alt="Gallery Image 4" class="rounded-lg gallery-image">
+    <img src="https://static.igem.wiki/teams/5425/human-practices/photo-2-2024-09-27-11-50-36-66f64f072ce25.webp" alt="Gallery Image 5" class="rounded-lg gallery-image">
+    <img src="https://static.igem.wiki/teams/5425/human-practices/photo-3-2024-09-27-11-50-36-66f64f0fed72f.webp" alt="Gallery Image 6" class="rounded-lg gallery-image">
   </div>
 </section>
 
