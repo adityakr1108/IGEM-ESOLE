@@ -1,6 +1,6 @@
 # Team IISER-Kolkata 2024 Wiki
 
-This repository **MUST** contain all coding assets to generate your team's wiki (HTML, CSS, JavaScript, TypeScript, Python)
+This repository **MUST** contain all coding assets to generate your team's wiki (HTML, CSS, JavaScript, TypeScript, Python, etc).
 
 Images, photos, icons and fonts **MUST** be stored on `static.igem.wiki` using [tools.igem.org](https://tools.igem.org), and Videos **must** be embedded from [iGEM Video Universe](https://video.igem.org).
 
