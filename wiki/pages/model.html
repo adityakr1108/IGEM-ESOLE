@@ -125,7 +125,6 @@
                 text-align: left;
             }
     </style>
-<<<<<<< HEAD
     
       <!-- Description -->
       <img src="https://static.igem.wiki/teams/5425/bacteria-8107336.png" style="height:200px; width:200px; border-radius: 20px; margin-left: 42%;" class="items-center w-full h-96 mt-20" alt="Inclusivity Banner">
@@ -1076,26 +1075,11 @@
         <li><a href="https://2020.igem.org/Team:Fudan/Model">iGEM Team Fudan</a></li>
         <li><a href="https://2021.igem.org/Team:NCTU_Formosa/Efficiency_Optimization_Model">iGEM Team NCTU Formosa</a></li>
     </ol>
-
-   
-
 </section>
 
                 
         
                
-=======
-</head>
-    <body>
-        {% extends "layout.html" %}
-        {% block title %}Notebook{% endblock %}
-        {% block page_content %}
-        <div class="heading"><b class="title">Math models</b>
-        <p class="title-quote">“All models are approximations. Essentially, all models are wrong, but some are useful. However, the approximate nature of the model must always be borne in mind”<br>
-        <b class="author">~ George Box</b>
-</p>
-        <img class="bacteria" src="https://static.igem.wiki/teams/5425/bacteria-8107336.png">
->>>>>>> ba2818556bfbeadc939dab776c3d170b174ee338
         </div>
 
     
@@ -1346,102 +1330,33 @@
             <p>The reason for building the stochastic model is to study the effect of noise in our linalool production circuit and observe whether noise can enhance or diminish the amount of linalool produced by the bacteria. Any biological system in contact with the outside environment will be influenced by several external factors that can subject the circuit to a variety of noise levels, making the study of such systems in the presence of external noise extremely important.</p>
         
             <h2 style="text-align: center; margin-top: 40px;" class="text-2xl font-bold">Events in Stochastic Model</h2>
-            <div class="flex justify-center mt-8">
-                <table class="table-auto bg-white rounded-lg shadow-lg w-3/4">
-                    <!-- Table Head -->
-                    <thead>
-                        <tr class="bg-blue-500 text-white">
-                            <th class="px-4 py-2 text-center">Event No.</th>
-                            <th class="px-4 py-2 text-center">Event</th>
-                            <th class="px-4 py-2 text-center">Rate</th>
-                        </tr>
-                    </thead>
-                    <!-- Table Body -->
-                    <tbody>
-                        <tr class="hover:bg-gray-200">
-                            <td class="border px-4 py-2 text-center">20</td>
-                            <td class="border px-4 py-2 text-center">Φ 🡪 E</td>
-                            <td class="border px-4 py-2 text-center">kEN</td>
-                        </tr>
-                        <tr class="hover:bg-gray-200">
-                            <td class="border px-4 py-2 text-center">21</td>
-                            <td class="border px-4 py-2 text-center">E 🡪 Φ</td>
-                            <td class="border px-4 py-2 text-center">dEI</td>
-                        </tr>
-                        <tr class="hover:bg-gray-200">
-                            <td class="border px-4 py-2 text-center">22</td>
-                            <td class="border px-4 py-2 text-center">Φ 🡪 ACA</td>
-                            <td class="border px-4 py-2 text-center">kACAN</td>
-                        </tr>
-                        <tr class="hover:bg-gray-200">
-                            <td class="border px-4 py-2 text-center">23</td>
-                            <td class="border px-4 py-2 text-center">ACA 🡪 Φ</td>
-                            <td class="border px-4 py-2 text-center">dACA(ACA)</td>
-                        </tr>
-                        <tr class="hover:bg-gray-200">
-                            <td class="border px-4 py-2 text-center">24</td>
-                            <td class="border px-4 py-2 text-center">ACA 🡪 AAC</td>
-                            <td class="border px-4 py-2 text-center">2k10*E*ACA/(2Km10+ACA)</td>
-                        </tr>
-                        <tr class="hover:bg-gray-200">
-                            <td class="border px-4 py-2 text-center">25</td>
-                            <td class="border px-4 py-2 text-center">ACA + AAC 🡪 HMG</td>
-                            <td class="border px-4 py-2 text-center">2k2*E*(ACA)(AAC)/Km2+(ACA)(AAC)</td>
-                        </tr>
-                        <tr class="hover:bg-gray-200">
-                            <td class="border px-4 py-2 text-center">26</td>
-                            <td class="border px-4 py-2 text-center">HMG 🡪 MV</td>
-                            <td class="border px-4 py-2 text-center">2k3*E*HMG/(Km3+HMG)</td>
-                        </tr>
-                        <tr class="hover:bg-gray-200">
-                            <td class="border px-4 py-2 text-center">27</td>
-                            <td class="border px-4 py-2 text-center">MV 🡪 MVP</td>
-                            <td class="border px-4 py-2 text-center">2k4*E*MV/(Km4+MV)</td>
-                        </tr>
-                        <tr class="hover:bg-gray-200">
-                            <td class="border px-4 py-2 text-center">28</td>
-                            <td class="border px-4 py-2 text-center">MVP 🡪 MVPP</td>
-                            <td class="border px-4 py-2 text-center">2k5*E*MVP/(Km5+MVP)</td>
-                        </tr>
-                        <tr class="hover:bg-gray-200">
-                            <td class="border px-4 py-2 text-center">29</td>
-                            <td class="border px-4 py-2 text-center">MVPP 🡪 IPP</td>
-                            <td class="border px-4 py-2 text-center">2k6*E*MVPP/(Km6+MVPP)</td>
-                        </tr>
-                        <tr class="hover:bg-gray-200">
-                            <td class="border px-4 py-2 text-center">30</td>
-                            <td class="border px-4 py-2 text-center">IPP 🡪 DMAPP</td>
-                            <td class="border px-4 py-2 text-center">2k7*E*IPP/(Km7+IPP)</td>
-                        </tr>
-                        <tr class="hover:bg-gray-200">
-                            <td class="border px-4 py-2 text-center">31</td>
-                            <td class="border px-4 py-2 text-center">DMAPP + IPP 🡪 GPP</td>
-                            <td class="border px-4 py-2 text-center">2k8*E*(DMAPP)(IPP)/Km8+(DMAPP)(IPP)</td>
-                        </tr>
-                        <tr class="hover:bg-gray-200">
-                            <td class="border px-4 py-2 text-center">32</td>
-                            <td class="border px-4 py-2 text-center">GPP 🡪 Li</td>
-                            <td class="border px-4 py-2 text-center">k9(GPP)</td>
-                        </tr>
-                        <tr class="hover:bg-gray-200">
-                            <td class="border px-4 py-2 text-center">33</td>
-                            <td class="border px-4 py-2 text-center">Li 🡨🡪 Lo</td>
-                            <td class="border px-4 py-2 text-center">D(Li – Lo)</td>
-                        </tr>
-                        <tr class="hover:bg-gray-200">
-                            <td class="border px-4 py-2 text-center">34</td>
-                            <td class="border px-4 py-2 text-center">Li 🡪 Φ</td>
-                            <td class="border px-4 py-2 text-center">dLi(Li)</td>
-                        </tr>
-                        <tr class="hover:bg-gray-200">
-                            <td class="border px-4 py-2 text-center">35</td>
-                            <td class="border px-4 py-2 text-center">Lo 🡪 Φ</td>
-                            <td class="border px-4 py-2 text-center">v(Lo)</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            
+            <table style="width: 100%; border-collapse: collapse; margin-top: 20px;">
+                <thead>
+                    <tr style="background-color: #eee;">
+                        <th style="border: 1px solid black; padding: 8px;">Event No.</th>
+                        <th style="border: 1px solid black; padding: 8px;">Event</th>
+                        <th style="border: 1px solid black; padding: 8px;">Rate</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td style="border: 1px solid black; padding: 8px;">20</td><td style="border: 1px solid black; padding: 8px;">Φ à E</td><td style="border: 1px solid black; padding: 8px;">kEN</td></tr>
+                    <tr><td style="border: 1px solid black; padding: 8px;">21</td><td style="border: 1px solid black; padding: 8px;">E à Φ</td><td style="border: 1px solid black; padding: 8px;">dEI</td></tr>
+                    <tr><td style="border: 1px solid black; padding: 8px;">22</td><td style="border: 1px solid black; padding: 8px;">Φ à ACA</td><td style="border: 1px solid black; padding: 8px;">kACAN</td></tr>
+                    <tr><td style="border: 1px solid black; padding: 8px;">23</td><td style="border: 1px solid black; padding: 8px;">ACA à Φ</td><td style="border: 1px solid black; padding: 8px;">dACA(ACA)</td></tr>
+                    <tr><td style="border: 1px solid black; padding: 8px;">24</td><td style="border: 1px solid black; padding: 8px;">ACA à AAC</td><td style="border: 1px solid black; padding: 8px;">&nbsp;</td></tr>
+                    <tr><td style="border: 1px solid black; padding: 8px;">25</td><td style="border: 1px solid black; padding: 8px;">ACA + AAC à HMG</td><td style="border: 1px solid black; padding: 8px;">&nbsp;</td></tr>
+                    <tr><td style="border: 1px solid black; padding: 8px;">26</td><td style="border: 1px solid black; padding: 8px;">HMG à MV</td><td style="border: 1px solid black; padding: 8px;">&nbsp;</td></tr>
+                    <tr><td style="border: 1px solid black; padding: 8px;">27</td><td style="border: 1px solid black; padding: 8px;">MV à MVP</td><td style="border: 1px solid black; padding: 8px;">&nbsp;</td></tr>
+                    <tr><td style="border: 1px solid black; padding: 8px;">28</td><td style="border: 1px solid black; padding: 8px;">MVP à MVPP</td><td style="border: 1px solid black; padding: 8px;">&nbsp;</td></tr>
+                    <tr><td style="border: 1px solid black; padding: 8px;">29</td><td style="border: 1px solid black; padding: 8px;">MVPP à IPP</td><td style="border: 1px solid black; padding: 8px;">&nbsp;</td></tr>
+                    <tr><td style="border: 1px solid black; padding: 8px;">30</td><td style="border: 1px solid black; padding: 8px;">IPP à DMAPP</td><td style="border: 1px solid black; padding: 8px;">&nbsp;</td></tr>
+                    <tr><td style="border: 1px solid black; padding: 8px;">31</td><td style="border: 1px solid black; padding: 8px;">DMAPP + IPP à GPP</td><td style="border: 1px solid black; padding: 8px;">&nbsp;</td></tr>
+                    <tr><td style="border: 1px solid black; padding: 8px;">32</td><td style="border: 1px solid black; padding: 8px;">GPP à Li</td><td style="border: 1px solid black; padding: 8px;">k9(GPP)</td></tr>
+                    <tr><td style="border: 1px solid black; padding: 8px;">33</td><td style="border: 1px solid black; padding: 8px;">Li ßà Lo</td><td style="border: 1px solid black; padding: 8px;">D(Li – Lo)</td></tr>
+                    <tr><td style="border: 1px solid black; padding: 8px;">34</td><td style="border: 1px solid black; padding: 8px;">Li à Φ</td><td style="border: 1px solid black; padding: 8px;">dLi(Li)</td></tr>
+                    <tr><td style="border: 1px solid black; padding: 8px;">35</td><td style="border: 1px solid black; padding: 8px;">Lo à Φ</td><td style="border: 1px solid black; padding: 8px;">v(Lo)</td></tr>
+                </tbody>
+            </table>
         
             <p>We simulate the events using the Gillespie Algorithm to obtain the stochastic linalool concentration curve produced by the bacteria with time. The plot is given below :-</p>
         </section>
