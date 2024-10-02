@@ -8,12 +8,13 @@
 <img src="https://static.igem.wiki/teams/5425/bacteria-8107336.png" style="height:200px; width:200px; border-radius: 20px; margin-left: 42%;" class="items-center w-full h-96 mt-20" alt="Inclusivity Banner">
 
 <div class="heading" style=" font-family:Architype Bayer-type W90; padding: 20px; border-radius: 10px;">
-  <h1 class="text-8xl font-bold text-center">experiment</h1>
+  <h1 class="text-8xl font-bold text-center">Experiment</h1>
 </div>
 
 <!-- Introduction Section -->
 <section class="bg-gray-100 border-2 border-gray-300 p-10 rounded-lg">
   <div class="introduction-section" style="text-align: left;">
+    <h2 class="text-6xl font-bold mb-6">Competent Cell Preparation</h2>
     <h2 class="text-4xl font-bold mb-6">Introduction</h2>
     <p class="text-lg leading-7">Preparing competent cells of <i>E. coli</i> strains BL21, DH5 alpha, and TOP10 involves a specific set of steps. Competent cells are vital for efficient transformation and DNA uptake during experiments.</p>
 
@@ -172,7 +173,511 @@
   </div>
 </section>
 
-<script>
+
+<div class="heading" style=" font-family:Architype Bayer-type W90; padding: 20px; border-radius: 10px;">
+    <h1 class="text-6xl font-bold text-center">Cloning Method</h1>
+  </div>
+  <br><br>
+  
+  <!-- Introduction Section -->
+  <section class="bg-gray-100 border-2 border-gray-300 p-10 rounded-lg">
+    <div class="introduction-section" style="text-align: left;">
+        <h2 class="text-3xl font-bold text-left"> For Plasmid Extraction: We followed the Qiagen Protocol.</h2>
+        <br>
+        <h2 class="text-3xl font-bold text-left"> Notes before starting:</h2>
+        <br>
+        <ol>
+            <li>1. Optional: Add LyseBlue reagent to Buffer P1 at a ratio of 1 to 1000. </li>
+            <li>2. Add the provided RNase A solution to Buffer P1, mix and store at 2–8°C.</li>
+            <li>3. Add ethanol (96–100%) to Buffer PE before use (see bottle label for volume).</li>
+            <li>4. All centrifugation steps are carried out at 13,000 rpm (~17,900 x g) in a conventional table-top microcentrifuge.</li>
+        </ol>
+        <br>
+        <h2 class="text-3xl font-bold text-left"> Procedure:</h2>
+        <br>
+        <ol>
+            <li>1. Pellet 1–5 ml bacterial overnight culture by centrifugation at >8000 rpm (6800 x g) for 3 min at room temperature (15–25°C).</li>
+            <li>2. Resuspend pelleted bacterial cells in 250 μl Buffer P1 and transfer to a microcentrifuge tube.</li>
+            <li>3. Add 250 μl Buffer P2 and mix thoroughly by inverting the tube 4–6 times until the solution becomes clear. Do not allow the lysis reaction to proceed for more than 5 min. If using LyseBlue reagent, the solution will turn blue. </li>
+            <li>4. Add 350 μl Buffer N3 and mix immediately and thoroughly by inverting the tube 4–6 times. If using LyseBlue reagent, the solution will turn colorless.</li>
+            <li>5. Centrifuge for 10 min at 13,000 rpm (~17,900 x g) in a table-top microcentrifuge.</li>
+            <li>6.Apply 800 μl supernatant from step 5 to the QIAprep 2.0 spin column by pipetting. For centrifuge processing, follow the instructions marked with a triangle (). For vacuum manifold processing, follow the instructions marked with a circle (). Centrifuge for 30–60 s and discard the flow-through, or apply vacuum to the manifold to draw the solution through the QIAprep 2.0 spin column and switch off the vacuum source.</li>
+            <li><strong>Recommended:</strong> Wash the QIAprep 2.0 spin column by adding 0.5 ml Buffer PB. Centrifuge for 30–60 s and discard the flow-through, or apply vacuum to the manifold to draw the solution through the QIAprep 2.0 spin column and switch off the vacuum source.</li>
+            <li><strong>Note:</strong> This step is only required when using endA+ strains or other bacteria strains with high nuclease activity or carbohydrate content.</li>
+            <li>7. Transfer the QIAprep 2.0 spin column to the collection tube.</li>
+            <li>8. Centrifuge for 1 min to rem/7ove residual wash buffer.</li>
+            <li>9.Place the QIAprep 2.0 column in a clean 1.5 ml microcentrifuge tube. To elute DNA, add 50 μl Buffer EB (10 mM TrisCl, pH 8.5) or water to the center of the QIAprep 2.0 spin column, let stand for 1 min, and centrifuge for 1 min. </li>
+            <li>10. If the extracted DNA is to be analyzed on a gel, add 1 volume of Loading Dye to 5 volumes of purified DNA. Mix the solution by pipetting up and down before loading the gel.</li>
+        </ol>
+        <br>
+        <p> To get a better yield, we strictly followed the following steps:</p>
+        <br>
+        <ol>
+            <li>1. After adding P2 buffer invert the tube vigorously and keep the tube still only for 1.5 min. (not more than that).</li>
+            <li>2. Adding the N3 buffer again invert the tube 4-6 times and centrifuge it for 20 min at 13,000 rpm.</li>
+            <li>3. Now carefully with the help of 20-200 uL pipette pull out the transparent part without disturbing the white part.</li>
+            <li>4. Keep the spin column for 2 min in the rack and then spin it for 30 sec .</li>
+            <li>5. Now have to add PB and keep the tube undisturbed for 5 min and again spin it for 2 min.</li>
+            <li>6. Adding the PE buffer and spinning it three times.</li>
+            <li>7. Now during the Elution we need to first add an elution buffer (20 ul) and keep the tube for 15 min and spin it for 2 min and we have to repeat the same process again.</li>
+        </ol>
+        <br>
+        <h2 class="text-3xl font-bold text-left"> For Gel Extraction: We followed the Qiagen Protocol.</h2>
+        <br>
+        <h2 class="text-3xl font-bold text-left"> Notes before starting:</h2>
+        <br>
+        <ol>
+            <li>1. This protocol is for the purification of up to 10 μg DNA (70 bp to 10 kb).</li>
+            <li>2. The yellow color of Buffer QG indicates a pH ≤+7.5. DNA adsorption to the membrane is only efficient at pH ≤ 7.5.</li>
+            <li>3. Add ethanol (96–100%) to Buffer PE before use (see bottle label for volume).</li>
+            <li>4. Isopropanol (100%) and a heating block or water bath at 50°C are required.</li>
+            <li>5. All centrifugation steps are carried out at 17,900 x g (13,000 rpm) in a conventional table-top microcentrifuge.</li>
+        </ol>
+        <br>
+      <h2 class="text-4xl font-bold mb-6">Procedure</h2>
+      <br>
+      <ol>
+        <li>1. Excise the DNA fragment from the agarose gel with a clean, sharp scalpel.</li>
+        <li>2. Weigh the gel slice in a colorless tube. Add 3 volumes Buffer QG to 1 volume gel (100 mg gel ~100 μl). The maximum amount of gel per spin column is 400 mg. For >2% agarose gels, add 6 volumes Buffer QG.</li>
+        <li>3. Incubate at 50°C for 10 min (or until the gel slice has completely dissolved). Vortex the tube every 2–3 min to help dissolve gel. After the gel slice has dissolved completely, check that the color of the mixture is yellow (similar to Buffer QG without dissolved agarose). If the color of the mixture is orange or violet, add 10 μl 3 M sodium acetate, pH 5.0, and mix. The mixture turns yellow.</li>
+        <li>4. Add 1 gel volume isopropanol to the sample and mix.</li>
+        <li>5. Place a QIAquick spin column in a provided 2 ml collection tube or into a vacuum manifold. To bind DNA, apply the sample to the QIAquick column and centrifuge for 1 min or apply vacuum to the manifold until all the samples have passed through the column. Discard flow-through and place the QIAquick column back into the same tube. For sample volumes >800 μl, load and spin/apply vacuum again.</li>
+        <li>6. If DNA will subsequently be used for sequencing, in vitro transcription, or microinjection, add 500 μl Buffer QG to the QIAquick column and centrifuge for 1 min or apply vacuum. Discard flow-through and place the QIAquick column back into the same tube.</li>
+        <li>7. To wash, add 750 μl Buffer PE to QIAquick column and centrifuge for 1 min or apply vacuum. Discard flow-through and place the QIAquick column back into the same tube. Note: If the DNA will be used for salt-sensitive applications (e.g., sequencing, blunt- ended ligation), let the column stand 2–5 min after addition of Buffer PE. Centrifuge the QIAquick column in the provided 2 ml collection tube for 1 min to remove residual wash buffer.</li>
+        <li>8. Place QIAquick column into a clean 1.5 ml microcentrifuge tube.</li>
+        <li>9. To elute DNA, add 50 μl Buffer EB (10 mM Tris·Cl, pH 8.5) or water to the center of the QIAquick membrane and centrifuge the column for 1 min. For increased DNA concentration, add 30 μl Buffer EB to the center of the QIAquick membrane, let thecolumn stand for 1 min, and then centrifuge for 1 min. After the addition of Buffer EB to the QIAquick membrane, increasing the incubation time to up to 4 min can increase the yield of purified DNA.</li>
+        <li>10. If purified DNA is to be analyzed on a gel, add 1 volume of Loading Dye to 5 volumes of purified DNA. Mix the solution by pipetting up and down before loading the gel.</li>
+      </ol>
+      <br>
+        <p> To get a better yield, we strictly followed the following steps:</p>
+        <br>
+        <ol>
+            <li>1. To get a better yield for the lengths of less than 600 bp we need to run the gel in presence of TBE buffer in 2.8 % gel media, which ultimately during extraction needs more than 5.5 %  of QG buffer.</li>
+            <li>2. Also need to use more than 1.5 % of the weight of isopropanol to minimize co precipitation of salt that interferes with downstream applications.</li>
+            <li>3. Need to do centrifugation for 5 min at 13,000 rpm and instead of throwing the flow through spin it again for 1 min to extract the ultimate product from the sample.</li>
+            <li>4. During the usage of the wash buffer spin it three times for 60 sec to get rid of all the ethanol from the solution.</li>
+            <li>5. Do the elution with 55 degree centigrade hot NFW to reduce the amount of salt.</li>
+        </ol>
+    <br>
+    <h2 class="text-5xl font-bold mb-6">Gel Electrophoresis</h2>
+    <h2 class="text-4xl font-bold mb-6">Introduction</h2>
+    <p>Gel electrophoresis is a laboratory method used to separate mixtures of DNA, RNA, or proteins according to molecular size.</p>
+      <!-- Materials Section -->
+      <div class="materials-section mt-10">
+          <h2 class="text-4xl font-bold mb-6">Materials</h2>
+  
+          <!-- Expandable Section 1: TFB-1 Preparation -->
+          <button class="collapsible bg-blue-600 text-white py-2 px-5 rounded-lg mb-4 hover:bg-blue-700 transition-all w-full text-left">
+              For Gel Electrophoresis
+          </button>
+          <div class="content" style="display: none;">
+            <table class="w-full max-w-4xl mx-auto border-2 border-gray-500 rounded-lg text-left mb-8">
+              <thead>
+                  <tr class="bg-blue-700 text-white">
+                      <th class="py-3 px-4 border-b-4 border-gray-500">Component</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr class="bg-gray-100 hover:bg-gray-300 transition-all">
+                      <td class="py-3 px-4 border-b border-gray-400">1x TAE Buffer</td>
+                  </tr>
+                  <tr class="bg-white hover:bg-gray-300 transition-all">
+                      <td class="py-3 px-4 border-b border-gray-400">Agarose</td>
+                  </tr>
+                  <tr class="bg-gray-100 hover:bg-gray-300 transition-all">
+                      <td class="py-3 px-4 border-b border-gray-400">EtBr (10mg/mL)</td>
+                  </tr>
+                  <tr class="bg-white hover:bg-gray-300 transition-all">
+                      <td class="py-3 px-4 border-b border-gray-400">Gel Cast</td>
+                  </tr>
+                  <tr class="bg-gray-100 hover:bg-gray-300 transition-all">
+                      <td class="py-3 px-4 border-b border-gray-400">Gel Combs</td>
+                  </tr>
+              </tbody>
+          </table>
+ 
+          </div>
+  
+      <!-- Procedure Section -->
+      <div class="procedure-section mt-10">
+        <h2 class="text-4xl font-bold mb-6">Procedure</h2>
+        <ol class="list-decimal list-inside text-lg leading-7">
+            <li>To make 1% Agarose gel, mix 1g of Agarose in 100ml of 1X TAE.</li>
+            <li>To dissolve, microwave it for 2-3 mins until it completely dissolves with occasional swirling. Remember not to over-boil as some amount can get evaporated and spilled. </li>
+            <li>Let it cool to 50°C.</li>
+            <li>Add EtBr to a final concentration of 0.2 - 0.5 μg/ml.</li>
+            <li>Cast the gel in the gel tray and place the comb carefully.</li>
+            <li>Keep the gel at room temperature for 20-25 mins (till it solidifies properly).</li>
+            <li>Add loading dye to each sample.</li>
+            <li>Fill the gel box with 1X TAE buffer, then place the solidified agarose gel in the gel box . Remember to check if the gel is fully covered with the buffer, if not so then add some more buffer!</li>
+            <li>Load the ladder in the first lane. Then carefully load samples. </li>
+            <li>Run the gel at 80-120 Volt until the dye line is approximately 75-80% of the way down the gel. Should take 1-1.5 hrs approximately.</li>
+            <li>Remove the Gel carefully and then visualize it using UV. </li>
+            <li>Now add 1 ml of autoclave water to the 1 mg of the etbr and vortex it until the complete ppt has gone .</li>
+        </ol>
+    </div>
+  
+    <!-- Caution Section -->
+    <div class="caution-section mt-10 bg-red-100 border-l-4 border-red-500 p-6 text-red-700">
+        <h3 class="text-2xl font-bold">Caution</h3>
+        <ul class="list-disc list-inside text-lg">
+            <li>For EtBr Prep - Wear goggles and maintain a safe distance.</li>
+        </ul>
+    </div>
+      </div>
+    </div>
+    <br>
+    <h2 class="text-4xl font-bold mb-6">Table: Agarose Gel % and Length of DNA to resolve.</h2>
+    <div class="content" style="display;">
+      <table class="w-full max-w-4xl mx-auto border-2 border-gray-500 rounded-lg text-left mb-8">
+        <thead>
+            <tr class="bg-blue-700 text-white">
+                <th class="py-3 px-4 border-b-4 border-gray-500">Agarose Gel %</th>
+                <th class="py-3 px-4 border-b-4 border-gray-500">Length of DNA to resolve</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="bg-gray-100 hover:bg-gray-300 transition-all">
+                <td class="py-3 px-4 border-b border-gray-400">0.5</td>
+                <td class="py-3 px-4 border-b border-gray-400">1000 - 30000 bp</td>
+            </tr>
+            <tr class="bg-white hover:bg-gray-300 transition-all">
+                <td class="py-3 px-4 border-b border-gray-400">0.7</td>
+                <td class="py-3 px-4 border-b border-gray-400">800 - 12000 bp</td>
+            </tr>
+            <tr class="bg-gray-100 hover:bg-gray-300 transition-all">
+                <td class="py-3 px-4 border-b border-gray-400">1.0</td>
+                <td class="py-3 px-4 border-b border-gray-400">500 - 10000 bp</td>
+            </tr>
+            <tr class="bg-white hover:bg-gray-300 transition-all">
+                <td class="py-3 px-4 border-b border-gray-400">1.2</td>
+                <td class="py-3 px-4 border-b border-gray-400">400 - 7000 bp</td>
+            </tr>
+            <tr class="bg-gray-100 hover:bg-gray-300 transition-all">
+                <td class="py-3 px-4 border-b border-gray-400">1.5</td>
+                <td class="py-3 px-4 border-b border-gray-400">200 - 3000 bp</td>
+            </tr>
+            <tr class="bg-gray-100 hover:bg-gray-300 transition-all"></tr>
+                <td class="py-3 px-4 border-b border-gray-400">2.0</td>
+                <td class="py-3 px-4 border-b border-gray-400">50 - 2000 bp</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2 class="text-5xl font-bold mb-6">Polymerase Chain Reaction (PCR)</h2>
+    <h2 class="text-4xl font-bold mb-6">Amplification PCR</h2>
+    <h2 class="text-4x1 font-bold mb-6">Introduction</h2>
+    <p>PCR is a method widely used to rapidly make millions to billions of copies (complete copies or partial copies) of a specific DNA sample, allowing us to take a very small sample of DNA and amplify it (or a part of it) to a large enough amount to study in detail. </p>
+    <br>
+    <!-- Materials Section -->
+    <div class="materials-section mt-10">
+        <h2 class="text-4xl font-bold mb-6">Materials</h2>
+
+        <!-- Expandable Section 1: TFB-1 Preparation -->
+        <button class="collapsible bg-blue-600 text-white py-2 px-5 rounded-lg mb-4 hover:bg-blue-700 transition-all w-full text-left">
+            For Amplification PCR
+        </button>
+        <div class="content" style="display: none;">
+          <table class="w-full max-w-4xl mx-auto border-2 border-gray-500 rounded-lg text-left mb-8">
+            <thead>
+                <tr class="bg-blue-700 text-white">
+                    <th class="py-3 px-4 border-b-4 border-gray-500">Component</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="bg-gray-100 hover:bg-gray-300 transition-all">
+                    <td class="py-3 px-4 border-b border-gray-400">Autoclaved PCR tubes</td>
+                </tr>
+                <tr class="bg-white hover:bg-gray-300 transition-all">
+                    <td class="py-3 px-4 border-b border-gray-400">Agar Plates (with desried antibiotics)</td>
+                </tr>
+                <tr class="bg-gray-100 hover:bg-gray-300 transition-all">
+                    <td class="py-3 px-4 border-b border-gray-400">NEB Q5® High-Fidelity 2X Master Mix</td>
+                </tr>
+                <tr class="bg-white hover:bg-gray-300 transition-all">
+                    <td class="py-3 px-4 border-b border-gray-400">Micropipette tips</td>
+                </tr>
+                <tr class="bg-gray-100 hover:bg-gray-300 transition-all">
+                    <td class="py-3 px-4 border-b border-gray-400">Respective Primers</td>
+                </tr>
+                <tr class="bg-gray-100 hover:bg-gray-300 transition-all"></tr>
+                    <td class="py-3 px-4 border-b border-gray-400">NFW</td>
+                </tr>
+            </tbody>
+        </table>
+
+        </div>
+        <br>
+        <h2 class="text-4xl font-bold mb-6">Procedure</h2>
+        <ol>
+            <li>1. Prepare the PCR mix by adding the following reagents by placing the PCR tubes all on ice.</li>
+            <br>
+            <div class="content" style="display;">
+                <table class="w-full max-w-4xl mx-auto border-2 border-gray-500 rounded-lg text-left mb-8">
+                  <thead>
+                      <tr class="bg-blue-700 text-white">
+                          <th class="py-3 px-4 border-b-4 border-gray-500">Reagents</th>
+                          <th class="py-3 px-4 border-b-4 border-gray-500">Volume (μL)</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr class="bg-gray-100 hover:bg-gray-300 transition-all">
+                          <td class="py-3 px-4 border-b border-gray-400">NEB Q5® High-Fidelity 2X Master Mix</td>
+                          <td class="py-3 px-4 border-b border-gray-400">25</td>
+                      </tr>
+                      <tr class="bg-white hover:bg-gray-300 transition-all">
+                          <td class="py-3 px-4 border-b border-gray-400">Forward Primer</td>
+                          <td class="py-3 px-4 border-b border-gray-400">2.5</td>
+                      </tr>
+                      <tr class="bg-gray-100 hover:bg-gray-300 transition-all">
+                          <td class="py-3 px-4 border-b border-gray-400">Reverse Primer</td>
+                          <td class="py-3 px-4 border-b border-gray-400">2.5</td>
+                      </tr>
+                      <tr class="bg-white hover:bg-gray-300 transition-all">
+                          <td class="py-3 px-4 border-b border-gray-400">Template DNA</td>
+                          <td class="py-3 px-4 border-b border-gray-400">3</td>
+                      </tr>
+                      <tr class="bg-gray-100 hover:bg-gray-300 transition-all">
+                          <td class="py-3 px-4 border-b border-gray-400">NFW</td>
+                          <td class="py-3 px-4 border-b border-gray-400">17</td>
+                      </tr>
+                      
+                  </tbody>
+              </table>
+            <li>2. Rest of the protocol to be followed as provided by NEB (linked in references).</li>
+        </ol>
+        <br>
+        <h2 class="text-4xl font-bold mb-6">Gradient PCR</h2>
+        <h2 class="text-4x1 font-bold mb-6">We have followed the same protocol as the NEB provided (linked in references).</h2>
+        <br>
+        <h2 class="text-4xl font-bold mb-6">Colony PCR</h2>
+        <h2 class="text-4x1 font-bold mb-6">Introduction</h2>
+        <br>
+        <p>Colony PCR is a method for rapidly screening colonies of bacteria that have grown up on selective media following a transformation step, to verify that the desired genetic construct is present, or to amplify a portion of the construct. </p>
+        <br>
+        <!-- Materials Section -->
+    <div class="materials-section mt-10">
+        <h2 class="text-4xl font-bold mb-6">Materials</h2>
+
+        <!-- Expandable Section 1: TFB-1 Preparation -->
+        <button class="collapsible bg-blue-600 text-white py-2 px-5 rounded-lg mb-4 hover:bg-blue-700 transition-all w-full text-left">
+            For Colony PCR
+        </button>
+        <div class="content" style="display: none;">
+          <table class="w-full max-w-4xl mx-auto border-2 border-gray-500 rounded-lg text-left mb-8">
+            <thead>
+                <tr class="bg-blue-700 text-white">
+                    <th class="py-3 px-4 border-b-4 border-gray-500">Component</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="bg-gray-100 hover:bg-gray-300 transition-all">
+                    <td class="py-3 px-4 border-b border-gray-400">Autoclaved PCR tubes</td>
+                </tr>
+                <tr class="bg-white hover:bg-gray-300 transition-all">
+                    <td class="py-3 px-4 border-b border-gray-400">Agar Plates (with desried antibiotics)</td>
+                </tr>
+                <tr class="bg-gray-100 hover:bg-gray-300 transition-all">
+                    <td class="py-3 px-4 border-b border-gray-400">Go Taq Green PCR master-mix by Promega</td>
+                </tr>
+                <tr class="bg-white hover:bg-gray-300 transition-all">
+                    <td class="py-3 px-4 border-b border-gray-400">Micropipette tips</td>
+                </tr>
+                <tr class="bg-gray-100 hover:bg-gray-300 transition-all">
+                    <td class="py-3 px-4 border-b border-gray-400">VF2 and VR primer. </td>
+                </tr>
+                <tr class="bg-gray-100 hover:bg-gray-300 transition-all"></tr>
+                    <td class="py-3 px-4 border-b border-gray-400">NFW</td>
+                </tr>
+            </tbody>
+        </table>
+
+        </div>
+
+        <h2 class="text-4xl font-bold mb-6">Procedure</h2>
+        <ol>
+            <li>1. Fill PCR tubes (as many required) with 10μl of NFW in each tube.</li>
+            <li>2. The culture plates with colonies were marked accordingly.</li>
+            <li>3. One colony was picked with a sterile tip and was streaked at the marked position on the new plate.</li>
+            <li>4. Then put the tip in the PCR tube containing 10μl of NFW.</li>
+            <li>5. Take the same number of autoclaved PCR tubes as number of colonies picked and label accordingly.</li>
+            <li>6. Add the following reagents in the PCR tubes to make a reaction mixture of 25μl.</li>
+            <br>
+            <div class="content" style="display;">
+                <table class="w-full max-w-4xl mx-auto border-2 border-gray-500 rounded-lg text-left mb-8">
+                  <thead>
+                      <tr class="bg-blue-700 text-white">
+                          <th class="py-3 px-4 border-b-4 border-gray-500">Reagents</th>
+                          <th class="py-3 px-4 border-b-4 border-gray-500">Volume (μL)</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr class="bg-gray-100 hover:bg-gray-300 transition-all">
+                          <td class="py-3 px-4 border-b border-gray-400">Go Taq Green DNA master mix</td>
+                          <td class="py-3 px-4 border-b border-gray-400">12.5</td>
+                      </tr>
+                      <tr class="bg-white hover:bg-gray-300 transition-all">
+                          <td class="py-3 px-4 border-b border-gray-400">VF2</td>
+                          <td class="py-3 px-4 border-b border-gray-400">1</td>
+                      </tr>
+                      <tr class="bg-gray-100 hover:bg-gray-300 transition-all">
+                          <td class="py-3 px-4 border-b border-gray-400">VR</td>
+                          <td class="py-3 px-4 border-b border-gray-400">1</td>
+                      </tr>
+                      <tr class="bg-white hover:bg-gray-300 transition-all">
+                          <td class="py-3 px-4 border-b border-gray-400">Template DNA</td>
+                          <td class="py-3 px-4 border-b border-gray-400">5</td>
+                      </tr>
+                      <tr class="bg-gray-100 hover:bg-gray-300 transition-all">
+                          <td class="py-3 px-4 border-b border-gray-400">NFW</td>
+                          <td class="py-3 px-4 border-b border-gray-400">5.5</td>
+                      </tr>
+                      
+                  </tbody>
+              </table>
+            <li>The only difference is that we have to set the denaturation temp at around 95 degrees centigrade for 10 min. </li>
+        </ol>
+
+        <br>
+        <h2 class="text-4xl font-bold mb-6">PCR Optimised for Amplification of Small Lengths of DNA</h2>
+        <h2 class="text-4x1 font-bold mb-6">Introduction</h2>
+        <p>In the very beginning of the reaction, we have to heat the lid and PCR machine up to 98 degrees Celsius and then from the ice directly have to put the tubes inside the PCR machine.
+        </p><p>Then follow the regular rule of PCR.</p>
+        <p>This is basically optimized PCR protocol for amplification of the short lengths (100-400 bp).</p>
+        <br><br>
+        <h2 class="text-6xl font-bold mb-6">HiFi Assembly</h2>
+        <h2 class="text-4x1 font-bold mb-6">Introduction</h2>
+        <p>NEBilder HiFi Assembly: To assemble the inserts and the backbone and check the induction.</p>
+        <br>
+        <h2 class="text-4x1 font-bold mb-6">Optimal Quantities</h2>
+        <p>NEB recommends a total of 0.03–0.2 pmols of DNA fragments when 1 or 2 fragments are being assembled into a vector, and 0.2–0.5 pmols of DNA fragments when 4–6 fragments are being assembled. Efficiency of assembly decreases as the number or length of fragments increases. To calculate the number of pmols of each fragment for optimal assembly, based on fragment length and weight, we recommend the following formula, or using the tool, NEBiocalculator (linked in references).</p>
+        <br>
+        <p> pmols = (weight in ng) x 1,000 / (base pairs x 650 daltons)</p>
+            <p>50 ng of 5000 bp dsDNA is about 0.015 pmols</p>
+           <p>50 ng of 500 bp dsDNA is about 0.15 pmols</p>
+           <br>
+        <p>The mass of each fragment can be measured using the Nanodrop instrument, absorbance at 260 nm or estimated from agarose gel electrophoresis followed by ethidium bromide staining.</p>
+        <br>
+        <h2 class="text-4x1 font-bold mb-6">HiFi DNA Assembly Protocol</h2>
+        <ol>
+            <li>1. Set up the following reaction on ice as follows.</li>
+            <p>Headings: Recommended Amount of Fragments Used for Assembly</p>
+            <br>
+            <div class="content" style="display;"></div>
+                <table class="w-full max-w-4xl mx-auto border-2 border-gray-500 rounded-lg text-left mb-8">
+                  <thead>
+                      <tr class="bg-blue-700 text-white">
+                          <th class="py-3 px-4 border-b-4 border-gray-500"></th>
+                          <th class="py-3 px-4 border-b-4 border-gray-500">2–3 Fragment Assembly*</th>
+                          <th class="py-3 px-4 border-b-4 border-gray-500">4-6 Fragment Assembly**</th>
+                          <th class="py-3 px-4 border-b-4 border-gray-500">NEBuilder Positive Control✝</th>
+
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr class="bg-gray-100 hover:bg-gray-300 transition-all">
+                          <td class="py-3 px-4 border-b border-gray-400">Recommended DNA Molar Ratio</td>
+                          <td class="py-3 px-4 border-b border-gray-400">vector: insert = 1:2</td>
+                          <td class="py-3 px-4 border-b border-gray-400">vector: insert = 1:1</td>
+                          <td class="py-3 px-4 border-b border-gray-400"></td>
+                      </tr>
+                      <tr class="bg-white hover:bg-gray-300 transition-all">
+                          <td class="py-3 px-4 border-b border-gray-400">Total Amount of Fragments</td>
+                          <td class="py-3 px-4 border-b border-gray-400">0.03–0.2 pmols*
+                            X μl</td>
+                          <td class="py-3 px-4 border-b border-gray-400">0.2–0.5 pmols**
+                            X μl</td>
+                          <td class="py-3 px-4 border-b border-gray-400">10 μl</td>
+                      </tr>
+                      <tr class="bg-gray-100 hover:bg-gray-300 transition-all">
+                        <td class="py-3 px-4 border-b border-gray-400">NEBuilder
+                            HiFi DNA Assembly Master Mix</td>
+                        <td class="py-3 px-4 border-b border-gray-400">10 μl</td>
+                        <td class="py-3 px-4 border-b border-gray-400">10 μl</td>
+                        <td class="py-3 px-4 border-b border-gray-400">10 μl</td>
+                      </tr>
+                      <tr class="bg-white hover:bg-gray-300 transition-all">
+                          <td class="py-3 px-4 border-b border-gray-400">Deionized H2O</td>
+                          <td class="py-3 px-4 border-b border-gray-400">10-X μl</td>
+                          <td class="py-3 px-4 border-b border-gray-400">10-X μl</td>
+                          <td class="py-3 px-4 border-b border-gray-400">0</td>
+                      </tr>
+                      <tr class="bg-gray-100 hover:bg-gray-300 transition-all">
+                        <td class="py-3 px-4 border-b border-gray-400">Total Volume</td>
+                        <td class="py-3 px-4 border-b border-gray-400">20 μl</td>
+                        <td class="py-3 px-4 border-b border-gray-400">20 μl</td>
+                        <td class="py-3 px-4 border-b border-gray-400">20 μl</td>
+                      </tr>
+                      
+                  </tbody>
+              </table>
+              <li>2. Optimized cloning efficiency is 50–100 ng of vector with 2-fold excess of each insert. Use 5-fold molar excess of any insert(s) less than 200 bp. Total volume of unpurified PCR fragments in the assembly reaction should not exceed 20%. To achieve optimal assembly efficiency, design 15-20 bp overlap regions between each fragment.</li>
+              <li>To achieve optimal assembly efficiency, design 20-30 bp overlap regions between each fragment with equimolar of all fragments (suggested: 0.05 pmol each).</li>
+              <li>Control reagents are provided for 5 experiments.</li>
+              <li>If greater numbers of fragments are assembled, increase the volume of the reaction, and use additional NE Builder HiFi DNA Assembly Master Mix.</li>
+        </ol>
+        <br>
+        <h2 class="text-4xl font-bold mb-6">Single Digestion</h2>
+        <h2 class="text-4x1 font-bold mb-6">We recommend digesting 0.2-1.5 µg DNA with a 2-fold to 10-fold excess of enzyme in a total volume of 20 µl. A typical restriction enzyme digestion protocol is below.</h2>
+
+        <h2 class="text-3xl font-bold mb-6">Protocol:</h2>
+        <ol>
+            <li>Add the following reaction components in the order indicated:</li>
+            <br>
+            <div class="content" style="display;">
+                <table class="w-full max-w-4xl mx-auto border-2 border-gray-500 rounded-lg text-left mb-8">
+                  <thead>
+                      <tr class="bg-blue-700 text-white">
+                          <th class="py-3 px-4 border-b-4 border-gray-500">Component</th>
+                          <th class="py-3 px-4 border-b-4 border-gray-500">Volume (μL)</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr class="bg-gray-100 hover:bg-gray-300 transition-all">
+                          <td class="py-3 px-4 border-b border-gray-400">
+                            Water, nuclease-free
+                          </td>
+                          <td class="py-3 px-4 border-b border-gray-400">16-16.5</td>
+                      </tr>
+                      <tr class="bg-white hover:bg-gray-300 transition-all">
+                          <td class="py-3 px-4 border-b border-gray-400">10X recommended buffer for restriction enzyme</td>
+                          <td class="py-3 px-4 border-b border-gray-400">2</td>
+                      </tr>
+                      <tr class="bg-gray-100 hover:bg-gray-300 transition-all">
+                          <td class="py-3 px-4 border-b border-gray-400">Substrate DNA</td>
+                          <td class="py-3 px-4 border-b border-gray-400">1 (~1 µg)</td>
+                      </tr>
+                      <tr class="bg-white hover:bg-gray-300 transition-all">
+                          <td class="py-3 px-4 border-b border-gray-400">Restriction enzyme</td>
+                          <td class="py-3 px-4 border-b border-gray-400">0.5-1 (5-10 u)</td>
+                      </tr>
+                      <tr class="bg-gray-100 hover:bg-gray-300 transition-all">
+                          <td class="py-3 px-4 border-b border-gray-400">Total</td>
+                          <td class="py-3 px-4 border-b border-gray-400">20</td>
+                      </tr>
+                      
+                  </tbody>
+              </table>
+              <li>2. Mix gently and spin down briefly.</li>
+              <li>3. Incubate at the optimal reaction temperature for 1-16 hours.</li>
+              <li>Note: The digestion reaction may be scaled either up or down. Some enzymes require additional components to obtain the stated activity. In these cases, add the required additive and adjust the volume of water appropriately.</li>
+        </ol>
+        <br>
+        <h2 class="text-4xl font-bold mb-6">References</h2>
+        <ol>
+            <li><a href="https://www.thermofisher.com/in/en/home/brands/thermo-scientific/molecular-biology/molecular-biology-learning-center/molecular-biology-resource-library/spotlight-articles/8-DNA-ladder-tips.html">https://www.thermofisher.com/in/en/home/brands/thermo-scientific/molecular-biology/molecular-biology-learning-center/molecular-biology-resource-library/spotlight-articles/8-DNA-ladder-tips.html</a></li>
+            <li><a href="https://www.neb.com/en/protocols/2012/12/07/protocol-for-q5-high-fidelity-2x-master-mix-m0492">https://www.neb.com/en/protocols/2012/12/07/protocol-for-q5-high-fidelity-2x-master-mix-m0492</a></li>
+            <li><a href="https://ww.neb.com/en/protocols/2014/11/26/nebuilder-hifi-dna-assembly-reaction-protocol">https://ww.neb.com/en/protocols/2014/11/26/nebuilder-hifi-dna-assembly-reaction-protocol</a></li>
+            <li><a href="https://www.neb.com/en/external-links/nebiocalculator">NEBiocalculato</a></li>
+            <li><a href="https://www.neb.com/en/protocols/2018/07/30/restriction-digest-protocol">https://www.neb.com/en/protocols/2018/07/30/restriction-digest-protocol</a></li>
+            <li><a href="https://www.neb.com/en/protocols/2012/12/07/protocol-for-q5-high-fidelity-2x-master-mix-m0492">https://www.neb.com/en/protocols/2012/12/07/protocol-for-q5-high-fidelity-2x-master-mix-m0492</a></li>
+        </ol>
+
+
+    </div>
+  </section>
+
+  <script>
     // Collapsible Sections
     var collapsibles = document.getElementsByClassName("collapsible");
     for (var i = 0; i < collapsibles.length; i++) {
