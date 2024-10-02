@@ -55,6 +55,9 @@
   }
 
 </style>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
 </head>
 
 <body class="m-0 font-sans bg-gray-100 flex">
@@ -86,7 +89,7 @@
   
   <!-- Learn Slides -->
   <div class="slide active block opacity-100 animate-fade-in">
-    <h2 class="text-2xl mb-4 text-center">Learn - Slide 1</h2>
+    <h2 class="text-2xl mb-4 text-center">Iteration 1: Circuit Designing</h2>
     <p class="text-base leading-relaxed text-center px-5 py-5">
       The math modellers found that the AiiA degradation tag (dtag) could help produce a stronger oscillation, hence is incorporated into the circuit. AiiA then lives just long enough for one round of oscillation, and doesn’t degrade AHL signal when the signal is actually needed, in the start of the next round of oscillation.
     <img src="https://static.igem.wiki/teams/5425/mmm.jpg" style=" border-radius: 20px; padding: 20px; ">
@@ -95,7 +98,7 @@
     </p>
   </div>
   <div class="slide hidden opacity-0">
-    <h2 class="text-2xl mb-4 text-center">Learn - Slide 2</h2>
+    <h2 class="text-2xl mb-4 text-center">Iteration 2:  Cell Cycle Arrest (CCA)</h2>
     <p class="text-base leading-relaxed text-center px-5 py-5">
       <p>1.   The RNA-RNA Docking showed a directly linear relationship between length of antisense mRNA and the spontaneity (given by the drop in Gibb’s free energy) of the steric blocking.
         <img src="https://static.igem.wiki/teams/5425/ll/rna1.jpg" style=" border-radius: 20px; padding: 20px;" >
@@ -122,15 +125,58 @@
 </p>
   </div>
   <div class="slide hidden opacity-0">
-    <h2 class="text-2xl mb-4 text-center">Learn - Slide 3</h2>
+    <h2 class="text-2xl mb-4 text-center">Iteration 3: Circuit Designing: the Linalool Production Module (LPM)</h2>
     <p class="text-base leading-relaxed text-center px-5 py-5">
       As a part of our human practices, we had attended talks with several synthetic biologists across the globe. Before starting our wet lab work, we wanted solid verification from them. After several brainstorming sessions we came up with certain limitations of our design to produce Linalool. According to them, the MEV pathway can be successfully functioned if the chassis is pre-engineered to bear the stress of such a long enzymatic reactive pathway, alternatively we could order engineered or mutated strains to incorporate the MEV pathway. But due to time constraints and safety purposes, we discarded the solution of ordering a new strain for our experiments. Another path showed up when we were advised to manipulate the Methylerythritol pathway (MEP pathway).  The MEP pathway is an innate metabolic pathway in E.coli that also produces isoprene for bacterial growth. Interestingly, the MEV and MEP pathway shares common intermediate substrates (DMAPP and IPP) among them, DMAPP being the former precursor of linalool. As it is clear that we could rather channelise the MEP pathway by just inserting GPPS and LIS into the bacteria to produce Linalool to reduce metabolic burden of the cloned organism.    </p>
   </div>
   <div class="slide hidden opacity-0">
-    <h2 class="text-2xl mb-4 text-center">Learn - Slide 4</h2>
+    <h2 class="text-2xl mb-4 text-center">Iteration 4: Cloning and Expression </h2>
     <p class="text-base leading-relaxed text-center px-5 py-5">
       The HiFi Assembly Protocol was optimized for a successful engineering of plasmid PCM. The knowledge helped us calculate optimized HiFi assembly reaction mixtures for our future experiments.    </p>
   </div>
+  <div class="slide hidden opacity-0">
+    <h2 class="text-2xl mb-4 text-center">Iteration 5:  Dry Lab: Initial Model for quorum sensing circuitI </h2>
+    <p class="text-base leading-relaxed text-center px-5 py-5">
+      We observed the oscillation in cell population in the presence of the quorum sensing circuit, thus verifying the presence of the negative feedback loop in it.
+
+      However, we also learned that our population equation could not relate death term, r0ct, with the accumulation of secondary metabolites and the reduction in substrate concentration as both r0 and c are constants and independent of the cell concentration as well as substrate concentration. 
+      
+      So, because this model cannot directly relate the accumulation of secondary metabolites and decrease in substrate concentration with the onset of the death phase in the population, we had to look upon developing an even better model.
+        </div>
+        <div class="slide hidden opacity-0">
+          <h2 class="text-2xl mb-4 text-center">Iteration 6:  Dry Lab: Final Model for quorum sensing circuit </h2>
+          <p class="text-base leading-relaxed text-center px-5 py-5">
+            We learned that our new growth model could very efficiently relate the death term of the population equation with the accumulation of toxic secondary metabolites and the reduction in substrate concentration.
+
+We also observed that our quorum sensing model is able to give us the desired output of controlling the bacterial population at a threshold level quite below the carrying capacity of the original bacterial population without the quorum sensing circuit, and thereby, the population life/media potential of the culture is getting increased due to less accumulation of secondary metabolites and slower rate of substrate consumption, making the death phase of the population arrive at a much later stage than the original population.
+
+Hence, our justification of choosing the later quorum sensing model to determine the bacterial population dynamics is accordingly verified.
+
+          </p></div>
+          <div class="slide hidden opacity-0">
+            <h2 class="text-2xl mb-4 text-center">Iteration 7:  Choosing Best Length of the Antisense  </h2>
+            <p class="text-base leading-relaxed text-center px-5 py-5">
+              <p><strong>Optimisation of PCR Protocol for Small Parts:</strong></p>
+              <p>The following modifications were incorporated:</p>
+              
+              <p>1. The PCR reaction mixture was kept on ice. The PCR machine was allowed to preheat to 98°C, and then the PCR tubes were promptly put into the thermocycler. This reduced off-site binding.</p>
+            
+              <p>2. Increasing Template (PCM extracted) concentration. That reduced primer dimers.</p>
+            
+              <p>3. A control was kept with no template. The idea is that the primers, unreacted, would come down the gel electrophoresis and create primer dimers to help distinguish them in the other wells.</p>
+            
+              <p>And excellent bright desired bands were observed in the gel.</p>
+            
+              <p>The Microplate Reader Assay did show some excellent oscillatory growth curve upon induction, which was not there in the control case. For both 150 and 393 bp, the induction and fluctuations (oscillations) are visible. This indicates a success for our experiment.</p>
+            
+              <p>We could not conclude if the assay of 150 or 393 bp showed a better oscillation, as both showed a similarly good result. We are yet to troubleshoot the 277 bp case.</p>
+            
+            
+              <img src="https://static.igem.wiki/teams/5425/experimental-assay/antisense-exp-2-1-mm-iptg-66f72bb943dfe.webp" style="border-radius: 20px; padding: 20px;">
+            
+  
+            </p></div>
+
 </div>
 
 <!-- Design Section -->
@@ -143,7 +189,7 @@
   
   <!-- Design Slides -->
   <div class="slide active block opacity-100 animate-fade-in">
-    <h2 class="text-2xl mb-4 text-center">Design - Slide 1</h2>
+    <h2 class="text-2xl mb-4 text-center">Iteration 1: Circuit Designing</h2>
     <p class="text-base leading-relaxed text-center px-5 py-5">
       Parallel to the linalool production module (LPM), we wanted an auto-regulated cell cycle regulation by another co-transformed plasmid. This plasmid will let each bacterium sense the cell density around itself. So that, when the bacterial density reaches an optimal threshold, a signal will trigger a feedback loop mechanism- which will cause cell cycle ‘arrest’. We needed two things.
       Firstly, we needed a signalling molecule- which can be produced in proportion to the cell density outside- inside each bacterium itself. With the help of literature study, we came across the AHL molecule, 
@@ -151,7 +197,7 @@
      <img src="https://static.igem.wiki/teams/5425/engineering/untitled-design-5.webp" style=" border-radius: 20px; padding: 20px;">   </p>
     </div>
   <div class="slide hidden opacity-0">
-    <h2 class="text-2xl mb-4 text-center">Design - Slide 2</h2>
+    <h2 class="text-2xl mb-4 text-center">Iteration 2:  Cell Cycle Arrest (CCA)</h2>
     <p class="text-base leading-relaxed text-center px-5 py-5">
       Multiple strategies to trigger cell cycle arrest were discussed and tallied against our criteria of arrest- reversibility, speed, and non-toxicity to cells. A cell cycle death was hence ruled out, due to the rapid build up of toxic wastes that would make our (limited) food medium unusable.3  Hence, we went for a ‘softer’ strategy- simple, steric blocking of a key protein of cell cycle at its mRNA stage itself. Unlike DICER, etc. this strategy does NOT cleave the mRNA- it just prevents its translation. The following questions were raised:
       Which gene to silence? We discussed an array of proteins involved in the replication fork of bacterial division4. Ultimately, we narrowed down to two- DnaB (a helicase) vs DnaA (initiator of cell replication). The knockout of the DnaB molecule was reportedly irreversible 5, pushing us to go for DnaA protein. Further, the DnaA molecule was BLASTed by our bio modellers and found to be a largely conserved protein- allowing us to silence the protein across a variety of strains of E. coli- including our expression strain BL21.
@@ -161,17 +207,41 @@
           </p>
   </div>
   <div class="slide hidden opacity-0">
-    <h2 class="text-2xl mb-4 text-center">Design - Slide 3</h2>
+    <h2 class="text-2xl mb-4 text-center">Iteration 3: Circuit Designing: the Linalool Production Module (LPM)</h2>
     <p class="text-base leading-relaxed text-center px-5 py-5">
       After thorough research for finding a biodegradable, eco-friendly, harmless overall green measure to manufacture our innovative cosmetic approach, we have found the most appropriate molecule fulfilling our desired properties in Linalool, a monoterpenoid mostly found in plants as a fragrant metabolite, moreover having antifungal and antimicrobial properties, a perfect combination for total foot care. Delving deep, we found that the plant enzymatic pathway known as Mevalonate Pathway (MEV Pathway) produces the Linalool where the direct enzyme Linalool synthase converts Geraniol diphosphate to Linalool. The MEV pathway is extensively researched and manipulated for different monoterpene production. We are grateful to the iGEM KEYSTONE China Team for their improved part for MEV pathway plasmid. Literature shows successful production of Linalool by incorporating the whole MEV pathways in bacteria. So we moved on building our model based on the design.
     </p>
   </div>
   <div class="slide hidden opacity-0">
-    <h2 class="text-2xl mb-4 text-center">Design - Slide 4</h2>
+    <h2 class="text-2xl mb-4 text-center">Iteration 4: Cloning and Expression </h2>
     <p class="text-base leading-relaxed text-center px-5 py-5">
       We decided to go with the proprietary Hi Fi assembly offered by New England Biolabs. It is scarless, remarkably accurate and the we could leverage the experience of ex iGEMers from IISER-K and our advisors in this method. We identified that many of the Kit 2024 parts- had pSB13C backbone, with inserts at the same position. The backbone was chosen to be a pSB13C one, and the pair of linearization primers were cleverly designed so that they could linearise the backbones of most of those kit parts having pSB13C.
     </p>
   </div>
+  <div class="slide hidden opacity-0">
+    <h2 class="text-2xl mb-4 text-center">Iteration 5:  Dry Lab: Initial Model for quorum sensing circuitI </h2>
+    <p class="text-base leading-relaxed text-center px-5 py-5">
+      We wanted to determine the bacterial population dynamics using a set of deterministic ODEs. We chose all the necessary entities whose concentrations would be important to us, namely LuxI, LuxR, AHL, AiiA, A2R2 (AHL-LuxR complex), tetR, CCA (Antisense mRNA), N (Population concentration), S (Substrate concentration).  </p>
+        </div>
+        <div class="slide hidden opacity-0">
+          <h2 class="text-2xl mb-4 text-center">Iteration 6:  Dry Lab: Final Model for quorum sensing circuit </h2>
+          <p class="text-base leading-relaxed text-center px-5 py-5">
+            We proceeded to develop a population equation which could more efficiently relate the accumulation of secondary metabolites and decrease in substrate concentration with the onset of the death phase in the bacterial population. For that, we though of introducing an extra term to the logistic growth equation which would govern the onset of the death phase in the bacterial population.   
+          </p>
+              </div>
+              <div class="slide hidden opacity-0">
+                <h2 class="text-2xl mb-4 text-center">Iteration 7:  Choosing Best Length of the Antisense </h2>
+                <p class="text-base leading-relaxed text-center px-5 py-5">
+                  <p><strong>Though we did incorporate a Cell Cycle Arrest (CCA) gene of length 400 bp length, we realized later that an empirical attempt at determining an even better Cell Cycle Arrest genes can be made.</strong></p>
+  
+                  <p>We stuck to DnaA reversible steric blocking, but now we decided to alter the length of the CCA gene, and hence the antisense mRNA. Ordering the replicates of the same PCM plasmid with different lengths of CCA was discarded in favour of a simple experiment. We wanted to put CCA genes of various lengths, such that they are expected to produce antisense mRNA against the first 150 bp, 278 bp, and 393 bp of the DnaA gene, starting from its AUG - each under an inducible promoter.</p>
+                
+                  <p>The part M20 of Kit Plate 1 of the 2024 Distribution kit had an IPTG inducible promoter pTac and LacO operator, we noticed after going through the Airtable. It also had a His operon terminator. So, we decided to leverage its backbone - we shall insert antisense of a certain length between this pTac + His operon terminator. We shall repeat this HiFi assembly for three such lengths of the CCA sequence.</p>
+                
+                  <img src="https://static.igem.wiki/teams/5425/engineering/untitled-design-4.webp" style="border-radius: 20px; padding: 20px;">
+                
+                </p>
+                    </div>
 </div>
 
 <!-- Build Section -->
@@ -184,7 +254,7 @@
   
   <!-- Build Slides -->
   <div class="slide active block opacity-100 animate-fade-in">
-    <h2 class="text-2xl mb-4 text-center">Build - Slide 1</h2>
+    <h2 class="text-2xl mb-4 text-center">Iteration 1: Circuit Designing</h2>
     <p class="text-base leading-relaxed text-center px-5 py-5">
       Once the circuit was built, the question of reversibility of Cell Cycle Arrest posed before us. Consider a situation wherein, the AHL concentration has been now enough to trigger cell cycle arrest, and so has happened. The signal is anyway getting produced, as per our circuit planned so far. But now, the signal is no more needed! How to decrease this signal?
       Moreover, once the AHL signal is reduced, and as the cell density falls below the aforementioned threshold due to inevitable cell death, a reverse mechanism should restart Cell Cycle- which would then trigger another round of cell cycle arrest, and so on. We, thus, expect an oscillatory growth curve for the bacteria, oscillating around the logarithmic growth phase. How to have this reversibility? We used the tetR negative regulation of the Quorum Sensing.
@@ -192,24 +262,62 @@
           </p>
   </div>
   <div class="slide hidden opacity-0">
-    <h2 class="text-2xl mb-4 text-center">Build - Slide 2</h2>
+    <h2 class="text-2xl mb-4 text-center">Iteration 2:  Cell Cycle Arrest (CCA)</h2>
     <p class="text-base leading-relaxed text-center px-5 py-5">
       The 3rd fragment of our Population Control Module (PCM) circuit contained this Cell Cycle Arrest (CCA) sequence. It was ordered from our sponsor Twist BioScience and then, alongwith the other fragments, HiFi assembled into a pSB1C3 backbone. The assembled plasmids were then transformed into bacteria.    </p>
   </div>
   <div class="slide hidden opacity-0">
-    <h2 class="text-2xl mb-4 text-center">Build - Slide 3</h2>
+    <h2 class="text-2xl mb-4 text-center">Iteration 3: Circuit Designing: the Linalool Production Module (LPM)</h2>
     <p class="text-base leading-relaxed text-center px-5 py-5">
       We had put a little modification to the already built plasmid of the KEYSTONE Team according to our need i.e. to produce Linalool. We proposed to put GPPS and LIS gene by knocking out the idi gene from their design. The plan is to put DMAPP as a substrate of GPPS to produce the precursor of LIS (Linalool Synthase). For cloning the desired functional plasmid we ordered the pBbA5c-MevT (CO)-T1-MBIS(CO, ispA) . We have planned to knock out the ispA gene and insert GPPS and LIS in it. Hence we have ordered the mentioned plasmid from Addgene. 
       (Plasmid ordered from addgene: https://www.addgene.org/35152/sequences/)
           
   </div>
   <div class="slide hidden opacity-0">
-    <h2 class="text-2xl mb-4 text-center">Build - Slide 4</h2>
+    <h2 class="text-2xl mb-4 text-center">Iteration 4: Cloning and Expression </h2>
     <p class="text-base leading-relaxed text-center px-5 py-5">
       We decided to keep blunt overhangs in each fragment, so that they are Hi Fi compatible. The inserts of quorum sensing circuit were ordered in three parts from our sponsors- Twist Biosciences. The backbones were linearized out from Kit parts, as said.
 
     </p>
   </div>
+  <div class="slide hidden opacity-0">
+    <h2 class="text-2xl mb-4 text-center">Iteration 5:  Dry Lab: Initial Model for quorum sensing circuitI </h2>
+    <p class="text-base leading-relaxed text-center px-5 py-5">
+      We built the ODE system for the quorum sensing model to determine the bacterial population dynamics with time. The population equation in the presence of the quorum sensing circuit was formulated by modifying the logistic growth equation as such :-
+      \[ dN/dt = r0*((1-μ[CCA])-ct/(1+(n*(CAA))^n))N(1-N/K)\]
+
+Here, r0 is the cell growth term and r0ct is the cell death term due to reduction in substrate concentration and accumulation of secondary metabolites, which eventually brings about the death phase in the population.
+
+The \(r0*(1-&mu;[CCA])\) term was incorporated to denote the reduction in the population growth rate due to the cell cycle arrest antisense mRNA (CCA). 
+
+
+The  \(r0*ct/(1+(n*(CAA))^n)\) term was incorporated to denote the increase in the population life of the bacteria due to the population being controlled at a lower threshold.
+ </p>
+        </div>
+        <div class="slide hidden opacity-0">
+          <h2 class="text-2xl mb-4 text-center">Iteration 6:  Dry Lab: Final Model for quorum sensing circuit </h2>
+          <p class="text-base leading-relaxed text-center px-5 py-5">
+            We formulated the new population equation of the quorum sensing model, from the logistic growth model as :-
+      \[dN/dt= r0*N/(1+(m*[CAA])^r3)-r0*(N^2)/K - aNt^4/((t^4+b^4)*(1+(c*S)^n))\]
+
+Here, the first term is the growth term, being repressed proportionately by the concentration of the antisense mRNA (CCA). The second term is the natural death term, as usual.
+
+The third term is the death term due to reduction in substrate concentration and the accumulation of secondary metabolites, which is responsible for bringing about the death phase in the bacterial population. It is multiplied to N as well as has a Hill term with respect to time to denote that the accumulation of secondary metabolites increases with increase with the cell population as peaks after a certain time. The term is also inversely proportional to the substrate concentration to indicate that the reduction in the amount of substrate amplifies the death phase of the population.
+
+           </p>
+              </div>
+              <div class="slide hidden opacity-0">
+                <h2 class="text-2xl mb-4 text-center">Iteration 7:  Choosing Best Length of the Antisense  </h2>
+                <p class="text-base leading-relaxed text-center px-5 py-5">
+                 
+                    <p><strong>Build:</strong> CCA of three different lengths - viz, 150 bp, 277 bp, and 393 bp - were amplified out, using primers, which were overlapping with the linearized M20 Backbone, from the main construct PCM (already having the maximum 400 bp arbitrary CCA sequence). And then one by one, they were HiFi assembled into three different plasmids. Let them be code named M20+CCA sequences of lengths 150 bp, 277 bp, and 393 bp, respectively.</p>
+                  
+                    <p>During the amplification, the initial attempts at amplifying such small parts (100-400 bp) posed a challenge to us. We were initially unsuccessful in amplifying out CCA sequences of such short lengths. In the gel electrophoresis data, huge off-site binding and primer dimers were saddening us. By optimisation of protocol for PCR, we could successfully amplify them. Then on, the experiment proceeded smoothly.</p>
+             
+                  
+                 </p>
+                    </div>
+  
 </div>
 
 <!-- Test Section -->
@@ -222,12 +330,12 @@
   
   <!-- Test Slides -->
   <div class="slide active block opacity-100 animate-fade-in">
-    <h2 class="text-2xl mb-4 text-center">Test - Slide 1</h2>
+    <h2 class="text-2xl mb-4 text-center">Iteration 1: Circuit Designing</h2>
     <p class="text-base leading-relaxed text-center px-5 py-5">
       Our math modellers ran an in-silico kinetic study on the above circuit.    </p>
   </div>
   <div class="slide hidden opacity-0">
-    <h2 class="text-2xl mb-4 text-center">Test - Slide 2</h2>
+    <h2 class="text-2xl mb-4 text-center">Iteration 2:  Cell Cycle Arrest (CCA)</h2>
     <p class="text-base leading-relaxed text-center px-5 py-5">
       The testing of its efficacy was done through:
       RNA-RNA Docking
@@ -237,26 +345,60 @@
           </p>
   </div>
   <div class="slide hidden opacity-0">
-    <h2 class="text-2xl mb-4 text-center">Test - Slide 3</h2>
+    <h2 class="text-2xl mb-4 text-center">Iteration 3: Circuit Designing: the Linalool Production Module (LPM)</h2>
     <p class="text-base leading-relaxed text-center px-5 py-5">
       Due to time constraint, we could not perform the experiment regarding our newer approach to produce Linalool before our wiki submission, however, we have designed required primers in silico to linearize M20 plasmid from iGEM kit, amplify the gene insert GPPS and LIS and HiFi assembly the inserts with the plasmid backbone. The detailed primers and cloned in silico plasmids are documented in the Material part of our website.    </p>
   </div>
   <div class="slide hidden opacity-0">
-    <h2 class="text-2xl mb-4 text-center">Test - Slide 4</h2>
+    <h2 class="text-2xl mb-4 text-center">Iteration 4: Cloning and Expression </h2>
     <p class="text-base leading-relaxed text-center px-5 py-5">
       The HiFi Assembly was successfully done.  Colony PCRs revealed the same. The plasmids were extracted and successfully transformed into DH5-alpha E. coli to increase copies. The plasmids extracted from their primary culture was then transformed into competent E. coli strain BL21 expression host. The construct has also been sent for a sequencing. We used this construct as the template for GFP characterization experiments and for the experiment to have an empirical idea on the best length of antisense mRNA. This is a successful engineering.
     </p>
   </div>
-  
+  <div class="slide hidden opacity-0">
+    <h2 class="text-2xl mb-4 text-center">Iteration 5:  Dry Lab: Initial Model for quorum sensing circuitI </h2>
+    <p class="text-base leading-relaxed text-center px-5 py-5">
+      We ran a simulation of the model to determine the population dynamics of the bacteria with time. The N vs t plot is given below :-
+    <img src="https://static.igem.wiki/teams/5425/drylab/population-qs.webp" style=" border-radius: 20px; padding: 20px;"></p>
+        </div>
+        <div class="slide hidden opacity-0">
+    <h2 class="text-2xl mb-4 text-center">Iteration 6:  Dry Lab: Final Model for quorum sensing circuit </h2>
+    <p class="text-base leading-relaxed text-center px-5 py-5">
+      <p>We ran a simulation of the model to determine the population dynamics of the bacteria with time. The plots are given below:</p>
+
+  <img src="https://static.igem.wiki/teams/5425/drylab/population-with-qs.webp" style="border-radius: 20px; padding: 20px;">
+  <img src="https://static.igem.wiki/teams/5425/drylab/substrate-with-qs.webp" style="border-radius: 20px; padding: 20px;">
+
+  <p>The plots without the quorum sensing circuits are also given below:</p>
+
+  <img src="https://static.igem.wiki/teams/5425/drylab/population-without-qs.webp" style="border-radius: 20px; padding: 20px;">
+  <img src="https://static.igem.wiki/teams/5425/drylab/substrate-without-qs.webp" style="border-radius: 20px; padding: 20px;">
+      </p>
+        </div>
+        <div class="slide hidden opacity-0">
+          <h2 class="text-2xl mb-4 text-center">Iteration 7:  Choosing Best Length of the Antisense  </h2>
+          <p class="text-base leading-relaxed text-center px-5 py-5">
+           
+              <p>That the three assemblies were successful was confirmed through Colony PCRs and the plasmids were sent for sequencing. The plasmids were then transformed into DH5-alpha E. coli, extracted, and transformed into expression hosts E. coli strain BL21. Successful colonies were observed on chloramphenicol marker plates for 150 and 393 bp but NOT for 277 bp.</p>
+              
+              <p>A similar microplate reader assay with induction by IPTG in various concentrations was done for 150 and 393 bp. And controls were given with no inducer.</p>
+            
+              <img src="https://static.igem.wiki/teams/5425/engineering/hifi-best-length-final.png" style="border-radius: 20px; padding: 20px;">
+            
+             </p>
+              </div>
 
   
 </div>
 <!-- Iteration Rows -->
-<div class="iterationRowContainer  w-[80vw] bottom-[10%] left-[10%] grid grid-cols-4 z-10">
+<div class="iterationRowContainer  w-[80vw] bottom-[10%] left-[10%] grid grid-cols-7 z-10">
   <div class="iterationRow font-medium text-2xl py-1 text-center border-b-4 border-[#114f85] transition-all duration-100 ease-linear cursor-pointer hover:-translate-y-1 hover:font-bold" onclick="goToSlide(0)">Iteration 1</div>
   <div class="iterationRow font-medium text-2xl py-1 text-center border-b-4 border-[#114f85] transition-all duration-100 ease-linear cursor-pointer hover:-translate-y-1 hover:font-bold" onclick="goToSlide(1)">Iteration 2</div>
   <div class="iterationRow font-medium text-2xl py-1 text-center border-b-4 border-[#114f85] transition-all duration-100 ease-linear cursor-pointer hover:-translate-y-1 hover:font-bold" onclick="goToSlide(2)">Iteration 3</div>
   <div class="iterationRow font-medium text-2xl py-1 text-center border-b-4 border-[#114f85] transition-all duration-100 ease-linear cursor-pointer hover:-translate-y-1 hover:font-bold" onclick="goToSlide(3)">Iteration 4</div>
+  <div class="iterationRow font-medium text-2xl py-1 text-center border-b-4 border-[#114f85] transition-all duration-100 ease-linear cursor-pointer hover:-translate-y-1 hover:font-bold" onclick="goToSlide(4)">Iteration 5</div>
+  <div class="iterationRow font-medium text-2xl py-1 text-center border-b-4 border-[#114f85] transition-all duration-100 ease-linear cursor-pointer hover:-translate-y-1 hover:font-bold" onclick="goToSlide(5)">Iteration 6</div>
+  <div class="iterationRow font-medium text-2xl py-1 text-center border-b-4 border-[#114f85] transition-all duration-100 ease-linear cursor-pointer hover:-translate-y-1 hover:font-bold" onclick="goToSlide(6)">Iteration 7</div>
 </div>
 
 
