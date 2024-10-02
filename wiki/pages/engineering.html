@@ -441,7 +441,7 @@ var tracker4
   }
 
   function updateIterationRows(sectionId) {
-    let slides = document.querySelectorAll(#${sectionId} .slide);
+    let slides = document.querySelectorAll(`#${sectionId} .slide`);
     let iterationRows = document.querySelectorAll('.iterationRow');
 
     iterationRows.forEach((row, idx) => {
@@ -454,7 +454,7 @@ var tracker4
   }
 
   function showSlide(sectionId, index) {
-    let slides = document.querySelectorAll(#${sectionId} .slide);
+    let slides = document.querySelectorAll(`#${sectionId} .slide`);
     slides.forEach(slide => {
       slide.classList.add('hidden', 'opacity-0');
       slide.classList.remove('block', 'opacity-100', 'animate-fade-in');
@@ -481,7 +481,7 @@ var tracker4
   }
 
   function nextSlide(sectionId) {
-    let slides = document.querySelectorAll(#${sectionId} .slide);
+    let slides = document.querySelectorAll(`#${sectionId} .slide`);
     if (currentSlides[sectionId] < slides.length - 1) {
       showSlide(sectionId, currentSlides[sectionId] + 1);
     }
@@ -502,4 +502,4 @@ var tracker4
   showSection(currentSection);
 </script>
 
-{% endblock %}
+{% endblock %}
