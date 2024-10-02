@@ -10,21 +10,21 @@
 
 <main class="page-container flex mt-10">
   <!-- Left Nav Section -->
-<nav class="left-nav w-1/4 border-2 border-black bg-[#fffbeb] p-4 rounded-lg shadow-lg mr-8 ml-4 ">
-    <button onclick="showSection('section1')" class="text-xl py-2 w-full bg-[#c1a0d2] text-black rounded-lg hover:bg-[#dec5ec] hover:scale-105 transition duration-300 ease-in-out mb-4" aria-label="Go to Section 1">
-      STRATEGIC DESIGN
-    </button>
-    <button onclick="showSection('section2')" class="text-xl py-2 w-full bg-[#c1a0d2] text-black rounded-lg hover:bg-[#dec5ec] hover:scale-105 transition duration-300 ease-in-out mb-4" aria-label="Go to Section 2">
-      SYSTEM DESIGN
-    </button>
-    <button onclick="showSection('section3')" class="text-xl py-2 w-full bg-[#c1a0d2] text-black rounded-lg hover:bg-[#dec5ec] hover:scale-105 transition duration-300 ease-in-out mb-4" aria-label="Go to Section 3">
-      PROOF OF CONCEPT
-    </button>
-  </nav>
+<nav style="position: fixed;  top: 500px; left: 0px; height: calc(100% - 40px); overflow-y: auto; z-index: 1000; padding-top: 10px;" class="left-nav  mb-10 w-1/4 border-0 border-black bg-[#fffbeb] p-4 rounded-lg shadow-lg mr-8 ml-4">
+  <button onclick="showSection('section1')" class="text-xl py-2 w-full bg-[#c1a0d2] text-black rounded-lg hover:bg-[#dec5ec] hover:scale-105 transition duration-300 ease-in-out mb-4" aria-label="Go to Section 1">
+    STRATEGIC DESIGN
+  </button>
+  <button onclick="showSection('section2')" class="text-xl py-2 w-full bg-[#c1a0d2] text-black rounded-lg hover:bg-[#dec5ec] hover:scale-105 transition duration-300 ease-in-out mb-4" aria-label="Go to Section 2">
+    SYSTEM DESIGN
+  </button>
+  <button onclick="showSection('section3')" class="text-xl py-2 w-full bg-[#c1a0d2] text-black rounded-lg hover:bg-[#dec5ec] hover:scale-105 transition duration-300 ease-in-out mb-4" aria-label="Go to Section 3">
+    PROOF OF CONCEPT
+  </button>
+</nav>
+
 
   <!-- Right Content Section -->
-  <div class="right-content w-3/4 border-2 border-gray-300 p-6 rounded-lg shadow-lg">
-    <!-- Strategic Design Section (Visible by default) -->
+  <div id="content" class="w-3/4" style="padding-left: 27%; width: 97%;">    <!-- Strategic Design Section (Visible by default) -->
     <section id="section1" class="content-section border-black">
       <h2 class="text-4xl font-bold mb-4">Strategic Design</h2>
       <p class="text-lg mb-6">
@@ -37,35 +37,28 @@
       </p>
       <p class = "text-2xl font-semibold">Why Use a Living Microbial System in the first place?</p>
       <p class = "text-lg">The advantage of using a living microbial system is that it provides continuous, self-sustaining production of therapeutic molecules. By housing bacteria in a contained and controlled environment within the foot-bed, the system can deliver round-the-clock foot care. Instead of relying on externally applied products that wear off after a few hours, the living microbial system ensures that fresh linalool is produced as long as the foot-bed is in use, forming an intrinsic part of the foot environment with time.</p>
-      <h2 class = "font-semi-bold">Linalool: The Perfect Foot Care Molecule</h2>
+      <h2 class = "font-bold text-2xl mt-2">Linalool: The Perfect Foot Care Molecule</h2>
       <p class = "text-lg">Linalool is a naturally occurring terpene alcohol found in many plants, such as lavender and coriander.It was specifically chosen for this project because of its multifaceted properties:</p>
-        <!-- Benefits List Section -->
-        <div class="w-full mt-4 py-4 bg-gray-50 border border-gray-300 rounded-lg shadow-lg">
-            <ul class="list-disc pl-8 w-full">
-              <li class="text-lg mb-4">
-                <strong>Anti-inflammatory and Antifungal Properties:</strong> Linalool has been shown to reduce inflammation, making it particularly effective in soothing irritated skin. Its antifungal activity can help manage common foot-related conditions, such as Athlete’s Foot.
-              </li>
-              <li class="text-lg mb-4">
-                <strong>Fragrance and Non-toxicity:</strong> As a pleasant-smelling and non-toxic compound, linalool adds a fragrance to the foot-bed, improving the user experience and combating bad odors. The compound is generally regarded as safe for topical use, even over long periods.
-              </li>
-              <li class="text-lg mb-4">
-                <strong>Easy Diffusion:</strong> One of the key benefits of linalool is its volatile nature, allowing it to escape easily from the nutritive foot-bed and disperse throughout the shoe. This diffusion ensures that the entire foot is exposed to the compound, providing continuous protection and skincare even in hard-to-reach areas.
-              </li>
-            </ul>
-          </div>
-          <img src="https://static.igem.wiki/teams/5425/3.webp" class="w-full h-auto rounded-lg shadow-lg  rounded-lg" alt="Population with QS">
-          <div class="w-full p-8 bg-gray-50 border border-gray-300 rounded-lg shadow-lg">
+      <!-- Benefits List Section -->
+      <div class="w-full mt-4 py-4 bg-gray-50 border border-gray-300 rounded-lg shadow-lg mb-4">
+        <ul class="list-disc pl-8 w-full">
+          <li class="text-lg mb-4">
+            <strong>Anti-inflammatory and Antifungal Properties:</strong> Linalool has been shown to reduce inflammation, making it particularly effective in soothing irritated skin. Its antifungal activity can help manage common foot-related conditions, such as Athlete’s Foot.
+          </li>
+          <li class="text-lg mb-4">
+            <strong>Fragrance and Non-toxicity:</strong> As a pleasant-smelling and non-toxic compound, linalool adds a fragrance to the foot-bed, improving the user experience and combating bad odors. The compound is generally regarded as safe for topical use, even over long periods.
+          </li>
+          <li class="text-lg mb-4">
+            <strong>Easy Diffusion:</strong> One of the key benefits of linalool is its volatile nature, allowing it to escape easily from the nutritive foot-bed and disperse throughout the shoe. This diffusion ensures that the entire foot is exposed to the compound, providing continuous protection and skincare even in hard-to-reach areas.
+          </li>
+        </ul>
+      </div>
+      <img src="https://static.igem.wiki/teams/5425/3.webp" class="w-full h-auto rounded-lg shadow-lg  rounded-lg" alt="Population with QS">
+        
+          
+          <div class="w-full p-8 bg-gray-50 border border-gray-300 rounded-lg shadow-lg mt-4">
             <!-- Section: LINALOOL Production Pathway Explanation -->
-            <h2 class="text-4xl font-bold mb-6 text-center">LINALOOL: The Production Pathway</h2>
-            <p class="text-lg mb-6">
-              Linalool, a naturally occurring molecule found in plant-based oils, has been engineered for production in a living microbial system. This process allows continuous production and release of Linalool, addressing common foot care issues such as fungal infections, inflammation, and odor.
-            </p>
-            
-            <!-- Diagram Section -->
-            <div class="w-full flex justify-center mb-6">
-              <img src="https://static.igem.wiki/teams/5425/4.webp
-" alt="Linalool Production Pathway" class="w-full h-auto rounded-lg shadow-lg ">
-            </div>
+          
           
             <!-- Section: Product Envisioning -->
             <h3 class="text-3xl font-semibold mb-4">E. Solei: Product Envisioning - Lifting the Veil!</h3>
@@ -80,6 +73,10 @@
             <h3 class="text-3xl font-semibold mb-4">Choosing the Chassis: Why Lactobacillus rhamnosus?</h3>
             <p clss  = "text-1xl font-semi-bold">
                 Why is Lactobacillus rhamnosus an ideal candidate for the foot-bed application for our iGEM project?</p>
+                <div class="w-full flex justify-center mb-6"></div>
+                  <img src=" https://static.igem.wiki/teams/5425/5.webp" alt="Safety Diagram" class="w-full h-auto rounded-lg shadow-lg hover:scale-105 transition-transform duration-500 ease-in-out">
+                </div>
+
             <!-- List of Benefits -->
             <ul class="list-disc list-inside bg-white p-6 rounded-lg shadow-md mb-6">
               <li class="text-lg mb-4">
@@ -96,24 +93,23 @@
                 <strong>Immunomodulatory Potential:</strong> Lactobacillus rhamnosus has been shown to have immunomodulatory effects, potentially aiding in reducing inflammation and improving skin health. Its presence can help maintain a healthy immune response on the skin, adding an additional layer of protection against pathogens.
                 
               </li>
+              <p class="text-lg mb-6">
+                  Thus we take home the fact that Lactobacillus rhamnosus provides a package of safe antimicrobial action, and skin- compatible properties, making it an ideal candidate for use in a live microbial system in the foot-bed designed to release therapeutic molecules such as linalool and manage skin conditions.
+                </p>
+                <p class = "text-lg">Further details can be extracted from discussions on Microbial Cell Factories and Applied Microbiology and Biotechnology.
+                </p>
+                <p class = "text-lg">For our project, the team carries out all experiments in Escherichia coli (BL21 and DH5- alpha strains) as chassis, which are to be replicated when the chassis is changed to Lactobacillus rhamnosus.
+                </p>
             </ul>
           
-            <p class="text-lg mb-6">
-                Thus we take home the fact that Lactobacillus rhamnosus provides a package of safe antimicrobial action, and skin- compatible properties, making it an ideal candidate for use in a live microbial system in the foot-bed designed to release therapeutic molecules such as linalool and manage skin conditions.
-            </p>
-            <p class = "text-lg">Further details can be extracted from discussions on Microbial Cell Factories and Applied Microbiology and Biotechnology.
-            </p>
-            <p class = "text-lg">For our project, the team carries out all experiments in Escherichia coli (BL21 and DH5- alpha strains) as chassis, which are to be replicated when the chassis is changed to Lactobacillus rhamnosus.
-            </p>
 
             <div class="w-full p-8 bg-gray-50 border border-gray-300 rounded-lg shadow-lg">
                 <!-- Safety Considerations Heading -->
                 <h2 class="text-4xl font-bold mb-6 text-center">Safety Considerations for Living Microbial Systems in Footbeds</h2>
+                <img src="https://static.igem.wiki/teams/5425/11/elementals-website-1.webp" alt="Image">
               
                 <!-- Image for Illustration -->
-                <div class="w-full flex justify-center mb-6">
-                  <img src=" https://static.igem.wiki/teams/5425/5.webp" alt="Safety Diagram" class="w-full h-auto rounded-lg shadow-lg hover:scale-105 transition-transform duration-500 ease-in-out">
-                </div>
+                
               
                 <!-- List of Safety Considerations -->
                 <ul class="list-disc list-inside bg-white p-6 rounded-lg shadow-md mb-6">
@@ -149,11 +145,15 @@
                 </p>
               </div>
               
-          <img src = "https://static.igem.wiki/teams/5425/registry/tp-a.jpg">
-  <p class = "text-3xl gont-bold">Addressing a major problem with living bio-material therapeutics </p>
-          <p class="text-lg mb-6 font-semibold">
-    When integrating living microbial systems into applications such as a nutritive footbed, there are several inherent issues related to population control and environmental sustainability. Without proper mechanisms to manage bacterial growth, these systems can quickly become inefficient due to several factors:
-  </p>
+         
+          <div class="bg-white p-6 rounded-lg shadow-md mt-4">
+
+            <p class = "text-3xl font-bold">Addressing a major problem with living bio-material therapeutics</p>
+            <img src="https://static.igem.wiki/teams/5425/freepik-doodle-colorful-business-infographic-20240927080707ievx.webp" alt="">
+            <p class="text-lg mb-6 font-semibold">
+              When integrating living microbial systems into applications such as a nutritive footbed, there are several inherent issues related to population control and environmental sustainability. Without proper mechanisms to manage bacterial growth, these systems can quickly become inefficient due to several factors:
+            </p>
+          </div>
 
   <ul class="list-disc list-inside bg-white p-6 rounded-lg shadow-md mb-6">
     <li class="text-lg mb-4">
@@ -167,23 +167,26 @@
     </li>
     <li class="text-lg mb-4">
       <strong>Loss of Stability:</strong> Overcrowded bacterial populations experience stress from competition for limited resources. This stress can lead to decreased productivity and failure to produce the desired compounds, such as linalool in the footbed application.
+      <p class = "text-lg">produce the desired compounds, such as linalool in the footbed application.
+        These challenges highlight the key limitations of using living microbial systems in practical, long-term applications.
+        </p>
     </li>
   </ul>
-  <p class = "text-lg">produce the desired compounds, such as linalool in the footbed application.
-    These challenges highlight the key limitations of using living microbial systems in practical, long-term applications.
-    </p>
 
   <!-- Facing the Challenges Section -->
-  <h3 class="text-3xl font-semibold mb-4">Facing the Challenges</h3>
-  <p class="text-lg mb-6">
-    Our solution to the bacterial population problem in the footbed involves a dynamic system that intelligently automates itself and controls bacterial growth to maintain a stable and healthy population. This system ensures the bacteria never overgrow, which could lead to the accumulation of harmful byproducts, or die off too quickly, which would reduce their beneficial effects. By periodically pausing their ability to multiply, the system prevents the bacteria from exceeding the capacity of their environment. This controlled population management extends the lifespan of the footbed by preserving the nutrients in the media and allowing the bacteria to continuously produce beneficial compounds, like linalool, over an extended period. This way, we create a sustainable, safe, and efficient solution that supports long-term foot care without the need for frequent replacements or interventions.
-</p>
+   <div class="bg-white p-4">
 
-<img src = "https://static.igem.wiki/teams/5425/registry/part-sensing.jpg ">
+     <h3 class="text-3xl font-semibold mb-4">Facing the Challenges</h3>
+     <p class="text-lg mb-6">
+       Our solution to the bacterial population problem in the footbed involves a dynamic system that intelligently automates itself and controls bacterial growth to maintain a stable and healthy population. This system ensures the bacteria never overgrow, which could lead to the accumulation of harmful byproducts, or die off too quickly, which would reduce their beneficial effects. By periodically pausing their ability to multiply, the system prevents the bacteria from exceeding the capacity of their environment. This controlled population management extends the lifespan of the footbed by preserving the nutrients in the media and allowing the bacteria to continuously produce beneficial compounds, like linalool, over an extended period. This way, we create a sustainable, safe, and efficient solution that supports long-term foot care without the need for frequent replacements or interventions.
+      </p>
+      
+    </div>
   <!-- Traffic Police Analogy Section -->
   <h3 class="text-3xl font-semibold mb-4">Traffic Police Analogy</h3>
   <p class="text-lg mb-6">
     The system works much like traffic police, regulating bacterial "traffic" to ensure smooth operation. The bacteria are allowed to multiply when needed, but once the population reaches optimal levels, the system "halts" further growth until necessary. This way, it balances population stability and efficiency.
+    <img src = "https://static.igem.wiki/teams/5425/registry/tp-a.jpg">
   </p>
 
   <!-- Phases of Development Section -->
@@ -253,6 +256,9 @@
         <p class="text-lg mb-4">
             The cca gene causes a halt in cell division across the bacterial population, preventing further growth. This is crucial because unchecked growth could lead to nutrient depletion and the buildup of toxic byproducts, reducing linalool production efficiency.
         </p>
+        <p class="text-lg mb-4 text-blue-500 underline"></p>
+          <img src="https://static.igem.wiki/teams/5425/registry/arrest-mm.jpg" alt="Antisense RNA Mechanism Figure" height="400" width="800">
+        </p>
         <h3 class="text-xl font-semibold mb-4">Introducing our cell cycle arrest gene</h3>
         <ul class="list-disc list-inside ml-4 mb-4">
             <li class="text-lg">Antisense against dnaA</li>
@@ -273,8 +279,8 @@
         <p class="text-lg mb-4">
             This allows for a dynamic regulation of gene expression, where the effects can be turned on or off as needed, enabling researchers to study gene function and potentially tailor therapies without long-lasting impacts.
         </p>
-        <p class="text-lg mb-4 text-blue-500 underline">
-          <img src="https://static.igem.wiki/teams/5425/registry/arrest-mm.jpg" alt="Antisense RNA Mechanism Figure" height="400" width="800">
+        <p class="text-lg mb-4 text-blue-500 underline"></p>
+          <img src="https://static.igem.wiki/teams/5425/antisense.png" alt="Antisense RNA Mechanism Figure" height="400" width="800">
         </p>
         <p class="text-lg mb-4">
             <strong>Why dnaA?</strong><br>
@@ -283,10 +289,7 @@
         <p class="text-lg mb-4">
             DnaA utilizes the energy from ATP hydrolysis to introduce a bend or kink in the DNA, creating tension in the double helix. This tension facilitates the unwinding of DNA at the AT-rich regions of oriC, allowing the replication process to commence effectively.
         </p>
-        <p class="text-lg mb-4 text-blue-500 underline">
-          <img src="https://static.igem.wiki/teams/5425/e-solei-brief-presentation-1.webp" alt="Presentation Link 1" height="400" width="800">
-            
-        </p>
+        
         <p class="text-lg mb-4 text-blue-500 underline">
           <img src="https://static.igem.wiki/teams/5425/e-solei-brief-presentation.webp" alt="Presentation Link 2" height="400" width="800">
         </p>
@@ -307,6 +310,9 @@
             The Regulation Module adds reversibility and fine control over the bacterial population. After triggering cell cycle arrest, the system allows periodic recovery to maintain a healthy population.
 
         </p>
+        <p class="text-lg mb-4 text-blue-500 underline"></p>
+          <img src="https://static.igem.wiki/teams/5425/registry/part-execution.jpg" alt="Antisense RNA Mechanism Figure" height="400" width="800">
+        </p>
         <p class="text-lg mb-4">
             This module features two negative feedback loops to manage AHL levels and modulate population control:
         </p>
@@ -326,9 +332,7 @@
             Both TetR and AiiA are expressed under the <strong>plux</strong> promoter, so they’re produced only when AHL levels are high. As bacteria die and AHL is degraded, its concentration drops. When AHL falls below the critical threshold, LuxR dissociates from the <strong>plux</strong> promoter, stopping the expression of <strong>cca</strong>, TetR, and AiiA. This ends cell cycle arrest and allows the population to recover and grow.
         </p>
         
-        <p class="text-lg mb-4 text-blue-500 underline">
-          <img src="https://static.igem.wiki/teams/5425/drylab/population-with-qs.webp" alt="Figure of Circuit and Components" height="400" width="800">
-        </p>
+        
     </section>
     <!-- Cyclic Control and Population Oscillations Section -->
     <section class="bg-white p-6 rounded-lg shadow-md mb-6">
@@ -345,9 +349,7 @@
         </p>
 
         <div style="background-color: #d3d3d3; padding: 10px;">
-          <img src="https://static.igem.wiki/teams/5425/map/teto-edited.gif" alt="Image" height="400" width="800" style="margin-bottom: 10px;">
-          <img src="https://static.igem.wiki/teams/5425/map/graph-2-final.gif" alt="Image" height="400" width="800">
-      </div>
+          </div>
         
     </section>
 
@@ -368,8 +370,6 @@
 
         </p>
 
-        <!-- Image Placeholder -->
-        <p class="text-lg text-blue-500 underline mb-4"><a href="#">(Insert Image of MEV Pathway)</a></p>
 
         <p class="text-lg mb-4">
           The production of Linalool, needed us to direct the MEV pathway from the compounds DMAPP to GPP (geranyl diphosphate) and finally Linalool. For this we needed to put in two genes of our own : namely GPPS (geranyl diphosphate synthase) and LIS (Linalool synthase).
@@ -380,8 +380,9 @@
           Initially the team had believed in trying to place the entirety of the pathway into our chassis E.coli for the production of linalool, just like other research teams have done before. However, this required us to place a plasmid (of approx. length 15 kb) with the full gene circuit, inside our chassis. Due to time constraints this made us wonder if we could come up with something new.
         </p>
 
-        <!-- Image Placeholder -->
-        <p class="text-lg text-blue-500 underline mb-4"><a href="#">(Insert Image of Gene Circuit)</a></p>
+        <p class="text-lg mb-4 text-blue-500 underline"></p>
+          <img src="https://static.igem.wiki/teams/5425/description/screenshot-2024-10-02-063115.webp" alt="Antisense RNA Mechanism Figure" height="400" width="800">
+        </p>
     </section>
 
     <!-- MEP Pathway in E. coli Section -->
@@ -401,8 +402,9 @@
         <p class="text-lg mb-4">
           However, even if unsuccessful it would provide valuable insight on the preference of Linalool production and other types of terpene productions like FPP (farnesyl pyrophosphate), and also enzyme reactivity comparison.        </p>
 
-        <!-- Image Placeholder -->
-        <p class="text-lg text-blue-500 underline mb-4"><a href="#">(Insert Image of MEP Pathway)</a></p>
+          <p class="text-lg mb-4 text-blue-500 underline"></p>
+          <img src="https://static.igem.wiki/teams/5425/description/mev-mep-circuit.webp" alt="Antisense RNA Mechanism Figure" height="400" width="800">
+        </p>
     </section>
 
     <!-- Future Prospects Section -->
@@ -439,7 +441,7 @@
             <tbody>
                 <!-- Tet Operator Row -->
                 <tr class="bg-gray-100 hover:bg-gray-300 transition duration-200">
-                    <td class="px-4 py-2">Tet Operator</td>
+                    
                     <td class="px-4 py-2"></td>
                     <td class="px-4 py-2"></td>
                     <td class="px-4 py-2"></td>
@@ -468,8 +470,8 @@
                 <!-- LuxI Row -->
                 <tr class="hover:bg-gray-300 transition duration-200">
                     <td class="px-4 py-2">LuxI</td>
-                    <td class="px-4 py-2"></td>
-                    <td class="px-4 py-2"></td>
+                    <td class="px-4 py-2">AHL Synthase </td>
+                    <td class="px-4 py-2">BBa_C0161 </td>
                     <td class="px-4 py-2 text-blue-500 underline">
                         <a href="https://parts.igem.org/Part:BBa_C0161:Experience" target="_blank">Link</a>
                     </td>
@@ -488,7 +490,7 @@
                 <!-- P_tac promoter Row -->
                 <tr class="hover:bg-gray-300 transition duration-200">
                     <td class="px-4 py-2">P_tac promoter</td>
-                    <td class="px-4 py-2"></td>
+                    <td class="px-4 py-2">Hybrid of lac and tryptophan promoter. </td>
                     <td class="px-4 py-2">BBa_K864400</td>
                     <td class="px-4 py-2 text-blue-500 underline">
                         <a href="https://parts.igem.org/Part:BBa_K864400" target="_blank">Link</a>
@@ -508,8 +510,8 @@
                 <!-- LuxR Row -->
                 <tr class="hover:bg-gray-300 transition duration-200">
                     <td class="px-4 py-2">LuxR</td>
-                    <td class="px-4 py-2"></td>
-                    <td class="px-4 py-2"></td>
+                    <td class="px-4 py-2">Transcription factor LuxR </td>                    </td>
+                    <td class="px-4 py-2">BBa_C0062 </td>
                     <td class="px-4 py-2 text-blue-500 underline">
                         <a href="https://parts.igem.org/Part:BBa_C0062" target="_blank">Link</a>
                     </td>
@@ -558,17 +560,19 @@
                 <!-- AiiA Row -->
                 <tr class="bg-gray-100 hover:bg-gray-300 transition duration-200">
                     <td class="px-4 py-2">AiiA</td>
-                    <td class="px-4 py-2"></td>
-                    <td class="px-4 py-2"></td>
-                    <td class="px-4 py-2"></td>
+                    <td class="px-4 py-2">AHL degrading enzyme</td>
+                    <td class="px-4 py-2">C0160</td>
+                    <td class="px-4 py-2"><a href="https://parts.igem.org/Part:BBa_C0160" target="_blank">Link</a>
+                    </td>
                 </tr>
 
                 <!-- Degradation Tag Row -->
                 <tr class="hover:bg-gray-300 transition duration-200">
                     <td class="px-4 py-2">Degradation Tag</td>
-                    <td class="px-4 py-2"></td>
-                    <td class="px-4 py-2"></td>
-                    <td class="px-4 py-2"></td>
+                    <td class="px-4 py-2"> LAA Degradation tag</td>
+                    <td class="px-4 py-2">M0050</td>
+                    <td class="px-4 py-2"><a href="https://parts.igem.org/Part:BBa_M0050" target="_blank">Link</a>
+                    </td>
                 </tr>
 
                 <!-- Terminator Row -->
@@ -581,13 +585,7 @@
                     </td>
                 </tr>
 
-                <!-- CCA Row -->
-                <tr class="hover:bg-gray-300 transition duration-200">
-                    <td class="px-4 py-2">CCA</td>
-                    <td class="px-4 py-2"></td>
-                    <td class="px-4 py-2"></td>
-                    <td class="px-4 py-2"></td>
-                </tr>
+                
             </tbody>
         </table>
     </section>
@@ -640,7 +638,7 @@
     
       <!-- Section: Proof of Concept for Quorum Sensing Math Model -->
       <section class="max-w-4xl mx-auto p-8 bg-white my-8 shadow-lg rounded">
-        <h2 class="text-2xl font-bold mb-4">Proof of Concept for Quorum Sensing Math Model</h2>
+        <h2 class="text-2xl font-bold mb-4"> Quorum Sensing Math Model</h2>
         <p class="mb-4">
           Our deterministic math model for the main quorum sensing circuit focuses upon controlling the bacterial population at a level quite below the original carrying capacity of the control bacterial population, thereby increasing the media potential in the process due to slower consumption of substrates as well as slower accumulation of secondary metabolites in the media. We also aim to achieve an oscillation at the population level to reflect the efficient working of the negative feedback loop in the main circuit, as demonstrated in several studies performing quorum sensing in bacterial populations.
         </p>
@@ -716,4 +714,4 @@
     showSection('section1');
   });
 </script>
-{% endblock %}
+{% endblock %}
