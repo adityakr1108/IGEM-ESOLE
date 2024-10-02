@@ -1,393 +1,433 @@
 {% extends "layout.html" %}
 
 {% block title %}Team{% endblock %}
+{% block lead %}On this page you can introduce your team members, instructors, and advisors.{% endblock %}
 
 {% block page_content %}
+<img src="https://static.igem.wiki/teams/5425/bacteria-8107336.png" style="height:200px; width:200px; border-radius: 20px; margin-left: 42%;" class="items-center w-full h-96 mt-20" alt="Inclusivity Banner">
 
+<!-- Heading Section -->
+<div class="heading" style="padding: 20px; border-radius: 10px;">
+    <h1 class="text-6xl font-bold text-center">Team Members</h1>
+</div>
 
+<hr>
+<style>
+    :root {
+        --primary-bg-color: #b29ce4;
+        --primary-text-color: #6e5b9a;
+        --secondary-bg-color: #D7C8eD;
+        --border-radius: 50%; /* Circular cards */
+        --transition-duration: 0.5s;
+    }
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Team Description</title>
-    <link href="https://fonts.googleapis.com/css?family=Poppins|Bubblegum+Sans&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary-bg-color: #b29ce4;
-            --primary-text-color: #6e5b9a;
-            --secondary-bg-color: #D7C8eD;
-            --border-radius: 50%; /* Circular cards */
-            --transition-duration: 0.5s;
-        }
+    .section {
+        margin: 50px 20px;
+    }
 
-        body {
-            background-color: var(--secondary-bg-color);
-            font-family: 'Poppins', sans-serif;
-            background-image: url('https://static.igem.wiki/teams/5425/dall-e-2024-09-12-12-19-12-a-minimalistic-background-image-featuring-very-small-lavender-colored-petals-scattered-across-a-white-background-the-number-of-petals-should-be-reduc.webp');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            margin: 0;
-            padding: 0;
-        }
+    .section-title {
+        font-size: 3em;
+        color: var(--primary-text-color);
+        margin-bottom: 40px;
+        text-align: center;
+    }
 
-        /* Hero Section */
-        .hero {
-            background-image: url('https://static.igem.wiki/teams/5425/dall-e-2024-09-11-01-13-17-a-wide-aspect-ratio-image-showing-7-to-8-researchers-standing-together-for-a-group-picture-in-a-modern-research-lab-they-are-diverse-in-background-an.webp');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            min-height: 100vh;
-            position: relative;
-            padding: 60px 0;
-            text-align: center;
-        }
+    .card-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 60px;
+        justify-content: center;
+    }
 
-        .hero-title {
-            font-size: 8em;
-            font-family: 'Bubblegum Sans', cursive;
-            font-weight: bold;
-            color: #c9bfbf;
-            letter-spacing: 2px;
-            padding-top: 60px;
-            text-shadow: 3px 3px 10px #070707;
-            text-transform: uppercase;
-            text-decoration: underline wavy;
-            animation: fadeIn 2s ease-in-out 1, retroHover 3s infinite alternate ease-in-out;
-        }
+    .card {
+        width: 350px;
+        height: 350px;
+        perspective: 1000px;
+        position: relative;
+    }
 
-        .section {
-            margin: 50px 20px;
-        }
+    .card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+    }
 
-        .section-title {
-            font-size: 3em;
-            color: var(--primary-text-color);
-            margin-bottom: 40px;
-            text-align: center;
-        }
+    .card.flip .card-inner {
+        transform: rotateY(180deg);
+    }
 
-        .card-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 60px; /* Adjusted gap */
-            justify-content: center;
-        }
+    .card-front,
+    .card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        backface-visibility: hidden;
+    }
 
-        /* Card styles for front and back */
-        .card {
-            width: 300px;  /* Increased card size */
-            height: 300px; /* Increased card size */
-            perspective: 1000px;
-            position: relative;
-        }
+    .card-front {
+        background-color: #fff;
+        border: 2px solid #ccc;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 
-        .card-inner {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            text-align: center;
-            transition: transform 0.6s;
-            transform-style: preserve-3d;
-        }
+    .card-front img {
+        border-radius: 100% 100% 40% 40%;
+    width: 264px;
+    height: 177px;
+    }
 
-        .card.flip .card-inner {
-            transform: rotateY(180deg);
-        }
+    .card-content h3 {
+        margin: -3px 0 0 0;
+        font-size: 1.5em;
+        color: #333;
+    }
 
-        .card-front,
-        .card-back {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            backface-visibility: hidden;
-        }
+    .card-content p {
+        margin: 5px 0 0 0;
+        font-size: 1.2em;
+        color: var(--primary-text-color);
+    }
 
-        .card-front {
-            background-color: #fff;
-            border: 2px solid #ccc;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
+    .card-back {
+        background-color: #6e5b9a;
+        color: white;
+        transform: rotateY(180deg);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        border-radius: 50%;
+    }
 
-        .card-front img {
-    border-radius: 100% 100% 37% 38%;
-    width: 250px;
-    height: 184px;
-}
+    .social-buttons {
+        margin-top: 15px;
+        display: flex;
+        gap: 10px;
+    }
 
-        .card-content h3 {
-            margin: -3px 0 0 0;
-            font-size: 1.5em;
-            color: #333;
-        }
+    .social-buttons a {
+        text-decoration: none;
+        background-color: #fff;
+        color: #6e5b9a;
+        padding: 10px;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.2em;
+        transition: background-color 0.3s ease;
+    }
 
-        .card-back {
-            background-color: #6e5b9a;
-            color: white;
-            transform: rotateY(180deg);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-            border-radius: 50%;
-        }
+    .social-buttons a:hover {
+        background-color: #c9bfbf;
+    }
 
-        .social-buttons {
-            margin-top: 15px;
-            display: flex;
-            gap: 10px;
-        }
+    /* Read More Button Styles */
+    .read-more {
+        margin-top: 10px;
+        padding: 10px 20px;
+        background-color: #472626;
+        color: #fff;
+        border-radius: 10px;
+        font-size: 1em;
+        cursor: pointer;
+        text-decoration: none;
+        transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    }
 
-        .social-buttons a {
-            text-decoration: none;
-            background-color: #fff;
-            color: #6e5b9a;
-            padding: 10px;
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 1.2em;
-            transition: background-color 0.3s ease;
-        }
+    .read-more:hover {
+        background-color: #c9bfbf;
+        color: #472626;
+        transform: scale(1.1);
+    }
 
-        .social-buttons a:hover {
-            background-color: #c9bfbf;
-        }
+    .read-more:active {
+        transform: scale(0.95);
+    }
 
-        /* Read More Button Styles */
-        .read-more {
-            margin-top: 10px;
-            padding: 10px 20px;
-            background-color: #472626;
-            color: #fff;
-            border-radius: 10px;
-            font-size: 1em;
-            cursor: pointer;
-            text-decoration: none;
-            transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
-        }
+    #scrollToTopBtn:hover {
+        transform: scale(1.1);
+    }
 
-        .read-more:hover {
-            background-color: #c9bfbf;
-            color: #472626;
-            transform: scale(1.1);
-        }
+    
+    #scrollToTopBtn {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: var(--primary-bg-color);
+        color: var(--primary-text-color);
+        border: none;
+        border-radius: 50%;
+        padding: 15px;
+        cursor: pointer;
+        z-index: 1000;
+        transition: all 0.3s ease-in-out;
+    }
+</style>
 
-        .read-more:active {
-            transform: scale(0.95);
-        }
-
-        /* Scroll Button */
-        #scrollToTopBtn:hover {
-            transform: scale(1.1);
-        }
-
-        #scrollToTopBtn {
-            display: none;
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: var(--primary-bg-color);
-            color: var(--primary-text-color);
-            border: none;
-            border-radius: 50%;
-            padding: 15px;
-            cursor: pointer;
-            z-index: 1000;
-            transition: all 0.3s ease-in-out;
-        }
-
-        /* Animation */
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        @keyframes retroHover {
-            0% { letter-spacing: 2px; }
-            100% { letter-spacing: 5px; }
-        }
-    </style>
-</head>
-<body>
-    <!-- Hero Section -->
-    <div class="hero">
-        <h1 class="hero-title">Team Member</h1>
-    </div>
-
-    <!-- Management Section -->
-    <div class="section">
-        <h2 class="section-title">Management</h2>
-        <div class="card-container">
-            <div class="card" id="card1">
-                <div class="card-inner">
-                    <div class="card-front">
-                        <img src="https://via.placeholder.com/150" alt="John Doe">
-                        <div class="card-content">
-                            <h3>John Doe</h3>
-                        </div>
-                        <a class="read-more" onclick="flipCard('card1')">Read More</a>
+<!-- Principal Investigators Section -->
+<div class="section">
+    <h2 class="section-title">Principal Investigators (PI)</h2>
+    <div class="card-container">
+        <div class="card" id="card1">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="https://static.igem.wiki/teams/5425/team-photo/sd.webp" alt="Dr. Smith">
+                    <div class="card-content">
+                        <h3>Dr. Supratim Datta</h3>
+                        <p>HoD, Departe. of Biological Sciences, IISER Kolkata</p>
                     </div>
-                    <div class="card-back">
-                        <p>John is an experienced project manager with over 10 years of experience.</p>
-                        <div class="social-buttons">
-                            <a href="#" title="Instagram">📷</a>
-                            <a href="#" title="LinkedIn">🔗</a>
-                            <a href="#" title="Twitter">🐦</a>
-                        </div>
-                    </div>
+                    <a class="read-more" onclick="flipCard('card1')">Read More</a>
+                </div>
+                <div class="card-back">
+                    <p>Combining synthetic biology-based approach with protein and metabolic engineering techniques with an overall goal of providing biology-based solutions in areas of bioenergy and chemical production.</p>
                 </div>
             </div>
-            <div class="card" id="card2">
-                <div class="card-inner">
-                    <div class="card-front">
-                        <img src="https://via.placeholder.com/150" alt="Alice Brown">
-                        <div class="card-content">
-                            <h3>Alice Brown</h3>
-                        </div>
-                        <a class="read-more" onclick="flipCard('card2')">Read More</a>
+        </div>
+        <div class="card" id="card2">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="https://static.igem.wiki/teams/5425/team-photo/s-ray.webp" alt="Dr. Jane Williams">
+                    <div class="card-content">
+                        <h3>Dr. Susmita Roy</h3>
+                        <p >Assistant Professor, Department of Chemical Sciences, IISER Kolkata</p>
                     </div>
-                    <div class="card-back">
-                        <p>Alice is the head of operations, ensuring smooth workflow and timelines.</p>
-                        <div class="social-buttons">
-                            <a href="#" title="Instagram">📷</a>
-                            <a href="#" title="LinkedIn">🔗</a>
-                            <a href="#" title="Twitter">🐦</a>
-                        </div>
+                    <a class="read-more" onclick="flipCard('card2')">Read More</a>
+                </div>
+                <div class="card-back">
+                    <p>Development of cutting-edge computational methodologies using fundamental concepts of theoretical physical chemistry/statistical mechanics to understand nucleic acids structure-function and chemical dynamical approaches to understand autoimmune diseases and cancer progression. </p>
+
+                </div>
+            </div>
+        </div>
+        <div class="card" id="card3">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="https://static.igem.wiki/teams/5425/team-photo/ab.webp" alt="Dr. Smith">
+                    <div class="card-content">
+                        <h3>Dr. Anindita Bhadra</h3>
+                        <p>Assistant Professor, Department of Biological Sciences, IISER Kolkata</p>
                     </div>
+                    <a class="read-more" onclick="flipCard('card1')">Read More</a>
+                </div>
+                <div class="card-back">
+                    <p>Behavioural dynamics of social organisms by exceptionally simplistic experimental designs. </p>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
-    <!-- Development Section -->
-    <div class="section">
-        <h2 class="section-title">Development</h2>
-        <div class="card-container">
-            <div class="card" id="card3">
-                <div class="card-inner">
-                    <div class="card-front">
-                        <img src="https://via.placeholder.com/150" alt="Jane Smith">
-                        <div class="card-content">
-                            <h3>Jane Smith</h3>
-                        </div>
-                        <a class="read-more" onclick="flipCard('card3')">Read More</a>
+<!-- Members Section -->
+<div class="section">
+    <h2 class="section-title">Members</h2>
+    <div class="card-container">
+        <!-- Fathima Anjum EC -->
+        <div class="card" id="card3">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="https://via.placeholder.com/150" alt="Fathima Anjum EC">
+                    <div class="card-content">
+                        <h3>Fathima Anjum EC</h3>
+                        <p>Team Lead, HP Head, Safety Head</p>
+                        <p>Status: 4th year, Bio Major</p>
                     </div>
-                    <div class="card-back">
-                        <p>Jane is a front-end developer specializing in UX and UI design.</p>
-                        <div class="social-buttons">
-                            <a href="#" title="Instagram">📷</a>
-                            <a href="#" title="LinkedIn">🔗</a>
-                            <a href="#" title="Twitter">🐦</a>
-                        </div>
-                    </div>
+                    <a class="read-more" onclick="flipCard('card3')">Read More</a>
+                </div>
+                <div class="card-back">
+                    <p>Engagement: Human Practices, Wet Lab, Public Engagement, Safety.</p>
                 </div>
             </div>
-            <div class="card" id="card4">
-                <div class="card-inner">
-                    <div class="card-front">
-                        <img src="https://via.placeholder.com/150" alt="Mark Lee">
-                        <div class="card-content">
-                            <h3>Mark Lee</h3>
-                        </div>
-                        <a class="read-more" onclick="flipCard('card4')">Read More</a>
+        </div>
+
+        <!-- Gitanjali Das -->
+        <div class="card" id="card4">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="https://static.igem.wiki/teams/5425/team-photo/gd.webp" alt="Gitanjali Das">
+                    <div class="card-content">
+                        <h3>Gitanjali Das</h3>
+                        <p>Team Lead</p>
+                        <p>Status: 4th year, Bio Major</p>
                     </div>
-                    <div class="card-back">
-                        <p>Mark is a full-stack developer with expertise in backend integration.</p>
-                        <div class="social-buttons">
-                            <a href="#" title="Instagram">📷</a>
-                            <a href="#" title="LinkedIn">🔗</a>
-                            <a href="#" title="Twitter">🐦</a>
-                        </div>
+                    <a class="read-more" onclick="flipCard('card4')">Read More</a>
+                </div>
+                <div class="card-back">
+                    <p>Engagement: Wet Lab, Human Practices, Wiki Coordinator.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sampoorn Pandey -->
+        <div class="card" id="card5">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="https://static.igem.wiki/teams/5425/team-photo/spandey.webp" alt="Sampoorn Pandey">
+                    <div class="card-content">
+                        <h3>Sampoorn Pandey</h3>
+                        <p>Bio-modelling and Wet Lab Head</p>
+                        <p>Status: 3rd year, Biology Major</p>
                     </div>
+                    <a class="read-more" onclick="flipCard('card5')">Read More</a>
+                </div>
+                <div class="card-back">
+                    <p>Engagement: Wet Lab, Bio Modelling, Entrepreneurship.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ayantik Kundu -->
+        <div class="card" id="card6">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="https://via.placeholder.com/150" alt="Ayantik Kundu">
+                    <div class="card-content">
+                        <h3>Ayantik Kundu</h3>
+                        <p>Math Model Lead</p>
+                        <p>Status: 2nd year, Opting for Bio Major/Physics Major</p>
+                    </div>
+                    <a class="read-more" onclick="flipCard('card6')">Read More</a>
+                </div>
+                <div class="card-back">
+                    <p>Engagement: Dry Lab, Human Practices, Entrepreneurship.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Anushka Mishra -->
+        <div class="card" id="card7">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="https://static.igem.wiki/teams/5425/team-photo/am.webp" alt="Anushka Mishra">
+                    <div class="card-content">
+                        <h3>Anushka Mishra</h3>
+                        <p>Wet Lab Manager</p>
+                        <p >2nd year, Opting <br>for Chemistry Major</p>
+                    </div>
+                    <a class="read-more" onclick="flipCard('card7')">Read More</a>
+                </div>
+                <div class="card-back">
+                    <p>Engagement: Wet Lab, Lab Management, Record Keeping, Bio Modelling, Safety.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Utkarsh Aryan -->
+        <div class="card" id="card8">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="https://static.igem.wiki/teams/5425/team-photo/ua.webp" alt="Utkarsh Aryan">
+                    <div class="card-content">
+                        <h3>Utkarsh Aryan</h3>
+                        <p>Entrepreneurship Lead</p>
+                        <p>Status: 2nd year, Opting for Bio Major</p>
+                    </div>
+                    <a class="read-more" onclick="flipCard('card8')">Read More</a>
+                </div>
+                <div class="card-back">
+                    <p>Engagement: Entrepreneurship, Human Practices, Collaborations.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Smrutimayee Prusty -->
+        <div class="card" id="card9">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="https://static.igem.wiki/teams/5425/team-photo/sp.webp" alt="Smrutimayee Prusty">
+                    <div class="card-content">
+                        <h3>Smrutimayee Prusty</h3>
+                        <p>Design Head</p>
+                        <p>Status: 4th year, Bio Major</p>
+                    </div>
+                    <a class="read-more" onclick="flipCard('card9')">Read More</a>
+                </div>
+                <div class="card-back">
+                    <p>Engagement: Design, Social Media, Entrepreneurship, Wet Lab, Human Practices.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sharanya Chatterjee -->
+        <div class="card" id="card10">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="https://via.placeholder.com/150" alt="Sharanya Chatterjee">
+                    <div class="card-content">
+                        <h3>Sharanya Chatterjee</h3>
+                        <p>Creativity Lead</p>
+                        <p>Status: 2nd year, Opting for Bio Major</p>
+                    </div>
+                    <a class="read-more" onclick="flipCard('card10')">Read More</a>
+                </div>
+                <div class="card-back">
+                    <p>Engagement: Bio Modelling, Wet Lab, Human Practices, Public Engagement, Content Writing.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Divyanshu Kumar -->
+        <div class="card" id="card11">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="https://static.igem.wiki/teams/5425/team-photo/dkumar.webp" alt="Divyanshu Kumar">
+                    <div class="card-content">
+                        <h3>Divyanshu Kumar</h3>
+                        <p>Finance Head</p>
+                        <p>Status: 4th year, Earth Science Major</p>
+                    </div>
+                    <a class="read-more" onclick="flipCard('card11')">Read More</a>
+                </div>
+                <div class="card-back">
+                    <p>Engagement: Finance Management, Dry Lab, Human Practices, Wiki Coordinator.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Shamba Chakraborty -->
+        <div class="card" id="card12">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="https://static.igem.wiki/teams/5425/team-photo/sc.webp" alt="Shamba Chakraborty">
+                    <div class="card-content">
+                        <h3>Shamba Chakraborty</h3>
+                        <p>Content Lead</p>
+                        <p>Status: 3rd year, Chemistry Major</p>
+                    </div>
+                    <a class="read-more" onclick="flipCard('card12')">Read More</a>
+                </div>
+                <div class="card-back">
+                    <p>Engagement: Wet Lab, Public Engagement, Bio Modelling, Wiki Content.</p>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
-    <!-- Design Section -->
-    <div class="section">
-        <h2 class="section-title">Design</h2>
-        <div class="card-container">
-            <div class="card" id="card5">
-                <div class="card-inner">
-                    <div class="card-front">
-                        <img src="https://via.placeholder.com/150" alt="Chris Doe">
-                        <div class="card-content">
-                            <h3>Chris Doe</h3>
-                        </div>
-                        <a class="read-more" onclick="flipCard('card5')">Read More</a>
-                    </div>
-                    <div class="card-back">
-                        <p>Chris is a graphic designer focused on brand identity and visuals.</p>
-                        <div class="social-buttons">
-                            <a href="#" title="Instagram">📷</a>
-                            <a href="#" title="LinkedIn">🔗</a>
-                            <a href="#" title="Twitter">🐦</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+<script>
+    function flipCard(cardId) {
+        const card = document.getElementById(cardId);
+        card.classList.toggle('flip');
 
-    <!-- Marketing Section -->
-    <div class="section">
-        <h2 class="section-title">Marketing</h2>
-        <div class="card-container">
-            <div class="card" id="card6">
-                <div class="card-inner">
-                    <div class="card-front">
-                        <img src="https://via.placeholder.com/150" alt="Sarah Lee">
-                        <div class="card-content">
-                            <h3>Sarah Lee</h3>
-                        </div>
-                        <a class="read-more" onclick="flipCard('card6')">Read More</a>
-                    </div>
-                    <div class="card-back">
-                        <p>Sarah heads our marketing team, specializing in social media campaigns.</p>
-                        <div class="social-buttons">
-                            <a href="#" title="Instagram">📷</a>
-                            <a href="#" title="LinkedIn">🔗</a>
-                            <a href="#" title="Twitter">🐦</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="scrollToTopBtn">▲</div>
-
-    <script>
-        function flipCard(cardId) {
-            const card = document.getElementById(cardId);
-            card.classList.toggle('flip');
-
-            // Automatically flip back after 10 seconds
-            setTimeout(() => {
-                if (card.classList.contains('flip')) {
-                    card.classList.remove('flip');
-                }
-            }, 5000); // 10 seconds
-        }
-    </script>
-</body>
-</html>
+        // Automatically flip back after 5 seconds
+        setTimeout(() => {
+            if (card.classList.contains('flip')) {
+                card.classList.remove('flip');
+            }
+        }, 5000);
+    }
+</script>
 
 
 {% endblock %}
-
-
