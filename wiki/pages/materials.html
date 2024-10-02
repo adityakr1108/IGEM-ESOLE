@@ -1,235 +1,353 @@
+
 {% extends "layout.html" %}
-{% block title %}Design{% endblock %}
-{% block lead %}{% endblock %}
+
+{% block title %}Materials{% endblock %}
+
 {% block page_content %}
-<style>
-  .sticky {
-    position: sticky;
-    top: 1rem; /* adjust to fit your layout */
-  }
-  .nav-link.font-bold {
-    background-color: #dec5ec !important;
-    color: #ffffff !important;
-  }
-  .safetyImg{
-    border-radius: 20px;
-    height: 400px;
-    width:600px;
-  }
-</style>
-<img src="https://static.igem.wiki/teams/5425/page-elements/material-66faf2c87cf65.webp" style="height:200px; width:200px; border-radius: 20px; margin-left: 42%;" class="items-center w-full h-96 mt-20 safetyImg" alt="Inclusivity Banner">
 
-<!-- Heading Section -->
-<div class="heading" style="padding: 20px; border-radius: 10px;">
-    <h1 class="text-6xl font-bold text-center">safety</h1>
+
+<img src="https://static.igem.wiki/teams/5425/bacteria-8107336.png" style="height:200px; width:200px; border-radius: 20px; margin-left: 42%;" class="items-center w-full h-96 mt-20" alt="Inclusivity Banner">
+
+<div class="heading" style=" font-family:Architype Bayer-type W90; padding: 20px; border-radius: 10px;">
+  <h1 class="text-8xl font-bold text-center">Materials</h1>
 </div>
-
-<main class="page-container flex mt-10">
-  <!-- Left Nav Section -->
-  <nav class="left-nav sticky top-4 w-1/4 border-2 border-gray-300 p-4 rounded-lg shadow-lg mr-8">
-    <a href="#section1" id="nav-section1" class="nav-link text-lg py-2 w-full bg-[#c1a0d2] text-white rounded-lg hover:bg-[#dec5ec] hover:scale-105 transition duration-300 ease-in-out mb-4 block text-center" aria-label="Go to Section 1">
-      OverView
-    </a>
-    <a href="#section2" id="nav-section2" class="nav-link text-lg py-2 w-full bg-[#c1a0d2] text-white rounded-lg hover:bg-[#dec5ec] hover:scale-105 transition duration-300 ease-in-out mb-4 block text-center" aria-label="Go to Section 2">
-      Laboratory Safety
-    </a>
-    <a href="#section3" id="nav-section3" class="nav-link text-lg py-2 w-full bg-[#c1a0d2] text-white rounded-lg hover:bg-[#dec5ec] hover:scale-105 transition duration-300 ease-in-out mb-4 block text-center" aria-label="Go to Section 3">
-      Design Safety
-    </a>
-    <a href="#section4" id="nav-section4" class="nav-link text-lg py-2 w-full bg-[#c1a0d2] text-white rounded-lg hover:bg-[#dec5ec] hover:scale-105 transition duration-300 ease-in-out  mb-4 block text-center" aria-label="Go to Section 4">
-      Ethical and Safety
-    </a>
-  </nav>
-
-  <!-- Right Content Section -->
-  <div id="content" class="w-3/4">
-    <div id="section1" class="section-content border border-gray-300 p-6 rounded-lg shadow-lg mb-6">
-      <h2 class="text-3xl font-bold mb-4">Quantitative Assay</h2>
-      <p>
-        At the heart of our iGEM project, E-Sole I, is the commitment to safety, both within our laboratory and in the potential real-world application of our microbial foot care system. Guided by the principles of responsible research and engineering, we have implemented comprehensive safety measures to mitigate any risks associated with our work. Safety is not an afterthought; it is integral to every stage of our project, from design to implementation.
-      </p>
-    </div>    
-    <div id="section2" class="section-content border border-gray-300 p-6 rounded-lg shadow-lg mb-6">
-      <h2 class="text-3xl font-bold mb-4">Design</h2>
-      <h3 class="text-2xl font-bold mb-4">Regulatory Compliance and Safety Protocols</h3>
-      <p>
-        The Department of Biotechnology (DBT), under the Government of India, regulates biosafety and biosecurity for research laboratories nationwide. Comprehensive rules and regulations governing laboratory safety are accessible through the DBT's official platform, ensuring that all research institutions comply with national standards. At IISER Kolkata, we also follow an internal set of laboratory safety protocols, established and overseen by the Institutional Biosafety Committee (IBSC). These protocols are essential for maintaining a secure lab environment, reducing the risk of accidents, and ensuring the safety of all personnel involved.
-      </p>
-      <p>
-        Our team underwent rigorous lab safety training under the supervision of Dr. G. Lekha, a Scientific Officer at IISER Kolkata. This training emphasized the proper handling and disposal of biosafety hazards, as well as the use of essential safety equipment like biosafety cabinets, fire extinguishers, and eyewash stations. The training culminated in biosafety exams, and all team members were awarded safety training certificates upon successful completion, verifying their qualifications to conduct lab work safely. As a precaution, the laboratory was fumigated to eliminate potential airborne pathogens before starting wet-lab activities.
-      </p>
-    
-      <!-- Adding images related to Laboratory Safety Practices -->
-      <div class="mt-6">
-        <img src="https://static.igem.wiki/teams/5425/safety/img-20240926-wa0098-66f8fa38ba47f.webp" alt="Lab Safety Image 1" class="safetyImg rounded-lg mb-4 w-full">
-        <img src="https://static.igem.wiki/teams/5425/safety/img-20240929-121846.jpg" alt="Lab Safety Image 2" class="safetyImg rounded-lg mb-4 w-full">
-      </div>
-    
-      <h3 class="text-2xl font-bold mb-4">Laboratory Safety Practices</h3>
-      <p>
-        In compliance with Biosafety Level 1 (BSL-1) standards, all experiments related to cloning and the expression of the quorum-sensing unit were conducted in designated BSL-1 laboratories. The bacteria used in these experiments include BSL-1 strains like E. coli DH5α, TOP10, and BL21. The fungal strain used Chaetomium thermophilum, which too falls under BSL-1. For containment and risk minimization, all experiments were performed using class biosafety cabinets, ensuring that our research complies with the highest safety standards.
-      </p>
-      <p>
-        These stringent safety measures, along with the adherence to both DBT and IBSC regulations, ensure that all research activities are conducted in a responsible and risk-mitigated manner.
-      </p>
-    
-      <h3 class="text-2xl font-bold mb-4">Laboratory Safety Equipment</h3>
-      <p>The iGEM Laboratory at IISER Kolkata is fully equipped with all the necessary safety equipment to ensure a secure and safe working environment for our research activities. The key safety features of the lab include:</p>
-    
-      <ul class="list-disc pl-6 mb-4">
-        <li>❖ Fire-retardant workbenches designed to withstand heat and chemical exposure.</li>
-        <div class="mt-4">
-          <img src="https://static.igem.wiki/teams/5425/safety/lab-pic-66f8fa3ab3039.webp" alt="Lab Safety Image 3" class="safetyImg rounded-lg mb-4 w-full">
-        </div>
-        <li>❖ Biosafety cabinets for handling microorganisms and hazardous materials in a controlled environment, minimizing contamination risks.</li>
-        <div class="mt-4">
-          <img src="https://static.igem.wiki/teams/5425/safety/lab-pic-2-66f8fa389e264.webp" alt="Lab Safety Image 4" class="safetyImg rounded-lg mb-4 w-full">
-        </div>
-        <li>❖ Autoclave sterilisers for effective sterilization of media, glassware, and biological waste, ensuring that no harmful organisms are released.</li>
-        <li>❖ Shower stations for immediate use in case of chemical spills or accidental exposure.</li>
-        <div class="mt-4">
-          <img src="https://static.igem.wiki/teams/5425/safety/shower-66f8fa44153b0.webp" alt="Lab Safety Image 5" class="safetyImg rounded-lg mb-4 w-full">
-        </div>
-        <li>❖ Fire-safety equipment, including fire hoses and extinguishers, with all team members trained in their proper use.</li>
-        <div class="mt-4">
-          <img src="https://static.igem.wiki/teams/5425/safety/sf2-66f8fa41b637b.webp" alt="Lab Safety Image 6" class="safetyImg rounded-lg mb-4 w-full">
-        </div>
-        <li>❖ Three separate waste disposal bins:
-          <ul class="list-disc pl-6 mt-2">
-            <li>➢ Biohazard waste for biological and potentially infectious materials.</li>
-            <li>➢ Sharp discard for safely disposing of needles, syringes, and sharp instruments.</li>
-            <li>➢ General waste for non-hazardous laboratory materials.</li>
-          </ul>
-        </li>
-        <div class="mt-4">
-          <img src="https://static.igem.wiki/teams/5425/safety/safety-66f8fa3b6a456.webp" alt="Lab Safety Image 7" class="safetyImg rounded-lg mb-4 w-full">
-        </div>
-        <li>❖ First aid box facility located nearby to provide immediate medical assistance in case of minor injuries or accidents.</li>
-        <div class="mt-4">
-          <img src="https://static.igem.wiki/teams/5425/safety/sf-3-66f8fa3dc3cb4.webp" alt="Lab Safety Image 8" class="safetyImg rounded-lg mb-4 w-full">
-        </div>
-      </ul>
-    </div>
-    
-    <div id="section3" class="section-content border border-gray-300 p-6 rounded-lg shadow-lg mb-6">
-      <h2 class="text-3xl font-bold mb-4">Construction of PCM</h2>
-      <p>
-        Proof section details the experiments and evidence that support the feasibility and effectiveness of the design.
-      </p>
-    
-      <!-- New Design Safety Content -->
-      <h3 class="text-2xl font-bold mb-4">Design Safety</h3>
-      <p>
-        In the development of our microbial foot care system, E.Sole I, we have placed a strong emphasis on design safety to proactively address potential risks in both the laboratory and future real-world applications. Our goal is to ensure that the use of our genetically modified bacteria (GM bacteria) is both safe and effective for users, while minimizing risks to the environment. The following safety measures are integrated into our project design:
-      </p>
-    
-      <h4 class="text-xl font-bold mb-2">1. Bacterial Strain Selection</h4>
-      <p>
-        We initially conducted our research using the E. coli strains BL21, DH5α, and TOP 10, which are widely recognized as safe, non-pathogenic, and suitable for biosafety level 1 (BSL-1) environments. These strains were chosen for their ease of manipulation and efficiency in gene cloning, making them ideal for our lab work.
-      </p>
-      <p>
-        For the final product, we plan to use Lactobacillus rhamnosus as the microbial chassis embedded in the footbed. This strain is a well-known probiotic, commonly found in human gut microbiomes and widely used in health applications. Due to its non-pathogenic nature and long history of safe use, Lactobacillus rhamnosus poses minimal risk to humans, even upon direct contact with the skin. Its compatibility with the skin microbiome further ensures that it will not cause irritation or disrupt the natural microbial balance, making it an excellent choice for prolonged use in foot care.
-      </p>
-    
-      <h4 class="text-xl font-bold mb-2">2. Apoptosis Module for Safety Control</h4>
-      <p>
-        To prevent any risks of environmental contamination or uncontrolled bacterial growth, we have designed a kill-switch (apoptosis module) that triggers bacterial cell death if the bacteria escape from the footbed or come into contact with non-target environments. This apoptosis module ensures that the bacteria do not persist outside the intended system, reducing the likelihood of unintended consequences. This safeguard is particularly important for preventing the accidental release of genetically modified organisms (GMOs) into the environment, thus ensuring both user and environmental safety.
-      </p>
-    
-      <h4 class="text-xl font-bold mb-2">3. Containment Strategy</h4>
-      <p>
-        Our containment strategy is designed to ensure that the GM bacteria remain securely housed within the footbed system. The bacteria are embedded in a nutritive biopolymer layer that is both biocompatible and non-porous, preventing their release into the external environment. The footbed structure includes a non-porous layer at the bottom to contain the bacteria and a porous layer at the top, allowing only the beneficial compound, linalool, to diffuse out. This containment system ensures that while the bacteria continue to function and produce linalool, they remain isolated from direct contact with the outside environment.
-      </p>
-    
-      <h4 class="text-xl font-bold mb-2">4. Biocompatible and Non-Toxic Materials</h4>
-      <p>
-        The materials used in the footbed are biocompatible and non-toxic, ensuring that they are safe for continuous contact with human skin. The porous layer allows the volatile linalool to escape while ensuring that the bacteria do not leak out. Additionally, by maintaining compatibility with the skin’s natural microbiome, our design minimizes the risk of skin irritation or infections. This makes our footbed suitable for long-term wear and safe for a broad range of users.
-      </p>
-    
-      <h4 class="text-xl font-bold mb-2">5. Preventing Environmental Impact</h4>
-      <p>
-        We understand that environmental safety is paramount in synthetic biology projects. To address this, our containment and kill-switch strategies are complemented by the use of biodegradable materials for the footbed. In the event of disposal, the materials used in the product will break down safely without releasing harmful byproducts into the environment. Furthermore, the kill-switch ensures that the bacteria will not survive outside the controlled footbed environment, further preventing any unintended ecological impact.
-      </p>
-    </div>
-    
-    <div id="section4" class="section-content border border-gray-300 p-6 rounded-lg shadow-lg mb-6">
-      <h2 class="text-3xl font-bold mb-4">Characterisation of PCM Circuit</h2>
-      
-      <!-- New Ethical Design and Safety Content -->
-      <h3 class="text-2xl font-bold mb-4">Ethical Design and Safety</h3>
-      <p>
-        Ethical considerations are central to our iGEM project, E.Sole I, particularly in the field of synthetic biology. We adhere to ethical standards and comply with all regulatory requirements throughout the project.
-      </p>
-      <ul class="list-disc ml-6 mb-4">
-        <li><strong>Transparency and Risk Management:</strong> We openly communicated potential risks related to synthetic biology, engaging experts to ensure safety measures like the kill-switch, which prevents bacterial overgrowth or environmental release, were effectively integrated into our design.</li>
-        <li><strong>iGEM Responsibility Program:</strong> In line with iGEM’s Responsibility Program, we evaluated the environmental and societal impacts of our project. By carefully managing the risks of using GMOs, we ensure that our approach remains innovative, safe, and responsible.</li>
-        <li><strong>Regulatory Compliance:</strong> Our work adheres to strict regulations regarding GMOs. With approval from the Institutional Biosafety Committee (IBSC), our experiments under Category I were conducted following all biosafety protocols.</li>
-      </ul>
-      
-      <!-- Public Engagement and Consent -->
-      <h3 class="text-2xl font-bold mb-4">Public Engagement and Consent</h3>
-      <p>
-        As part of E.Sole I, we engaged with the public through interviews, surveys, and webinars, ensuring compliance with all ethical and legal standards.
-      </p>
-      <ul class="list-disc ml-6 mb-4">
-        <li><strong>Public Interaction:</strong> We obtained prior approval from legal authorities for public-facing activities. Participants were fully informed, and informed consent was obtained before collecting any data or recording webinars.</li>
-        <li><strong>Survey and Webinars:</strong> Data gathered from surveys and webinars were used only with explicit consent from participants, ensuring respect for privacy and ethical data handling.</li>
-      </ul>
-      
-      <!-- Proposed Implementation and Safety -->
-      <h3 class="text-2xl font-bold mb-4">Proposed Implementation and Safety</h3>
-      <p>
-        From lab work to future product development, safety has been prioritized at every stage of E.Sole I.
-      </p>
-      <ul class="list-disc ml-6 mb-4">
-        <li><strong>Safe Lab Practices:</strong> We identified potential risks early on and implemented strict safety protocols in the lab to prevent contamination and environmental release of GMOs.</li>
-        <li><strong>Future Plans:</strong> In scaling up for production, we will use bioreactors with robust safety controls to ensure that the product can be manufactured safely and responsibly. More details on future safety measures can be found in our Proposed Implementation section.</li>
-      </ul>
-      <p>
-        By embedding ethical safety practices into the design, public engagement, and future production phases, E.Sole I aims to provide a safe, effective, and responsible solution for foot care.
-      </p>
-    
-      <!-- References Section -->
-      <h3 class="text-2xl font-bold mb-4">References</h3>
-      <ul class="list-disc ml-6">
-        <li><a href="https://responsibility.igem.org/" target="_blank" class="text-blue-500 underline">iGEM Responsibility Program</a></li>
-        <li><a href="https://ibkp.dbtindia.gov.in/" target="_blank" class="text-blue-500 underline">Institutional Biosafety Committee (IBSC)</a></li>
-        <li><a href="https://static.igem.wiki/teams/5425/safety-manual-dbs-14-02-2024.pdf" target="_blank" class="text-blue-500 underline">Safety Manual (DBS)</a></li>
-        <li><a href="https://microbialcellfactories.biomedcentral.com/articles/10.1186/1475-2859-13-S1-S7" target="_blank" class="text-blue-500 underline">Microbial Cell Factories</a></li>
-      </ul>
-    </div>
-  </div>
-</main>
-
-<script>
-    window.addEventListener('scroll', function() {
-    const sections = document.querySelectorAll('.section-content');
-    const navLinks = document.querySelectorAll('.nav-link');
-
-    let currentSection = '';
-
-    sections.forEach(section => {
-      const sectionTop = section.offsetTop;
-      const sectionHeight = section.clientHeight;
-
-      if (window.scrollY >= sectionTop - sectionHeight / 3) {
-        currentSection = section.getAttribute('id');
-      }
-    });
-
-    navLinks.forEach(link => {
-      link.classList.remove('bg-[#dec5ec]', 'font-bold');
-      if (link.getAttribute('href').substring(1) === currentSection) {
-        link.classList.add('bg-[#dec5ec]', 'font-bold');
-      }
-    });
-  });
-</script>
-
-<style>
-  html {
-    scroll-behavior: smooth;
-  }
-</style>
+<h2 class="text-5xl font-bold text-left">Strains</h2>
+<br><br>
+<!-- Strain Table -->
+<div class="overflow-x-auto">
+  <table class="min-w-full border border-gray-300 bg-white shadow-md sm:rounded-lg">
+    <thead class="bg-gray-100">
+      <tr>
+        <th class="px-4 py-2 text-left text-gray-700">Strain</th>
+        <th class="px-4 py-2 text-left text-gray-700">Use</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="border-t border-gray-300">
+        <td class="px-4 py-2">Escherichia coli BL21 (DE3)</td>
+        <td class="px-4 py-2">For protein expression</td>
+      </tr>
+      <tr class="border-t border-gray-300">
+        <td class="px-4 py-2">Escherichia coli DH5α</td>
+        <td class="px-4 py-2">For the cloning of our plasmid of interest</td>
+      </tr>
+      <tr class="border-t border-gray-300">
+        <td class="px-4 py-2">Escherichia coli TOP10</td>
+        <td class="px-4 py-2">To increase the copy number of the plasmid</td>
+      </tr>
+      <tr class="border-t border-gray-300">
+        <td class="px-4 py-2">S. cerevisiae</td>
+        <td class="px-4 py-2">Plasmid for MEV pathway</td>
+      </tr>
+      <tr class="border-t border-gray-300">
+        <td class="px-4 py-2">Chaetomium thermophilum var. thermophilum 1495</td>
+        <td class="px-4 py-2">Fungal assay in the presence of different Linalool conc.</td>
+      </tr>
+      <tr class="border-t border-gray-300">
+        <td class="px-4 py-2">Vibrio fischeri</td>
+        <td class="px-4 py-2">Quorum sensing system</td>
+      </tr>
+      <tr class="border-t border-gray-300">
+        <td class="px-4 py-2">Pseudomonas sp.</td>
+        <td class="px-4 py-2">AHL for Lux system induction</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<br><br>
+<h2 class="text-5xl font-bold text-left">Plasmids</h2>
+<br><br>
+<!-- Plasmid Table -->
+<div class="overflow-x-auto mt-6">
+  <table class="min-w-full border border-gray-300 bg-white shadow-md sm:rounded-lg">
+    <thead class="bg-gray-100">
+      <tr>
+        <th class="px-4 py-2 text-left text-gray-700">Plasmid</th>
+        <th class="px-4 py-2 text-left text-gray-700">Speciality</th>
+        <th class="px-4 py-2 text-left text-gray-700">Why Used?</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="border-t border-gray-300">
+        <td class="px-4 py-2">pUC19</td>
+        <td class="px-4 py-2">Ori derived from pMB1, ampicillin, lacZa promoter</td>
+        <td class="px-4 py-2">Cloning and propagation of the DH5alpha protein producing genes</td>
+      </tr>
+      <tr class="border-t border-gray-300">
+        <td class="px-4 py-2">C11</td>
+        <td class="px-4 py-2">Chloramphenicol selective marker, lux system can be expressed</td>
+      </tr>
+      <tr class="border-t border-gray-300">
+        <td class="px-4 py-2">M20</td>
+        <td class="px-4 py-2">Chloramphenicol resistant pSB1C3SA, IPTG inducible pTac promoter</td>
+        <td class="px-4 py-2">Inserted variable lengths of CCA (Antisense) sequence</td>
+      </tr>
+      <tr class="border-t border-gray-300">
+        <td class="px-4 py-2">pBbA5c-MevT(CO)-T1-MBIS(CO, ispA)</td>
+        <td class="px-4 py-2">Chloramphenicol</td>
+        <td class="px-4 py-2">Insertion of genes GPPS and LIS for linalool production</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<br><br>
+<h2 class="text-5xl font-bold text-left">Primers</h2>
+<br><br>
+<p>For the PCM Circuit: </p>
+<!-- Primers Table -->
+<div class="overflow-x-auto mt-6">
+  <table class="min-w-full border border-gray-300 bg-white shadow-md sm:rounded-lg">
+    <thead class="bg-gray-100">
+      <tr>
+        <th class="px-4 py-2 text-left text-gray-700">Primers</th>
+        <th class="px-4 py-2 text-left text-gray-700">Sequence</th>
+        <th class="px-4 py-2 text-left text-gray-700">Used For</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="border-t border-gray-300">
+        <td class="px-4 py-2">PL-RP</td>
+        <td class="px-4 py-2">AGGGATGTCAATCTCTATCACTGATAGGGAATTTCTAGAAGCGGCCGCGAAT</td>
+        <td class="px-4 py-2">Plasmid linearisation</td>
+      </tr>
+      <tr class="border-t border-gray-300">
+        <td class="px-4 py-2">Ptet-FP</td>
+        <td class="px-4 py-2">GATAGAGATTGACATCCCTA</td>
+        <td class="px-4 py-2">Insert-1 grad. Amplify FP</td>
+      </tr>
+      <tr class="border-t border-gray-300">
+        <td class="px-4 py-2">I1-amp-RP</td>
+        <td class="px-4 py-2">GAGCGCCATTGAAATTACGTCGTCCAAGCTTAGTCGTG</td>
+        <td class="px-4 py-2">Insert-1 amplify RP</td>
+      </tr>
+      <tr class="border-t border-gray-300">
+        <td class="px-4 py-2">I2-amp-FP</td>
+        <td class="px-4 py-2">ATGGCACGACTAAGCTTGGACG</td>
+        <td class="px-4 py-2">Insert-2 amplify</td>
+      </tr>
+      <tr class="border-t border-gray-300"></tr>
+        <td class="px-4 py-2">I2-amp-FP</td>
+        <td class="px-4 py-2">CCATTTCCTCCTGCATGATC AAA ATG CAA GTG AGA AC</td>
+        <td class="px-4 py-2">Insert-2 amplify</td>
+      </tr>
+      <tr class="border-t border-gray-300"></tr>
+        <td class="px-4 py-2">I3-amp-FP</td>
+        <td class="px-4 py-2">TTATTAGTTCTCACTTGCATTTTGATC ATG CAG G</td>
+        <td class="px-4 py-2">Insert-3 amplify</td>
+      </tr>
+      <tr class="border-t border-gray-300"></tr>
+        <td class="px-4 py-2">T7-O(P)-RP</td>
+        <td class="px-4 py-2">AGCGGCCGCTACTAGTATTCAAAAAACCCCTCAAGACCCGTTT</td>
+        <td class="px-4 py-2">Insert-3 amplify</td>
+      </tr>
+      <!-- Add more primer rows as needed -->
+    </tbody>
+  </table>
+</div>
+<p>For PCM Characterization: </p>
+<!-- Primers Table -->
+<div class="overflow-x-auto mt-6">
+  <table class="min-w-full border border-gray-300 bg-white shadow-md sm:rounded-lg">
+    <thead class="bg-gray-100">
+      <tr>
+        <th class="px-4 py-2 text-left text-gray-700">Primers</th>
+        <th class="px-4 py-2 text-left text-gray-700">Sequence</th>
+        <th class="px-4 py-2 text-left text-gray-700">Used For</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="border-t border-gray-300">
+        <td class="px-4 py-2">PL(Tet-R)-RP </td>
+        <td class="px-4 py-2">TCGTCCAAGCTTAGTCGTG</td>
+        <td class="px-4 py-2">GFP of tetR 3761 bp amplification</td>
+      </tr>
+      <tr class="border-t border-gray-300">
+        <td class="px-4 py-2">GFP-amp-FP(tetR)</td>
+        <td class="px-4 py-2">ATGGCACGACTAAGCTTGGA ATG AGC AAA GGA GAA GAA CTT TTC ACT GG</td>
+        <td class="px-4 py-2">GFP 757 bp for tetR amp.</td>
+      </tr>
+      <tr class="border-t border-gray-300">
+        <td class="px-4 py-2">PL(Antisense)-RP </td>
+        <td class="px-4 py-2">CGA CGG TTT CGC TTT CAC TG</td>
+        <td class="px-4 py-2">GFP of anti 5308 bp amplification</td>
+      </tr>
+      <tr class="border-t border-gray-300">
+        <td class="px-4 py-2">GFP-amp-FP(Antisense)  </td>
+        <td class="px-4 py-2">TACAGTGAAAGCGAAACCGTATG AGC AAA GGA GAA GAA CTT TTC ACT GG</td>
+        <td class="px-4 py-2">GFP 757 bp for anti amp.</td>
+      </tr>
+      <tr class="border-t border-gray-300"></tr>
+        <td class="px-4 py-2">GFP-amp-RP</td>
+        <td class="px-4 py-2">CCTTGCCCTTTTTTGCCGGA CTA TTT GTA GAG CTC ATC CAT G</td>
+        <td class="px-4 py-2">GFP 757 bp for tetR and anti amp.</td>
+      </tr>
+      <tr class="border-t border-gray-300"></tr>
+        <td class="px-4 py-2">PL(hisTerm)-amp-FP </td>
+        <td class="px-4 py-2">TCCGGCAAAAAAGGGCAAGG</td>
+        <td class="px-4 py-2">For both GFP  backbone amplification</td>
+      </tr>
+      <!-- Add more primer rows as needed -->
+    </tbody>
+  </table>
+</div>
+<br><br>
+<p>Antisense at different length: </p>
+<!-- Primers Table -->
+<div class="overflow-x-auto mt-6">
+  <table class="min-w-full border border-gray-300 bg-white shadow-md sm:rounded-lg">
+    <thead class="bg-gray-100">
+      <tr>
+        <th class="px-4 py-2 text-left text-gray-700">Primers</th>
+        <th class="px-4 py-2 text-left text-gray-700">Sequence</th>
+        <th class="px-4 py-2 text-left text-gray-700">Used For</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="border-t border-gray-300">
+        <td class="px-4 py-2">PL-Anti-FP </td>
+        <td class="px-4 py-2">TCC GGC AAA AAA GGG CAA GGT GTC ACC</td>
+        <td class="px-4 py-2">To linearize the PSB1C3SA backbone of M20.</td>
+      </tr>
+      <tr class="border-t border-gray-300">
+        <td class="px-4 py-2">PL-Anti-RP</td>
+        <td class="px-4 py-2">AAGTAAATTGTGAGCGCTCACAATTCCACACATTATACGAGCCG</td>
+        <td class="px-4 py-2">To linearize the PSB1C3SA backbone of M20.</td>
+      </tr>
+      <tr class="border-t border-gray-300">
+        <td class="px-4 py-2">Anti-FP</td>
+        <td class="px-4 py-2">CCTTGCCCTTTTTTGCCGGAATGTCACTTTCGCTTTGGC</td>
+        <td class="px-4 py-2">Common FP to amplify variable  bp of CCA from PCM. With overhangs to attach </td>
+      </tr>
+      <tr class="border-t border-gray-300">
+        <td class="px-4 py-2">Anti-RP1</td>
+        <td class="px-4 py-2">AGCGCTCACAATTTACTTTAACTCATCCTGCAATCGGGC</td>
+        <td class="px-4 py-2">To amplify first 51 bp of CCA from PCM. With overhangs to attach to M20 PSB1C3SA</td>
+      </tr>
+      <tr class="border-t border-gray-300"></tr>
+        <td class="px-4 py-2">Anti-RP2</td>
+        <td class="px-4 py-2">AGCGCTCACAATTTACTTCCAATCGAGGACAAAACGG</td>
+        <td class="px-4 py-2">To amplify first 150 bp of CCA from PCM. With overhangs to attach to M20 PSB1C3SA</td>
+      </tr>
+      <tr class="border-t border-gray-300"></tr>
+        <td class="px-4 py-2">Anti-RP3</td>
+        <td class="px-4 py-2">AGCGCTCACAATTTACTTTCGTCACTGCCGCTTGTG</td>
+        <td class="px-4 py-2">To amplify first 277 bp of CCA from PCM. With overhangs to attach to M20 PSB1C3SA linearised backbone.</td>
+      </tr>
+      <tr class="border-t border-gray-300"></tr>
+        <td class="px-4 py-2">Anti-RP4</td>
+        <td class="px-4 py-2">AGCGCTCACAATTTACTTGTTAGAACGATAGGTCGGTTCTG</td>
+        <td class="px-4 py-2">To amplify first 393 bp (selected for low hairpin, etc reasons) of CCA from PCM. With overhangs to attach to M20 PSB1C3SA</td>
+      </tr>
+      <tr class="border-t border-gray-300"></tr>
+        <td class="px-4 py-2">Anti-RP4</td>
+        <td class="px-4 py-2">AGCGCTCACAATTTACTTGTTAGAACGATAGGTCGGTTCTG</td>
+        <td class="px-4 py-2">To amplify first 393 bp (selected for low hairpin, etc reasons) of CCA from PCM. With overhangs to attach to M20 PSB1C3SA</td>
+      </tr>
+      <tr class="border-t border-gray-300"></tr>
+        <td class="px-4 py-2">Anti-RP5</td>
+        <td class="px-4 py-2">AGCGCTCACAATTTACTTCGTTTACGTTAGAACGATAGGTCGGTTCTG</td>
+        <td class="px-4 py-2">To amplify all 400 bp of CCA from our assembled PCM.</td>
+      </tr>
+      <!-- Add more primer rows as needed -->
+    </tbody>
+  </table>
+</div>
+<br><br>
+<h2 class="text-5xl font-bold text-left">MEV Primers</h2>
+<br><br>
+<p>Primers for Assembly: </p>
+<!-- Primers Table -->
+<div class="overflow-x-auto mt-6">
+  <table class="min-w-full border border-gray-300 bg-white shadow-md sm:rounded-lg">
+    <thead class="bg-gray-100">
+      <tr>
+        <th class="px-4 py-2 text-left text-gray-700">Primers</th>
+        <th class="px-4 py-2 text-left text-gray-700">Sequence</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="border-t border-gray-300">
+        <td class="px-4 py-2">GPPS_FP</td>
+        <td class="px-4 py-2">TTTCACACAGGAAAGATGGAATTTGAC </td>
+      </tr>
+      <tr class="border-t border-gray-300">
+        <td class="px-4 py-2">GPPS_RP</td>
+        <td class="px-4 py-2">CATTTTCTCCTCTTTAATTTA ATTCTGACGAAATGCCACGTAG</td>
+      </tr>
+      <tr class="border-t border-gray-300">
+        <td class="px-4 py-2">LIS_FP</td>
+        <td class="px-4 py-2">TAAATTAAAGAGGAGAAA ATGAGCATCAACATTAACATGCCG</td>
+      </tr>
+      <tr class="border-t border-gray-300"></tr>
+        <td class="px-4 py-2">LIS_RP</td>
+        <td class="px-4 py-2">TATAAACGCAGAAAGGCCCACCCG </td>
+      </tr>
+      </tr>
+      <!-- Add more primer rows as needed -->
+    </tbody>
+  </table>
+</div>
+<br><br>
+<p>Primers for Cloning: </p>
+<!-- Primers Table -->
+<div class="overflow-x-auto mt-6">
+  <table class="min-w-full border border-gray-300 bg-white shadow-md sm:rounded-lg">
+    <thead class="bg-gray-100">
+      <tr>
+        <th class="px-4 py-2 text-left text-gray-700">Primers</th>
+        <th class="px-4 py-2 text-left text-gray-700">Sequence</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="border-t border-gray-300">
+        <td class="px-4 py-2">PL-FP</td>
+        <td class="px-4 py-2">TGGGCCTTTCTGCGTTTATA TCC GGC AAA AAA GGG CAA GGT GTC ACC</td>
+      </tr>
+      <tr class="border-t border-gray-300">
+        <td class="px-4 py-2">PL-RP</td>
+        <td class="px-4 py-2">TCCATCTTTCCTGTGTGAAAAAGTAAATTGTGAGCGCTCACAATTCCACACATTATACGAGCCG</td>
+      </tr>
+      </tr>
+      <!-- Add more primer rows as needed -->
+    </tbody>
+  </table>
+</div>
+<br><br>
+<h2 class="text-5xl font-bold text-left">Chemicals</h2>
+<!-- Chemicals Table -->
+<div class="overflow-x-auto mt-6">
+  <table class="min-w-full border border-gray-300 bg-white shadow-md sm:rounded-lg">
+    <thead class="bg-gray-100">
+      <tr>
+        <th class="px-4 py-2 text-left text-gray-700">Chemical Name</th>
+        <th class="px-4 py-2 text-left text-gray-700">Used For</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="border-t border-gray-300">
+        <td class="px-4 py-2">Dry AHL(N-(3-Oxododecanoyl)-L-homoserine lactone)</td>
+        <td class="px-4 py-2">For induction checking in PCM</td>
+      </tr>
+      <tr class="border-t border-gray-300">
+        <td class="px-4 py-2">Anhydro tetracycline</td>
+        <td class="px-4 py-2">To check how tetR binding affects upon induction</td>
+      </tr>
+      <tr class="border-t border-gray-300">
+        <td class="px-4 py-2">IPTG</td>
+        <td class="px-4 py-2">To check ptac promoter affecting upon induction</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<br>
+<h2 class="text-5xl font-bold text-left">References</h2>
+<br>
+<ul>
+  <li>1. <a href="https://parts.igem.org/Part:BBa_J364000" class="text-blue-500 hover:underline">https://parts.igem.org/Part:BBa_J364000</a></li>
+  <li>2. <a href="https://parts.igem.org/Part:BBa_K2572025" class="text-blue-500 hover:underline">https://parts.igem.org/Part:BBa_K2572025</a></li>
+  <li>3. <a href="https://www.addgene.org/" class="text-blue-500 hover:underline">Addgene</a></li>
+  <li>4. <a href="https://www.sigmaaldrich.com/IN/en/search/o9139?focus=products&page=1&perpage=30&sort=relevance&term=o9139&type=product" class="text-blue-500 hover:underline">Dry AHL Link</a></li>
+  <li>5. <a href="https://www.sigmaaldrich.com/IN/en/product/sial/i6758?srsltid=AfmBOooVR5duyO-zSOGb9ElKRvy1qQyn-CLWe4DZh1xNe0Ze_BVeOVOs" class="text-blue-500 hover:underline">IPTG Link</a></li>
+</ul>
 
 {% endblock %}
