@@ -1,0 +1,81 @@
+{% extends "layout.html" %}
+
+{% block title %}Medals{% endblock %}
+{% block lead %}On this page, you can showcase the awards and medals your team has achieved, highlighting their dedication and accomplishments.{% endblock %}
+
+{% block page_content %}
+<style>
+    .text1 {
+    font-size: 1.5rem; /* Adjust font size for readability */
+    font-family: "Arial", sans-serif; /* A clean and professional font */
+    text-align: center; /* Center-align the text */
+    line-height: 1.8; /* Add line spacing for better readability */
+    color: #333; /* Neutral dark color for the text */
+    background-color: #ffffff; /* White background for a clean look */
+    padding: 20px; /* Add padding for some inner spacing */
+    border-radius: 15px; /* More rounded corners for aesthetic appeal */
+    margin: 20px auto; /* Center it horizontally and add vertical margin */
+    max-width: 90%; /* Ensure the text block doesn't stretch too wide */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* More pronounced shadow for depth */
+    border: 1px solid #e0e0e0; /* Subtle border to define the area */
+    background-image: linear-gradient(135deg, #f5f7fa, #c3cfe2); /* Soft gradient for a modern look */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.text1:hover {
+    transform: scale(1.01); /* Slightly enlarge on hover */
+    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.3); /* Increase shadow on hover */
+}
+
+
+</style>
+<div class="flex justify-center mt-20">
+    <img 
+        src="https://static.igem.wiki/teams/5425/medals/64088-removebg-preview.webp" 
+        class="h-72 w-72 rounded-xl" 
+        alt="Inclusivity Banner"
+    >
+</div>
+
+<div class="heading" style="padding: 20px; border-radius: 10px;">
+    <h1 class="text-7xl font-bold text-center">Achievements</h1>
+</div>
+
+<div class="text1 mx-auto mt-8 p-6 text-lg text-center text-gray-800 bg-gray-100 rounded-lg shadow-md max-w-6xl">
+    With great pleasure, we inform that our project E.solei has received a Gold Medal and been nominated for Best Fashion and Cosmetics Village. We are grateful to everyone who helped us along the way, including our sponsors.
+</div>
+<div class="heading mx-auto mt-8 p-4 rounded-lg" style="padding: 10px; border-radius: 10px;">
+    <h1 class="text-4xl md:text-6xl font-extrabold text-center tracking-wide text-gray-800 uppercase">
+        Awards
+    </h1>
+</div>
+
+<div class="flex justify-center mt-15">
+    <img 
+        src="https://static.igem.wiki/teams/5425/medals/screenshot-2024-12-04-112057-removebg-preview.webp" 
+        class="h-64 w-auto rounded-xl" 
+        alt="Inclusivity Banner"
+    >
+</div>
+
+
+<div class="heading mx-auto mt-8 p-4 rounded-lg" style="padding: 10px; border-radius: 10px;">
+    <h1 class="text-4xl md:text-5xl font-extrabold text-center tracking-wide text-gray-800 uppercase">
+        Nomination
+    </h1>
+</div>
+<div class="heading mx-auto mt-8 p-4 rounded-lg" style="padding: 10px; border-radius: 10px;">
+    <h1 class="text-3xl md:text-4xl font-extrabold text-center tracking-wide text-gray-800 uppercase">
+        Best Fashion and Cosmetics Village
+    </h1>
+</div>
+<div class="flex justify-center mt-20">
+    <img 
+        src="https://static.igem.wiki/teams/5425/medals/village-fashionandcosmetics-2x.webp" 
+        class="h-64 w-auto rounded-xl" 
+        alt="Inclusivity Banner"
+    >
+</div>
+
+
+{% endblock %}

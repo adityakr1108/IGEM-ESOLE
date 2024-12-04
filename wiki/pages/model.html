@@ -12,8 +12,7 @@
         height: 100%; 
         width: 100%; 
         position: absolute;
-        top: 0; 
-        left; 0; 
+        top: 0;  
         background-image: url('https://static.igem.wiki/teams/5425/map/points.svg'); 
         background-size: cover;
     }
@@ -89,7 +88,7 @@
         top: 0%;
         background-color: inherit;
         height: 120%;
-        left: 64%;
+        left: 60%;
         border: none;
         font-family: Helvetica;
         width: 12%;
@@ -101,7 +100,7 @@
         top: 0%;
         background-color: inherit;
         height: 120%;
-        left: 80%;
+        left: 75%;
         border: none;
         font-family: Helvetica;
         width: 12%;
@@ -113,7 +112,7 @@
         top: 0%;
         background-color: inherit;
         height: 120%;
-        left: 96%;
+        left: 88%;
         border: none;
         font-family: Helvetica;
         width: 12%;
@@ -121,6 +120,17 @@
     }
 
     #b8 {
+        position: absolute;
+        top: 0%;
+        background-color: inherit;
+        height: 120%;
+        left: 110%;
+        border: none;
+        font-family: Helvetica;
+        width: 12%;
+        font-size: 14px;
+    }
+    #b9 {
         position: absolute;
         top: 0%;
         background-color: inherit;
@@ -353,7 +363,8 @@
         <button onmouseover="getElementById('d4').style.display='block'"  class="nav_buttons" id="b5"><b>DryLabs</b></button>
         <button onmouseover="getElementById('d5').style.display='block'"  class="nav_buttons" id="b6"><b>Human Practices</b></button>   
         <button class="nav_buttons" id="b7"><a href="https://2024.igem.wiki/iiser-kolkata/entrepreneurship">Entrepreneurship</a></button>
-        <button class="nav_buttons" id="b8"><a href="https://2024.igem.wiki/iiser-kolkata/awards">Awards</a></button>  
+        <button class="nav_buttons" id="b8"><a href="https://2024.igem.wiki/iiser-kolkata/awards">Awards</a></button>
+        <button class="nav_buttons" id="b9"><a href="{{ url_for('pages', page='medals') }}">Medals</a></button>    
         <div onmouseleave="getElementById('d1').style.display='none'" class="dropdown" id="d1">
             <a style="width:100%; position: absolute; left: 32%; top: 30%;" href="https://2024.igem.wiki/iiser-kolkata/team">Team</a>
             <a style="width:100%; position: absolute; left: 32%; top: 60%;" href="https://2024.igem.wiki/iiser-kolkata/attributions">Attribution</a>

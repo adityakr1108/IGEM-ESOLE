@@ -17,7 +17,7 @@
   <div id="nav-menu" class="hidden lg:flex gap-10 text-lg">
     <!-- Home -->
     <a href="{{ url_for('pages', page='home') }}" class="font-medium text-primary">Home</a>
-    
+
     <!-- Team Dropdown -->
     <div class="relative group">
       <a href="#" class="font-medium hover:text-primary">Team</a>
@@ -60,7 +60,7 @@
         <a href="{{ url_for('pages', page='software') }}" class="block px-4 py-2 hover:bg-gray-100">Software</a>
       </div>
     </div>
-    
+
     <!-- Human Practices Dropdown -->
     <div class="relative group">
       <a href="#" class="font-medium hover:text-primary">Human Practices</a>
@@ -70,16 +70,22 @@
         <a href="{{ url_for('pages', page='inclusivity') }}" class="block px-4 py-2 hover:bg-gray-100">Inclusivity</a>
       </div>
     </div>
-    <a href="{{ url_for('pages', page='entrepreneurship') }}" class="font-medium text-primary">Entrepreneurship</a>
-  </div>
-    </div>
+    <a href="{{ url_for('pages', page='entrepreneurship') }}" class="font-medium text-primary ml-2">Entrepreneurship</a>
     <a href="{{ url_for('pages', page='awards') }}" class="font-medium text-primary ml-2">Awards</a>
+    <a href="{{ url_for('pages', page='medals') }}" class="font-medium text-primary ml-2">Medals</a>
   </div>
+
+
+
   
   <!-- Mobile Menu Button -->
-  <button class="p-2 lg:hidden" onclick="handleMenu()">
-    <i class="fa-solid fa-bars text-gray-600"></i>
+  <button class="p-2 lg:hidden flex flex-col justify-between items-center h-10 w-8" onclick="handleMenu()">
+    <div class="h-1 w-full bg-white rounded"></div>
+    <div class="h-1 w-full bg-white rounded my-1"></div>
+    <div class="h-1 w-full bg-white rounded"></div>
   </button>
+  
+  
 </nav>
 
 <!-- Mobile Menu -->
@@ -88,9 +94,12 @@
     <a href="#" id="brand" class="flex gap-2 items-center">
       <span class="text-lg font-medium font-display">IISER KOLKATA</span>
     </a>
-    <button class="p-2" onclick="handleMenu()">
-      <i class="fa-solid fa-xmark text-gray-600"></i>
+    <button class="p-2 lg:hidden relative h-8 w-8" onclick="handleMenu()">
+      <div class="absolute top-1/2 left-0 right-0 h-1 bg-black rounded transform rotate-45"></div>
+      <div class="absolute top-1/2 left-0 right-0 h-1 bg-black rounded transform -rotate-45"></div>
     </button>
+    
+    
   </div>
 
   <!-- Mobile Menu Options -->
@@ -147,6 +156,7 @@
         <a href="{{ url_for('pages', page='inclusivity') }}" class="block py-2 hover:bg-gray-100">Inclusivity</a>
       </div>
     </div>
+    
   </div>
 </div>
 
