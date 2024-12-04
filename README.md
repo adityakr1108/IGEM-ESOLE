@@ -60,7 +60,9 @@ python3 -m venv venv
 pip install -r dependencies.txt
 ```
 
+
 #### Execute
 ```bash
 python app.py
 ```
+### Final Commit was done on 4/12/24
