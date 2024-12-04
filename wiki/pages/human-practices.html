@@ -116,16 +116,25 @@
             </p>
         
             <!-- Row for Images -->
-            <div class="flex items-center justify-center space-x-4">
-                <div class="cursor-pointer" onclick="toggleSection('dermatologists')">
-                    <img src="https://static.igem.wiki/teams/5425/human-practices/demolo.png" alt="Dermatologists"style="height:200px; width:400px">
-                    <p class = "text-1xl mt-2 text-center" style = "color:black; font-weight: bold;"> Dermatologists and Diabetic Foot Care Specialist </p>
+            <div class="flex items-center justify-center space-x-8">
+                <div class="cursor-pointer text-center" onclick="toggleSection('dermatologists')">
+                    <img src="https://static.igem.wiki/teams/5425/human-practices/demolo.png" 
+                         alt="Dermatologists" 
+                         class="h-64 w-64 rounded-full border-4" 
+                         style="border-color: #c1a0d2; box-shadow: 0px 6px 12px #dec5ec;">
+                    <p class="text-1xl mt-4 font-bold text-black">Dermatologists and Diabetic Foot Care Specialist</p>
                 </div>
-                <div class="cursor-pointer" onclick="toggleSection('survey')">
-                    <img src="https://static.igem.wiki/teams/5425/human-practices/survey.png" alt="Survey Form" style="height:200px; width:400px">
-                    <p class = "text-1xl mt-2 text-center" style = "color:black; font-weight: bold;"> Survey Forms</p>
+                <div class="cursor-pointer text-center" onclick="toggleSection('survey')">
+                    <img src="https://static.igem.wiki/teams/5425/human-practices/survey.png" 
+                         alt="Survey Form" 
+                         class="h-64 w-64 rounded-full border-4" 
+                         style="border-color: #c1a0d2; box-shadow: 0px 6px 12px #dec5ec;">
+                    <p class="text-1xl mt-4 font-bold text-black">Survey Forms</p>
                 </div>
             </div>
+            
+            
+            
         
             <!-- Hidden Sections that will appear on image click -->
             <!-- Hidden Sections that will appear on image click -->
@@ -245,7 +254,6 @@
                       </p>
                         <div class="bg-peach p-6 rounded-lg border-2 border-gray-400 shadow-inner mt-4">
                           <div class="grid grid-cols-2 gap-4">
-                              <img src="https://static.igem.wiki/teams/5425/human-practices/graph/graph-1.png" class="transition duration-500 ease-in-out transform hover:scale-105">
                               <img src="https://static.igem.wiki/teams/5425/human-practices/graph/graph-2.png" class="transition duration-500 ease-in-out transform hover:scale-105">
                               <img src="https://static.igem.wiki/teams/5425/human-practices/graph/graph-4.png" class="transition duration-500 ease-in-out transform hover:scale-105">
                               <img src="https://static.igem.wiki/teams/5425/human-practices/graph/graph-4.png" class="transition duration-500 ease-in-out transform hover:scale-105">
@@ -318,32 +326,50 @@
         
        
 
-<section id="stake" class="bg-white p-6 shadow-md rounded-lg">
-  <h2 class="text-3xl font-bold mb-4">Stake Holders</h2>
-  <div class="flex flex-wrap justify-center space-x-4">
-    <div class="cursor-pointer text-center" onclick="toggleSection('corporate', this)">
-        <img src="https://static.igem.wiki/teams/5425/corporate.png" alt="corporate" class="h-24 w-24 rounded-full border-4 border-gray-300">
-        <p class="text-1xl mt-2" style="color:black; font-weight: bold;">Corporate</p>
-    </div>
-    <div class="cursor-pointer text-center" onclick="toggleSection('athelete', this)">
-        <img src="https://static.igem.wiki/teams/5425/human-practices/athelete.png" alt="Athletes" class="h-24 w-24 rounded-full border-4 border-gray-300">
-        <p class="text-1xl mt-2" style="color:black; font-weight: bold;">Athletes</p>
-    </div>
-    <div class="cursor-pointer text-center" onclick="toggleSection('student', this)">
-        <img src="https://static.igem.wiki/teams/5425/human-practices/student.png" alt="Students" class="h-24 w-24 rounded-full border-4 border-gray-300">
-        <p class="text-1xl mt-2" style="color:black; font-weight: bold;">Student</p>
-    </div>
-    <div class="cursor-pointer text-center" onclick="toggleSection('common', this)">
-        <img src="https://static.igem.wiki/teams/5425/human-practices/common.png" alt="common people" class="h-24 w-24 rounded-full border-4 border-gray-300">
-        <p class="text-1xl mt-2" style="color:black; font-weight: bold;">Common People</p>
-    </div>
-    <div class="cursor-pointer text-center" onclick="toggleSection('defence', this)">
-        <img src="https://static.igem.wiki/teams/5425/human-practices/defence.png" alt="Defence" class="h-24 w-24 rounded-full border-4 border-gray-300">
-        <p class="text-1xl mt-2" style="color:black; font-weight: bold;">Defence</p>
-    </div>
-</div>
+        <section id="stake" class="bg-white p-6 shadow-md rounded-lg">
+            <h2 class="text-3xl font-bold mb-4">Stake Holders</h2>
+            <div class="flex flex-wrap justify-center space-x-4">
+              <div class="cursor-pointer text-center" onclick="toggleSection('corporate', this)">
+                <img src="https://static.igem.wiki/teams/5425/corporate.png" alt="corporate" class="h-24 w-24 rounded-full border-4" style="border-color: #c1a0d2; box-shadow: 0px 4px 8px #dec5ec;">
+                <p class="text-1xl mt-2 font-bold text-black">Corporate</p>
+              </div>
+              <div class="cursor-pointer text-center" onclick="toggleSection('athelete', this)">
+                <img src="https://static.igem.wiki/teams/5425/human-practices/athelete.png" alt="Athletes" class="h-24 w-24 rounded-full border-4" style="border-color: #c1a0d2; box-shadow: 0px 4px 8px #dec5ec;">
+                <p class="text-1xl mt-2 font-bold text-black">Athletes</p>
+              </div>
+              <div class="cursor-pointer text-center" onclick="toggleSection('student', this)">
+                <img src="https://static.igem.wiki/teams/5425/human-practices/student.png" alt="Students" class="h-24 w-24 rounded-full border-4" style="border-color: #c1a0d2; box-shadow: 0px 4px 8px #dec5ec;">
+                <p class="text-1xl mt-2 font-bold text-black">Student</p>
+              </div>
+              <div class="cursor-pointer text-center" onclick="toggleSection('common', this)">
+                <img src="https://static.igem.wiki/teams/5425/human-practices/common.png" alt="common people" class="h-24 w-24 rounded-full border-4" style="border-color: #c1a0d2; box-shadow: 0px 4px 8px #dec5ec;">
+                <p class="text-1xl mt-2 font-bold text-black">Common People</p>
+              </div>
+              <div class="cursor-pointer text-center" onclick="toggleSection('defence', this)">
+                <img src="https://static.igem.wiki/teams/5425/human-practices/defence.png" alt="Defence" class="h-24 w-24 rounded-full border-4" style="border-color: #c1a0d2; box-shadow: 0px 4px 8px #dec5ec;">
+                <p class="text-1xl mt-2 font-bold text-black">Defence</p>
+              </div>
+            </div>
+          </section>
+          
+          
+          <script>
+            function toggleSection(sectionId, element) {
+              // Remove active state from all buttons
+              document.querySelectorAll('#stake .cursor-pointer').forEach((el) => {
+                el.classList.remove('bg-gray-200');
+              });
+              // Add active state to the clicked button
+              element.classList.add('bg-gray-200');
+          
+              // Optional: Implement additional actions for toggling sections
+              console.log(`Section ${sectionId} clicked`);
+            }
+          </script>
+          
 
- <!-- Corporate Section -->athelete.png
+
+ <!-- Corporate Section -->
 <div id="corporate" class="hidden mt-6">
   <p class="text-lg" style="font-family:'Times New Roman', Times, serif;">
       <strong>1. Visit to Axis Bank Office, Theatre Road, AC Market, Kolkata, West Bengal</strong><br>
@@ -370,7 +396,6 @@
       <p class="text-lg flex-1" style="font-family:'Times New Roman', Times, serif;">
           Wearing closed shoes all day leaves my feet smelly with flaky skin, and the constant dampness has caused cracks between my toes. I even consulted a dermatologist and tried the medications prescribed, but none of them have worked, and the condition keeps coming back, especially during the summer and rainy seasons.
       </p>
-      <img src="/static/assets/avir.jpg" class="w-1/4 h-1/4 ml-4 border-2 border-gray-300 rounded-lg">
   </div>
 </div>
 
@@ -430,8 +455,15 @@
 
 <br>
 <h3 class="text-4xl font-bold text-center">ATHLETIC COACHES</h3>
+<br>
 
-<h3 class="text-2xl font-semibold mb-4">Dr. Sandip Bera</h3>
+<div class="flex flex-col items-center">
+    <img src="https://static.igem.wiki/teams/5425/human-practices/img-20240925-143601-321-1.webp" 
+         alt="Dr. Sandip Bera" 
+         class="w-80 h-60 rounded-lg shadow-md mb-4" />
+    <h3 class="text-2xl font-semibold text-center">Dr. Sandip Bera</h3>
+  </div>
+  
 <div id="layout-container" class="grid grid-cols-1 md:grid-cols-2 gap-3 p-3">
   <!-- About Section -->
   <div class="bg-gray-200 p-6 rounded-xl text-lg font-bold h-auto">
@@ -443,7 +475,13 @@
   </div>
 </div>
 
-<h3 class="text-2xl font-semibold mb-4">Mohan Mandal</h3>
+<div class="flex flex-col items-center">
+    <img src="https://static.igem.wiki/teams/5425/human-practices/img-20240925-143554-237.webp" 
+         alt="Mohal Mandal" 
+         class="w-80 h-60 rounded-lg shadow-md mb-4" />
+    <h3 class="text-2xl font-semibold text-center">Mohan Mandal</h3>
+  </div>
+  
 <div id="layout-container" class="grid grid-cols-1 md:grid-cols-2 gap-3 p-3">
   <!-- About Section -->
   <div class="bg-gray-200 p-6 rounded-xl text-lg font-bold h-auto">
@@ -455,7 +493,13 @@
   </div>
 </div>
 
-<h3 class="text-2xl font-semibold mb-4">Chandan Das</h3>
+<div class="flex flex-col items-center">
+    <img src="https://static.igem.wiki/teams/5425/human-practices/img-20240925-143605-239-1.webp" 
+         alt="Chandan das" 
+         class="w-80 h-60 rounded-lg shadow-md mb-4" />
+    <h3 class="text-2xl font-semibold text-center">Chandan Das</h3>
+  </div>
+  
 <div id="layout-container" class="grid grid-cols-1 md:grid-cols-2 gap-3 p-3">
   <!-- About Section -->
   <div class="bg-gray-200 p-6 rounded-xl text-lg font-bold h-auto">
